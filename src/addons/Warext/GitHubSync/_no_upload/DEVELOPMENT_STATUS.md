@@ -1,45 +1,34 @@
 # Warext GitHub Sync – Development status
 
-Version: **0.6.0 Alpha 6**
+Version: **0.8.0 Alpha 8**
 
-## Completed
+## Completed foundation
 - Core add-on database/entity/repository structure.
 - GitHub App RS256 JWT and installation access-token flow.
 - Installation repository discovery/synchronization.
 - Config-reference secret/private-key handling.
 - HMAC-SHA256 webhook verification and delivery deduplication.
 - Persistent GitHub object ↔ XenForo sync registry with reverse/parent lookup.
-- Release / push / tag GitHub → XenForo create-update-delete path.
-- GitHub Issues / Issue comments / Pull Requests / PR reviews / PR review comments → XenForo normalization and routing.
-- Dynamic GitHub parent object → XenForo thread resolution.
-- XenForo → GitHub Issue create/update/close flow.
-- XenForo replies → GitHub Issue comments create/update/delete flow.
-- Queue-based outbound processing with retry.
-- Bidirectional recursion guard.
-- Native XenForo thread/post create-edit-delete services.
-- Mapping filters and reusable templates.
-- Push aggregation and delivery retry.
-- Admin CP dashboard, connections, repositories, mappings, templates, webhook logs and diagnostics.
-- Dedicated Admin CP permission.
+- GitHub Releases / push / tags / Issues / comments / Pull Requests / reviews / Actions → XenForo routing.
+- XenForo → GitHub Issue and Pull Request create/update/close flows.
+- Queue-based outbound processing with retry and recursion guard.
+- Conflict handling, label ↔ prefix mapping, GitHub ↔ XenForo user mapping and safe field mapping.
+- Admin CP dashboard, connection/repository/mapping/template/Actions/XFRM/Health/log/diagnostics modules.
 
-## Completed in 0.5.0 Alpha 5
-- Active conflict resolver (`github_wins`, `xenforo_wins`, `newest_wins`, manual review queue).
-- GitHub labels ↔ XenForo prefixes mapping in both directions.
-- GitHub Issue state ↔ XenForo thread open/close synchronization.
-- Scoped GitHub user → XenForo user mapping.
-- Admin CP conflict and user-mapping screens.
-- Unified XenForo hash model for reliable conflict detection.
-
-## Completed in 0.6.0 Alpha 6
-- XenForo thread → GitHub Pull Request create/update/close support.
-- XenForo replies → Pull Request conversation comment create/update/delete support.
-- Optional XenForo prefix → GitHub PR review actions (`APPROVE`, `REQUEST_CHANGES`, `COMMENT`).
-- `workflow_run` and `workflow_job` inbound event rendering and parent routing.
-- Workflow branch/status/conclusion filters.
-- Admin CP GitHub Actions browser + explicit `workflow_dispatch` action.
-- Safe inbound/outbound field mapping layer for selected synchronization fields.
+## 0.7–0.8 XFRM layer
+- GitHub Release → existing XFRM ResourceVersion + Resource Update through XenForo REST API.
+- Persistent release/version/update identity tracking and configurable download/delete behavior.
+- Per-action XFRM history snapshots.
+- Manual retry by refetching the authoritative GitHub Release through the GitHub App API.
+- Remote Resource/ResourceVersion/ResourceUpdate reconciliation.
+- Safe local tracking-snapshot restore followed by reconcile.
+- Retry/attempt/success/reconcile timestamps and remote-state tracking.
+- Semantic release hashing for idempotency.
+- Dedicated XFRM mapping manager.
+- Synchronization Health monitor with backlog/failure/conflict/XFRM metrics.
 
 ## Next major development block
-- XFRM integration module for GitHub releases ↔ resource versions/discussion threads.
-- More granular PR reviewer/request controls and workflow run monitoring.
-- Full XenForo 2.3 runtime import/template validation and `xf-addon:build-release` production package.
+- Bulk XFRM retry/reconcile and notification thresholds.
+- More granular PR reviewer/request controls and workflow-run history.
+- Runtime smoke-test harness for a real XenForo 2.3 + XFRM installation.
+- Production `_data` export / `xf-addon:build-release` once a real XenForo development environment is available.
