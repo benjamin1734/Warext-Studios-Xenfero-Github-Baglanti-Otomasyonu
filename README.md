@@ -4,7 +4,7 @@
 
 **Warext GitHub Sync** is a modular GitHub ↔ XenForo synchronization add-on for XenForo 2.3+. It is designed as a synchronization engine, not merely a webhook poster.
 
-> Current status: **0.4.0 Alpha 4 — development source, not a production release.**
+> Current status: **0.5.0 Alpha 5 — development source, not a production release.**
 
 ## What it does
 
@@ -26,6 +26,11 @@ XenForo → GitHub currently supports:
 - Optional thread open/closed state synchronization.
 - Queue-based outbound processing with retry so a GitHub outage does not block normal forum posting.
 - Recursion protection to prevent GitHub → XenForo → GitHub loops.
+- GitHub label ↔ XenForo prefix synchronization using per-mapping label maps.
+- GitHub account → XenForo user mapping with repository/connection/global scope fallbacks.
+- Bidirectional open/closed state synchronization for Issue-backed threads.
+- Conflict detection with GitHub-wins, XenForo-wins, newest-wins and manual-review strategies.
+- Admin conflict queue with explicit GitHub/XenForo resolution actions.
 
 ## Architecture
 
