@@ -4,21 +4,40 @@
 
 **Warext GitHub Sync**, XenForo 2.3+ için modüler ve çift yönlü GitHub ↔ XenForo senkronizasyon eklentisidir. GitHub ve XenForo nesneleri arasında kalıcı kimlik bağı tutar; Issue, Pull Request, Release, yorum, workflow, conflict, retry/recovery ve XFRM akışlarını yönetir.
 
-> Güncel sürüm: **v0.9.3 Alpha 12 — pre-release / test sürümü.**
+> Güncel sürüm: **v0.9.4 Alpha 13 — pre-release / test sürümü.**
 
 ### İndir / Kurulum
 
-- **Güncel Release:** [v0.9.3 Alpha 12](https://github.com/benjamin1734/Warext-Studios-Xenfero-Github-Baglanti-Otomasyonu/releases/tag/v0.9.3-alpha.12)
-- Release asset: `Warext-GitHub-Sync-v0.9.3-Alpha12-install.zip`
+- **Güncel Release:** [v0.9.4 Alpha 13](https://github.com/benjamin1734/Warext-Studios-Xenfero-Github-Baglanti-Otomasyonu/releases/tag/v0.9.4-alpha.13)
+- Release asset: `Warext-GitHub-Sync-v0.9.4-Alpha13-install.zip`
 - XenForo Admin CP > **Add-ons > Install/upgrade from archive** üzerinden doğrudan kurulabilir veya güncellenebilir.
-- Kurulumdan sonra Admin CP > **Tools > Warext GitHub Sync** alanı görünmelidir.
+
+### Admin CP alanı
+
+v0.9.4 ile Warext GitHub Sync artık `Tools` altındaki tek bir link olarak değil, Admin CP sol menüsünde **bağımsız açılır bir kategori** olarak tanımlanır. Kategori altında şu sayfalar bulunur:
+
+- Dashboard
+- Connections
+- Repositories
+- Mappings
+- Templates
+- Actions
+- PR Tools
+- XFRM
+- Health
+- User Mappings
+- Conflicts
+- Webhook Logs
+- Diagnostics
+
+Admin route section context değeri de `wghGitHubSync` olarak bağlanmıştır; eklenti sayfalarında sol menü grubu doğru seçili kalır. Super admin olmayan yöneticilere `wghManage` admin yetkisi verilmelidir.
 
 ### Son kurulum düzeltmeleri
 
-- v0.9.1 ile normal XenForo kurulumunda gerekli `_data/*.xml + hashes.json` yapısı eklendi.
-- v0.9.2 ile geçersiz `<xf:submit>` template etiketleri temizlendi.
-- v0.9.3 ile `wgh_mappings` ve `wgh_user_mappings` içindeki PHP tarzı dinamik array erişimleri XenForo template sözdizimine çevrildi.
-- Release workflow'u artık bu iki hata sınıfını statik olarak kontrol eder ve hatalı paketi yayınlamaz.
+- v0.9.1: normal XenForo kurulumu için `_data/*.xml + hashes.json` release yapısı.
+- v0.9.2: geçersiz `<xf:submit>` template etiketleri kaldırıldı.
+- v0.9.3: PHP tarzı dinamik array erişimleri XenForo template sözdizimine çevrildi.
+- v0.9.4: bağımsız Admin CP kategori ağacı ve route section context eklendi.
 
 ### Özellikler
 
@@ -34,33 +53,32 @@
 - Health monitor ve kalıcı alert geçmişi.
 - GitHub App JWT / installation token ve HMAC webhook doğrulaması.
 
-### Yönetim paneli
-
-Admin CP altında Warext GitHub Sync; Dashboard, Connections, Repositories, Mappings, Templates, Actions, PR Tools, XFRM, Health, User Mappings, Conflicts, Webhook Logs ve Diagnostics modüllerini içerir.
-
-Super admin olmayan yöneticilere özel `wghManage` admin yetkisi verilmelidir.
-
 ---
 
 ## English
 
 **Warext GitHub Sync** is a modular, bidirectional GitHub ↔ XenForo synchronization add-on for XenForo 2.3+. It keeps durable identity mappings between GitHub and XenForo objects and manages Issues, Pull Requests, Releases, comments, workflows, conflicts, retry/recovery and XFRM flows.
 
-> Current version: **v0.9.3 Alpha 12 — pre-release / testing build.**
+> Current version: **v0.9.4 Alpha 13 — pre-release / testing build.**
 
 ### Download / Installation
 
-- **Latest Release:** [v0.9.3 Alpha 12](https://github.com/benjamin1734/Warext-Studios-Xenfero-Github-Baglanti-Otomasyonu/releases/tag/v0.9.3-alpha.12)
-- Release asset: `Warext-GitHub-Sync-v0.9.3-Alpha12-install.zip`
+- **Latest Release:** [v0.9.4 Alpha 13](https://github.com/benjamin1734/Warext-Studios-Xenfero-Github-Baglanti-Otomasyonu/releases/tag/v0.9.4-alpha.13)
+- Release asset: `Warext-GitHub-Sync-v0.9.4-Alpha13-install.zip`
 - Install or upgrade directly from XenForo Admin CP > **Add-ons > Install/upgrade from archive**.
-- After installation, **Tools > Warext GitHub Sync** should appear in Admin CP.
+
+### Admin CP area
+
+Starting with v0.9.4, Warext GitHub Sync is defined as its own **collapsible Admin CP navigation group** instead of a single link nested below Tools. The group contains Dashboard, Connections, Repositories, Mappings, Templates, Actions, PR Tools, XFRM, Health, User Mappings, Conflicts, Webhook Logs and Diagnostics.
+
+The admin route section context is also set to `wghGitHubSync` so the correct navigation group remains selected while browsing the add-on. Non-super administrators must be granted the custom `wghManage` administrator permission.
 
 ### Recent installer fixes
 
-- v0.9.1 added the normal XenForo `_data/*.xml + hashes.json` release structure.
-- v0.9.2 removed invalid `<xf:submit>` template tags.
-- v0.9.3 converts PHP-style dynamic array access in `wgh_mappings` and `wgh_user_mappings` to XenForo template syntax.
-- The release workflow now statically rejects both error classes before publishing an archive.
+- v0.9.1: normal XenForo `_data/*.xml + hashes.json` archive layout.
+- v0.9.2: removed invalid `<xf:submit>` tags.
+- v0.9.3: converted PHP-style dynamic array access to XenForo template syntax.
+- v0.9.4: added a dedicated Admin CP navigation tree and route section context.
 
 ### Features
 
@@ -75,12 +93,6 @@ Super admin olmayan yöneticilere özel `wghManage` admin yetkisi verilmelidir.
 - XFRM history, manual/bulk retry-reconcile and tracking restore.
 - Health monitor and persistent alert history.
 - GitHub App JWT / installation-token flow and HMAC webhook validation.
-
-### Admin CP
-
-Warext GitHub Sync provides Dashboard, Connections, Repositories, Mappings, Templates, Actions, PR Tools, XFRM, Health, User Mappings, Conflicts, Webhook Logs and Diagnostics.
-
-Non-super administrators must be granted the custom `wghManage` administrator permission.
 
 ---
 
