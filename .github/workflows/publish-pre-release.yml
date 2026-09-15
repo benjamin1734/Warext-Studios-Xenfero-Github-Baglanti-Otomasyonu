@@ -1,4 +1,4 @@
-name: Publish v0.9.0 Alpha 9 pre-release
+name: Publish v0.9.1 Alpha 10 pre-release
 
 on:
   push:
@@ -6,7 +6,9 @@ on:
       - main
     paths:
       - '.github/workflows/publish-pre-release.yml'
-      - 'release/v0.9.0-alpha.9/**'
+      - 'tools/build-xenforo-release.py'
+      - 'release/v0.9.1-alpha.10/**'
+      - 'src/addons/Warext/GitHubSync/**'
   workflow_dispatch:
 
 permissions:
@@ -16,26 +18,54 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     env:
-      TAG: v0.9.0-alpha.9
-      ZIP_NAME: Warext-GitHub-Sync-v0.9.0-Alpha9-install.zip
+      TAG: v0.9.1-alpha.10
+      ZIP_NAME: Warext-GitHub-Sync-v0.9.1-Alpha10-install.zip
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build installation ZIP
+      - name: Build XenForo installation ZIP
         shell: bash
         run: |
           set -euo pipefail
-          rm -rf dist
+          rm -rf dist "${ZIP_NAME}" "${ZIP_NAME}.sha256"
           mkdir -p dist/upload/src/addons/Warext
           cp -a src/addons/Warext/GitHubSync dist/upload/src/addons/Warext/
-          cp release/v0.9.0-alpha.9/INSTALL.md dist/KURULUM-README.md
+
+          rm -rf dist/upload/src/addons/Warext/GitHubSync/_data
+          python tools/build-xenforo-release.py dist/upload/src/addons/Warext/GitHubSync
+
+          rm -rf dist/upload/src/addons/Warext/GitHubSync/_output \
+                 dist/upload/src/addons/Warext/GitHubSync/_no_upload \
+                 dist/upload/src/addons/Warext/GitHubSync/_releases
+          rm -f dist/upload/src/addons/Warext/GitHubSync/hashes.json
+
+          cp release/v0.9.1-alpha.10/INSTALL.md dist/KURULUM-INSTALL.md
+          cp release/v0.9.1-alpha.10/RELEASE_NOTES.md dist/RELEASE_NOTES.md
+
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, json
+          upload = Path('dist/upload')
+          addon = upload / 'src/addons/Warext/GitHubSync'
+          hashes = {}
+          for path in sorted(upload.rglob('*')):
+              if path.is_file() and path.name != 'hashes.json':
+                  hashes[path.relative_to(upload).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
+          (addon / 'hashes.json').write_text(json.dumps(hashes, indent=2) + '\n', encoding='utf-8')
+          PY
+
           (
             cd dist
-            zip -qr "../${ZIP_NAME}" upload KURULUM-README.md
+            zip -qr "../${ZIP_NAME}" upload KURULUM-INSTALL.md RELEASE_NOTES.md
           )
           sha256sum "${ZIP_NAME}" | tee "${ZIP_NAME}.sha256"
           unzip -t "${ZIP_NAME}"
+          ! unzip -l "${ZIP_NAME}" | grep -q '/_output/'
+          unzip -l "${ZIP_NAME}" | grep -q '_data/admin_navigation.xml'
+          unzip -l "${ZIP_NAME}" | grep -q '_data/admin_permission.xml'
+          unzip -l "${ZIP_NAME}" | grep -q '_data/routes.xml'
+          unzip -l "${ZIP_NAME}" | grep -q 'hashes.json'
 
       - name: Create or update pre-release
         env:
@@ -45,14 +75,14 @@ jobs:
           set -euo pipefail
           if gh release view "${TAG}" >/dev/null 2>&1; then
             gh release edit "${TAG}" \
-              --title "Warext GitHub Sync v0.9.0 Alpha 9" \
-              --notes-file release/v0.9.0-alpha.9/RELEASE_NOTES.md \
+              --title "Warext GitHub Sync v0.9.1 Alpha 10" \
+              --notes-file release/v0.9.1-alpha.10/RELEASE_NOTES.md \
               --prerelease
           else
             gh release create "${TAG}" \
               --target "${GITHUB_SHA}" \
-              --title "Warext GitHub Sync v0.9.0 Alpha 9" \
-              --notes-file release/v0.9.0-alpha.9/RELEASE_NOTES.md \
+              --title "Warext GitHub Sync v0.9.1 Alpha 10" \
+              --notes-file release/v0.9.1-alpha.10/RELEASE_NOTES.md \
               --prerelease
           fi
 
