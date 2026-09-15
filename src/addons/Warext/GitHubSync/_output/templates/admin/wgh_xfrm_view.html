@@ -1,0 +1,23 @@
+<xf:title>XFRM release #{$record.xfrm_release_id}</xf:title>
+<xf:macro template="wgh_macros" name="nav" arg-selected="xfrm" />
+<div class="block"><div class="block-container"><h2 class="block-header">Tracked release</h2><div class="block-body block-row">
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>GitHub release ID</dt><dd>{$record.github_release_id}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Resource</dt><dd>#{$record.resource_id}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Version</dt><dd>{$record.version_string}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>ResourceVersion ID</dt><dd>{$record.resource_version_id}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>ResourceUpdate ID</dt><dd>{$record.resource_update_id}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Status</dt><dd>{$record.status}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Remote state</dt><dd>{$record.remote_state}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Retry count</dt><dd>{$record.retry_count}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Last attempt</dt><dd><xf:if is="$record.last_attempt_date"><xf:date time="$record.last_attempt_date" /><xf:else />Never</xf:if></dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Last success</dt><dd><xf:if is="$record.last_success_date"><xf:date time="$record.last_success_date" /><xf:else />Never</xf:if></dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Last reconcile</dt><dd><xf:if is="$record.last_reconcile_date"><xf:date time="$record.last_reconcile_date" /><xf:else />Never</xf:if></dd></div>
+<xf:if is="$record.last_error"><p class="formRow-explain">{$record.last_error}</p></xf:if>
+<div class="buttonGroup">
+<xf:form action="{{ link('github-sync/xfrm-retry', null, {'xfrm_release_id': $record.xfrm_release_id}) }}" ajax="true"><xf:button type="submit">Retry from GitHub</xf:button></xf:form>
+<xf:form action="{{ link('github-sync/xfrm-reconcile', null, {'xfrm_release_id': $record.xfrm_release_id}) }}" ajax="true"><xf:button type="submit">Reconcile remote objects</xf:button></xf:form>
+</div>
+</div></div></div>
+<div class="block"><div class="block-container"><h2 class="block-header">History</h2><div class="block-body"><table class="dataList"><thead><tr class="dataList-row"><th class="dataList-cell">Action</th><th class="dataList-cell">Status</th><th class="dataList-cell">Version ID</th><th class="dataList-cell">Update ID</th><th class="dataList-cell">Message</th><th class="dataList-cell">Date</th><th class="dataList-cell"></th></tr></thead><tbody>
+<xf:foreach loop="$history" value="$item"><tr class="dataList-row"><td class="dataList-cell">{$item.action}</td><td class="dataList-cell">{$item.status}</td><td class="dataList-cell">{$item.resource_version_id}</td><td class="dataList-cell">{$item.resource_update_id}</td><td class="dataList-cell">{$item.message}</td><td class="dataList-cell"><xf:date time="$item.created_date" /></td><td class="dataList-cell"><xf:form action="{{ link('github-sync/xfrm-history-restore', null, {'xfrm_history_id': $item.xfrm_history_id}) }}" ajax="true"><xf:button type="submit">Restore tracking</xf:button></xf:form></td></tr></xf:foreach>
+</tbody></table></div></div></div>
