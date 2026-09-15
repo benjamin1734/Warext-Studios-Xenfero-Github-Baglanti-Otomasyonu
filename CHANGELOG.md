@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.8.0 Alpha 8
+- Added XFRM synchronization history/audit records with per-action snapshots.
+- Added manual XFRM retry that refetches the authoritative GitHub Release through the GitHub App API.
+- Added remote XFRM reconciliation for Resource, ResourceVersion and Resource Update identities.
+- Added safe local tracking-snapshot restore; remote XFRM content is never silently rolled back.
+- Added retry/attempt/success/reconcile timestamps and remote-state tracking.
+- Added semantic GitHub Release hashing to suppress work caused only by sender/delivery metadata noise.
+- Added a dedicated XFRM mapping manager and detailed tracked-release/history pages in Admin CP.
+- Added Health monitoring for webhook backlog/failures, unresolved conflicts and XFRM failed/attention/stale states.
+- Added typed XFRM API HTTP exceptions so 404 missing-object results are distinguished from auth/server failures.
+- Added `xf_wgh_xfrm_history` and the 0.8 upgrade schema.
+- Refactored Setup table creation into reusable helpers while preserving historical upgrade steps.
+
 ## 0.7.0 Alpha 7
 - Added optional GitHub Release → existing XFRM resource synchronization.
 - Added XFRM ResourceVersion creation through XenForo REST API `/resource-versions/`.
@@ -63,7 +76,7 @@
 - Added connection deletion guard while synchronized repository records still belong to the connection.
 
 ## 0.2.0 Alpha 2
-- Added GitHub App JWT authentication and installation access token client.
+- Added GitHub App JWT authentication and installation access-token client.
 - Added installation repository discovery and repository upsert/deactivation synchronization.
 - Added config-reference based private-key and webhook-secret handling.
 - Added per-repository/per-connection webhook secret resolution with global bootstrap fallback.
