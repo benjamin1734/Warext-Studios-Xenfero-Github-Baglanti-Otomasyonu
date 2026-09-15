@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.5.0 Alpha 5
+- Added persistent synchronization conflict records and Admin CP conflict review/resolution workflow.
+- Added `github_wins`, `xenforo_wins`, `newest_wins`, and `manual` conflict strategies to the active inbound dispatcher.
+- Unified XenForo content hashing so inbound/outbound conflict detection uses the same title/message/prefix/open-state model.
+- Added GitHub label ↔ XenForo prefix mapping in both directions.
+- Added optional GitHub open/closed state → XenForo thread open-state synchronization.
+- Added XenForo prefix → GitHub Issue labels synchronization.
+- Added scoped GitHub-login → XenForo-user mappings and optional inbound author resolution.
+- Added `xf_wgh_user_mapping` and `xf_wgh_conflict` install/upgrade/uninstall schema support.
+- Added Admin CP screens for user mappings and conflict queue.
+- Refactored Admin CP actions into independent connection/repository, mapping/template, conflict/user-mapping and delivery/diagnostics modules.
+- Restored the repository branch/commit/path filter engine and extended diagnostics for all current tables.
+- Added diagnostics/static-integrity coverage for the new modules.
+- Updated GitHub REST client user agent for the 0.5 development line.
+
 ## 0.4.0 Alpha 4
 - Added GitHub `issues`, `issue_comment`, `pull_request`, `pull_request_review`, and `pull_request_review_comment` message/action normalization.
 - Added dynamic parent-child routing so GitHub comments can automatically locate the XenForo thread created for their parent Issue/PR.
