@@ -5,7 +5,7 @@
 <table class="dataList"><thead><tr class="dataList-row"><th class="dataList-cell">Title</th><th class="dataList-cell">Repository</th><th class="dataList-cell">Direction</th><th class="dataList-cell">Event</th><th class="dataList-cell">Priority</th><th class="dataList-cell">Status</th><th class="dataList-cell"></th></tr></thead><tbody>
 <xf:foreach loop="$mappings" value="$mapping"><tr class="dataList-row">
 <td class="dataList-cell"><a href="{{ link('github-sync/mapping-edit', null, {'mapping_id': $mapping.mapping_id}) }}">{$mapping.title}</a></td>
-<td class="dataList-cell">{{$repositories[$mapping.repository_id]}}</td>
+<td class="dataList-cell">{$repositories.{$mapping.repository_id}}</td>
 <td class="dataList-cell">{$mapping.direction}</td><td class="dataList-cell">{$mapping.event}.{$mapping.event_action}</td><td class="dataList-cell">{$mapping.priority}</td><td class="dataList-cell">{{ $mapping.enabled ? 'Enabled' : 'Disabled' }}</td>
 <td class="dataList-cell dataList-cell--action"><a href="{{ link('github-sync/mapping-delete', null, {'mapping_id': $mapping.mapping_id}) }}">Delete</a></td>
 </tr></xf:foreach>
