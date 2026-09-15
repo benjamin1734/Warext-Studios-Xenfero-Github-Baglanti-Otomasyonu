@@ -1,4 +1,4 @@
-name: Publish v0.9.1 Alpha 10 pre-release
+name: Publish v0.9.2 Alpha 11 pre-release
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     paths:
       - '.github/workflows/publish-pre-release.yml'
       - 'tools/build-xenforo-release.py'
-      - 'release/v0.9.1-alpha.10/**'
+      - 'release/v0.9.2-alpha.11/**'
       - 'src/addons/Warext/GitHubSync/**'
   workflow_dispatch:
 
@@ -18,8 +18,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     env:
-      TAG: v0.9.1-alpha.10
-      ZIP_NAME: Warext-GitHub-Sync-v0.9.1-Alpha10-install.zip
+      TAG: v0.9.2-alpha.11
+      ZIP_NAME: Warext-GitHub-Sync-v0.9.2-Alpha11-install.zip
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,6 +32,11 @@ jobs:
           mkdir -p dist/upload/src/addons/Warext
           cp -a src/addons/Warext/GitHubSync dist/upload/src/addons/Warext/
 
+          if grep -R -n -E '<xf:submit([[:space:]>])' dist/upload/src/addons/Warext/GitHubSync/_output/templates; then
+            echo 'Invalid XenForo <xf:submit> tag found. Use <xf:submitrow> or <xf:button type="submit"> instead.' >&2
+            exit 1
+          fi
+
           rm -rf dist/upload/src/addons/Warext/GitHubSync/_data
           python tools/build-xenforo-release.py dist/upload/src/addons/Warext/GitHubSync
 
@@ -40,8 +45,8 @@ jobs:
                  dist/upload/src/addons/Warext/GitHubSync/_releases
           rm -f dist/upload/src/addons/Warext/GitHubSync/hashes.json
 
-          cp release/v0.9.1-alpha.10/INSTALL.md dist/KURULUM-INSTALL.md
-          cp release/v0.9.1-alpha.10/RELEASE_NOTES.md dist/RELEASE_NOTES.md
+          cp release/v0.9.2-alpha.11/INSTALL.md dist/KURULUM-INSTALL.md
+          cp release/v0.9.2-alpha.11/RELEASE_NOTES.md dist/RELEASE_NOTES.md
 
           python - <<'PY'
           from pathlib import Path
@@ -65,6 +70,7 @@ jobs:
           unzip -l "${ZIP_NAME}" | grep -q '_data/admin_navigation.xml'
           unzip -l "${ZIP_NAME}" | grep -q '_data/admin_permission.xml'
           unzip -l "${ZIP_NAME}" | grep -q '_data/routes.xml'
+          unzip -l "${ZIP_NAME}" | grep -q '_data/templates.xml'
           unzip -l "${ZIP_NAME}" | grep -q 'hashes.json'
 
       - name: Create or update pre-release
@@ -75,14 +81,14 @@ jobs:
           set -euo pipefail
           if gh release view "${TAG}" >/dev/null 2>&1; then
             gh release edit "${TAG}" \
-              --title "Warext GitHub Sync v0.9.1 Alpha 10" \
-              --notes-file release/v0.9.1-alpha.10/RELEASE_NOTES.md \
+              --title "Warext GitHub Sync v0.9.2 Alpha 11" \
+              --notes-file release/v0.9.2-alpha.11/RELEASE_NOTES.md \
               --prerelease
           else
             gh release create "${TAG}" \
               --target "${GITHUB_SHA}" \
-              --title "Warext GitHub Sync v0.9.1 Alpha 10" \
-              --notes-file release/v0.9.1-alpha.10/RELEASE_NOTES.md \
+              --title "Warext GitHub Sync v0.9.2 Alpha 11" \
+              --notes-file release/v0.9.2-alpha.11/RELEASE_NOTES.md \
               --prerelease
           fi
 
