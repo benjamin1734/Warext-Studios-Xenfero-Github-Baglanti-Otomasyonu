@@ -1,0 +1,18 @@
+<xf:title>Warext GitHub Sync - Health</xf:title>
+<xf:macro template="wgh_macros" name="nav" arg-selected="health" />
+<div class="block"><div class="block-container">
+<h2 class="block-header">Synchronization health: {$health.severity}</h2>
+<div class="block-body block-row">
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Processed last hour</dt><dd>{$health.processedHour}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Failed last hour</dt><dd>{$health.failedHour}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Pending deliveries</dt><dd>{$health.pending}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Oldest pending age</dt><dd>{$health.pendingAge} sec</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Pending conflicts</dt><dd>{$health.conflicts}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>XFRM failed</dt><dd>{$health.xfrmFailed}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>XFRM attention</dt><dd>{$health.xfrmAttention}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Stale XFRM checks</dt><dd>{$health.staleXfrm}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Inactive connections</dt><dd>{$health.inactiveConnections}</dd></div>
+</div></div></div>
+<xf:if is="$health.reasons is not empty">
+<div class="block"><div class="block-container"><h2 class="block-header">Reasons</h2><div class="block-body block-row"><ul><xf:foreach loop="$health.reasons" value="$reason"><li>{$reason}</li></xf:foreach></ul></div></div></div>
+</xf:if>
