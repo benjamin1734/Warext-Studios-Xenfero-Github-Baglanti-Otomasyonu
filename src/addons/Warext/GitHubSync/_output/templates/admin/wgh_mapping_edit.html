@@ -18,13 +18,20 @@
 <xf:option name="sync_first_post" value="1" selected="{$source.sync_first_post}">Synchronize thread title and first post to the GitHub Issue</xf:option>
 <xf:option name="sync_replies" value="1" selected="{$source.sync_replies}">Synchronize thread replies as GitHub Issue comments</xf:option>
 <xf:option name="sync_thread_state" value="1" selected="{$source.sync_thread_state}">Synchronize thread open/closed state to the GitHub Issue</xf:option>
+<xf:option name="sync_labels" value="1" selected="{$source.sync_labels}">Synchronize XenForo thread prefix to GitHub Issue labels using the label map below</xf:option>
 </xf:checkboxrow>
 </div>
 <h2 class="block-header">XenForo target</h2><div class="block-body">
 <xf:numberboxrow name="node_id" value="{$target.node_id}" min="0" label="Forum node ID" explain="Used when the integration should create a new thread." />
 <xf:numberboxrow name="thread_id" value="{$target.thread_id}" min="0" label="Existing thread ID" explain="When set, synchronization targets this thread instead of creating a new one." />
 <xf:numberboxrow name="user_id" value="{$target.user_id}" min="0" label="Automation user ID" required="required" />
-<xf:numberboxrow name="prefix_id" value="{$target.prefix_id}" min="0" label="Thread prefix ID" />
+<xf:numberboxrow name="prefix_id" value="{$target.prefix_id}" min="0" label="Fallback thread prefix ID" />
+<xf:checkboxrow label="Inbound identity and metadata">
+<xf:option name="use_user_mapping" value="1" selected="{$target.use_user_mapping}">Use GitHub → XenForo user mappings for the event author</xf:option>
+<xf:option name="sync_remote_labels" value="1" selected="{$target.sync_remote_labels}">Synchronize GitHub labels to XenForo thread prefix</xf:option>
+<xf:option name="sync_remote_state" value="1" selected="{$target.sync_remote_state}">Synchronize GitHub open/closed state to the XenForo thread</xf:option>
+</xf:checkboxrow>
+<xf:textarearow name="label_prefix_map" value="{$labelMapText}" label="GitHub label ↔ XenForo prefix map" explain="One mapping per line, for example: bug=12. The same map is used in both directions." autosize="true" />
 <xf:selectrow name="template_id" value="{$target.template_id}" label="Reusable template"><xf:option value="0">Use inline/default template</xf:option><xf:foreach loop="$templates" value="$template"><xf:option value="{$template.template_id}">{$template.title}</xf:option></xf:foreach></xf:selectrow>
 <xf:textarearow name="title_template" value="{$target.title_template}" label="Title template override" autosize="true" />
 <xf:textarearow name="message_template" value="{$target.message_template}" label="Message template override" rows="8" />
