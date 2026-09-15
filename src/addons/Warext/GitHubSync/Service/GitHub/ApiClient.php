@@ -95,12 +95,14 @@ final class ApiClient
         return $this->requestJson($method, $path, $this->installationToken($connection), $json);
     }
 
-    public function createIssue(Connection $connection, string $owner, string $repo, string $title, string $body): array
+    public function createIssue(Connection $connection, string $owner, string $repo, string $title, string $body, array $labels = []): array
     {
-        return $this->requestInstallation($connection, 'POST', $this->repoPath($owner, $repo) . '/issues', [
+        $payload = [
             'title' => $title,
             'body' => $body
-        ]);
+        ];
+        if ($labels !== []) $payload['labels'] = array_values(array_unique(array_map('strval', $labels)));
+        return $this->requestInstallation($connection, 'POST', $this->repoPath($owner, $repo) . '/issues', $payload);
     }
 
     public function updateIssue(Connection $connection, string $owner, string $repo, int $number, array $changes): array
@@ -140,7 +142,7 @@ final class ApiClient
                 'Accept' => 'application/vnd.github+json',
                 'Authorization' => 'Bearer ' . $bearerToken,
                 'X-GitHub-Api-Version' => self::API_VERSION,
-                'User-Agent' => 'Warext-GitHub-Sync/0.4'
+                'User-Agent' => 'Warext-GitHub-Sync/0.5'
             ],
             'http_errors' => false,
             'timeout' => 20,
