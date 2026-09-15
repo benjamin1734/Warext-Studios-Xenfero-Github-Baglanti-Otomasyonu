@@ -4,18 +4,21 @@
 
 **Warext GitHub Sync**, XenForo 2.3+ için modüler ve çift yönlü GitHub ↔ XenForo senkronizasyon eklentisidir. GitHub ve XenForo nesneleri arasında kalıcı kimlik bağı tutar; Issue, Pull Request, Release, yorum, workflow, conflict, retry/recovery ve XFRM akışlarını yönetir.
 
-> Güncel sürüm: **v0.9.1 Alpha 10 — pre-release / test sürümü.**
+> Güncel sürüm: **v0.9.3 Alpha 12 — pre-release / test sürümü.**
 
 ### İndir / Kurulum
 
-- **Güncel Release:** [v0.9.1 Alpha 10](https://github.com/benjamin1734/Warext-Studios-Xenfero-Github-Baglanti-Otomasyonu/releases/tag/v0.9.1-alpha.10)
-- Release asset: `Warext-GitHub-Sync-v0.9.1-Alpha10-install.zip`
+- **Güncel Release:** [v0.9.3 Alpha 12](https://github.com/benjamin1734/Warext-Studios-Xenfero-Github-Baglanti-Otomasyonu/releases/tag/v0.9.3-alpha.12)
+- Release asset: `Warext-GitHub-Sync-v0.9.3-Alpha12-install.zip`
 - XenForo Admin CP > **Add-ons > Install/upgrade from archive** üzerinden doğrudan kurulabilir veya güncellenebilir.
 - Kurulumdan sonra Admin CP > **Tools > Warext GitHub Sync** alanı görünmelidir.
 
-### v0.9.1 kurulum düzeltmesi
+### Son kurulum düzeltmeleri
 
-v0.9.0 Alpha 9 arşivi yalnız development `_output` verisini içerdiği için normal XenForo kurulumunda Admin CP route/navigation/template verileri import edilmiyordu. v0.9.1 Alpha 10 release’i gerçek XenForo `_data/*.xml` dosyalarını ve `hashes.json` dosyasını üretir; `_output` release ZIP’inden çıkarılır. Admin navigation ve permission phrase adları da XenForo standardına göre düzeltildi.
+- v0.9.1 ile normal XenForo kurulumunda gerekli `_data/*.xml + hashes.json` yapısı eklendi.
+- v0.9.2 ile geçersiz `<xf:submit>` template etiketleri temizlendi.
+- v0.9.3 ile `wgh_mappings` ve `wgh_user_mappings` içindeki PHP tarzı dinamik array erişimleri XenForo template sözdizimine çevrildi.
+- Release workflow'u artık bu iki hata sınıfını statik olarak kontrol eder ve hatalı paketi yayınlamaz.
 
 ### Özellikler
 
@@ -43,18 +46,21 @@ Super admin olmayan yöneticilere özel `wghManage` admin yetkisi verilmelidir.
 
 **Warext GitHub Sync** is a modular, bidirectional GitHub ↔ XenForo synchronization add-on for XenForo 2.3+. It keeps durable identity mappings between GitHub and XenForo objects and manages Issues, Pull Requests, Releases, comments, workflows, conflicts, retry/recovery and XFRM flows.
 
-> Current version: **v0.9.1 Alpha 10 — pre-release / testing build.**
+> Current version: **v0.9.3 Alpha 12 — pre-release / testing build.**
 
 ### Download / Installation
 
-- **Latest Release:** [v0.9.1 Alpha 10](https://github.com/benjamin1734/Warext-Studios-Xenfero-Github-Baglanti-Otomasyonu/releases/tag/v0.9.1-alpha.10)
-- Release asset: `Warext-GitHub-Sync-v0.9.1-Alpha10-install.zip`
+- **Latest Release:** [v0.9.3 Alpha 12](https://github.com/benjamin1734/Warext-Studios-Xenfero-Github-Baglanti-Otomasyonu/releases/tag/v0.9.3-alpha.12)
+- Release asset: `Warext-GitHub-Sync-v0.9.3-Alpha12-install.zip`
 - Install or upgrade directly from XenForo Admin CP > **Add-ons > Install/upgrade from archive**.
 - After installation, **Tools > Warext GitHub Sync** should appear in Admin CP.
 
-### v0.9.1 installer fix
+### Recent installer fixes
 
-The v0.9.0 Alpha 9 archive only shipped development `_output` data, so normal XenForo installations did not import the Admin CP routes/navigation/templates. v0.9.1 Alpha 10 generates real XenForo `_data/*.xml` files plus `hashes.json`, removes `_output` from the release ZIP, and fixes the admin navigation/admin permission phrase identifiers.
+- v0.9.1 added the normal XenForo `_data/*.xml + hashes.json` release structure.
+- v0.9.2 removed invalid `<xf:submit>` template tags.
+- v0.9.3 converts PHP-style dynamic array access in `wgh_mappings` and `wgh_user_mappings` to XenForo template syntax.
+- The release workflow now statically rejects both error classes before publishing an archive.
 
 ### Features
 
