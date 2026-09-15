@@ -1,0 +1,14 @@
+<xf:title>Warext GitHub Sync - XFRM</xf:title>
+<xf:macro template="wgh_macros" name="nav" arg-selected="xfrm" />
+<div class="block"><div class="block-container">
+<h2 class="block-header">XenForo Resource Manager integration</h2>
+<div class="block-body block-row">
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>XFRM loaded</dt><dd>{{ $available ? 'Yes' : 'No' }}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Tracked releases</dt><dd>{$recordCount}</dd></div>
+<p class="formRow-explain">Release synchronization targets an existing XFRM resource. Resource versions and resource updates are written through XenForo's official REST API using a config-referenced API key with resource:write scope.</p>
+</div></div></div>
+<div class="block"><div class="block-container"><h2 class="block-header">Recent XFRM release syncs</h2><div class="block-body">
+<table class="dataList"><thead><tr class="dataList-row"><th class="dataList-cell">GitHub release</th><th class="dataList-cell">Resource</th><th class="dataList-cell">Version</th><th class="dataList-cell">Version ID</th><th class="dataList-cell">Update ID</th><th class="dataList-cell">Status</th><th class="dataList-cell">Updated</th></tr></thead><tbody>
+<xf:foreach loop="$records" value="$record"><tr class="dataList-row"><td class="dataList-cell">{$record.github_release_id}</td><td class="dataList-cell">#{$record.resource_id}</td><td class="dataList-cell">{$record.version_string}</td><td class="dataList-cell">{$record.resource_version_id}</td><td class="dataList-cell">{$record.resource_update_id}</td><td class="dataList-cell">{$record.status}<xf:if is="$record.last_error"><br /><span class="u-muted">{$record.last_error}</span></xf:if></td><td class="dataList-cell"><xf:date time="$record.updated_date" /></td></tr></xf:foreach>
+</tbody></table>
+</div></div></div>
