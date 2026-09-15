@@ -1,17 +1,26 @@
 # Changelog
 
+## 0.6.0 Alpha 6
+- Added XenForo thread → GitHub Pull Request create/update/close synchronization.
+- Added XenForo replies → Pull Request conversation comments.
+- Added optional XenForo prefix → GitHub PR review actions (`APPROVE`, `REQUEST_CHANGES`, `COMMENT`) with duplicate-review protection.
+- Added GitHub `workflow_run` and `workflow_job` webhook modules.
+- Added workflow branch/status/conclusion filters.
+- Added Admin CP Actions browser and explicit `workflow_dispatch` execution.
+- Added safe inbound/outbound field mapping for selected synchronization fields.
+- Added GitHub REST helpers for Pull Requests, PR reviews and Actions workflows.
+- Updated REST user agent to the 0.6 development line.
+
 ## 0.5.0 Alpha 5
 - Added persistent synchronization conflict records and Admin CP conflict review/resolution workflow.
 - Added `github_wins`, `xenforo_wins`, `newest_wins`, and `manual` conflict strategies to the active inbound dispatcher.
 - Unified XenForo content hashing so inbound/outbound conflict detection uses the same title/message/prefix/open-state model.
 - Added GitHub label ↔ XenForo prefix mapping in both directions.
-- Added optional GitHub open/closed state → XenForo thread open-state synchronization.
+- Added optional GitHub open/closed state → XenForo thread lock state synchronization.
 - Added XenForo prefix → GitHub Issue labels synchronization.
 - Added scoped GitHub-login → XenForo-user mappings and optional inbound author resolution.
 - Added `xf_wgh_user_mapping` and `xf_wgh_conflict` install/upgrade/uninstall schema support.
 - Added Admin CP screens for user mappings and conflict queue.
-- Refactored Admin CP actions into independent connection/repository, mapping/template, conflict/user-mapping and delivery/diagnostics modules.
-- Restored the repository branch/commit/path filter engine and extended diagnostics for all current tables.
 - Added diagnostics/static-integrity coverage for the new modules.
 - Updated GitHub REST client user agent for the 0.5 development line.
 

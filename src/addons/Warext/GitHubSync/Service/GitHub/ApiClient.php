@@ -129,6 +129,77 @@ final class ApiClient
         $this->requestInstallation($connection, 'DELETE', $this->repoPath($owner, $repo) . '/issues/comments/' . $commentId);
     }
 
+    public function createPullRequest(
+        Connection $connection,
+        string $owner,
+        string $repo,
+        string $title,
+        string $body,
+        string $head,
+        string $base,
+        bool $draft = false,
+        bool $maintainerCanModify = true
+    ): array
+    {
+        return $this->requestInstallation($connection, 'POST', $this->repoPath($owner, $repo) . '/pulls', [
+            'title' => $title,
+            'body' => $body,
+            'head' => $head,
+            'base' => $base,
+            'draft' => $draft,
+            'maintainer_can_modify' => $maintainerCanModify
+        ]);
+    }
+
+    public function updatePullRequest(Connection $connection, string $owner, string $repo, int $number, array $changes): array
+    {
+        return $this->requestInstallation($connection, 'PATCH', $this->repoPath($owner, $repo) . '/pulls/' . $number, $changes);
+    }
+
+    public function createPullRequestReview(
+        Connection $connection,
+        string $owner,
+        string $repo,
+        int $number,
+        string $event,
+        string $body
+    ): array
+    {
+        $event = strtoupper(trim($event));
+        if (!in_array($event, ['APPROVE', 'REQUEST_CHANGES', 'COMMENT'], true))
+        {
+            throw new RuntimeException('Unsupported pull request review event: ' . $event);
+        }
+        return $this->requestInstallation($connection, 'POST', $this->repoPath($owner, $repo) . '/pulls/' . $number . '/reviews', [
+            'event' => $event,
+            'body' => $body
+        ]);
+    }
+
+    public function listWorkflows(Connection $connection, string $owner, string $repo): array
+    {
+        return $this->requestInstallation($connection, 'GET', $this->repoPath($owner, $repo) . '/actions/workflows?per_page=100');
+    }
+
+    public function dispatchWorkflow(
+        Connection $connection,
+        string $owner,
+        string $repo,
+        string $workflowId,
+        string $ref,
+        array $inputs = []
+    ): array
+    {
+        $payload = ['ref' => $ref];
+        if ($inputs !== []) $payload['inputs'] = $inputs;
+        return $this->requestInstallation(
+            $connection,
+            'POST',
+            $this->repoPath($owner, $repo) . '/actions/workflows/' . rawurlencode($workflowId) . '/dispatches',
+            $payload
+        );
+    }
+
     private function repoPath(string $owner, string $repo): string
     {
         return '/repos/' . rawurlencode($owner) . '/' . rawurlencode($repo);
@@ -142,7 +213,7 @@ final class ApiClient
                 'Accept' => 'application/vnd.github+json',
                 'Authorization' => 'Bearer ' . $bearerToken,
                 'X-GitHub-Api-Version' => self::API_VERSION,
-                'User-Agent' => 'Warext-GitHub-Sync/0.5'
+                'User-Agent' => 'Warext-GitHub-Sync/0.6'
             ],
             'http_errors' => false,
             'timeout' => 20,

@@ -8,10 +8,11 @@ use Warext\GitHubSync\Admin\Controller\Traits\ConnectionRepositoryActions;
 use Warext\GitHubSync\Admin\Controller\Traits\DeliveryDiagnosticActions;
 use Warext\GitHubSync\Admin\Controller\Traits\MappingTemplateActions;
 use Warext\GitHubSync\Admin\Controller\Traits\UserConflictActions;
+use Warext\GitHubSync\Admin\Controller\Traits\WorkflowActions;
 
 class GitHubSync extends AbstractController
 {
-    use ConnectionRepositoryActions, MappingTemplateActions, UserConflictActions, DeliveryDiagnosticActions;
+    use ConnectionRepositoryActions, MappingTemplateActions, UserConflictActions, DeliveryDiagnosticActions, WorkflowActions;
 
     protected function preDispatchController($action, ParameterBag $params) { $this->assertAdminPermission('wghManage'); }
 
@@ -50,6 +51,23 @@ class GitHubSync extends AbstractController
     protected function parseMapLines(string $value): array
     {
         $map=[]; foreach($this->lines($value) as $line){ if(!str_contains($line,'='))continue; [$k,$v]=array_map('trim',explode('=',$line,2)); if($k!==''&&(int)$v>0)$map[mb_strtolower($k)]=(int)$v; } return $map;
+    }
+    protected function stringMapLines(array $map): string
+    {
+        $out=[]; foreach($map as $k=>$v){ $k=trim((string)$k); $v=trim((string)$v); if($k!==''&&$v!=='')$out[]=$k.'='.$v; }
+        return implode("\n",$out);
+    }
+    protected function parseStringMapLines(string $value): array
+    {
+        $map=[]; foreach($this->lines($value) as $line){ if(!str_contains($line,'='))continue; [$k,$v]=array_map('trim',explode('=',$line,2)); if($k!==''&&$v!=='')$map[$k]=$v; } return $map;
+    }
+    protected function reviewMapLines(array $map): string
+    {
+        $out=[]; foreach($map as $prefix=>$event){ $prefix=(int)$prefix; $event=strtoupper(trim((string)$event)); if($prefix>0&&$event!=='')$out[]=$prefix.'='.$event; } return implode("\n",$out);
+    }
+    protected function parseReviewMapLines(string $value): array
+    {
+        $map=[]; foreach($this->lines($value) as $line){ if(!str_contains($line,'='))continue; [$prefix,$event]=array_map('trim',explode('=',$line,2)); $prefix=(int)$prefix; $event=strtoupper($event); if($prefix>0&&in_array($event,['APPROVE','REQUEST_CHANGES','COMMENT'],true))$map[$prefix]=$event; } return $map;
     }
     protected function lines(string $value): array { return array_values(array_unique(array_filter(array_map('trim',preg_split('/\R+/',trim($value))?:[]),static fn($v)=>$v!==''))); }
 }

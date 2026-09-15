@@ -13,13 +13,24 @@
 </div>
 <h2 class="block-header">XenForo source (XenForo → GitHub)</h2><div class="block-body">
 <xf:numberboxrow name="xf_node_id" value="{$source.xf_node_id}" min="0" label="Source forum node ID" explain="Only threads/posts from this forum are sent to GitHub. 0 allows any forum for this mapping." />
-<xf:selectrow name="outbound_object" value="{$source.outbound_object}" label="GitHub object"><xf:option value="issue">GitHub Issue</xf:option></xf:selectrow>
+<xf:selectrow name="outbound_object" value="{$source.outbound_object}" label="GitHub object"><xf:option value="issue">GitHub Issue</xf:option><xf:option value="pull_request">GitHub Pull Request</xf:option></xf:selectrow>
 <xf:checkboxrow label="Outbound synchronization">
 <xf:option name="sync_first_post" value="1" selected="{$source.sync_first_post}">Synchronize thread title and first post to the GitHub Issue</xf:option>
 <xf:option name="sync_replies" value="1" selected="{$source.sync_replies}">Synchronize thread replies as GitHub Issue comments</xf:option>
 <xf:option name="sync_thread_state" value="1" selected="{$source.sync_thread_state}">Synchronize thread open/closed state to the GitHub Issue</xf:option>
 <xf:option name="sync_labels" value="1" selected="{$source.sync_labels}">Synchronize XenForo thread prefix to GitHub Issue labels using the label map below</xf:option>
 </xf:checkboxrow>
+<xf:textarearow name="outbound_field_map" value="{$outboundFieldMapText}" label="Outbound field map" explain="Optional GitHub field=XenForo field mappings. Examples: title=thread.title, body=post.message, head=thread.custom_fields.github_branch, base=thread.custom_fields.github_base." autosize="true" />
+<h3 class="block-minorHeader">Pull Request options</h3>
+<xf:textboxrow name="pr_head" value="{$source.pr_head}" label="Default PR head branch" explain="Required when creating a PR unless head is provided by the outbound field map." />
+<xf:textboxrow name="pr_base" value="{$source.pr_base}" label="Default PR base branch" explain="Empty uses the repository default branch unless base is provided by the outbound field map." />
+<xf:checkboxrow label="Pull Request creation">
+<xf:option name="pr_draft" value="1" selected="{$source.pr_draft}">Create new pull requests as drafts</xf:option>
+<xf:option name="pr_maintainer_can_modify" value="1" selected="{$source.pr_maintainer_can_modify}">Allow maintainers to modify the pull request branch</xf:option>
+<xf:option name="sync_review_prefix" value="1" selected="{$source.sync_review_prefix}">Create a GitHub PR review when the thread prefix matches the review map</xf:option>
+</xf:checkboxrow>
+<xf:textarearow name="review_prefix_map" value="{$reviewPrefixMapText}" label="Prefix → PR review action" explain="One per line. Example: 12=APPROVE, 13=REQUEST_CHANGES, 14=COMMENT. Review is sent only when the prefix changes to a configured value." autosize="true" />
+<xf:textarearow name="review_body" value="{$source.review_body}" label="PR review body" explain="Optional message used for synchronized reviews." autosize="true" />
 </div>
 <h2 class="block-header">XenForo target</h2><div class="block-body">
 <xf:numberboxrow name="node_id" value="{$target.node_id}" min="0" label="Forum node ID" explain="Used when the integration should create a new thread." />
@@ -32,6 +43,7 @@
 <xf:option name="sync_remote_state" value="1" selected="{$target.sync_remote_state}">Synchronize GitHub open/closed state to the XenForo thread</xf:option>
 </xf:checkboxrow>
 <xf:textarearow name="label_prefix_map" value="{$labelMapText}" label="GitHub label ↔ XenForo prefix map" explain="One mapping per line, for example: bug=12. The same map is used in both directions." autosize="true" />
+<xf:textarearow name="inbound_field_map" value="{$inboundFieldMapText}" label="Inbound field map" explain="Optional XenForo action field=GitHub payload path. Safe targets: title, message, remote_state, prefix_id. Example: title=workflow_run.name." autosize="true" />
 <xf:selectrow name="template_id" value="{$target.template_id}" label="Reusable template"><xf:option value="0">Use inline/default template</xf:option><xf:foreach loop="$templates" value="$template"><xf:option value="{$template.template_id}">{$template.title}</xf:option></xf:foreach></xf:selectrow>
 <xf:textarearow name="title_template" value="{$target.title_template}" label="Title template override" autosize="true" />
 <xf:textarearow name="message_template" value="{$target.message_template}" label="Message template override" rows="8" />
@@ -44,6 +56,8 @@
 <xf:textarearow name="exclude_commit" value="{$filterText.exclude_commit}" label="Commit message exclude terms" autosize="true" />
 <xf:textarearow name="include_paths" value="{$filterText.include_paths}" label="Included paths" explain="Supports * and ** globs." autosize="true" />
 <xf:textarearow name="exclude_paths" value="{$filterText.exclude_paths}" label="Excluded paths" explain="Supports * and ** globs." autosize="true" />
+<xf:textarearow name="workflow_statuses" value="{$filterText.workflow_statuses}" label="Allowed workflow statuses" explain="One per line. Example: completed or in_progress. Empty means all." autosize="true" />
+<xf:textarearow name="workflow_conclusions" value="{$filterText.workflow_conclusions}" label="Allowed workflow conclusions" explain="One per line. Example: success, failure, cancelled. Empty means all." autosize="true" />
 <xf:checkboxrow label="Release states"><xf:option name="allow_prerelease" value="1" selected="{$filter.allow_prerelease}">Allow prereleases</xf:option><xf:option name="allow_draft" value="1" selected="{$filter.allow_draft}">Allow draft releases</xf:option></xf:checkboxrow>
 <xf:selectrow name="conflict_strategy" value="{$mapping.conflict_strategy}" label="Conflict strategy"><xf:option value="manual">Manual review</xf:option><xf:option value="github_wins">GitHub wins</xf:option><xf:option value="xenforo_wins">XenForo wins</xf:option><xf:option value="newest_wins">Newest wins</xf:option></xf:selectrow>
 </div><xf:submitrow submit="Save mapping" />

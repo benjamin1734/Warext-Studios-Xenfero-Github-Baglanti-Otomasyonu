@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.6.0 Alpha 6
+- Added XenForo thread → GitHub Pull Request create/update/close synchronization.
+- Added XenForo reply → Pull Request conversation comment synchronization.
+- Added optional prefix-driven GitHub Pull Request review actions with duplicate-review protection.
+- Added GitHub `workflow_run` and `workflow_job` inbound event support.
+- Added Actions branch/status/conclusion filters.
+- Added Admin CP workflow browser and explicit `workflow_dispatch` execution.
+- Added safe inbound/outbound field mapping for title/body/state/branch and related synchronization fields.
+- Added GitHub REST helpers for PR creation/update/review and Actions workflows/dispatch.
+
+## 0.5.0 Alpha 5
+- Added persistent synchronization conflict records and Admin CP conflict review/resolution workflow.
+- Added `github_wins`, `xenforo_wins`, `newest_wins`, and `manual` conflict strategies to the active inbound dispatcher.
+- Unified XenForo content hashing so inbound/outbound conflict detection uses the same title/message/prefix/open-state model.
+- Added GitHub label ↔ XenForo prefix mapping in both directions.
+- Added optional GitHub open/closed state → XenForo thread lock state synchronization.
+- Added XenForo prefix → GitHub Issue labels synchronization.
+- Added scoped GitHub-login → XenForo-user mappings and optional inbound author resolution.
+- Added `xf_wgh_user_mapping` and `xf_wgh_conflict` install/upgrade/uninstall schema support.
+- Added Admin CP screens for user mappings and conflict queue.
+- Added diagnostics/static-integrity coverage for the new modules.
+- Updated GitHub REST client user agent for the 0.5 development line.
+
 ## 0.4.0 Alpha 4
 - Added GitHub `issues`, `issue_comment`, `pull_request`, `pull_request_review`, and `pull_request_review_comment` message/action normalization.
 - Added dynamic parent-child routing so GitHub comments can automatically locate the XenForo thread created for their parent Issue/PR.
