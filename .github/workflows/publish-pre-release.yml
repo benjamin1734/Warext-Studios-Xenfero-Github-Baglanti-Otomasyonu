@@ -1,4 +1,4 @@
-name: Publish v0.9.4 Alpha 13 pre-release
+name: Publish v1.0.0 stable release
 
 on:
   push:
@@ -7,8 +7,9 @@ on:
     paths:
       - '.github/workflows/publish-pre-release.yml'
       - 'tools/build-xenforo-release.py'
-      - 'release/v0.9.4-alpha.13/**'
+      - 'release/v1.0.0/**'
       - 'src/addons/Warext/GitHubSync/**'
+      - 'README.md'
   workflow_dispatch:
 
 permissions:
@@ -18,8 +19,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     env:
-      TAG: v0.9.4-alpha.13
-      ZIP_NAME: Warext-GitHub-Sync-v0.9.4-Alpha13-install.zip
+      TAG: v1.0.0
+      ZIP_NAME: Warext-GitHub-Sync-v1.0.0-install.zip
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,6 +36,12 @@ jobs:
           addon = Path('src/addons/Warext/GitHubSync')
           templates = addon / '_output/templates'
           errors = []
+
+          addon_meta = json.loads((addon / 'addon.json').read_text(encoding='utf-8'))
+          if addon_meta.get('version_string') != '1.0.0':
+              errors.append('addon.json version_string must be 1.0.0')
+          if addon_meta.get('version_id') != 10000000:
+              errors.append('addon.json version_id must be 10000000')
 
           for path in templates.rglob('*.html'):
               text = path.read_text(encoding='utf-8')
@@ -53,7 +60,7 @@ jobs:
               errors.append('Missing wghGitHubSync root admin navigation')
           else:
               if root.get('parent_navigation_id') != '':
-                  errors.append('wghGitHubSync must be top-level (empty parent_navigation_id)')
+                  errors.append('wghGitHubSync must be top-level')
               if root.get('link') != 'github-sync':
                   errors.append('wghGitHubSync root link must be github-sync')
 
@@ -91,7 +98,7 @@ jobs:
           if errors:
               print('\n'.join(errors), file=sys.stderr)
               raise SystemExit(1)
-          print(f'XenForo source validation: OK ({len(expected_children)} child navigation entries)')
+          print(f'XenForo stable source validation: OK ({len(expected_children)} child navigation entries)')
           PY
 
       - name: Build XenForo installation ZIP
@@ -110,8 +117,8 @@ jobs:
                  dist/upload/src/addons/Warext/GitHubSync/_releases
           rm -f dist/upload/src/addons/Warext/GitHubSync/hashes.json
 
-          cp release/v0.9.4-alpha.13/INSTALL.md dist/KURULUM-INSTALL.md
-          cp release/v0.9.4-alpha.13/RELEASE_NOTES.md dist/RELEASE_NOTES.md
+          cp release/v1.0.0/INSTALL.md dist/KURULUM-INSTALL.md
+          cp release/v1.0.0/RELEASE_NOTES.md dist/RELEASE_NOTES.md
 
           python - <<'PY'
           from pathlib import Path
@@ -120,22 +127,23 @@ jobs:
           upload = Path('dist/upload')
           addon = upload / 'src/addons/Warext/GitHubSync'
 
-          nav_xml = addon / '_data/admin_navigation.xml'
-          route_xml = addon / '_data/routes.xml'
-          nav_root = ET.parse(nav_xml).getroot()
+          nav_root = ET.parse(addon / '_data/admin_navigation.xml').getroot()
           nav_items = list(nav_root)
           if len(nav_items) < 14:
               raise SystemExit(f'Expected at least 14 admin navigation records, found {len(nav_items)}')
-          route_text = route_xml.read_text(encoding='utf-8')
+          route_text = (addon / '_data/routes.xml').read_text(encoding='utf-8')
           if 'wghGitHubSync' not in route_text:
               raise SystemExit('Built routes.xml does not contain wghGitHubSync section context')
+
+          for xml_path in (addon / '_data').glob('*.xml'):
+              ET.parse(xml_path)
 
           hashes = {}
           for path in sorted(upload.rglob('*')):
               if path.is_file() and path.name != 'hashes.json':
                   hashes[path.relative_to(upload).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
           (addon / 'hashes.json').write_text(json.dumps(hashes, indent=2) + '\n', encoding='utf-8')
-          print(f'Built admin navigation records: {len(nav_items)}')
+          print(f'Stable package validation: {len(nav_items)} admin navigation records, {len(hashes)} hashed files')
           PY
 
           (
@@ -151,7 +159,7 @@ jobs:
           unzip -l "${ZIP_NAME}" | grep -q '_data/templates.xml'
           unzip -l "${ZIP_NAME}" | grep -q 'hashes.json'
 
-      - name: Create or update pre-release
+      - name: Create or update stable release
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
@@ -159,18 +167,19 @@ jobs:
           set -euo pipefail
           if gh release view "${TAG}" >/dev/null 2>&1; then
             gh release edit "${TAG}" \
-              --title "Warext GitHub Sync v0.9.4 Alpha 13" \
-              --notes-file release/v0.9.4-alpha.13/RELEASE_NOTES.md \
-              --prerelease
+              --title "Warext GitHub Sync v1.0.0" \
+              --notes-file release/v1.0.0/RELEASE_NOTES.md \
+              --prerelease=false \
+              --latest
           else
             gh release create "${TAG}" \
               --target "${GITHUB_SHA}" \
-              --title "Warext GitHub Sync v0.9.4 Alpha 13" \
-              --notes-file release/v0.9.4-alpha.13/RELEASE_NOTES.md \
-              --prerelease
+              --title "Warext GitHub Sync v1.0.0" \
+              --notes-file release/v1.0.0/RELEASE_NOTES.md \
+              --latest
           fi
 
-      - name: Upload installation assets
+      - name: Upload stable installation assets
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
