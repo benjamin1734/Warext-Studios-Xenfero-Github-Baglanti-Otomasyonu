@@ -48,9 +48,12 @@ final class EventDispatcher
         }
 
         $filter = new FilterMatcher();
+        $registry = new SyncRegistry();
         $messageFactory = new MessageFactory(new TemplateRenderer());
-        $executor = new XenForoActionExecutor(new SyncRegistry());
+        $executor = new XenForoActionExecutor($registry);
+        $conflictResolver = new ConflictResolver();
         $processed = 0;
+        $conflicts = 0;
 
         foreach ($mappings as $mapping)
         {
@@ -64,17 +67,30 @@ final class EventDispatcher
             }
 
             $action = $messageFactory->build($mapping, $repository, $event);
+            $existing = $registry->find($mapping, (string)$action['object_type'], (string)$action['object_id']);
+            if (($action['action_mode'] ?? 'upsert') !== 'delete'
+                && !$conflictResolver->allowInbound($mapping, $repository, $existing, $action, (string)$delivery->payload_hash))
+            {
+                if ((string)$mapping->conflict_strategy === 'manual') $conflicts++;
+                continue;
+            }
+
             $executor->execute($mapping, $repository, $action, (string)$delivery->payload_hash);
             $processed++;
         }
 
         if ($processed === 0)
         {
+            if ($conflicts > 0)
+            {
+                $this->finish($delivery, 'conflict', sprintf('%d synchronization conflict(s) queued for review.', $conflicts));
+                return;
+            }
             $this->finish($delivery, 'ignored', 'Mappings matched but all were filtered or directional.');
             return;
         }
 
-        $this->finish($delivery, 'processed', '');
+        $this->finish($delivery, 'processed', $conflicts > 0 ? sprintf('%d mapping(s) processed; %d conflict(s) queued.', $processed, $conflicts) : '');
     }
 
     private function finish(Delivery $delivery, string $status, string $message): void
