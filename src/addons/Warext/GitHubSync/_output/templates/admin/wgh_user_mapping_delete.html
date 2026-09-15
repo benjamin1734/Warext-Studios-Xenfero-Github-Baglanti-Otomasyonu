@@ -1,0 +1,2 @@
+<xf:title>Delete user mapping</xf:title>
+<xf:form action="{{ link('github-sync/user-mapping-delete', null, {'user_mapping_id': $userMapping.user_mapping_id}) }}" ajax="true" class="block"><div class="block-container"><div class="block-body block-row">Delete mapping for <strong>{$userMapping.github_login}</strong>?</div><xf:submitrow submit="Delete" /></div></xf:form>
