@@ -1,17 +1,26 @@
 # Değişiklik Günlüğü
 
+## 0.9.0 Alpha 9
+- Webhooklardan yakalanan ve istenirse GitHub'dan yenilenen kalıcı `workflow_run` geçmişi eklendi.
+- GitHub Actions run kontrolleri eklendi: yeniden çalıştırma, yalnızca başarısız jobları yeniden çalıştırma ve iptal.
+- Admin CP üzerinden kullanıcı loginleri ve organizasyon team slugları için Pull Request reviewer request yönetimi eklendi.
+- İşlem başına en fazla 50 seçili kayıt için toplu XFRM retry/reconcile eklendi.
+- Inbound/outbound job aktivitesiyle otomatik değerlendirilen kalıcı health alert geçmişi eklendi.
+- `warextGitHubSync.healthThresholds` altında ayarlanabilir health eşikleri eklendi.
+- Workflow run ve health alert tabloları ile 0.9 upgrade adımları eklendi.
+- GitHub REST user-agent 0.9 geliştirme hattına yükseltildi.
+
 ## 0.8.0 Alpha 8
 - XFRM senkronizasyon geçmişi/audit kayıtları ve işlem snapshotları eklendi.
-- GitHub App API üzerinden güncel Release kaydını yeniden çekerek çalışan manuel XFRM retry eklendi.
+- GitHub App API üzerinden gerçek Release kaydını tekrar çekerek çalışan manuel XFRM retry eklendi.
 - Resource, ResourceVersion ve Resource Update kimlikleri için remote reconcile kontrolü eklendi.
-- Uzak XFRM içeriğini sessizce değiştirmeyen güvenli local tracking snapshot restore sistemi eklendi.
-- Retry/attempt/success/reconcile zamanları ve remote-state takibi eklendi.
-- Sender/delivery metadata gürültüsünün gereksiz işlem oluşturmaması için semantik GitHub Release hash sistemi eklendi.
-- Admin CP için ayrı XFRM mapping yöneticisi, kayıt detay ve history ekranları eklendi.
-- Webhook backlog/hata, çözülmemiş conflict ve XFRM failed/attention/stale metriklerini gösteren Health ekranı eklendi.
-- Reconcile sırasında 404 ile auth/sunucu hatalarını ayıran tipli XFRM API exception katmanı eklendi.
-- `xf_wgh_xfrm_history` tablosu ve 0.8 upgrade şeması eklendi.
-- Setup tablo kurulum yapısı helper metodlara ayrılarak sadeleştirildi; eski Alpha upgrade adımları korundu.
+- Uzak XFRM içeriğini sessizce geri almayan güvenli local tracking snapshot restore sistemi eklendi.
+- Retry/attempt/success/reconcile zamanları ve remote state takibi eklendi.
+- Gereksiz payload/sender değişikliklerinin XFRM işlemi üretmemesi için semantik Release hash sistemi eklendi.
+- Admin CP için ayrı XFRM mapping yöneticisi eklendi.
+- Webhook backlog/hata, conflict ve XFRM attention metriklerini gösteren Health ekranı eklendi.
+- Reconcile sırasında 404 ile auth/sunucu hatalarını ayıran XFRM API exception katmanı eklendi.
+- XFRM history tablosu ve 0.8 upgrade şeması eklendi.
 
 ## 0.7.0 Alpha 7
 - GitHub Release → mevcut XFRM resource senkronizasyonu eklendi.
@@ -35,17 +44,24 @@
 ## 0.5.0 Alpha 5
 - Kalıcı conflict kayıtları ve Admin CP conflict inceleme/çözüm akışı eklendi.
 - `github_wins`, `xenforo_wins`, `newest_wins` ve `manual` stratejileri gerçek inbound işlem motoruna bağlandı.
-- GitHub ↔ XenForo karşılaştırmalarında ortak mesaj/başlık/prefix/açık-kapalı hash modeli kullanıldı.
+- GitHub ↔ XenForo karşılaştırmalarında aynı mesaj/başlık/prefix/açık-kapalı hash modeli kullanılacak şekilde hash sistemi birleştirildi.
 - GitHub label ↔ XenForo konu prefix eşlemesi iki yönde eklendi.
-- GitHub Issue açık/kapalı durumu ↔ XenForo konu durumu senkronizasyonu eklendi.
+- GitHub Issue açık/kapalı durumu → XenForo konu açık/kapalı durumu senkronizasyonu eklendi.
+- XenForo konu prefix → GitHub Issue label senkronizasyonu eklendi.
 - Repository/connection/global kapsamlı GitHub kullanıcı adı → XenForo kullanıcı ID eşlemeleri eklendi.
-- `xf_wgh_user_mapping` ve `xf_wgh_conflict` şemaları ile Admin CP ekranları eklendi.
+- `xf_wgh_user_mapping` ve `xf_wgh_conflict` kurulum/yükseltme/kaldırma şemaları eklendi.
+- Kullanıcı eşlemeleri ve conflict kuyruğu için Admin CP ekranları eklendi.
 
 ## 0.4.0 Alpha 4
-- GitHub Issues, comments, Pull Requests, PR reviews ve review comment olayları eklendi.
-- Dinamik parent yönlendirme ve kalıcı Issue/PR metadata eşlemesi eklendi.
-- XenForo Thread/Post eventlerinden GitHub'a outbound queue + retry sistemi eklendi.
-- XenForo konusu → GitHub Issue ve XenForo cevapları → Issue comment akışları eklendi.
-- `SyncGuard` ile çift yönlü sonsuz döngü koruması eklendi.
+- GitHub `issues`, `issue_comment`, `pull_request`, `pull_request_review` ve `pull_request_review_comment` olayları eklendi.
+- GitHub yorumlarının parent Issue/PR üzerinden doğru XenForo konusunu otomatik bulduğu dinamik yönlendirme eklendi.
+- Issue/PR numarası metadata'sı kalıcı sync kayıtlarına eklendi.
+- XenForo Thread/Post save/delete event listenerları eklendi.
+- XenForo kullanıcı işlemlerini GitHub ağı yüzünden bekletmemek için outbound queue + retry sistemi eklendi.
+- XenForo konusu → GitHub Issue oluşturma/güncelleme/kapatma eklendi.
+- XenForo cevapları → GitHub Issue comment oluşturma/güncelleme/silme eklendi.
+- GitHub → XenForo → GitHub sonsuz döngüsünü engelleyen `SyncGuard` eklendi.
+- Mapping ekranına source forum, ilk mesaj, cevap ve durum senkronizasyon seçenekleri eklendi.
+- Reverse XenForo lookup ve repository parent lookup özellikleri Sync Registry'ye eklendi.
 
 Önceki Alpha sürümlerinin ayrıntılı İngilizce geçmişi için [CHANGELOG.md](CHANGELOG.md) dosyasına bakın.

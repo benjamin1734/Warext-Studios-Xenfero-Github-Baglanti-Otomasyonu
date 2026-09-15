@@ -1,48 +1,20 @@
 <xf:title>GitHub Actions</xf:title>
 <xf:macro template="wgh_macros" name="nav" arg-selected="actions" />
-
-<xf:form action="{{ link('github-sync/actions') }}" method="get" class="block">
-	<div class="block-container">
-		<h2 class="block-header">Repository workflows</h2>
-		<div class="block-body">
-			<xf:selectrow name="repository_id" value="{$repositoryId}" label="Repository">
-				<xf:option value="0">Select repository</xf:option>
-				<xf:foreach loop="$repositories" value="$repository"><xf:option value="{$repository.repository_id}">{$repository.full_name}</xf:option></xf:foreach>
-			</xf:selectrow>
-		</div>
-		<xf:submitrow submit="Load workflows" />
-	</div>
-</xf:form>
-
-<xf:if is="$error">
-	<div class="blockMessage blockMessage--error">{$error}</div>
-</xf:if>
-
+<xf:form action="{{ link('github-sync/actions') }}" method="get" class="block"><div class="block-container"><h2 class="block-header">Repository workflows</h2><div class="block-body">
+<xf:selectrow name="repository_id" value="{$repositoryId}" label="Repository"><xf:option value="0">Select repository</xf:option><xf:foreach loop="$repositories" value="$repository"><xf:option value="{$repository.repository_id}">{$repository.full_name}</xf:option></xf:foreach></xf:selectrow>
+</div><xf:submitrow submit="Load workflows" /></div></xf:form>
+<xf:if is="$error"><div class="blockMessage blockMessage--error">{$error}</div></xf:if>
 <xf:if is="$selectedRepository && !$error">
-	<div class="block">
-		<div class="block-container">
-			<h2 class="block-header">{$selectedRepository.full_name}</h2>
-			<div class="block-body">
-				<xf:if is="$workflows is not empty">
-					<xf:foreach loop="$workflows" value="$workflow">
-						<xf:form action="{{ link('github-sync/workflow-dispatch') }}" ajax="true" class="block-row block-row--separated">
-							<input type="hidden" name="repository_id" value="{$selectedRepository.repository_id}" />
-							<input type="hidden" name="workflow_id" value="{$workflow.id}" />
-							<div class="contentRow">
-								<div class="contentRow-main">
-									<h3 class="contentRow-title">{$workflow.name}</h3>
-									<div class="contentRow-minor">{$workflow.path} · {$workflow.state}</div>
-									<xf:textboxrow name="ref" value="{$selectedRepository.default_branch}" label="Ref" />
-									<xf:textarearow name="inputs_json" value="{}" label="Inputs JSON" explain="Optional workflow_dispatch inputs object." autosize="true" />
-									<xf:submitrow submit="Run workflow" />
-								</div>
-							</div>
-						</xf:form>
-					</xf:foreach>
-				<xf:else />
-					<div class="block-row">No workflows were returned for this repository.</div>
-				</xf:if>
-			</div>
-		</div>
-	</div>
+<div class="block"><div class="block-container"><h2 class="block-header">{$selectedRepository.full_name}</h2><div class="block-body">
+<xf:foreach loop="$workflows" value="$workflow"><xf:form action="{{ link('github-sync/workflow-dispatch') }}" ajax="true" class="block-row block-row--separated">
+<input type="hidden" name="repository_id" value="{$selectedRepository.repository_id}" /><input type="hidden" name="workflow_id" value="{$workflow.id}" />
+<h3>{$workflow.name}</h3><div class="u-muted">{$workflow.path} · {$workflow.state}</div><xf:textboxrow name="ref" value="{$selectedRepository.default_branch}" label="Ref" /><xf:textarearow name="inputs_json" value="{}" label="Inputs JSON" autosize="true" /><xf:submitrow submit="Run workflow" />
+</xf:form></xf:foreach>
+</div></div></div>
+<xf:form action="{{ link('github-sync/workflow-runs-refresh') }}" ajax="true" class="block"><input type="hidden" name="repository_id" value="{$selectedRepository.repository_id}" /><div class="block-container"><h2 class="block-header">Workflow run history</h2><div class="block-body block-row"><p>Webhook-captured runs are stored locally. Refresh imports the latest 50 runs from GitHub.</p></div><xf:submitrow submit="Refresh run history from GitHub" /></div></xf:form>
+<div class="block"><div class="block-container"><div class="block-body"><table class="dataList"><thead><tr class="dataList-row"><th class="dataList-cell">Run</th><th class="dataList-cell">Branch</th><th class="dataList-cell">Status</th><th class="dataList-cell">Actor</th><th class="dataList-cell">Actions</th></tr></thead><tbody>
+<xf:foreach loop="$runs" value="$run"><tr class="dataList-row"><td class="dataList-cell">{$run.workflow_name} #{$run.run_number}<br /><span class="u-muted">{$run.github_run_id}</span></td><td class="dataList-cell">{$run.branch}</td><td class="dataList-cell">{$run.status}<xf:if is="$run.conclusion"> / {$run.conclusion}</xf:if></td><td class="dataList-cell">{$run.actor_login}</td><td class="dataList-cell">
+<xf:form action="{{ link('github-sync/workflow-run-control') }}" ajax="true"><input type="hidden" name="repository_id" value="{$selectedRepository.repository_id}" /><input type="hidden" name="run_id" value="{$run.github_run_id}" /><xf:select name="run_operation"><xf:option value="rerun">Re-run</xf:option><xf:option value="rerun_failed">Re-run failed jobs</xf:option><xf:option value="cancel">Cancel</xf:option></xf:select> <xf:submit submit="Apply" /></xf:form>
+</td></tr></xf:foreach>
+</tbody></table></div></div></div>
 </xf:if>

@@ -3,6 +3,7 @@
 namespace Warext\GitHubSync\Job;
 
 use Warext\GitHubSync\Service\Sync\OutboundProcessor;
+use Warext\GitHubSync\Service\Admin\HealthAlertManager;
 use XF\Job\AbstractJob;
 
 class ProcessOutbound extends AbstractJob
@@ -55,6 +56,7 @@ class ProcessOutbound extends AbstractJob
             }
         }
 
+        (new HealthAlertManager())->evaluate();
         return $this->complete();
     }
 

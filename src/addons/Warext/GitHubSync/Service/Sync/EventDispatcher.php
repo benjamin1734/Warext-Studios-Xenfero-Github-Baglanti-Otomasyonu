@@ -6,6 +6,7 @@ use RuntimeException;
 use Warext\GitHubSync\Entity\Delivery;
 use Warext\GitHubSync\Service\Webhook\EventNormalizer;
 use Warext\GitHubSync\Service\XFRM\ReleaseSynchronizer;
+use Warext\GitHubSync\Service\GitHub\WorkflowRunTracker;
 
 final class EventDispatcher
 {
@@ -33,6 +34,8 @@ final class EventDispatcher
             $this->finish($delivery, 'ignored', 'Repository is not registered or is inactive.');
             return;
         }
+
+        (new WorkflowRunTracker())->capture($repository, $event);
 
         /** @var \Warext\GitHubSync\Repository\Mapping $mappingRepo */
         $mappingRepo = \XF::repository('Warext\\GitHubSync:Mapping');

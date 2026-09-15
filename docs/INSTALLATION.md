@@ -96,3 +96,9 @@ $config['warextGitHubSync']['xfrmApiKeys'] = [
 ```
 
 The mapping stores only `github_xfrm`. The real API key is never saved to the add-on database.
+
+## Additional GitHub App permissions for 0.9 tools
+
+- Pull Request reviewer inspection requires **Pull requests: read**; requesting or removing reviewers requires **Pull requests: write**.
+- Workflow-run history refresh requires **Actions: read**; re-run/cancel operations require **Actions: write**.
+- Keep these permissions disabled if you do not use the corresponding Admin CP tools.

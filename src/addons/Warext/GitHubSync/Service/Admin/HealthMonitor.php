@@ -20,16 +20,23 @@ final class HealthMonitor
         $staleXfrm = \XF::finder('Warext\\GitHubSync:XfrmRelease')->where('status',['synced','attention'])->where('updated_date','<',$day)->where('last_reconcile_date',0)->total();
         $inactiveConnections = \XF::finder('Warext\\GitHubSync:Connection')->where('active',0)->total();
 
+        $config = \XF::config('warextGitHubSync');
+        $thresholds = is_array($config) && is_array($config['healthThresholds'] ?? null) ? $config['healthThresholds'] : [];
+        $failedCritical = max(1, (int)($thresholds['failedPerHourCritical'] ?? 1));
+        $pendingCritical = max(60, (int)($thresholds['pendingAgeCritical'] ?? 900));
+        $conflictDegraded = max(1, (int)($thresholds['conflictsDegraded'] ?? 1));
+        $attentionDegraded = max(1, (int)($thresholds['xfrmAttentionDegraded'] ?? 1));
+
         $severity = 'healthy';
         $reasons = [];
-        if ($failedHour > 0 || $xfrmFailed > 0 || $pendingAge > 900)
+        if ($failedHour >= $failedCritical || $xfrmFailed > 0 || $pendingAge > $pendingCritical)
         {
             $severity = 'critical';
             if ($failedHour) $reasons[] = $failedHour . ' webhook failure(s) in the last hour';
             if ($xfrmFailed) $reasons[] = $xfrmFailed . ' failed XFRM sync record(s)';
-            if ($pendingAge > 900) $reasons[] = 'oldest webhook pending for ' . $pendingAge . ' seconds';
+            if ($pendingAge > $pendingCritical) $reasons[] = 'oldest webhook pending for ' . $pendingAge . ' seconds';
         }
-        elseif ($conflicts > 0 || $xfrmAttention > 0 || $staleXfrm > 0)
+        elseif ($conflicts >= $conflictDegraded || $xfrmAttention >= $attentionDegraded || $staleXfrm > 0)
         {
             $severity = 'degraded';
             if ($conflicts) $reasons[] = $conflicts . ' pending conflict(s)';
@@ -49,6 +56,7 @@ final class HealthMonitor
             'xfrmAttention' => $xfrmAttention,
             'staleXfrm' => $staleXfrm,
             'inactiveConnections' => $inactiveConnections,
+            'thresholds' => ['failedPerHourCritical'=>$failedCritical,'pendingAgeCritical'=>$pendingCritical,'conflictsDegraded'=>$conflictDegraded,'xfrmAttentionDegraded'=>$attentionDegraded],
             'generatedAt' => $now
         ];
     }

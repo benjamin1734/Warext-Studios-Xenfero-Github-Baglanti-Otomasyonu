@@ -17,179 +17,68 @@ final class ApiClient
 
     public function installationToken(Connection $connection): string
     {
-        if ((int)$connection->installation_id <= 0)
-        {
-            throw new RuntimeException('GitHub App installation ID is not configured.');
-        }
-
-        $jwt = $this->jwtFactory->create(
-            (int)$connection->app_id,
-            $this->credentialProvider->privateKey($connection)
-        );
-
-        $data = $this->requestJson(
-            'POST',
-            '/app/installations/' . (int)$connection->installation_id . '/access_tokens',
-            $jwt,
-            []
-        );
-
+        if ((int)$connection->installation_id <= 0) throw new RuntimeException('GitHub App installation ID is not configured.');
+        $jwt = $this->jwtFactory->create((int)$connection->app_id,$this->credentialProvider->privateKey($connection));
+        $data = $this->requestJson('POST','/app/installations/' . (int)$connection->installation_id . '/access_tokens',$jwt,[]);
         $token = (string)($data['token'] ?? '');
-        if ($token === '')
-        {
-            throw new RuntimeException('GitHub did not return an installation access token.');
-        }
-
+        if ($token === '') throw new RuntimeException('GitHub did not return an installation access token.');
         return $token;
     }
 
     public function installation(Connection $connection): array
     {
-        $jwt = $this->jwtFactory->create(
-            (int)$connection->app_id,
-            $this->credentialProvider->privateKey($connection)
-        );
-
-        return $this->requestJson(
-            'GET',
-            '/app/installations/' . (int)$connection->installation_id,
-            $jwt
-        );
+        $jwt = $this->jwtFactory->create((int)$connection->app_id,$this->credentialProvider->privateKey($connection));
+        return $this->requestJson('GET','/app/installations/' . (int)$connection->installation_id,$jwt);
     }
 
-    /** @return array<int, array<string,mixed>> */
     public function installationRepositories(Connection $connection): array
     {
-        $token = $this->installationToken($connection);
-        $repositories = [];
-        $page = 1;
-
-        do
-        {
-            $data = $this->requestJson(
-                'GET',
-                '/installation/repositories?per_page=100&page=' . $page,
-                $token
-            );
-            $batch = $data['repositories'] ?? [];
-            if (!is_array($batch))
-            {
-                $batch = [];
-            }
-            foreach ($batch as $repository)
-            {
-                if (is_array($repository))
-                {
-                    $repositories[] = $repository;
-                }
-            }
-            $page++;
-        }
-        while (count($batch) === 100 && $page <= 100);
-
+        $token=$this->installationToken($connection); $repositories=[]; $page=1;
+        do { $data=$this->requestJson('GET','/installation/repositories?per_page=100&page='.$page,$token); $batch=$data['repositories']??[]; if(!is_array($batch))$batch=[]; foreach($batch as $r)if(is_array($r))$repositories[]=$r; $page++; }
+        while(count($batch)===100&&$page<=100);
         return $repositories;
     }
 
-    public function requestInstallation(Connection $connection, string $method, string $path, array $json = []): array
-    {
-        return $this->requestJson($method, $path, $this->installationToken($connection), $json);
-    }
+    public function requestInstallation(Connection $connection,string $method,string $path,array $json=[]): array { return $this->requestJson($method,$path,$this->installationToken($connection),$json); }
+    public function getRelease(Connection $connection,string $owner,string $repo,int $releaseId): array { if($releaseId<=0)throw new RuntimeException('GitHub release ID must be positive.'); return $this->requestInstallation($connection,'GET',$this->repoPath($owner,$repo).'/releases/'.$releaseId); }
 
-    public function getRelease(Connection $connection, string $owner, string $repo, int $releaseId): array
-    {
-        if ($releaseId <= 0) throw new RuntimeException('GitHub release ID must be positive.');
-        return $this->requestInstallation($connection, 'GET', $this->repoPath($owner, $repo) . '/releases/' . $releaseId);
-    }
+    public function createIssue(Connection $connection,string $owner,string $repo,string $title,string $body,array $labels=[]): array
+    { $p=['title'=>$title,'body'=>$body]; if($labels!==[])$p['labels']=array_values(array_unique(array_map('strval',$labels))); return $this->requestInstallation($connection,'POST',$this->repoPath($owner,$repo).'/issues',$p); }
+    public function updateIssue(Connection $connection,string $owner,string $repo,int $number,array $changes): array { return $this->requestInstallation($connection,'PATCH',$this->repoPath($owner,$repo).'/issues/'.$number,$changes); }
+    public function createIssueComment(Connection $connection,string $owner,string $repo,int $number,string $body): array { return $this->requestInstallation($connection,'POST',$this->repoPath($owner,$repo).'/issues/'.$number.'/comments',['body'=>$body]); }
+    public function updateIssueComment(Connection $connection,string $owner,string $repo,int $commentId,string $body): array { return $this->requestInstallation($connection,'PATCH',$this->repoPath($owner,$repo).'/issues/comments/'.$commentId,['body'=>$body]); }
+    public function deleteIssueComment(Connection $connection,string $owner,string $repo,int $commentId): void { $this->requestInstallation($connection,'DELETE',$this->repoPath($owner,$repo).'/issues/comments/'.$commentId); }
 
-    public function createIssue(Connection $connection, string $owner, string $repo, string $title, string $body, array $labels = []): array
-    {
-        $payload = ['title' => $title, 'body' => $body];
-        if ($labels !== []) $payload['labels'] = array_values(array_unique(array_map('strval', $labels)));
-        return $this->requestInstallation($connection, 'POST', $this->repoPath($owner, $repo) . '/issues', $payload);
-    }
+    public function createPullRequest(Connection $connection,string $owner,string $repo,string $title,string $body,string $head,string $base,bool $draft=false,bool $maintainerCanModify=true): array
+    { return $this->requestInstallation($connection,'POST',$this->repoPath($owner,$repo).'/pulls',['title'=>$title,'body'=>$body,'head'=>$head,'base'=>$base,'draft'=>$draft,'maintainer_can_modify'=>$maintainerCanModify]); }
+    public function updatePullRequest(Connection $connection,string $owner,string $repo,int $number,array $changes): array { return $this->requestInstallation($connection,'PATCH',$this->repoPath($owner,$repo).'/pulls/'.$number,$changes); }
+    public function createPullRequestReview(Connection $connection,string $owner,string $repo,int $number,string $event,string $body): array
+    { $event=strtoupper(trim($event)); if(!in_array($event,['APPROVE','REQUEST_CHANGES','COMMENT'],true))throw new RuntimeException('Unsupported pull request review event: '.$event); return $this->requestInstallation($connection,'POST',$this->repoPath($owner,$repo).'/pulls/'.$number.'/reviews',['event'=>$event,'body'=>$body]); }
 
-    public function updateIssue(Connection $connection, string $owner, string $repo, int $number, array $changes): array
-    {
-        return $this->requestInstallation($connection, 'PATCH', $this->repoPath($owner, $repo) . '/issues/' . $number, $changes);
-    }
+    public function listWorkflows(Connection $connection,string $owner,string $repo): array { return $this->requestInstallation($connection,'GET',$this->repoPath($owner,$repo).'/actions/workflows?per_page=100'); }
+    public function dispatchWorkflow(Connection $connection,string $owner,string $repo,string $workflowId,string $ref,array $inputs=[]): array
+    { $p=['ref'=>$ref]; if($inputs!==[])$p['inputs']=$inputs; return $this->requestInstallation($connection,'POST',$this->repoPath($owner,$repo).'/actions/workflows/'.rawurlencode($workflowId).'/dispatches',$p); }
+    public function listWorkflowRuns(Connection $connection,string $owner,string $repo,int $perPage=50): array { $perPage=max(1,min(100,$perPage)); return $this->requestInstallation($connection,'GET',$this->repoPath($owner,$repo).'/actions/runs?per_page='.$perPage); }
+    public function rerunWorkflowRun(Connection $connection,string $owner,string $repo,int $runId,bool $debug=false): array { return $this->requestInstallation($connection,'POST',$this->repoPath($owner,$repo).'/actions/runs/'.$runId.'/rerun',['enable_debug_logging'=>$debug]); }
+    public function rerunFailedWorkflowJobs(Connection $connection,string $owner,string $repo,int $runId,bool $debug=false): array { return $this->requestInstallation($connection,'POST',$this->repoPath($owner,$repo).'/actions/runs/'.$runId.'/rerun-failed-jobs',['enable_debug_logging'=>$debug]); }
+    public function cancelWorkflowRun(Connection $connection,string $owner,string $repo,int $runId): array { return $this->requestInstallation($connection,'POST',$this->repoPath($owner,$repo).'/actions/runs/'.$runId.'/cancel'); }
 
-    public function createIssueComment(Connection $connection, string $owner, string $repo, int $number, string $body): array
-    {
-        return $this->requestInstallation($connection, 'POST', $this->repoPath($owner, $repo) . '/issues/' . $number . '/comments', ['body' => $body]);
-    }
+    public function getPullRequest(Connection $connection,string $owner,string $repo,int $number): array { return $this->requestInstallation($connection,'GET',$this->repoPath($owner,$repo).'/pulls/'.$number); }
+    public function getRequestedReviewers(Connection $connection,string $owner,string $repo,int $number): array { return $this->requestInstallation($connection,'GET',$this->repoPath($owner,$repo).'/pulls/'.$number.'/requested_reviewers'); }
+    public function requestReviewers(Connection $connection,string $owner,string $repo,int $number,array $reviewers=[],array $teamReviewers=[]): array
+    { $p=[]; if($reviewers!==[])$p['reviewers']=array_values(array_unique(array_filter(array_map('strval',$reviewers)))); if($teamReviewers!==[])$p['team_reviewers']=array_values(array_unique(array_filter(array_map('strval',$teamReviewers)))); if($p===[])throw new RuntimeException('At least one reviewer or team reviewer is required.'); return $this->requestInstallation($connection,'POST',$this->repoPath($owner,$repo).'/pulls/'.$number.'/requested_reviewers',$p); }
+    public function removeRequestedReviewers(Connection $connection,string $owner,string $repo,int $number,array $reviewers=[],array $teamReviewers=[]): array
+    { $p=[]; if($reviewers!==[])$p['reviewers']=array_values(array_unique(array_filter(array_map('strval',$reviewers)))); if($teamReviewers!==[])$p['team_reviewers']=array_values(array_unique(array_filter(array_map('strval',$teamReviewers)))); if($p===[])throw new RuntimeException('At least one reviewer or team reviewer is required.'); return $this->requestInstallation($connection,'DELETE',$this->repoPath($owner,$repo).'/pulls/'.$number.'/requested_reviewers',$p); }
 
-    public function updateIssueComment(Connection $connection, string $owner, string $repo, int $commentId, string $body): array
-    {
-        return $this->requestInstallation($connection, 'PATCH', $this->repoPath($owner, $repo) . '/issues/comments/' . $commentId, ['body' => $body]);
-    }
+    private function repoPath(string $owner,string $repo): string { return '/repos/'.rawurlencode($owner).'/'.rawurlencode($repo); }
 
-    public function deleteIssueComment(Connection $connection, string $owner, string $repo, int $commentId): void
+    private function requestJson(string $method,string $path,string $bearerToken,array $json=[]): array
     {
-        $this->requestInstallation($connection, 'DELETE', $this->repoPath($owner, $repo) . '/issues/comments/' . $commentId);
-    }
-
-    public function createPullRequest(Connection $connection, string $owner, string $repo, string $title, string $body, string $head, string $base, bool $draft = false, bool $maintainerCanModify = true): array
-    {
-        return $this->requestInstallation($connection, 'POST', $this->repoPath($owner, $repo) . '/pulls', [
-            'title' => $title, 'body' => $body, 'head' => $head, 'base' => $base,
-            'draft' => $draft, 'maintainer_can_modify' => $maintainerCanModify
-        ]);
-    }
-
-    public function updatePullRequest(Connection $connection, string $owner, string $repo, int $number, array $changes): array
-    {
-        return $this->requestInstallation($connection, 'PATCH', $this->repoPath($owner, $repo) . '/pulls/' . $number, $changes);
-    }
-
-    public function createPullRequestReview(Connection $connection, string $owner, string $repo, int $number, string $event, string $body): array
-    {
-        $event = strtoupper(trim($event));
-        if (!in_array($event, ['APPROVE', 'REQUEST_CHANGES', 'COMMENT'], true)) throw new RuntimeException('Unsupported pull request review event: ' . $event);
-        return $this->requestInstallation($connection, 'POST', $this->repoPath($owner, $repo) . '/pulls/' . $number . '/reviews', ['event' => $event, 'body' => $body]);
-    }
-
-    public function listWorkflows(Connection $connection, string $owner, string $repo): array
-    {
-        return $this->requestInstallation($connection, 'GET', $this->repoPath($owner, $repo) . '/actions/workflows?per_page=100');
-    }
-
-    public function dispatchWorkflow(Connection $connection, string $owner, string $repo, string $workflowId, string $ref, array $inputs = []): array
-    {
-        $payload = ['ref' => $ref];
-        if ($inputs !== []) $payload['inputs'] = $inputs;
-        return $this->requestInstallation($connection, 'POST', $this->repoPath($owner, $repo) . '/actions/workflows/' . rawurlencode($workflowId) . '/dispatches', $payload);
-    }
-
-    private function repoPath(string $owner, string $repo): string
-    {
-        return '/repos/' . rawurlencode($owner) . '/' . rawurlencode($repo);
-    }
-
-    private function requestJson(string $method, string $path, string $bearerToken, array $json = []): array
-    {
-        $client = \XF::app()->http()->client();
-        $options = [
-            'headers' => [
-                'Accept' => 'application/vnd.github+json',
-                'Authorization' => 'Bearer ' . $bearerToken,
-                'X-GitHub-Api-Version' => self::API_VERSION,
-                'User-Agent' => 'Warext-GitHub-Sync/0.8'
-            ],
-            'http_errors' => false,
-            'timeout' => 20,
-            'connect_timeout' => 8
-        ];
-        if ($json !== [] || strtoupper($method) !== 'GET') $options['json'] = $json;
-        $response = $client->request(strtoupper($method), self::API_BASE . $path, $options);
-        $status = (int)$response->getStatusCode();
-        $body = (string)$response->getBody();
-        $data = $body !== '' ? json_decode($body, true) : [];
-        if (!is_array($data)) $data = [];
-        if ($status < 200 || $status >= 300)
-        {
-            $message = (string)($data['message'] ?? ('HTTP ' . $status));
-            throw new RuntimeException('GitHub API request failed: ' . $message . ' (' . $status . ')');
-        }
+        $client=\XF::app()->http()->client();
+        $options=['headers'=>['Accept'=>'application/vnd.github+json','Authorization'=>'Bearer '.$bearerToken,'X-GitHub-Api-Version'=>self::API_VERSION,'User-Agent'=>'Warext-GitHub-Sync/0.9'],'http_errors'=>false,'timeout'=>20,'connect_timeout'=>8];
+        if($json!==[]||strtoupper($method)!=='GET')$options['json']=$json;
+        $response=$client->request(strtoupper($method),self::API_BASE.$path,$options); $status=(int)$response->getStatusCode(); $body=(string)$response->getBody(); $data=$body!==''?json_decode($body,true):[]; if(!is_array($data))$data=[];
+        if($status<200||$status>=300){$message=(string)($data['message']??('HTTP '.$status));throw new RuntimeException('GitHub API request failed: '.$message.' ('.$status.')');}
         return $data;
     }
 }

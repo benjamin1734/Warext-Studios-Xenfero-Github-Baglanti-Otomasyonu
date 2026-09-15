@@ -24,6 +24,8 @@ class Setup extends AbstractSetup
         $this->createUserMapping();
         $this->createXfrmRelease(true);
         $this->createXfrmHistory();
+        $this->createWorkflowRun();
+        $this->createHealthAlert();
         $this->createConflict();
     }
 
@@ -66,12 +68,14 @@ class Setup extends AbstractSetup
     }
 
     public function upgrade8000080Step2(): void { $this->createXfrmHistory(); }
+    public function upgrade9000090Step1(): void { $this->createWorkflowRun(); }
+    public function upgrade9000090Step2(): void { $this->createHealthAlert(); }
 
     public function uninstallStep1(): void
     {
         $sm = $this->schemaManager();
         foreach ([
-            'xf_wgh_xfrm_history', 'xf_wgh_xfrm_release', 'xf_wgh_conflict', 'xf_wgh_user_mapping',
+            'xf_wgh_health_alert', 'xf_wgh_workflow_run', 'xf_wgh_xfrm_history', 'xf_wgh_xfrm_release', 'xf_wgh_conflict', 'xf_wgh_user_mapping',
             'xf_wgh_delivery', 'xf_wgh_sync_object', 'xf_wgh_template', 'xf_wgh_mapping',
             'xf_wgh_repository', 'xf_wgh_connection'
         ] as $table) $sm->dropTable($table);
@@ -243,6 +247,54 @@ class Setup extends AbstractSetup
             $t->addColumn('resource_update_id', 'bigint')->unsigned()->setDefault(0); $t->addColumn('release_hash', 'char', 64)->setDefault('');
             $t->addColumn('created_date', 'int')->unsigned()->setDefault(0); $t->addPrimaryKey('xfrm_history_id');
             $t->addKey(['xfrm_release_id','created_date']); $t->addKey(['status','created_date']);
+        });
+    }
+
+    private function createWorkflowRun(): void
+    {
+        $this->schemaManager()->createTable('xf_wgh_workflow_run', function (Create $t)
+        {
+            $t->addColumn('workflow_run_id', 'bigint')->autoIncrement();
+            $t->addColumn('repository_id', 'int')->unsigned();
+            $t->addColumn('github_run_id', 'bigint')->unsigned();
+            $t->addColumn('github_workflow_id', 'bigint')->unsigned()->setDefault(0);
+            $t->addColumn('workflow_name', 'varchar', 191)->setDefault('');
+            $t->addColumn('run_number', 'int')->unsigned()->setDefault(0);
+            $t->addColumn('event', 'varchar', 75)->setDefault('');
+            $t->addColumn('branch', 'varchar', 191)->setDefault('');
+            $t->addColumn('head_sha', 'varchar', 64)->setDefault('');
+            $t->addColumn('status', 'varchar', 50)->setDefault('');
+            $t->addColumn('conclusion', 'varchar', 50)->setDefault('');
+            $t->addColumn('actor_login', 'varchar', 100)->setDefault('');
+            $t->addColumn('html_url', 'varchar', 1000)->setDefault('');
+            $t->addColumn('github_created_date', 'int')->unsigned()->setDefault(0);
+            $t->addColumn('github_updated_date', 'int')->unsigned()->setDefault(0);
+            $t->addColumn('created_date', 'int')->unsigned()->setDefault(0);
+            $t->addColumn('updated_date', 'int')->unsigned()->setDefault(0);
+            $t->addPrimaryKey('workflow_run_id');
+            $t->addUniqueKey('github_run_id');
+            $t->addKey(['repository_id','updated_date']);
+            $t->addKey(['status','conclusion']);
+        });
+    }
+
+    private function createHealthAlert(): void
+    {
+        $this->schemaManager()->createTable('xf_wgh_health_alert', function (Create $t)
+        {
+            $t->addColumn('health_alert_id', 'bigint')->autoIncrement();
+            $t->addColumn('fingerprint', 'char', 64);
+            $t->addColumn('severity', 'varchar', 25)->setDefault('degraded');
+            $t->addColumn('status', 'varchar', 25)->setDefault('open');
+            $t->addColumn('message', 'varchar', 2000)->setDefault('');
+            $t->addColumn('occurrence_count', 'int')->unsigned()->setDefault(1);
+            $t->addColumn('first_seen_date', 'int')->unsigned()->setDefault(0);
+            $t->addColumn('last_seen_date', 'int')->unsigned()->setDefault(0);
+            $t->addColumn('resolved_date', 'int')->unsigned()->setDefault(0);
+            $t->addPrimaryKey('health_alert_id');
+            $t->addKey(['status','last_seen_date']);
+            $t->addKey(['severity','status']);
+            $t->addKey(['fingerprint','status']);
         });
     }
 }

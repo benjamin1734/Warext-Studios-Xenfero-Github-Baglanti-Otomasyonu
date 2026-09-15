@@ -3,6 +3,7 @@
 namespace Warext\GitHubSync\Job;
 
 use Warext\GitHubSync\Service\Sync\PushDeliveryAggregator;
+use Warext\GitHubSync\Service\Admin\HealthAlertManager;
 use XF\Job\AbstractJob;
 
 class ProcessDelivery extends AbstractJob
@@ -60,6 +61,7 @@ class ProcessDelivery extends AbstractJob
                     ['delivery_id' => (int)$delivery->delivery_id]
                 );
                 \XF::logException($e, false, '[Warext GitHub Sync] Delivery retry scheduled: ');
+                (new HealthAlertManager())->evaluate();
                 return $this->complete();
             }
 
@@ -67,9 +69,11 @@ class ProcessDelivery extends AbstractJob
             $delivery->next_attempt_date = 0;
             $delivery->save();
             \XF::logException($e, false, '[Warext GitHub Sync] Delivery permanently failed: ');
+            (new HealthAlertManager())->evaluate();
             return $this->complete();
         }
 
+        (new HealthAlertManager())->evaluate();
         return $this->complete();
     }
 

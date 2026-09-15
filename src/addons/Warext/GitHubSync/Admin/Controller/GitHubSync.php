@@ -11,10 +11,11 @@ use Warext\GitHubSync\Admin\Controller\Traits\UserConflictActions;
 use Warext\GitHubSync\Admin\Controller\Traits\WorkflowActions;
 use Warext\GitHubSync\Admin\Controller\Traits\XfrmActions;
 use Warext\GitHubSync\Admin\Controller\Traits\HealthActions;
+use Warext\GitHubSync\Admin\Controller\Traits\PullRequestActions;
 
 class GitHubSync extends AbstractController
 {
-    use ConnectionRepositoryActions, MappingTemplateActions, UserConflictActions, DeliveryDiagnosticActions, WorkflowActions, XfrmActions, HealthActions;
+    use ConnectionRepositoryActions, MappingTemplateActions, UserConflictActions, DeliveryDiagnosticActions, WorkflowActions, XfrmActions, HealthActions, PullRequestActions;
 
     protected function preDispatchController($action, ParameterBag $params) { $this->assertAdminPermission('wghManage'); }
 
@@ -31,7 +32,9 @@ class GitHubSync extends AbstractController
             'userMappings'=>\XF::finder('Warext\\GitHubSync:UserMapping')->where('active',1)->total(),
             'xfrmReleases'=>\XF::finder('Warext\\GitHubSync:XfrmRelease')->total(),
             'xfrmFailed'=>\XF::finder('Warext\\GitHubSync:XfrmRelease')->where('status','failed')->total(),
-            'xfrmAttention'=>\XF::finder('Warext\\GitHubSync:XfrmRelease')->where('status','attention')->total()
+            'xfrmAttention'=>\XF::finder('Warext\\GitHubSync:XfrmRelease')->where('status','attention')->total(),
+            'workflowRuns'=>\XF::finder('Warext\\GitHubSync:WorkflowRun')->total(),
+            'healthAlerts'=>\XF::finder('Warext\\GitHubSync:HealthAlert')->where('status','open')->total()
         ];
         return $this->view('Warext\\GitHubSync:GitHubSync\\Dashboard','wgh_dashboard',[
             'stats'=>$stats,

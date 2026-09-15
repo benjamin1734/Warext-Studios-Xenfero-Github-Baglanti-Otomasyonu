@@ -94,3 +94,9 @@ $config['warextGitHubSync']['xfrmApiKeys'] = [
 ```
 
 Mapping yalnızca `github_xfrm` değerini tutar; gerçek API key eklenti veritabanına kaydedilmez.
+
+## 0.9 araçları için ek GitHub App yetkileri
+
+- Pull Request reviewer görüntüleme için **Pull requests: read**, reviewer ekleme/kaldırma için **Pull requests: write** gerekir.
+- Workflow run geçmişini GitHub'dan yenilemek için **Actions: read**, yeniden çalıştırma/iptal işlemleri için **Actions: write** gerekir.
+- Bu Admin CP araçlarını kullanmıyorsanız ilgili yazma yetkilerini açmayın.

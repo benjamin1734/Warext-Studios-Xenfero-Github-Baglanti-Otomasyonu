@@ -1,17 +1,26 @@
 # Changelog
 
+## 0.9.0 Alpha 9
+- Added persistent `workflow_run` history captured from webhooks and optional GitHub refresh.
+- Added GitHub Actions run controls: re-run, re-run failed jobs and cancel.
+- Added Admin CP Pull Request reviewer request management for user logins and organization team slugs.
+- Added bulk XFRM retry/reconcile with a maximum of 50 selected records per operation.
+- Added persistent health-alert history with automatic evaluation from inbound/outbound jobs.
+- Added configurable health thresholds under `warextGitHubSync.healthThresholds`.
+- Added workflow-run and health-alert tables plus 0.9 upgrade steps.
+- Updated GitHub REST user agent to the 0.9 development line.
+
 ## 0.8.0 Alpha 8
 - Added XFRM synchronization history/audit records with per-action snapshots.
-- Added manual XFRM retry that refetches the authoritative GitHub Release through the GitHub App API.
-- Added remote XFRM reconciliation for Resource, ResourceVersion and Resource Update identities.
+- Added manual XFRM retry which refetches the authoritative GitHub Release through the GitHub App API.
+- Added remote XFRM reconcile checks for Resource, ResourceVersion and Resource Update identity.
 - Added safe local tracking-snapshot restore; remote XFRM content is never silently rolled back.
 - Added retry/attempt/success/reconcile timestamps and remote-state tracking.
-- Added semantic GitHub Release hashing to suppress work caused only by sender/delivery metadata noise.
-- Added a dedicated XFRM mapping manager and detailed tracked-release/history pages in Admin CP.
-- Added Health monitoring for webhook backlog/failures, unresolved conflicts and XFRM failed/attention/stale states.
-- Added typed XFRM API HTTP exceptions so 404 missing-object results are distinguished from auth/server failures.
-- Added `xf_wgh_xfrm_history` and the 0.8 upgrade schema.
-- Refactored Setup table creation into reusable helpers while preserving historical upgrade steps.
+- Added semantic GitHub Release hashing so sender/payload noise does not create unnecessary XFRM work.
+- Added dedicated XFRM mapping manager in Admin CP.
+- Added Health monitor with webhook backlog/failure, conflict and XFRM attention metrics.
+- Added XFRM API typed HTTP exceptions so 404 reconciliation can be distinguished from authentication/server failures.
+- Added XFRM history table and 0.8 upgrade schema.
 
 ## 0.7.0 Alpha 7
 - Added optional GitHub Release → existing XFRM resource synchronization.
@@ -76,7 +85,7 @@
 - Added connection deletion guard while synchronized repository records still belong to the connection.
 
 ## 0.2.0 Alpha 2
-- Added GitHub App JWT authentication and installation access-token client.
+- Added GitHub App JWT authentication and installation access token client.
 - Added installation repository discovery and repository upsert/deactivation synchronization.
 - Added config-reference based private-key and webhook-secret handling.
 - Added per-repository/per-connection webhook secret resolution with global bootstrap fallback.

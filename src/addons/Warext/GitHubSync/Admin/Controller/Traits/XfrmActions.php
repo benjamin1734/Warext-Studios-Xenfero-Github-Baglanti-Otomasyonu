@@ -5,6 +5,8 @@ namespace Warext\GitHubSync\Admin\Controller\Traits;
 use XF\Mvc\ParameterBag;
 use Warext\GitHubSync\Service\XFRM\Reconciler;
 use Warext\GitHubSync\Service\XFRM\RetryService;
+use Warext\GitHubSync\Service\XFRM\BulkRecoveryService;
+use Warext\GitHubSync\Service\Admin\HealthAlertManager;
 
 trait XfrmActions
 {
@@ -22,6 +24,20 @@ trait XfrmActions
             'attentionCount' => \XF::finder('Warext\\GitHubSync:XfrmRelease')->where('status','attention')->total(),
             'status' => $status
         ]);
+    }
+
+    public function actionXfrmBulk()
+    {
+        $this->assertPostOnly();
+        $ids = $this->filter('xfrm_release_ids', 'array-uint');
+        $operation = $this->filter('bulk_operation','str');
+        if (!in_array($operation,['retry','reconcile'],true)) return $this->error('Select retry or reconcile.');
+        if (!$ids) return $this->error('Select at least one XFRM synchronization record.');
+        $result = (new BulkRecoveryService())->run($ids,$operation);
+        (new HealthAlertManager())->evaluate();
+        $message = sprintf('%d XFRM record(s) processed, %d failed.',(int)$result['processed'],(int)$result['failed']);
+        if (!empty($result['errors'])) $message .= ' First error: ' . (string)$result['errors'][0];
+        return $this->redirect($this->buildLink('github-sync/xfrm'),$message);
     }
 
     public function actionXfrmView(ParameterBag $params)
@@ -44,6 +60,7 @@ trait XfrmActions
         try
         {
             $result = (new RetryService())->retry($record);
+            (new HealthAlertManager())->evaluate();
             return $this->redirect($this->buildLink('github-sync/xfrm-view', null, ['xfrm_release_id'=>$id]), (string)($result['message'] ?? 'XFRM retry completed.'));
         }
         catch (\Throwable $e) { return $this->error('XFRM retry failed: ' . $e->getMessage()); }
@@ -57,6 +74,7 @@ trait XfrmActions
         try
         {
             $result = (new Reconciler())->reconcile($record);
+            (new HealthAlertManager())->evaluate();
             $message = !empty($result['ok']) ? 'Remote XFRM objects verified.' : 'Reconcile completed with missing remote objects.';
             return $this->redirect($this->buildLink('github-sync/xfrm-view', null, ['xfrm_release_id'=>$id]), $message);
         }
@@ -78,6 +96,7 @@ trait XfrmActions
         $record->updated_date = \XF::$time;
         $record->save();
         (new \Warext\GitHubSync\Service\XFRM\HistoryLogger())->log($record, 'restore_tracking', 'attention', $record->last_error);
+        (new HealthAlertManager())->evaluate();
         return $this->redirect($this->buildLink('github-sync/xfrm-view', null, ['xfrm_release_id'=>(int)$record->xfrm_release_id]), 'Tracking snapshot restored. Run reconcile before retrying.');
     }
 

@@ -1,0 +1,29 @@
+<xf:title>GitHub Pull Request tools</xf:title>
+<xf:macro template="wgh_macros" name="nav" arg-selected="pulls" />
+<xf:form action="{{ link('github-sync/pull-requests') }}" method="get" class="block">
+<div class="block-container"><h2 class="block-header">Load pull request</h2><div class="block-body">
+<xf:selectrow name="repository_id" value="{$repositoryId}" label="Repository"><xf:option value="0">Select repository</xf:option><xf:foreach loop="$repositories" value="$repo"><xf:option value="{$repo.repository_id}">{$repo.full_name}</xf:option></xf:foreach></xf:selectrow>
+<xf:numberboxrow name="pull_request_number" value="{$number}" min="1" label="Pull request number" />
+</div><xf:submitrow submit="Load pull request" /></div>
+</xf:form>
+<xf:if is="$error"><div class="blockMessage blockMessage--error">{$error}</div></xf:if>
+<xf:if is="$pullRequest">
+<div class="block"><div class="block-container"><h2 class="block-header">#{$pullRequest.number} {$pullRequest.title}</h2><div class="block-body block-row">
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>State</dt><dd>{$pullRequest.state}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Draft</dt><dd>{{ $pullRequest.draft ? 'Yes' : 'No' }}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Head</dt><dd>{$pullRequest.head.ref}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Base</dt><dd>{$pullRequest.base.ref}</dd></div>
+</div></div></div>
+<div class="block"><div class="block-container"><h2 class="block-header">Requested reviewers</h2><div class="block-body block-row">
+<p><strong>Users:</strong> <xf:foreach loop="$requested.users" value="$user">{$user.login} </xf:foreach></p>
+<p><strong>Teams:</strong> <xf:foreach loop="$requested.teams" value="$team">{$team.slug} </xf:foreach></p>
+</div></div></div>
+<xf:form action="{{ link('github-sync/pull-request-reviewers') }}" ajax="true" class="block">
+<input type="hidden" name="repository_id" value="{$repositoryId}" /><input type="hidden" name="pull_request_number" value="{$number}" />
+<div class="block-container"><h2 class="block-header">Manage review requests</h2><div class="block-body">
+<xf:textarearow name="reviewers" label="User reviewers" explain="Comma or line separated GitHub logins." autosize="true" />
+<xf:textarearow name="team_reviewers" label="Team reviewers" explain="Comma or line separated organization team slugs." autosize="true" />
+<xf:selectrow name="reviewer_action" value="request" label="Action"><xf:option value="request">Request review</xf:option><xf:option value="remove">Remove review request</xf:option></xf:selectrow>
+</div><xf:submitrow submit="Apply reviewer action" /></div>
+</xf:form>
+</xf:if>
