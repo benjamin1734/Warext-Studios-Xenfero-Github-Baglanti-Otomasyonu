@@ -11,6 +11,8 @@
 			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Deliveries</dt><dd>{$stats.deliveries}</dd></div>
 			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Pending</dt><dd>{$stats.pending}</dd></div>
 			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Failed</dt><dd>{$stats.failed}</dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Pending conflicts</dt><dd><a href="{{ link('github-sync/conflicts') }}">{$stats.conflicts}</a></dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>User mappings</dt><dd><a href="{{ link('github-sync/user-mappings') }}">{$stats.userMappings}</a></dd></div>
 		</div>
 	</div>
 </div>
