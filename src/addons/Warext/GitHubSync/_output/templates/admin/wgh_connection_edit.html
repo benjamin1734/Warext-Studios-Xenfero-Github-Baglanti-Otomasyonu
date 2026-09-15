@@ -1,0 +1,33 @@
+<xf:title>{{ $connection.connection_id ? 'Edit GitHub connection' : 'Add GitHub connection' }}</xf:title>
+<xf:macro template="wgh_macros" name="nav" arg-selected="connections" />
+
+<xf:form action="{{ link('github-sync/connection-save', null, {'connection_id': $connection.connection_id}) }}" ajax="true" class="block">
+	<div class="block-container">
+		<h2 class="block-header">GitHub App connection</h2>
+		<div class="block-body">
+			<xf:textboxrow name="title" value="{$connection.title}" label="Title" required="required" />
+			<xf:numberboxrow name="app_id" value="{$connection.app_id}" min="0" label="GitHub App ID" />
+			<xf:numberboxrow name="installation_id" value="{$connection.installation_id}" min="0" label="Installation ID" />
+			<xf:textboxrow name="client_id" value="{$connection.client_id}" label="Client ID" />
+			<xf:textboxrow name="account_login" value="{$connection.account_login}" label="Account / organization login" />
+			<xf:textboxrow name="private_key_ref" value="{$connection.private_key_ref}" label="Private key reference" explain="Key name under $config['warextGitHubSync']['privateKeys']. The PEM itself is not stored in the database." />
+			<xf:textboxrow name="secret_ref" value="{$connection.secret_ref}" label="Webhook secret reference" explain="Key name under $config['warextGitHubSync']['webhookSecrets']." />
+			<xf:checkboxrow label="Status"><xf:option name="active" value="1" selected="{$connection.active}">Connection is active</xf:option></xf:checkboxrow>
+		</div>
+		<xf:submitrow submit="Save" />
+	</div>
+</xf:form>
+
+<xf:if is="$connection.connection_id">
+	<xf:form action="{{ link('github-sync/connection-sync', null, {'connection_id': $connection.connection_id}) }}" ajax="true" class="block">
+		<div class="block-container"><div class="block-body"><xf:submitrow submit="Synchronize repositories now" /></div></div>
+	</xf:form>
+</xf:if>
+
+<div class="block"><div class="block-container"><h2 class="block-header">config.php example</h2><div class="block-body block-row"><pre>$config['warextGitHubSync']['privateKeys']['warext'] = &lt;&lt;&lt;'PEM'
+-----BEGIN PRIVATE KEY-----
+...
+-----END PRIVATE KEY-----
+PEM;
+$config['warextGitHubSync']['webhookSecrets']['warext'] = 'long-random-secret';
+$config['warextGitHubSync']['pushAggregationSeconds'] = 60;</pre></div></div></div>

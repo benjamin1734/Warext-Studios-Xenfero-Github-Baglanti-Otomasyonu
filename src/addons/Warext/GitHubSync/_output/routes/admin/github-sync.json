@@ -1,0 +1,11 @@
+{
+  "route_type": "admin",
+  "route_prefix": "github-sync",
+  "sub_name": "",
+  "format": "",
+  "build_class": "",
+  "build_method": "",
+  "controller": "Warext\\GitHubSync:GitHubSync",
+  "context": "",
+  "action_prefix": ""
+}

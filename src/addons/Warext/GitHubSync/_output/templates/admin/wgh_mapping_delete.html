@@ -1,0 +1,2 @@
+<xf:title>Delete synchronization mapping</xf:title><xf:macro template="wgh_macros" name="nav" arg-selected="mappings" />
+<xf:form action="{{ link('github-sync/mapping-delete', null, {'mapping_id': $mapping.mapping_id}) }}" ajax="true" class="block"><div class="block-container"><div class="block-body block-row">Delete mapping <strong>{$mapping.title}</strong>? Existing sync registry entries are retained for audit/recovery.</div><xf:submitrow submit="Delete" /></div></xf:form>

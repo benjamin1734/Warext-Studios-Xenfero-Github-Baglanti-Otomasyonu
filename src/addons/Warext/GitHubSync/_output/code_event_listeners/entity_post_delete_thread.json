@@ -1,0 +1,9 @@
+{
+  "event_id": "entity_post_delete",
+  "execute_order": 10,
+  "callback_class": "Warext\\GitHubSync\\Listener",
+  "callback_method": "threadPostDelete",
+  "active": true,
+  "hint": "XF\\Entity\\Thread",
+  "description": "Queue XenForo thread deletions for GitHub synchronization."
+}

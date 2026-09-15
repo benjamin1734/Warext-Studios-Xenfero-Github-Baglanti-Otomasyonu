@@ -1,0 +1,11 @@
+{
+  "route_type": "public",
+  "route_prefix": "github-sync-webhook",
+  "sub_name": "",
+  "format": "",
+  "build_class": "",
+  "build_method": "",
+  "controller": "Warext\\GitHubSync:Webhook",
+  "context": "",
+  "action_prefix": ""
+}

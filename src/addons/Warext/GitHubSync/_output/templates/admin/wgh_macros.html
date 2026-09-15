@@ -1,0 +1,17 @@
+<xf:macro name="nav" arg-selected="!">
+	<div class="block">
+		<div class="block-container">
+			<div class="block-body">
+				<div class="buttonGroup buttonGroup--scroll">
+					<a class="button {{ $selected == 'dashboard' ? 'button--primary' : '' }}" href="{{ link('github-sync') }}">Dashboard</a>
+					<a class="button {{ $selected == 'connections' ? 'button--primary' : '' }}" href="{{ link('github-sync/connections') }}">Connections</a>
+					<a class="button {{ $selected == 'repositories' ? 'button--primary' : '' }}" href="{{ link('github-sync/repositories') }}">Repositories</a>
+					<a class="button {{ $selected == 'mappings' ? 'button--primary' : '' }}" href="{{ link('github-sync/mappings') }}">Mappings</a>
+					<a class="button {{ $selected == 'templates' ? 'button--primary' : '' }}" href="{{ link('github-sync/templates') }}">Templates</a>
+					<a class="button {{ $selected == 'deliveries' ? 'button--primary' : '' }}" href="{{ link('github-sync/deliveries') }}">Webhook logs</a>
+					<a class="button {{ $selected == 'diagnostics' ? 'button--primary' : '' }}" href="{{ link('github-sync/diagnostics') }}">Diagnostics</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</xf:macro>

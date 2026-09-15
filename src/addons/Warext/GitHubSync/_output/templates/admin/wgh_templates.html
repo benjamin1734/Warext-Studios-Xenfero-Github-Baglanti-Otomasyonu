@@ -1,0 +1,5 @@
+<xf:title>Message templates</xf:title><xf:macro template="wgh_macros" name="nav" arg-selected="templates" />
+<xf:pageaction><xf:button href="{{ link('github-sync/template-edit') }}" icon="add">Add template</xf:button></xf:pageaction>
+<div class="block"><div class="block-container"><div class="block-body"><table class="dataList"><thead><tr class="dataList-row"><th class="dataList-cell">Title</th><th class="dataList-cell">Event</th><th class="dataList-cell">Status</th><th class="dataList-cell"></th></tr></thead><tbody>
+<xf:foreach loop="$templates" value="$template"><tr class="dataList-row"><td class="dataList-cell"><a href="{{ link('github-sync/template-edit', null, {'template_id': $template.template_id}) }}">{$template.title}</a></td><td class="dataList-cell">{$template.event}</td><td class="dataList-cell">{{ $template.active ? 'Active' : 'Disabled' }}</td><td class="dataList-cell dataList-cell--action"><a href="{{ link('github-sync/template-delete', null, {'template_id': $template.template_id}) }}">Delete</a></td></tr></xf:foreach>
+</tbody></table></div></div></div>

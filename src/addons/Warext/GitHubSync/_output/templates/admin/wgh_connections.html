@@ -1,0 +1,25 @@
+<xf:title>GitHub connections</xf:title>
+<xf:macro template="wgh_macros" name="nav" arg-selected="connections" />
+<xf:pageaction><xf:button href="{{ link('github-sync/connection-edit') }}" icon="add">Add connection</xf:button></xf:pageaction>
+
+<div class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<table class="dataList">
+				<thead><tr class="dataList-row"><th class="dataList-cell">Title</th><th class="dataList-cell">GitHub account</th><th class="dataList-cell">App ID</th><th class="dataList-cell">Installation ID</th><th class="dataList-cell">Status</th><th class="dataList-cell"></th></tr></thead>
+				<tbody>
+				<xf:foreach loop="$connections" value="$connection">
+					<tr class="dataList-row">
+						<td class="dataList-cell"><a href="{{ link('github-sync/connection-edit', null, {'connection_id': $connection.connection_id}) }}">{$connection.title}</a></td>
+						<td class="dataList-cell">{$connection.account_login}</td>
+						<td class="dataList-cell">{$connection.app_id}</td>
+						<td class="dataList-cell">{$connection.installation_id}</td>
+						<td class="dataList-cell">{{ $connection.active ? 'Active' : 'Disabled' }}</td>
+						<td class="dataList-cell dataList-cell--action"><a href="{{ link('github-sync/connection-delete', null, {'connection_id': $connection.connection_id}) }}">Delete</a></td>
+					</tr>
+				</xf:foreach>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

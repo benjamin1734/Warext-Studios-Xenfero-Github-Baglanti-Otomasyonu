@@ -1,0 +1,43 @@
+<xf:title>{{ $mapping.mapping_id ? 'Edit synchronization mapping' : 'Add synchronization mapping' }}</xf:title>
+<xf:macro template="wgh_macros" name="nav" arg-selected="mappings" />
+<xf:form action="{{ link('github-sync/mapping-save', null, {'mapping_id': $mapping.mapping_id}) }}" ajax="true" class="block">
+<div class="block-container">
+<h2 class="block-header">Event mapping</h2><div class="block-body">
+<xf:textboxrow name="title" value="{$mapping.title}" label="Title" required="required" />
+<xf:selectrow name="repository_id" value="{$mapping.repository_id}" label="Repository"><xf:option value="0">All repositories</xf:option><xf:foreach loop="$repositories" value="$repository"><xf:option value="{$repository.repository_id}">{$repository.full_name}</xf:option></xf:foreach></xf:selectrow>
+<xf:selectrow name="direction" value="{$mapping.direction}" label="Direction"><xf:option value="github_to_xf">GitHub → XenForo</xf:option><xf:option value="xf_to_github">XenForo → GitHub</xf:option><xf:option value="bidirectional">Bidirectional</xf:option></xf:selectrow>
+<xf:textboxrow name="event" value="{$mapping.event}" label="GitHub event" explain="Examples: release, push, issues, pull_request. Use * for all." />
+<xf:textboxrow name="event_action" value="{$mapping.event_action}" label="Event action" explain="Examples: published, edited, deleted, opened, closed. Use * for all." />
+<xf:numberboxrow name="priority" value="{$mapping.priority}" label="Priority" />
+<xf:checkboxrow label="Status"><xf:option name="enabled" value="1" selected="{$mapping.enabled}">Mapping is enabled</xf:option></xf:checkboxrow>
+</div>
+<h2 class="block-header">XenForo source (XenForo → GitHub)</h2><div class="block-body">
+<xf:numberboxrow name="xf_node_id" value="{$source.xf_node_id}" min="0" label="Source forum node ID" explain="Only threads/posts from this forum are sent to GitHub. 0 allows any forum for this mapping." />
+<xf:selectrow name="outbound_object" value="{$source.outbound_object}" label="GitHub object"><xf:option value="issue">GitHub Issue</xf:option></xf:selectrow>
+<xf:checkboxrow label="Outbound synchronization">
+<xf:option name="sync_first_post" value="1" selected="{$source.sync_first_post}">Synchronize thread title and first post to the GitHub Issue</xf:option>
+<xf:option name="sync_replies" value="1" selected="{$source.sync_replies}">Synchronize thread replies as GitHub Issue comments</xf:option>
+<xf:option name="sync_thread_state" value="1" selected="{$source.sync_thread_state}">Synchronize thread open/closed state to the GitHub Issue</xf:option>
+</xf:checkboxrow>
+</div>
+<h2 class="block-header">XenForo target</h2><div class="block-body">
+<xf:numberboxrow name="node_id" value="{$target.node_id}" min="0" label="Forum node ID" explain="Used when the integration should create a new thread." />
+<xf:numberboxrow name="thread_id" value="{$target.thread_id}" min="0" label="Existing thread ID" explain="When set, synchronization targets this thread instead of creating a new one." />
+<xf:numberboxrow name="user_id" value="{$target.user_id}" min="0" label="Automation user ID" required="required" />
+<xf:numberboxrow name="prefix_id" value="{$target.prefix_id}" min="0" label="Thread prefix ID" />
+<xf:selectrow name="template_id" value="{$target.template_id}" label="Reusable template"><xf:option value="0">Use inline/default template</xf:option><xf:foreach loop="$templates" value="$template"><xf:option value="{$template.template_id}">{$template.title}</xf:option></xf:foreach></xf:selectrow>
+<xf:textarearow name="title_template" value="{$target.title_template}" label="Title template override" autosize="true" />
+<xf:textarearow name="message_template" value="{$target.message_template}" label="Message template override" rows="8" />
+<xf:checkboxrow label="Update behavior"><xf:option name="update_first_post" value="1" selected="{$target.update_first_post}">Update the first post of an existing thread</xf:option><xf:option name="update_title" value="1" selected="{$target.update_title}">Update thread title</xf:option></xf:checkboxrow>
+<xf:selectrow name="delete_policy" value="{$target.delete_policy}" label="Remote delete policy"><xf:option value="ignore">Ignore</xf:option><xf:option value="mark_deleted">Mark as deleted</xf:option><xf:option value="soft_delete">Soft delete integration-created content</xf:option><xf:option value="hard_delete">Hard delete integration-created content</xf:option></xf:selectrow>
+</div>
+<h2 class="block-header">Filters</h2><div class="block-body">
+<xf:textarearow name="branches" value="{$filterText.branches}" label="Allowed branches" explain="One branch per line. Empty means all branches." autosize="true" />
+<xf:textarearow name="include_commit" value="{$filterText.include_commit}" label="Commit message include terms" explain="At least one term must match when configured." autosize="true" />
+<xf:textarearow name="exclude_commit" value="{$filterText.exclude_commit}" label="Commit message exclude terms" autosize="true" />
+<xf:textarearow name="include_paths" value="{$filterText.include_paths}" label="Included paths" explain="Supports * and ** globs." autosize="true" />
+<xf:textarearow name="exclude_paths" value="{$filterText.exclude_paths}" label="Excluded paths" explain="Supports * and ** globs." autosize="true" />
+<xf:checkboxrow label="Release states"><xf:option name="allow_prerelease" value="1" selected="{$filter.allow_prerelease}">Allow prereleases</xf:option><xf:option name="allow_draft" value="1" selected="{$filter.allow_draft}">Allow draft releases</xf:option></xf:checkboxrow>
+<xf:selectrow name="conflict_strategy" value="{$mapping.conflict_strategy}" label="Conflict strategy"><xf:option value="manual">Manual review</xf:option><xf:option value="github_wins">GitHub wins</xf:option><xf:option value="xenforo_wins">XenForo wins</xf:option><xf:option value="newest_wins">Newest wins</xf:option></xf:selectrow>
+</div><xf:submitrow submit="Save mapping" />
+</div></xf:form>

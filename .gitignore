@@ -1,0 +1,17 @@
+# Secrets / local configuration
+*.pem
+*.key
+.env
+.env.*
+config.local.php
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Build output
+/releases/
+/build/
+*.zip

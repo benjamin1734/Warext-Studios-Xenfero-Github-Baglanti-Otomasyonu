@@ -1,0 +1,38 @@
+<xf:title>Warext GitHub Sync</xf:title>
+<xf:macro template="wgh_macros" name="nav" arg-selected="dashboard" />
+
+<div class="block">
+	<div class="block-container">
+		<h2 class="block-header">Synchronization overview</h2>
+		<div class="block-body block-row">
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Connections</dt><dd>{$stats.connections}</dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Repositories</dt><dd>{$stats.repositories}</dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Mappings</dt><dd>{$stats.mappings}</dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Deliveries</dt><dd>{$stats.deliveries}</dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Pending</dt><dd>{$stats.pending}</dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Failed</dt><dd>{$stats.failed}</dd></div>
+		</div>
+	</div>
+</div>
+
+<div class="block">
+	<div class="block-container">
+		<h2 class="block-header">Recent webhook deliveries</h2>
+		<div class="block-body">
+			<table class="dataList">
+				<thead><tr class="dataList-row"><th class="dataList-cell">Event</th><th class="dataList-cell">Action</th><th class="dataList-cell">Status</th><th class="dataList-cell">Attempts</th><th class="dataList-cell">Received</th></tr></thead>
+				<tbody>
+				<xf:foreach loop="$recentDeliveries" value="$delivery">
+					<tr class="dataList-row">
+						<td class="dataList-cell"><a href="{{ link('github-sync/delivery', null, {'delivery_id': $delivery.delivery_id}) }}">{$delivery.github_event}</a></td>
+						<td class="dataList-cell">{$delivery.event_action}</td>
+						<td class="dataList-cell">{$delivery.status}</td>
+						<td class="dataList-cell">{$delivery.attempt_count}</td>
+						<td class="dataList-cell"><xf:date time="$delivery.received_date" /></td>
+					</tr>
+				</xf:foreach>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

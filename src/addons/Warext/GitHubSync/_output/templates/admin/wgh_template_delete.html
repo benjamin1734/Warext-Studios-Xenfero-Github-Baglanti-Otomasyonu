@@ -1,0 +1,2 @@
+<xf:title>Delete message template</xf:title><xf:macro template="wgh_macros" name="nav" arg-selected="templates" />
+<xf:form action="{{ link('github-sync/template-delete', null, {'template_id': $template.template_id}) }}" ajax="true" class="block"><div class="block-container"><div class="block-body block-row">Delete template <strong>{$template.title}</strong>? Mappings referencing it will fall back to inline/default templates.</div><xf:submitrow submit="Delete" /></div></xf:form>

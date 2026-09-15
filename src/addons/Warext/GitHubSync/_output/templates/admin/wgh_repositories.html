@@ -1,0 +1,14 @@
+<xf:title>GitHub repositories</xf:title>
+<xf:macro template="wgh_macros" name="nav" arg-selected="repositories" />
+<div class="block"><div class="block-container"><div class="block-body">
+<table class="dataList">
+<thead><tr class="dataList-row"><th class="dataList-cell">Repository</th><th class="dataList-cell">Default branch</th><th class="dataList-cell">Visibility</th><th class="dataList-cell">Archived</th><th class="dataList-cell">Status</th></tr></thead>
+<tbody><xf:foreach loop="$repositories" value="$repository"><tr class="dataList-row">
+<td class="dataList-cell"><a href="{$repository.html_url}" target="_blank">{$repository.full_name}</a></td>
+<td class="dataList-cell">{$repository.default_branch}</td>
+<td class="dataList-cell">{{ $repository.is_private ? 'Private' : 'Public' }}</td>
+<td class="dataList-cell">{{ $repository.is_archived ? 'Yes' : 'No' }}</td>
+<td class="dataList-cell">{{ $repository.active ? 'Active' : 'Inactive' }}</td>
+</tr></xf:foreach></tbody>
+</table>
+</div></div></div>

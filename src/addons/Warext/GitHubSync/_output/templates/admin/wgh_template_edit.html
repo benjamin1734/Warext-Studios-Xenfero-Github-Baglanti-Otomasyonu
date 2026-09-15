@@ -1,0 +1,9 @@
+<xf:title>{{ $template.template_id ? 'Edit message template' : 'Add message template' }}</xf:title><xf:macro template="wgh_macros" name="nav" arg-selected="templates" />
+<xf:form action="{{ link('github-sync/template-save', null, {'template_id': $template.template_id}) }}" ajax="true" class="block"><div class="block-container"><div class="block-body">
+<xf:textboxrow name="title" value="{$template.title}" label="Title" required="required" />
+<xf:textboxrow name="event" value="{$template.event}" label="Event" explain="release, push, issues, pull_request or *" />
+<xf:textarearow name="title_template" value="{$template.title_template}" label="Thread/title template" autosize="true" />
+<xf:textarearow name="message_template" value="{$template.message_template}" label="Message template" rows="12" />
+<xf:checkboxrow label="Status"><xf:option name="active" value="1" selected="{$template.active}">Template is active</xf:option></xf:checkboxrow>
+</div><xf:submitrow submit="Save template" /></div></xf:form>
+<div class="block"><div class="block-container"><h2 class="block-header">Available variables (current engine)</h2><div class="block-body block-row"><code>{repo.name}</code>, <code>{repo.full_name}</code>, <code>{repo.url}</code>, <code>{event}</code>, <code>{action}</code>, <code>{sender.login}</code>, <code>{release.tag}</code>, <code>{release.name}</code>, <code>{release.body}</code>, <code>{release.url}</code>, <code>{push.branch}</code>, <code>{push.commit_count}</code>, <code>{push.commits}</code>, <code>{push.compare_url}</code>.</div></div></div>

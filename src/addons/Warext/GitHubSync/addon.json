@@ -1,0 +1,14 @@
+{
+  "title": "Warext GitHub Sync",
+  "description": "Bidirectional GitHub ↔ XenForo synchronization engine.",
+  "version_string": "0.4.0 Alpha 4",
+  "version_id": 4000040,
+  "dev": "Warext Studios",
+  "dev_url": "https://warext.com/",
+  "require": {
+    "XF": [
+      2030000,
+      "XenForo 2.3.0+"
+    ]
+  }
+}

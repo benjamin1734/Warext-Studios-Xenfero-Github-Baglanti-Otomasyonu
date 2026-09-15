@@ -1,0 +1,9 @@
+{
+  "event_id": "entity_post_save",
+  "execute_order": 10,
+  "callback_class": "Warext\\GitHubSync\\Listener",
+  "callback_method": "postPostSave",
+  "active": true,
+  "hint": "XF\\Entity\\Post",
+  "description": "Queue XenForo post changes for GitHub synchronization."
+}

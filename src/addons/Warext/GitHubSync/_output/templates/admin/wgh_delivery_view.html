@@ -1,0 +1,15 @@
+<xf:title>Webhook delivery #{$delivery.delivery_id}</xf:title><xf:macro template="wgh_macros" name="nav" arg-selected="deliveries" />
+<div class="block"><div class="block-container"><h2 class="block-header">Delivery details</h2><div class="block-body block-row">
+<div class="pairs pairs--columns"><dt>GitHub delivery ID</dt><dd>{$delivery.github_delivery_guid}</dd></div>
+<div class="pairs pairs--columns"><dt>Event</dt><dd>{$delivery.github_event}.{$delivery.event_action}</dd></div>
+<div class="pairs pairs--columns"><dt>Repository ID</dt><dd>{$delivery.github_repository_id}</dd></div>
+<div class="pairs pairs--columns"><dt>Source ref</dt><dd>{$delivery.source_ref}</dd></div>
+<div class="pairs pairs--columns"><dt>Status</dt><dd>{$delivery.status}</dd></div>
+<div class="pairs pairs--columns"><dt>Attempts</dt><dd>{$delivery.attempt_count}</dd></div>
+<div class="pairs pairs--columns"><dt>Grouped into</dt><dd>{$delivery.grouped_into_delivery_id}</dd></div>
+<div class="pairs pairs--columns"><dt>Last error / note</dt><dd>{$delivery.last_error}</dd></div>
+</div></div></div>
+<xf:if is="$delivery.status == 'failed' OR $delivery.status == 'retry_waiting'">
+<xf:form action="{{ link('github-sync/delivery-retry', null, {'delivery_id': $delivery.delivery_id}) }}" ajax="true" class="block"><div class="block-container"><xf:submitrow submit="Retry delivery now" /></div></xf:form>
+</xf:if>
+<div class="block"><div class="block-container"><h2 class="block-header">Payload</h2><div class="block-body block-row"><pre style="max-height:650px;overflow:auto;white-space:pre-wrap">{$prettyPayload}</pre></div></div></div>
