@@ -78,6 +78,8 @@ final class SyncRegistry
         $sync->sync_direction = (string)$mapping->direction;
         $sync->origin = 'github';
         $sync->last_github_hash = $githubHash;
+        $xfHash = $this->currentXfHash($xfType, $xfId);
+        if ($xfHash !== '') $sync->last_xf_hash = $xfHash;
         $sync->status = 'active';
         $sync->metadata = array_replace(is_array($sync->metadata) ? $sync->metadata : [], $metadata);
         $sync->last_sync_date = \XF::$time;
@@ -120,4 +122,22 @@ final class SyncRegistry
         $sync->save();
         return $sync;
     }
+
+    public function currentXfHash(string $xfType, int $xfId): string
+    {
+        if ($xfType !== 'post' || $xfId <= 0) return '';
+        $post = \XF::em()->find('XF:Post', $xfId);
+        if (!$post) return '';
+        $thread = $post->Thread;
+        $isFirstPost = $thread && (int)$thread->first_post_id === (int)$post->post_id;
+        $data = ['message' => (string)$post->message];
+        if ($isFirstPost)
+        {
+            $data['title'] = (string)$thread->title;
+            $data['prefix_id'] = (int)$thread->prefix_id;
+            $data['discussion_open'] = (bool)$thread->discussion_open;
+        }
+        return hash('sha256', json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+    }
+
 }
