@@ -1,0 +1,15 @@
+<xf:title>XFRM mapping - {$mapping.title}</xf:title>
+<xf:macro template="wgh_macros" name="nav" arg-selected="xfrm" />
+<xf:form action="{{ link('github-sync/xfrm-mapping-save', null, {'mapping_id': $mapping.mapping_id}) }}" ajax="true" class="block"><div class="block-container"><h2 class="block-header">XFRM target</h2><div class="block-body">
+<xf:checkboxrow label="Status"><xf:option name="xfrm_enabled" value="1" selected="{$target.xfrm_enabled}">Enable XFRM release synchronization</xf:option></xf:checkboxrow>
+<xf:selectrow name="xfrm_mode" value="{$target.xfrm_mode}" label="Mode"><xf:option value="alongside">XFRM + normal XenForo target</xf:option><xf:option value="only">XFRM only</xf:option></xf:selectrow>
+<xf:selectrow name="xfrm_resource_id" value="{$target.xfrm_resource_id}" label="Existing resource"><xf:option value="0">Select resource</xf:option><xf:foreach loop="$resources" value="$resource"><xf:option value="{$resource.resource_id}">#{$resource.resource_id} {$resource.title}</xf:option></xf:foreach></xf:selectrow>
+<xf:textboxrow name="xfrm_api_key_ref" value="{$target.xfrm_api_key_ref}" label="API key config reference" />
+<xf:numberboxrow name="xfrm_api_user_id" value="{$target.xfrm_api_user_id}" min="0" label="API context user ID" />
+<xf:checkboxrow label="API"><xf:option name="xfrm_api_bypass" value="1" selected="{$target.xfrm_api_bypass}">Bypass permissions (super-user API key only)</xf:option></xf:checkboxrow>
+<xf:checkboxrow label="Create"><xf:option name="xfrm_create_version" value="1" selected="{$target.xfrm_create_version}">Create ResourceVersion</xf:option><xf:option name="xfrm_create_update" value="1" selected="{$target.xfrm_create_update}">Create/update Resource Update</xf:option></xf:checkboxrow>
+<xf:selectrow name="xfrm_download_source" value="{$target.xfrm_download_source}" label="Download source"><xf:option value="asset">Matching release asset</xf:option><xf:option value="zipball">GitHub source ZIP</xf:option><xf:option value="release_page">GitHub release page</xf:option></xf:selectrow>
+<xf:textboxrow name="xfrm_asset_pattern" value="{$target.xfrm_asset_pattern}" label="Asset wildcard" />
+<xf:checkboxrow label="Version"><xf:option name="xfrm_strip_v" value="1" selected="{$target.xfrm_strip_v}">Strip leading v from numeric tags</xf:option></xf:checkboxrow>
+<xf:selectrow name="xfrm_delete_policy" value="{$target.xfrm_delete_policy}" label="Deleted release policy"><xf:option value="ignore">Ignore</xf:option><xf:option value="soft_delete">Soft delete XFRM content</xf:option><xf:option value="hard_delete">Hard delete XFRM content</xf:option></xf:selectrow>
+</div><xf:submitrow submit="Save XFRM mapping" /></div></xf:form>
