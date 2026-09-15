@@ -155,6 +155,28 @@ class Setup extends AbstractSetup
             $table->addKey(['xf_user_id', 'active']);
         });
 
+        $sm->createTable('xf_wgh_xfrm_release', function (Create $table)
+        {
+            $table->addColumn('xfrm_release_id', 'bigint')->autoIncrement();
+            $table->addColumn('mapping_id', 'int')->unsigned();
+            $table->addColumn('repository_id', 'int')->unsigned();
+            $table->addColumn('github_release_id', 'bigint')->unsigned();
+            $table->addColumn('resource_id', 'int')->unsigned();
+            $table->addColumn('resource_version_id', 'bigint')->unsigned()->setDefault(0);
+            $table->addColumn('resource_update_id', 'bigint')->unsigned()->setDefault(0);
+            $table->addColumn('version_string', 'varchar', 100)->setDefault('');
+            $table->addColumn('download_url', 'varchar', 1000)->setDefault('');
+            $table->addColumn('release_hash', 'char', 64)->setDefault('');
+            $table->addColumn('status', 'varchar', 25)->setDefault('pending');
+            $table->addColumn('last_error', 'varchar', 1000)->setDefault('');
+            $table->addColumn('created_date', 'int')->unsigned()->setDefault(0);
+            $table->addColumn('updated_date', 'int')->unsigned()->setDefault(0);
+            $table->addPrimaryKey('xfrm_release_id');
+            $table->addUniqueKey(['mapping_id', 'github_release_id'], 'mapping_release');
+            $table->addKey(['resource_id', 'status']);
+            $table->addKey(['repository_id', 'updated_date']);
+        });
+
         $sm->createTable('xf_wgh_conflict', function (Create $table)
         {
             $table->addColumn('conflict_id', 'bigint')->autoIncrement();
@@ -177,7 +199,6 @@ class Setup extends AbstractSetup
             $table->addKey(['mapping_id', 'status']);
             $table->addKey(['sync_id', 'status']);
         });
-
     }
 
     public function upgrade2000020Step1(): void
@@ -216,7 +237,6 @@ class Setup extends AbstractSetup
             $table->addKey(['event', 'active']);
         });
     }
-
 
     public function upgrade5000050Step1(): void
     {
@@ -262,10 +282,36 @@ class Setup extends AbstractSetup
         });
     }
 
+    public function upgrade7000070Step1(): void
+    {
+        $this->schemaManager()->createTable('xf_wgh_xfrm_release', function (Create $table)
+        {
+            $table->addColumn('xfrm_release_id', 'bigint')->autoIncrement();
+            $table->addColumn('mapping_id', 'int')->unsigned();
+            $table->addColumn('repository_id', 'int')->unsigned();
+            $table->addColumn('github_release_id', 'bigint')->unsigned();
+            $table->addColumn('resource_id', 'int')->unsigned();
+            $table->addColumn('resource_version_id', 'bigint')->unsigned()->setDefault(0);
+            $table->addColumn('resource_update_id', 'bigint')->unsigned()->setDefault(0);
+            $table->addColumn('version_string', 'varchar', 100)->setDefault('');
+            $table->addColumn('download_url', 'varchar', 1000)->setDefault('');
+            $table->addColumn('release_hash', 'char', 64)->setDefault('');
+            $table->addColumn('status', 'varchar', 25)->setDefault('pending');
+            $table->addColumn('last_error', 'varchar', 1000)->setDefault('');
+            $table->addColumn('created_date', 'int')->unsigned()->setDefault(0);
+            $table->addColumn('updated_date', 'int')->unsigned()->setDefault(0);
+            $table->addPrimaryKey('xfrm_release_id');
+            $table->addUniqueKey(['mapping_id', 'github_release_id'], 'mapping_release');
+            $table->addKey(['resource_id', 'status']);
+            $table->addKey(['repository_id', 'updated_date']);
+        });
+    }
+
     public function uninstallStep1(): void
     {
         $sm = $this->schemaManager();
         foreach ([
+            'xf_wgh_xfrm_release',
             'xf_wgh_conflict',
             'xf_wgh_user_mapping',
             'xf_wgh_delivery',

@@ -78,3 +78,19 @@ Kullandığınız event'leri seçin. Mevcut modüller `release`, `push`, `issues
 - İlk mesaj, cevap ve durum senkronizasyonunu ihtiyacınıza göre açın
 
 Gerçek çift yönlü kullanımda inbound target forum ile outbound source forum aynı iş akışını temsil etmelidir.
+
+## Çift yönlü Issue senkronizasyonu için GitHub App yetkileri
+
+Mevcut özellikler için GitHub App repository izinlerinde **Metadata: Read-only** ve **Issues: Read and write** yetkilerini verin. Yalnızca mappinglerde kullanacağınız webhook olaylarına abone olun (örneğin Releases, Push, Issues, Issue comments, Pull requests ve Pull request review olayları).
+
+## Opsiyonel XFRM API key
+
+GitHub Release → XFRM senkronizasyonu için Resource Manager yazma kapsamına sahip ayrı bir XenForo API key oluşturup config üzerinden referanslayın:
+
+```php
+$config['warextGitHubSync']['xfrmApiKeys'] = [
+    'github_xfrm' => 'GERCEK-XENFORO-API-KEY'
+];
+```
+
+Mapping yalnızca `github_xfrm` değerini tutar; gerçek API key eklenti veritabanına kaydedilmez.

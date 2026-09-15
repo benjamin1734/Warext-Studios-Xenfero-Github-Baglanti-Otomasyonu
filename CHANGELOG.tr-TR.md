@@ -1,5 +1,15 @@
 # Değişiklik Günlüğü
 
+## 0.7.0 Alpha 7
+- GitHub Release → mevcut XFRM resource senkronizasyonu eklendi.
+- XenForo REST API üzerinden ResourceVersion oluşturma eklendi.
+- Release notlarından Resource Update oluşturma/düzenleme eklendi.
+- GitHub release → XFRM version/update kalıcı kimlik takibi eklendi.
+- Release asset/source ZIP/release sayfası indirme kaynağı seçimi eklendi.
+- Silinen veya yayından kaldırılan release için ignore/soft/hard delete politikaları eklendi.
+- Admin CP XFRM durum ekranı ve diagnostics kontrolleri eklendi.
+- Gerçek API anahtarlarını DB’ye yazmadan config.php referanslarıyla çalışma eklendi.
+
 ## 0.6.0 Alpha 6
 - XenForo konusu → GitHub Pull Request oluşturma/güncelleme/kapatma desteği eklendi.
 - XenForo cevapları → Pull Request conversation comment senkronizasyonu eklendi.

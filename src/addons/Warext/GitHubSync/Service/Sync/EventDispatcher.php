@@ -5,6 +5,7 @@ namespace Warext\GitHubSync\Service\Sync;
 use RuntimeException;
 use Warext\GitHubSync\Entity\Delivery;
 use Warext\GitHubSync\Service\Webhook\EventNormalizer;
+use Warext\GitHubSync\Service\XFRM\ReleaseSynchronizer;
 
 final class EventDispatcher
 {
@@ -52,7 +53,9 @@ final class EventDispatcher
         $messageFactory = new MessageFactory(new TemplateRenderer());
         $executor = new XenForoActionExecutor($registry);
         $conflictResolver = new ConflictResolver();
+        $xfrm = new ReleaseSynchronizer();
         $processed = 0;
+        $messages = [];
         $conflicts = 0;
 
         foreach ($mappings as $mapping)
@@ -64,6 +67,17 @@ final class EventDispatcher
             if (!$filter->matches($mapping, $event))
             {
                 continue;
+            }
+
+            if ($xfrm->enabled($mapping, $event))
+            {
+                $xfrmResult = $xfrm->synchronize($mapping, $repository, $event, (string)$delivery->payload_hash);
+                if (!empty($xfrmResult['processed']))
+                {
+                    $processed++;
+                    if (!empty($xfrmResult['message'])) $messages[] = (string)$xfrmResult['message'];
+                }
+                if ($xfrm->mode($mapping) === 'only') continue;
             }
 
             $action = $messageFactory->build($mapping, $repository, $event);
@@ -90,7 +104,8 @@ final class EventDispatcher
             return;
         }
 
-        $this->finish($delivery, 'processed', $conflicts > 0 ? sprintf('%d mapping(s) processed; %d conflict(s) queued.', $processed, $conflicts) : '');
+        if ($conflicts > 0) $messages[] = sprintf('%d conflict(s) queued.', $conflicts);
+        $this->finish($delivery, 'processed', implode(' ', array_values(array_unique($messages))));
     }
 
     private function finish(Delivery $delivery, string $status, string $message): void

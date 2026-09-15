@@ -50,6 +50,23 @@
 <xf:checkboxrow label="Update behavior"><xf:option name="update_first_post" value="1" selected="{$target.update_first_post}">Update the first post of an existing thread</xf:option><xf:option name="update_title" value="1" selected="{$target.update_title}">Update thread title</xf:option></xf:checkboxrow>
 <xf:selectrow name="delete_policy" value="{$target.delete_policy}" label="Remote delete policy"><xf:option value="ignore">Ignore</xf:option><xf:option value="mark_deleted">Mark as deleted</xf:option><xf:option value="soft_delete">Soft delete integration-created content</xf:option><xf:option value="hard_delete">Hard delete integration-created content</xf:option></xf:selectrow>
 </div>
+<h2 class="block-header">XFRM Resource Manager target</h2><div class="block-body">
+<xf:checkboxrow label="XFRM synchronization">
+<xf:option name="xfrm_enabled" value="1" selected="{$target.xfrm_enabled}">Synchronize GitHub release events to an existing XenForo Resource Manager resource</xf:option>
+<xf:option name="xfrm_create_version" value="1" selected="{$target.xfrm_create_version}">Create an XFRM ResourceVersion for a new GitHub release</xf:option>
+<xf:option name="xfrm_create_update" value="1" selected="{$target.xfrm_create_update}">Create/update an XFRM Resource Update from GitHub release notes (also feeds the resource discussion workflow)</xf:option>
+<xf:option name="xfrm_strip_v" value="1" selected="{$target.xfrm_strip_v}">Strip a leading v from numeric release tags (v1.2.0 → 1.2.0)</xf:option>
+<xf:option name="xfrm_api_bypass" value="1" selected="{$target.xfrm_api_bypass}">Use api_bypass_permissions (requires a suitable super-user API key)</xf:option>
+</xf:checkboxrow>
+<xf:selectrow name="xfrm_mode" value="{$target.xfrm_mode}" label="XFRM mode"><xf:option value="alongside">XFRM + normal XenForo target</xf:option><xf:option value="only">XFRM only for this release mapping</xf:option></xf:selectrow>
+<xf:numberboxrow name="xfrm_resource_id" value="{$target.xfrm_resource_id}" min="0" label="Existing XFRM resource ID" explain="v0.7 intentionally targets an existing resource; it does not auto-create ResourceItem records." />
+<xf:textboxrow name="xfrm_api_key_ref" value="{$target.xfrm_api_key_ref}" label="Local XFRM API key reference" explain="Reference under config.php: warextGitHubSync.xfrmApiKeys. The real key is never stored in the add-on database." />
+<xf:numberboxrow name="xfrm_api_user_id" value="{$target.xfrm_api_user_id}" min="0" label="XFRM API context user ID" explain="Used as XF-Api-User when the configured key is a super-user key." />
+<xf:selectrow name="xfrm_download_source" value="{$target.xfrm_download_source}" label="Release download source"><xf:option value="asset">Matching release asset</xf:option><xf:option value="zipball">GitHub source ZIP</xf:option><xf:option value="release_page">GitHub release page</xf:option></xf:selectrow>
+<xf:textboxrow name="xfrm_asset_pattern" value="{$target.xfrm_asset_pattern}" label="Release asset pattern" explain="Used in asset mode. Wildcards are supported, e.g. *.zip or Warext-*.zip." />
+<xf:selectrow name="xfrm_delete_policy" value="{$target.xfrm_delete_policy}" label="Deleted GitHub release policy"><xf:option value="ignore">Keep XFRM version/update</xf:option><xf:option value="soft_delete">Soft-delete synchronized XFRM version/update</xf:option><xf:option value="hard_delete">Hard-delete synchronized XFRM version/update</xf:option></xf:selectrow>
+</div>
+
 <h2 class="block-header">Filters</h2><div class="block-body">
 <xf:textarearow name="branches" value="{$filterText.branches}" label="Allowed branches" explain="One branch per line. Empty means all branches." autosize="true" />
 <xf:textarearow name="include_commit" value="{$filterText.include_commit}" label="Commit message include terms" explain="At least one term must match when configured." autosize="true" />

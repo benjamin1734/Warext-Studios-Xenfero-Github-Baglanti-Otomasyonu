@@ -9,10 +9,11 @@ use Warext\GitHubSync\Admin\Controller\Traits\DeliveryDiagnosticActions;
 use Warext\GitHubSync\Admin\Controller\Traits\MappingTemplateActions;
 use Warext\GitHubSync\Admin\Controller\Traits\UserConflictActions;
 use Warext\GitHubSync\Admin\Controller\Traits\WorkflowActions;
+use Warext\GitHubSync\Admin\Controller\Traits\XfrmActions;
 
 class GitHubSync extends AbstractController
 {
-    use ConnectionRepositoryActions, MappingTemplateActions, UserConflictActions, DeliveryDiagnosticActions, WorkflowActions;
+    use ConnectionRepositoryActions, MappingTemplateActions, UserConflictActions, DeliveryDiagnosticActions, WorkflowActions, XfrmActions;
 
     protected function preDispatchController($action, ParameterBag $params) { $this->assertAdminPermission('wghManage'); }
 
@@ -26,7 +27,8 @@ class GitHubSync extends AbstractController
             'failed'=>\XF::finder('Warext\\GitHubSync:Delivery')->where('status','failed')->total(),
             'pending'=>\XF::finder('Warext\\GitHubSync:Delivery')->where('status',['received','processing'])->total(),
             'conflicts'=>\XF::finder('Warext\\GitHubSync:Conflict')->where('status','pending')->total(),
-            'userMappings'=>\XF::finder('Warext\\GitHubSync:UserMapping')->where('active',1)->total()
+            'userMappings'=>\XF::finder('Warext\\GitHubSync:UserMapping')->where('active',1)->total(),
+            'xfrmReleases'=>\XF::finder('Warext\\GitHubSync:XfrmRelease')->total()
         ];
         return $this->view('Warext\\GitHubSync:GitHubSync\\Dashboard','wgh_dashboard',[
             'stats'=>$stats,

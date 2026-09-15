@@ -4,7 +4,7 @@
 
 **Warext GitHub Sync** is a modular GitHub ↔ XenForo synchronization add-on for XenForo 2.3+. It is designed as a synchronization engine, not merely a webhook poster.
 
-> Current status: **0.6.0 Alpha 6 — development source, not a production release.**
+> Current status: **0.7.0 Alpha 7 — development source, not a production release.**
 
 ## What it does
 
@@ -16,6 +16,7 @@ GitHub → XenForo currently supports:
 - Issue comments: create/update/delete replies and automatically resolve the parent Issue thread.
 - Pull requests, PR reviews and PR review comments: normalize and route them to XenForo.
 - GitHub Actions `workflow_run` and `workflow_job` events with workflow status/conclusion filters.
+- Optional GitHub Release → existing XFRM ResourceVersion + Resource Update synchronization through XenForo’s official REST API.
 - Persistent object mapping, payload idempotency, webhook delivery logs and retries.
 
 XenForo → GitHub currently supports:
@@ -36,6 +37,7 @@ XenForo → GitHub currently supports:
 - Optional XenForo prefix → PR review actions (`APPROVE`, `REQUEST_CHANGES`, `COMMENT`).
 - Admin CP Actions browser with explicit `workflow_dispatch`.
 - Safe inbound/outbound field mapping for selected synchronization fields and branch values.
+- XFRM release tracking with idempotent version/update creation, edit synchronization, configurable download source and delete policy.
 
 ## Architecture
 
@@ -80,6 +82,7 @@ docs/                           English/Turkish project docs
 - [Installation / development setup](docs/INSTALLATION.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Field mapping](docs/FIELD_MAPPING.md)
+- [XFRM integration](docs/XFRM.md)
 - [Türkçe kurulum](docs/KURULUM.tr-TR.md)
 - [Türkçe mimari](docs/MIMARI.tr-TR.md)
 - [Changelog](CHANGELOG.md)

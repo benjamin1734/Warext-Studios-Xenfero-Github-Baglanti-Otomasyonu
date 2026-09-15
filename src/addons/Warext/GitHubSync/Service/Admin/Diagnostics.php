@@ -24,7 +24,8 @@ final class Diagnostics
             'xf_wgh_sync_object',
             'xf_wgh_delivery',
             'xf_wgh_user_mapping',
-            'xf_wgh_conflict'
+            'xf_wgh_conflict',
+            'xf_wgh_xfrm_release'
         ] as $table)
         {
             try
@@ -64,6 +65,25 @@ final class Diagnostics
             catch (\Throwable $e)
             {
                 $checks[] = $this->check($prefix . ' GitHub API', false, $e->getMessage());
+            }
+        }
+
+        $xfrmAvailable = class_exists('XFRM\\Entity\\ResourceItem');
+        $checks[] = $this->check('XFRM', $xfrmAvailable, $xfrmAvailable ? 'Loaded' : 'Not installed/loaded');
+        if ($xfrmAvailable)
+        {
+            $config = \XF::config('warextGitHubSync');
+            $keys = is_array($config) ? ($config['xfrmApiKeys'] ?? []) : [];
+            foreach (\XF::finder('Warext\\GitHubSync:Mapping')->where('enabled',1)->fetch() as $mapping)
+            {
+                $target = is_array($mapping->target_config) ? $mapping->target_config : [];
+                if (empty($target['xfrm_enabled'])) continue;
+                $resourceId = (int)($target['xfrm_resource_id'] ?? 0);
+                $resource = $resourceId > 0 ? \XF::em()->find('XFRM:ResourceItem', $resourceId) : null;
+                $checks[] = $this->check('XFRM mapping #' . $mapping->mapping_id . ' resource', (bool)$resource, $resource ? ('Resource #' . $resourceId) : ('Missing resource #' . $resourceId));
+                $ref = trim((string)($target['xfrm_api_key_ref'] ?? ''));
+                $keyOk = $ref !== '' && is_array($keys) && trim((string)($keys[$ref] ?? '')) !== '';
+                $checks[] = $this->check('XFRM mapping #' . $mapping->mapping_id . ' API key', $keyOk, $keyOk ? ('Resolved: ' . $ref) : ('Missing reference: ' . $ref));
             }
         }
 

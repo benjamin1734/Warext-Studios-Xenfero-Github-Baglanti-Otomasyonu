@@ -4,11 +4,13 @@ require $root . '/Service/GitHub/JwtFactory.php';
 require $root . '/Service/Webhook/SignatureVerifier.php';
 require $root . '/Service/Sync/TemplateRenderer.php';
 require $root . '/Service/Sync/SyncGuard.php';
+require $root . '/Service/XFRM/DownloadResolver.php';
 
 use Warext\GitHubSync\Service\GitHub\JwtFactory;
 use Warext\GitHubSync\Service\Webhook\SignatureVerifier;
 use Warext\GitHubSync\Service\Sync\TemplateRenderer;
 use Warext\GitHubSync\Service\Sync\SyncGuard;
+use Warext\GitHubSync\Service\XFRM\DownloadResolver;
 
 $key = openssl_pkey_new(['private_key_bits' => 2048, 'private_key_type' => OPENSSL_KEYTYPE_RSA]);
 if (!$key) throw new RuntimeException('RSA key generation failed');
@@ -43,5 +45,18 @@ $value = SyncGuard::run(function() {
     return 123;
 });
 if ($value !== 123 || SyncGuard::active()) throw new RuntimeException('Sync guard cleanup failed');
+
+$resolver = new DownloadResolver();
+$release = [
+    'html_url' => 'https://github.test/releases/v1',
+    'zipball_url' => 'https://github.test/archive/v1.zip',
+    'assets' => [
+        ['name' => 'notes.txt', 'browser_download_url' => 'https://github.test/notes.txt'],
+        ['name' => 'Warext-1.0.0.zip', 'browser_download_url' => 'https://github.test/Warext-1.0.0.zip']
+    ]
+];
+if ($resolver->resolve($release, ['xfrm_download_source'=>'asset','xfrm_asset_pattern'=>'Warext-*.zip']) !== 'https://github.test/Warext-1.0.0.zip') throw new RuntimeException('XFRM asset resolver failed');
+if ($resolver->resolve($release, ['xfrm_download_source'=>'zipball']) !== 'https://github.test/archive/v1.zip') throw new RuntimeException('XFRM zipball resolver failed');
+if ($resolver->resolve($release, ['xfrm_download_source'=>'release_page']) !== 'https://github.test/releases/v1') throw new RuntimeException('XFRM release page resolver failed');
 
 echo "core-tests: OK\n";

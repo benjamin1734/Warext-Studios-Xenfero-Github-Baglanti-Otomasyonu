@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.7.0 Alpha 7
+- Added optional GitHub Release → existing XFRM resource synchronization.
+- Added XFRM ResourceVersion creation through XenForo REST API `/resource-versions/`.
+- Added Resource Update create/edit synchronization for GitHub release notes.
+- Added persistent GitHub release → XFRM version/update identity tracking.
+- Added release asset/source ZIP/release-page download source selection.
+- Added soft/hard/ignore delete policies for deleted or unpublished releases.
+- Added XFRM Admin CP status page and diagnostics.
+- Added config-referenced local XenForo API keys; real API keys are not stored in add-on tables.
+
 ## 0.6.0 Alpha 6
 - Added XenForo thread → GitHub Pull Request create/update/close synchronization.
 - Added XenForo replies → Pull Request conversation comments.

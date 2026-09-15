@@ -80,3 +80,19 @@ Subscribe only to events you use. Current modules understand release, push, issu
 - Enable first-post/reply/state synchronization as required
 
 For a true bidirectional Issue workflow, use a concrete repository and configure both the inbound target forum and outbound source forum consistently.
+
+## GitHub App permissions for bidirectional Issue sync
+
+For the current feature set, grant the GitHub App repository **Metadata: Read-only** and **Issues: Read and write** permissions. Subscribe only to the webhook events enabled by your mappings (for example Releases, Push, Issues, Issue comments, Pull requests and Pull request review events).
+
+## Optional XFRM API key
+
+For GitHub Release → XFRM synchronization, create a dedicated XenForo API key with Resource Manager write scope and reference it from config:
+
+```php
+$config['warextGitHubSync']['xfrmApiKeys'] = [
+    'github_xfrm' => 'REAL-XENFORO-API-KEY'
+];
+```
+
+The mapping stores only `github_xfrm`. The real API key is never saved to the add-on database.
