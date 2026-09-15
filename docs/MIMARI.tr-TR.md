@@ -12,9 +12,10 @@ Warext GitHub Sync tek bir webhook controller'a yığılmış bir sistem değild
 6. Event Normalizer payload'ı ortak event modeline dönüştürür.
 7. Mapping sistemi repo/event/action eşleşmelerini bulur.
 8. Filter Engine branch/release/commit/path kurallarını uygular.
-9. Message Factory standart XenForo işlemini oluşturur.
-10. XenForo'nun native servisleri konu/mesaj ekler, düzenler veya siler.
-11. Sync Registry GitHub nesnesi ↔ XenForo nesnesi kimlik bağını saklar.
+9. Message Factory standart XenForo işlemini ve metadata eşlemelerini oluşturur.
+10. Conflict Resolver, eşlenen XenForo içeriğinin son senkronizasyondan sonra değişip değişmediğini kontrol eder.
+11. XenForo'nun native servisleri konu/mesaj ekler, düzenler, siler ve prefix/açık-kapalı metadata'sını uygular.
+12. Sync Registry GitHub nesnesi ↔ XenForo nesnesi kimlik bağını ve hash durumunu saklar.
 
 ## Dinamik parent yönlendirme
 
@@ -28,8 +29,9 @@ Issue/PR yorumları için sabit XenForo thread ID zorunlu değildir. Yorumun par
 4. Gerekirse GitHub Issue oluşturur veya mevcut eşleşmeyi bulur.
 5. Konu başlığı + ilk mesaj Issue title/body olur.
 6. XenForo cevapları GitHub Issue comment olur.
-7. Hash kontrolü gereksiz tekrar yazımlarını engeller.
-8. GitHub API hataları kullanıcı isteğinin dışında retry edilir.
+7. İsteğe bağlı prefix mapping GitHub Issue label setine; konu açık/kapalı durumu Issue durumuna dönüşür.
+8. Ortak hash modeli hem gereksiz tekrar yazımları hem conflict tabanını yönetir.
+9. GitHub API hataları kullanıcı isteğinin dışında retry edilir.
 
 ## Güvenlik ilkeleri
 
@@ -40,3 +42,13 @@ Issue/PR yorumları için sabit XenForo thread ID zorunlu değildir. Yorumun par
 - Mevcut XenForo konu ilk mesajları yanlış remote delete'e karşı korunur.
 - GitHub API yazma işlemleri queue içinde çalışır.
 - Loop protection çift yönlü sonsuz senkronizasyonu engeller.
+
+## Conflict ve metadata senkronizasyonu
+
+Daha önce eşlenmiş bir nesne GitHub'dan tekrar geldiğinde sistem, son senkronizasyonda kaydedilen XenForo hash'i ile mevcut XenForo içeriğini karşılaştırır. Mapping politikasına göre GitHub, XenForo, en yeni taraf veya yönetici kararı kazanabilir. Manuel conflict kayıtları `xf_wgh_conflict` tablosunda tutulur ve Admin CP'den çözülebilir.
+
+Mapping metadata katmanı GitHub label'larını tek bir XenForo konu prefix'i ile, Issue açık/kapalı durumunu `discussion_open` ile ve GitHub event gönderen hesabını kapsamlı XenForo kullanıcı eşlemeleriyle senkronize edebilir. Label/prefix eşlemeleri `label=prefix_id` biçimindedir ve bidirectional mappinglerde aynı tablo iki yönde kullanılır.
+
+## Admin CP modülerliği
+
+Yönetim işlemleri bağlantı/repository, mapping/template, kullanıcı/conflict ve delivery/diagnostics modüllerine ayrılmıştır. Böylece ileride yeni GitHub nesneleri veya XenForo hedefleri eklenirken tek büyük controller'a bağımlılık oluşmaz.
