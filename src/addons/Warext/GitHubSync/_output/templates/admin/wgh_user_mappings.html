@@ -6,7 +6,7 @@
 <xf:foreach loop="$userMappings" value="$item"><tr class="dataList-row">
 <td class="dataList-cell"><a href="{{ link('github-sync/user-mapping-edit', null, {'user_mapping_id': $item.user_mapping_id}) }}">{$item.github_login}</a></td>
 <td class="dataList-cell">{$item.xf_user_id}</td>
-<td class="dataList-cell"><xf:if is="$item.repository_id">{{$repositories[$item.repository_id]}}<xf:elseif is="$item.connection_id" />Connection #{$item.connection_id}<xf:else />Global</xf:if></td>
+<td class="dataList-cell"><xf:if is="$item.repository_id">{$repositories.{$item.repository_id}}<xf:elseif is="$item.connection_id" />Connection #{$item.connection_id}<xf:else />Global</xf:if></td>
 <td class="dataList-cell">{{ $item.active ? 'Enabled' : 'Disabled' }}</td>
 <td class="dataList-cell dataList-cell--action"><a href="{{ link('github-sync/user-mapping-delete', null, {'user_mapping_id': $item.user_mapping_id}) }}">Delete</a></td>
 </tr></xf:foreach>
