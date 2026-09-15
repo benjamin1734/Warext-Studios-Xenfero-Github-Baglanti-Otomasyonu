@@ -1,0 +1,9 @@
+<xf:title>{{ $userMapping.user_mapping_id ? 'Edit GitHub user mapping' : 'Add GitHub user mapping' }}</xf:title>
+<xf:macro template="wgh_macros" name="nav" arg-selected="users" />
+<xf:form action="{{ link('github-sync/user-mapping-save', null, {'user_mapping_id': $userMapping.user_mapping_id}) }}" ajax="true" class="block"><div class="block-container"><div class="block-body">
+<xf:textboxrow name="github_login" value="{$userMapping.github_login}" label="GitHub login" required="required" />
+<xf:numberboxrow name="xf_user_id" value="{$userMapping.xf_user_id}" min="1" label="XenForo user ID" required="required" />
+<xf:selectrow name="connection_id" value="{$userMapping.connection_id}" label="Connection scope"><xf:option value="0">Any connection</xf:option><xf:foreach loop="$connections" value="$connection"><xf:option value="{$connection.connection_id}">{$connection.title}</xf:option></xf:foreach></xf:selectrow>
+<xf:selectrow name="repository_id" value="{$userMapping.repository_id}" label="Repository scope"><xf:option value="0">Any repository in the selected scope</xf:option><xf:foreach loop="$repositories" value="$repository"><xf:option value="{$repository.repository_id}">{$repository.full_name}</xf:option></xf:foreach></xf:selectrow>
+<xf:checkboxrow label="Status"><xf:option name="active" value="1" selected="{$userMapping.active}">Mapping is enabled</xf:option></xf:checkboxrow>
+</div><xf:submitrow submit="Save user mapping" /></div></xf:form>
