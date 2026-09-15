@@ -1,0 +1,9 @@
+{
+  "navigation_id": "wghGitHubSyncPullRequests",
+  "parent_navigation_id": "wghGitHubSync",
+  "display_order": 70,
+  "link": "github-sync/pull-requests",
+  "admin_permission_id": "wghManage",
+  "debug_only": false,
+  "hide_no_children": false
+}

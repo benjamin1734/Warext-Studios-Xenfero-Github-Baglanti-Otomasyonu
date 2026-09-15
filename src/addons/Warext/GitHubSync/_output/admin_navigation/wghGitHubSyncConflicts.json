@@ -1,0 +1,9 @@
+{
+  "navigation_id": "wghGitHubSyncConflicts",
+  "parent_navigation_id": "wghGitHubSync",
+  "display_order": 110,
+  "link": "github-sync/conflicts",
+  "admin_permission_id": "wghManage",
+  "debug_only": false,
+  "hide_no_children": false
+}

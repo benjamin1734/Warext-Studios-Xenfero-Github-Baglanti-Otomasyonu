@@ -1,0 +1,9 @@
+{
+  "navigation_id": "wghGitHubSyncUsers",
+  "parent_navigation_id": "wghGitHubSync",
+  "display_order": 100,
+  "link": "github-sync/user-mappings",
+  "admin_permission_id": "wghManage",
+  "debug_only": false,
+  "hide_no_children": false
+}

@@ -1,7 +1,7 @@
 {
-  "navigation_id": "wghGitHubSync",
-  "parent_navigation_id": "",
-  "display_order": 850,
+  "navigation_id": "wghGitHubSyncDashboard",
+  "parent_navigation_id": "wghGitHubSync",
+  "display_order": 10,
   "link": "github-sync",
   "admin_permission_id": "wghManage",
   "debug_only": false,

@@ -1,0 +1,9 @@
+{
+  "navigation_id": "wghGitHubSyncActions",
+  "parent_navigation_id": "wghGitHubSync",
+  "display_order": 60,
+  "link": "github-sync/actions",
+  "admin_permission_id": "wghManage",
+  "debug_only": false,
+  "hide_no_children": false
+}

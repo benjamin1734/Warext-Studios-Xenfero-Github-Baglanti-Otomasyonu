@@ -1,0 +1,9 @@
+{
+  "navigation_id": "wghGitHubSyncHealth",
+  "parent_navigation_id": "wghGitHubSync",
+  "display_order": 90,
+  "link": "github-sync/health",
+  "admin_permission_id": "wghManage",
+  "debug_only": false,
+  "hide_no_children": false
+}
