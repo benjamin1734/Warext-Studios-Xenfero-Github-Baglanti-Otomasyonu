@@ -2,42 +2,23 @@
 
 [Türkçe](README.tr-TR.md) | **English**
 
-**Warext GitHub Sync** is a modular GitHub ↔ XenForo synchronization add-on for XenForo 2.3+. It is designed as a synchronization engine, not merely a webhook poster.
+**Warext GitHub Sync** is a modular, bidirectional GitHub ↔ XenForo synchronization add-on for XenForo 2.3+. It is a synchronization engine rather than a simple webhook poster: GitHub and XenForo objects keep durable identity links so later edits, deletes and state changes can update the original counterpart.
 
-> Current status: **0.7.0 Alpha 7 — development source, not a production release.**
+> Current status: **0.8.0 Alpha 8 — development source, not a production release.**
 
-## What it does
+## Current capabilities
 
-GitHub → XenForo currently supports:
+GitHub → XenForo supports releases, push/tag changelogs, Issues, Issue comments, Pull Requests, PR reviews/review comments, GitHub Actions `workflow_run` / `workflow_job`, reusable templates, filters, queues/retries and persistent object mapping.
 
-- Releases: create/update mapped XenForo threads or posts.
-- Pushes and tags: filtered/aggregated changelog messages.
-- Issues: create/update mapped XenForo discussions.
-- Issue comments: create/update/delete replies and automatically resolve the parent Issue thread.
-- Pull requests, PR reviews and PR review comments: normalize and route them to XenForo.
-- GitHub Actions `workflow_run` and `workflow_job` events with workflow status/conclusion filters.
-- Optional GitHub Release → existing XFRM ResourceVersion + Resource Update synchronization through XenForo’s official REST API.
-- Persistent object mapping, payload idempotency, webhook delivery logs and retries.
+XenForo → GitHub supports Issue create/update/close, Issue comments, Pull Request create/update/close, PR conversation comments, optional prefix → PR review actions, explicit Admin CP `workflow_dispatch`, label ↔ prefix mapping, user mapping, safe field mapping and conflict policies (`github_wins`, `xenforo_wins`, `newest_wins`, manual review).
 
-XenForo → GitHub currently supports:
+Optional XenForo Resource Manager integration supports GitHub Release → existing XFRM ResourceVersion + Resource Update synchronization using XenForo's REST API. v0.8 adds XFRM action history, manual retry by refetching the authoritative GitHub Release, remote reconciliation, safe local tracking-snapshot restore, retry/attempt/success/reconcile timestamps, remote-state tracking and semantic release hashing.
 
-- Thread + first post → GitHub Issue create/update.
-- Thread replies → GitHub Issue comment create/update.
-- Reply deletion → GitHub Issue comment deletion.
-- Thread deletion → close the mapped GitHub Issue.
-- Optional thread open/closed state synchronization.
-- Queue-based outbound processing with retry so a GitHub outage does not block normal forum posting.
-- Recursion protection to prevent GitHub → XenForo → GitHub loops.
-- GitHub label ↔ XenForo prefix synchronization using per-mapping label maps.
-- GitHub account → XenForo user mapping with repository/connection/global scope fallbacks.
-- Bidirectional open/closed state synchronization for Issue-backed threads.
-- Conflict detection with GitHub-wins, XenForo-wins, newest-wins and manual-review strategies.
-- Admin conflict queue with explicit GitHub/XenForo resolution actions.
-- Thread → GitHub Pull Request create/update/close and reply → PR conversation comments.
-- Optional XenForo prefix → PR review actions (`APPROVE`, `REQUEST_CHANGES`, `COMMENT`).
-- Admin CP Actions browser with explicit `workflow_dispatch`.
-- Safe inbound/outbound field mapping for selected synchronization fields and branch values.
-- XFRM release tracking with idempotent version/update creation, edit synchronization, configurable download source and delete policy.
+## Operations and monitoring
+
+Admin CP contains Dashboard, Connections, Repositories, Mappings, Templates, Actions, XFRM, Health, User mappings, Conflicts, Webhook logs and Diagnostics. The Health monitor summarizes webhook failures/backlog, unresolved conflicts and XFRM failed/attention/staleness as `healthy`, `degraded` or `critical`.
+
+Manual XFRM retry does not blindly replay an old payload: it fetches the current GitHub Release using the configured GitHub App installation. Reconcile checks the configured Resource and tracked ResourceVersion/Resource Update identities. HTTP 404 is treated as a missing remote object; authentication and server failures remain real errors.
 
 ## Architecture
 
@@ -45,36 +26,26 @@ XenForo → GitHub currently supports:
 GitHub Webhooks
       │
       ▼
-HMAC validation → Delivery log → Queue / retry → Event normalizer
+HMAC validation → Delivery log → Queue/retry → Event normalizer
                                              │
                                              ▼
-                                   Mapping / filter engine
+                                   Mapping/filter engine
                                              │
-                    ┌────────────────────────┴──────────────────────┐
-                    ▼                                               ▼
-             XenForo actions                                Sync registry
-       thread/post create/edit/delete                  GitHub object ↔ XF object
-                    ▲                                               │
-                    └────────────────────────┬──────────────────────┘
+                     ┌───────────────────────┴──────────────────────┐
+                     ▼                                              ▼
+              XenForo actions                               Sync registry
+                     ▲                                              │
+                     └───────────────────────┬──────────────────────┘
                                              │
                                    XenForo entity events
                                              │
                                              ▼
-                                   Outbound queue / retry
+                                   Outbound queue/retry
                                              │
                                              ▼
-                                     GitHub REST API
-```
+                                      GitHub REST API
 
-The synchronization registry stores durable identity links, so editing a GitHub Issue or Release edits the previously-created XenForo content rather than blindly creating another post.
-
-## Repository layout
-
-```text
-src/addons/Warext/GitHubSync/   XenForo add-on source
-  _output/                      XenForo development output
-  _no_upload/                   development notes/tests
-docs/                           English/Turkish project docs
+GitHub Release → optional XFRM adapter → XenForo REST API → ResourceVersion/Update
 ```
 
 ## Documentation
@@ -83,18 +54,18 @@ docs/                           English/Turkish project docs
 - [Architecture](docs/ARCHITECTURE.md)
 - [Field mapping](docs/FIELD_MAPPING.md)
 - [XFRM integration](docs/XFRM.md)
+- [Health / retry / reconciliation](docs/MONITORING.md)
 - [Türkçe kurulum](docs/KURULUM.tr-TR.md)
 - [Türkçe mimari](docs/MIMARI.tr-TR.md)
+- [Türkçe izleme](docs/IZLEME.tr-TR.md)
 - [Changelog](CHANGELOG.md)
 
 ## Security
 
-Webhook requests are validated using GitHub `X-Hub-Signature-256` HMAC-SHA256 signatures. GitHub App private keys and webhook secrets are referenced from XenForo configuration and are intentionally not stored as plaintext in the add-on tables.
-
-Never commit your GitHub App private key or real webhook secret to this repository.
+Webhook deliveries require GitHub `X-Hub-Signature-256` HMAC-SHA256 validation and delivery-ID deduplication. GitHub App private keys, webhook secrets and XFRM API keys are referenced from XenForo `config.php`; real secrets are not stored in add-on tables or committed to the repository.
 
 ## Development status
 
-This repository contains development output (`_output`). A real XenForo 2.3 development installation is still required to import/validate the development data and produce a production package using XenForo's normal add-on build process.
+The repository contains XenForo development output (`_output`). Before a production release, the add-on still needs import/template/runtime testing on a real XenForo 2.3 + XFRM development installation and XenForo's normal `_data` / `xf-addon:build-release` build process.
 
 Warext Studios
