@@ -20,8 +20,11 @@ final class Diagnostics
             'xf_wgh_connection',
             'xf_wgh_repository',
             'xf_wgh_mapping',
+            'xf_wgh_template',
             'xf_wgh_sync_object',
-            'xf_wgh_delivery'
+            'xf_wgh_delivery',
+            'xf_wgh_user_mapping',
+            'xf_wgh_conflict'
         ] as $table)
         {
             try
