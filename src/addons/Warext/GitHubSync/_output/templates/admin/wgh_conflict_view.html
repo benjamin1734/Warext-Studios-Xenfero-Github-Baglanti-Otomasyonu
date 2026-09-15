@@ -1,0 +1,13 @@
+<xf:title>Synchronization conflict #{$conflict.conflict_id}</xf:title>
+<xf:macro template="wgh_macros" name="nav" arg-selected="conflicts" />
+<div class="block"><div class="block-container"><h2 class="block-header">Conflict details</h2><div class="block-body block-row">
+<div><strong>GitHub:</strong> {$conflict.github_type} {$conflict.github_id}</div><div><strong>XenForo:</strong> {$conflict.xf_content_type} #{$conflict.xf_content_id}</div><div><strong>GitHub hash:</strong> <code>{$conflict.github_hash}</code></div><div><strong>XenForo hash:</strong> <code>{$conflict.xf_hash}</code></div><div><strong>Status:</strong> {$conflict.status}</div>
+</div></div></div>
+<div class="block"><div class="block-container"><h2 class="block-header">Incoming GitHub action</h2><div class="block-body block-row"><pre style="white-space:pre-wrap">{$payload}</pre></div></div></div>
+<xf:if is="$conflict.status == 'pending'">
+<div class="buttonGroup">
+<xf:form action="{{ link('github-sync/conflict-resolve', null, {'conflict_id': $conflict.conflict_id}) }}" ajax="true"><xf:hiddenval name="resolution" value="github_wins" /><xf:button type="submit" class="button--primary">Apply GitHub version</xf:button></xf:form>
+<xf:form action="{{ link('github-sync/conflict-resolve', null, {'conflict_id': $conflict.conflict_id}) }}" ajax="true"><xf:hiddenval name="resolution" value="xenforo_wins" /><xf:button type="submit">Keep XenForo version</xf:button></xf:form>
+<xf:form action="{{ link('github-sync/conflict-resolve', null, {'conflict_id': $conflict.conflict_id}) }}" ajax="true"><xf:hiddenval name="resolution" value="dismiss" /><xf:button type="submit">Dismiss</xf:button></xf:form>
+</div>
+</xf:if>
