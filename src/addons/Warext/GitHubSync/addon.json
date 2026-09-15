@@ -3,8 +3,8 @@
   "description": "Bidirectional GitHub ↔ XenForo synchronization engine.",
   "version_string": "1.0.0",
   "version_id": 10000000,
-  "dev": "Warext Studios",
-  "dev_url": "https://warext.com/",
+  "dev": "Warext Studios | Support Discord Server",
+  "dev_url": "https://discord.gg/tgsV5XMcFS",
   "require": {
     "XF": [
       2030000,
