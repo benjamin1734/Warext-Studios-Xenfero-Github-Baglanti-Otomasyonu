@@ -5,10 +5,13 @@
 <div class="block-body block-row">
 <div class="pairs pairs--columns pairs--fixedSmall"><dt>XFRM loaded</dt><dd>{{ $available ? 'Yes' : 'No' }}</dd></div>
 <div class="pairs pairs--columns pairs--fixedSmall"><dt>Tracked releases</dt><dd>{$recordCount}</dd></div>
-<p class="formRow-explain">Release synchronization targets an existing XFRM resource. Resource versions and resource updates are written through XenForo's official REST API using a config-referenced API key with resource:write scope.</p>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Failed</dt><dd>{$failedCount}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>Attention</dt><dd>{$attentionCount}</dd></div>
+<p><a class="button" href="{{ link('github-sync/xfrm-mappings') }}">Manage XFRM mappings</a></p>
+<p class="formRow-explain">Release synchronization targets an existing XFRM resource. v0.8 adds audit history, manual retry, remote reconciliation and a dedicated mapping manager.</p>
 </div></div></div>
-<div class="block"><div class="block-container"><h2 class="block-header">Recent XFRM release syncs</h2><div class="block-body">
-<table class="dataList"><thead><tr class="dataList-row"><th class="dataList-cell">GitHub release</th><th class="dataList-cell">Resource</th><th class="dataList-cell">Version</th><th class="dataList-cell">Version ID</th><th class="dataList-cell">Update ID</th><th class="dataList-cell">Status</th><th class="dataList-cell">Updated</th></tr></thead><tbody>
-<xf:foreach loop="$records" value="$record"><tr class="dataList-row"><td class="dataList-cell">{$record.github_release_id}</td><td class="dataList-cell">#{$record.resource_id}</td><td class="dataList-cell">{$record.version_string}</td><td class="dataList-cell">{$record.resource_version_id}</td><td class="dataList-cell">{$record.resource_update_id}</td><td class="dataList-cell">{$record.status}<xf:if is="$record.last_error"><br /><span class="u-muted">{$record.last_error}</span></xf:if></td><td class="dataList-cell"><xf:date time="$record.updated_date" /></td></tr></xf:foreach>
+<div class="block"><div class="block-container"><h2 class="block-header">Tracked XFRM releases</h2><div class="block-body">
+<table class="dataList"><thead><tr class="dataList-row"><th class="dataList-cell">GitHub release</th><th class="dataList-cell">Resource</th><th class="dataList-cell">Version</th><th class="dataList-cell">Status</th><th class="dataList-cell">Remote</th><th class="dataList-cell">Retries</th><th class="dataList-cell">Updated</th></tr></thead><tbody>
+<xf:foreach loop="$records" value="$record"><tr class="dataList-row"><td class="dataList-cell"><a href="{{ link('github-sync/xfrm-view', null, {'xfrm_release_id': $record.xfrm_release_id}) }}">{$record.github_release_id}</a></td><td class="dataList-cell">#{$record.resource_id}</td><td class="dataList-cell">{$record.version_string}</td><td class="dataList-cell">{$record.status}<xf:if is="$record.last_error"><br /><span class="u-muted">{$record.last_error}</span></xf:if></td><td class="dataList-cell">{$record.remote_state}</td><td class="dataList-cell">{$record.retry_count}</td><td class="dataList-cell"><xf:date time="$record.updated_date" /></td></tr></xf:foreach>
 </tbody></table>
 </div></div></div>

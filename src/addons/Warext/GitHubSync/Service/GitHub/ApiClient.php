@@ -95,12 +95,15 @@ final class ApiClient
         return $this->requestJson($method, $path, $this->installationToken($connection), $json);
     }
 
+    public function getRelease(Connection $connection, string $owner, string $repo, int $releaseId): array
+    {
+        if ($releaseId <= 0) throw new RuntimeException('GitHub release ID must be positive.');
+        return $this->requestInstallation($connection, 'GET', $this->repoPath($owner, $repo) . '/releases/' . $releaseId);
+    }
+
     public function createIssue(Connection $connection, string $owner, string $repo, string $title, string $body, array $labels = []): array
     {
-        $payload = [
-            'title' => $title,
-            'body' => $body
-        ];
+        $payload = ['title' => $title, 'body' => $body];
         if ($labels !== []) $payload['labels'] = array_values(array_unique(array_map('strval', $labels)));
         return $this->requestInstallation($connection, 'POST', $this->repoPath($owner, $repo) . '/issues', $payload);
     }
@@ -112,16 +115,12 @@ final class ApiClient
 
     public function createIssueComment(Connection $connection, string $owner, string $repo, int $number, string $body): array
     {
-        return $this->requestInstallation($connection, 'POST', $this->repoPath($owner, $repo) . '/issues/' . $number . '/comments', [
-            'body' => $body
-        ]);
+        return $this->requestInstallation($connection, 'POST', $this->repoPath($owner, $repo) . '/issues/' . $number . '/comments', ['body' => $body]);
     }
 
     public function updateIssueComment(Connection $connection, string $owner, string $repo, int $commentId, string $body): array
     {
-        return $this->requestInstallation($connection, 'PATCH', $this->repoPath($owner, $repo) . '/issues/comments/' . $commentId, [
-            'body' => $body
-        ]);
+        return $this->requestInstallation($connection, 'PATCH', $this->repoPath($owner, $repo) . '/issues/comments/' . $commentId, ['body' => $body]);
     }
 
     public function deleteIssueComment(Connection $connection, string $owner, string $repo, int $commentId): void
@@ -129,25 +128,11 @@ final class ApiClient
         $this->requestInstallation($connection, 'DELETE', $this->repoPath($owner, $repo) . '/issues/comments/' . $commentId);
     }
 
-    public function createPullRequest(
-        Connection $connection,
-        string $owner,
-        string $repo,
-        string $title,
-        string $body,
-        string $head,
-        string $base,
-        bool $draft = false,
-        bool $maintainerCanModify = true
-    ): array
+    public function createPullRequest(Connection $connection, string $owner, string $repo, string $title, string $body, string $head, string $base, bool $draft = false, bool $maintainerCanModify = true): array
     {
         return $this->requestInstallation($connection, 'POST', $this->repoPath($owner, $repo) . '/pulls', [
-            'title' => $title,
-            'body' => $body,
-            'head' => $head,
-            'base' => $base,
-            'draft' => $draft,
-            'maintainer_can_modify' => $maintainerCanModify
+            'title' => $title, 'body' => $body, 'head' => $head, 'base' => $base,
+            'draft' => $draft, 'maintainer_can_modify' => $maintainerCanModify
         ]);
     }
 
@@ -156,24 +141,11 @@ final class ApiClient
         return $this->requestInstallation($connection, 'PATCH', $this->repoPath($owner, $repo) . '/pulls/' . $number, $changes);
     }
 
-    public function createPullRequestReview(
-        Connection $connection,
-        string $owner,
-        string $repo,
-        int $number,
-        string $event,
-        string $body
-    ): array
+    public function createPullRequestReview(Connection $connection, string $owner, string $repo, int $number, string $event, string $body): array
     {
         $event = strtoupper(trim($event));
-        if (!in_array($event, ['APPROVE', 'REQUEST_CHANGES', 'COMMENT'], true))
-        {
-            throw new RuntimeException('Unsupported pull request review event: ' . $event);
-        }
-        return $this->requestInstallation($connection, 'POST', $this->repoPath($owner, $repo) . '/pulls/' . $number . '/reviews', [
-            'event' => $event,
-            'body' => $body
-        ]);
+        if (!in_array($event, ['APPROVE', 'REQUEST_CHANGES', 'COMMENT'], true)) throw new RuntimeException('Unsupported pull request review event: ' . $event);
+        return $this->requestInstallation($connection, 'POST', $this->repoPath($owner, $repo) . '/pulls/' . $number . '/reviews', ['event' => $event, 'body' => $body]);
     }
 
     public function listWorkflows(Connection $connection, string $owner, string $repo): array
@@ -181,23 +153,11 @@ final class ApiClient
         return $this->requestInstallation($connection, 'GET', $this->repoPath($owner, $repo) . '/actions/workflows?per_page=100');
     }
 
-    public function dispatchWorkflow(
-        Connection $connection,
-        string $owner,
-        string $repo,
-        string $workflowId,
-        string $ref,
-        array $inputs = []
-    ): array
+    public function dispatchWorkflow(Connection $connection, string $owner, string $repo, string $workflowId, string $ref, array $inputs = []): array
     {
         $payload = ['ref' => $ref];
         if ($inputs !== []) $payload['inputs'] = $inputs;
-        return $this->requestInstallation(
-            $connection,
-            'POST',
-            $this->repoPath($owner, $repo) . '/actions/workflows/' . rawurlencode($workflowId) . '/dispatches',
-            $payload
-        );
+        return $this->requestInstallation($connection, 'POST', $this->repoPath($owner, $repo) . '/actions/workflows/' . rawurlencode($workflowId) . '/dispatches', $payload);
     }
 
     private function repoPath(string $owner, string $repo): string
@@ -213,32 +173,23 @@ final class ApiClient
                 'Accept' => 'application/vnd.github+json',
                 'Authorization' => 'Bearer ' . $bearerToken,
                 'X-GitHub-Api-Version' => self::API_VERSION,
-                'User-Agent' => 'Warext-GitHub-Sync/0.6'
+                'User-Agent' => 'Warext-GitHub-Sync/0.8'
             ],
             'http_errors' => false,
             'timeout' => 20,
             'connect_timeout' => 8
         ];
-        if ($json !== [] || strtoupper($method) !== 'GET')
-        {
-            $options['json'] = $json;
-        }
-
+        if ($json !== [] || strtoupper($method) !== 'GET') $options['json'] = $json;
         $response = $client->request(strtoupper($method), self::API_BASE . $path, $options);
         $status = (int)$response->getStatusCode();
         $body = (string)$response->getBody();
         $data = $body !== '' ? json_decode($body, true) : [];
-        if (!is_array($data))
-        {
-            $data = [];
-        }
-
+        if (!is_array($data)) $data = [];
         if ($status < 200 || $status >= 300)
         {
             $message = (string)($data['message'] ?? ('HTTP ' . $status));
             throw new RuntimeException('GitHub API request failed: ' . $message . ' (' . $status . ')');
         }
-
         return $data;
     }
 }

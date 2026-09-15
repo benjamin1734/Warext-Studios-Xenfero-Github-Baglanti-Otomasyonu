@@ -25,6 +25,11 @@ class XfrmRelease extends Entity
             'release_hash' => ['type' => self::STR, 'maxLength' => 64, 'default' => ''],
             'status' => ['type' => self::STR, 'maxLength' => 25, 'default' => 'pending'],
             'last_error' => ['type' => self::STR, 'maxLength' => 1000, 'default' => ''],
+            'retry_count' => ['type' => self::UINT, 'default' => 0],
+            'last_attempt_date' => ['type' => self::UINT, 'default' => 0],
+            'last_success_date' => ['type' => self::UINT, 'default' => 0],
+            'last_reconcile_date' => ['type' => self::UINT, 'default' => 0],
+            'remote_state' => ['type' => self::STR, 'maxLength' => 25, 'default' => 'unknown'],
             'created_date' => ['type' => self::UINT, 'default' => 0],
             'updated_date' => ['type' => self::UINT, 'default' => 0]
         ];
