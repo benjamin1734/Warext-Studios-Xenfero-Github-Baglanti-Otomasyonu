@@ -1,5 +1,59 @@
 # Warext Studios | XenForo GitHub Connection Automation
 
+## English
+
+**Warext GitHub Sync** is a modular, bidirectional GitHub ↔ XenForo synchronization add-on for XenForo 2.3+. It keeps durable identity mappings between GitHub and XenForo objects and manages Issues, Pull Requests, Releases, comments, workflows, conflicts, retry/recovery and XFRM flows.
+
+> Current version: **v1.0.0 — Stable**
+
+### Download / Installation
+
+- **Latest stable release:** [v1.0.0](https://github.com/benjamin1734/Warext-Studios-Xenfero-Github-Baglanti-Otomasyonu/releases/tag/v1.0.0)
+- Release asset: `Warext-GitHub-Sync-v1.0.0-install.zip`
+- Install or upgrade directly from XenForo Admin CP → Add-ons → **Install/upgrade from archive**.
+- Existing `v0.9.4 Alpha 13` installations can be upgraded directly to v1.0.0 without uninstalling first.
+
+### Admin CP area
+
+Warext GitHub Sync appears as its own **collapsible Admin CP navigation group**. The group contains Dashboard, Connections, Repositories, Mappings, Templates, Actions, PR Tools, XFRM, Health, User Mappings, Conflicts, Webhook Logs and Diagnostics.
+
+Non-super administrators must be granted the custom `wghManage` administrator permission.
+
+### Features
+
+- GitHub Release / Push / Tag / Issue / Comment / Pull Request / Review / Actions → XenForo.
+- XenForo Thread/Post → GitHub Issue / PR / Comment.
+- GitHub label ↔ XenForo prefix and open/closed state synchronization.
+- GitHub user ↔ XenForo user mapping.
+- GitHub-wins, XenForo-wins, newest-wins and manual conflict resolution.
+- Pull Request reviewer / team reviewer management.
+- Workflow dispatch, history, rerun, failed-rerun and cancel controls.
+- GitHub Release → XFRM ResourceVersion + Resource Update.
+- XFRM history, manual/bulk retry-reconcile and tracking restore.
+- Health monitor and persistent alert history.
+- GitHub App JWT / installation-token flow and HMAC webhook validation.
+- Normal XenForo `_data/*.xml + hashes.json` release package.
+
+### Installer fixes validated before v1.0.0
+
+- Normal XenForo `_data/*.xml + hashes.json` archive layout.
+- Invalid `<xf:submit>` template tags removed.
+- PHP-style dynamic array access converted to XenForo template syntax.
+- Dedicated Admin CP navigation tree and route section context.
+- Release workflow validation for templates, navigation, routes and package structure.
+
+---
+
+Warext Studios
+
+## Support
+
+For questions, bug reports, installation support, and help with Warext Studios XenForo add-ons, you can join our support Discord server:
+
+**Discord:** https://discord.gg/tgsV5XMcFS
+
+---
+
 ## Türkçe
 
 **Warext GitHub Sync**, XenForo 2.3+ için modüler ve çift yönlü GitHub ↔ XenForo senkronizasyon eklentisidir. GitHub ve XenForo nesneleri arasında kalıcı kimlik bağı tutar; Issue, Pull Request, Release, yorum, workflow, conflict, retry/recovery ve XFRM akışlarını yönetir.
@@ -59,59 +113,5 @@ Super admin olmayan yöneticilere `wghManage` admin yetkisi verilmelidir.
 ## Destek
 
 Sorularınız, hata bildirimleriniz, kurulum desteği ve Warext Studios XenForo eklentileriyle ilgili yardım için destek Discord sunucumuza katılabilirsiniz:
-
-**Discord:** https://discord.gg/tgsV5XMcFS
-
----
-
-## English
-
-**Warext GitHub Sync** is a modular, bidirectional GitHub ↔ XenForo synchronization add-on for XenForo 2.3+. It keeps durable identity mappings between GitHub and XenForo objects and manages Issues, Pull Requests, Releases, comments, workflows, conflicts, retry/recovery and XFRM flows.
-
-> Current version: **v1.0.0 — Stable**
-
-### Download / Installation
-
-- **Latest stable release:** [v1.0.0](https://github.com/benjamin1734/Warext-Studios-Xenfero-Github-Baglanti-Otomasyonu/releases/tag/v1.0.0)
-- Release asset: `Warext-GitHub-Sync-v1.0.0-install.zip`
-- Install or upgrade directly from XenForo Admin CP → Add-ons → **Install/upgrade from archive**.
-- Existing `v0.9.4 Alpha 13` installations can be upgraded directly to v1.0.0 without uninstalling first.
-
-### Admin CP area
-
-Warext GitHub Sync appears as its own **collapsible Admin CP navigation group**. The group contains Dashboard, Connections, Repositories, Mappings, Templates, Actions, PR Tools, XFRM, Health, User Mappings, Conflicts, Webhook Logs and Diagnostics.
-
-Non-super administrators must be granted the custom `wghManage` administrator permission.
-
-### Features
-
-- GitHub Release / Push / Tag / Issue / Comment / Pull Request / Review / Actions → XenForo.
-- XenForo Thread/Post → GitHub Issue / PR / Comment.
-- GitHub label ↔ XenForo prefix and open/closed state synchronization.
-- GitHub user ↔ XenForo user mapping.
-- GitHub-wins, XenForo-wins, newest-wins and manual conflict resolution.
-- Pull Request reviewer / team reviewer management.
-- Workflow dispatch, history, rerun, failed-rerun and cancel controls.
-- GitHub Release → XFRM ResourceVersion + Resource Update.
-- XFRM history, manual/bulk retry-reconcile and tracking restore.
-- Health monitor and persistent alert history.
-- GitHub App JWT / installation-token flow and HMAC webhook validation.
-- Normal XenForo `_data/*.xml + hashes.json` release package.
-
-### Installer fixes validated before v1.0.0
-
-- Normal XenForo `_data/*.xml + hashes.json` archive layout.
-- Invalid `<xf:submit>` template tags removed.
-- PHP-style dynamic array access converted to XenForo template syntax.
-- Dedicated Admin CP navigation tree and route section context.
-- Release workflow validation for templates, navigation, routes and package structure.
-
----
-
-Warext Studios
-
-## Support
-
-For questions, bug reports, installation support, and help with Warext Studios XenForo add-ons, you can join our support Discord server:
 
 **Discord:** https://discord.gg/tgsV5XMcFS
