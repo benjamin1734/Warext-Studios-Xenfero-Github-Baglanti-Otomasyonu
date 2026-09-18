@@ -1,4 +1,4 @@
-# Warext GitHub Sync for XenForo
+# Warext Studios | XenForo GitHub Connection Automation
 
 ## Türkçe
 
@@ -56,6 +56,12 @@ Super admin olmayan yöneticilere `wghManage` admin yetkisi verilmelidir.
 - Bağımsız Admin CP kategori ağacı ve route section context.
 - Release workflow'unda template, navigation, route ve package validation kontrolleri.
 
+## Destek
+
+Sorularınız, hata bildirimleriniz, kurulum desteği ve Warext Studios XenForo eklentileriyle ilgili yardım için destek Discord sunucumuza katılabilirsiniz:
+
+**Discord:** https://discord.gg/tgsV5XMcFS
+
 ---
 
 ## English
@@ -103,3 +109,9 @@ Non-super administrators must be granted the custom `wghManage` administrator pe
 ---
 
 Warext Studios
+
+## Support
+
+For questions, bug reports, installation support, and help with Warext Studios XenForo add-ons, you can join our support Discord server:
+
+**Discord:** https://discord.gg/tgsV5XMcFS
