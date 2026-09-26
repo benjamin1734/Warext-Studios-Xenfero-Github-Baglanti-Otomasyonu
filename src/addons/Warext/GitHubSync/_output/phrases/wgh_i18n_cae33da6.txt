@@ -1,0 +1,1 @@
+release, push, issues, pull_request or *

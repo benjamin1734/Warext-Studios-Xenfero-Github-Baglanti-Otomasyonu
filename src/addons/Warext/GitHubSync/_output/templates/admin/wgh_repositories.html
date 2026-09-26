@@ -1,14 +1,14 @@
-<xf:title>GitHub repositories</xf:title>
+<xf:title>{{ phrase('wgh_i18n_ac6427ee') }}</xf:title>
 <xf:macro template="wgh_macros" name="nav" arg-selected="repositories" />
 <div class="block"><div class="block-container"><div class="block-body">
 <table class="dataList">
-<thead><tr class="dataList-row"><th class="dataList-cell">Repository</th><th class="dataList-cell">Default branch</th><th class="dataList-cell">Visibility</th><th class="dataList-cell">Archived</th><th class="dataList-cell">Status</th></tr></thead>
+<thead><tr class="dataList-row"><th class="dataList-cell">Repository</th><th class="dataList-cell">{{ phrase('wgh_i18n_699f32e2') }}</th><th class="dataList-cell">Visibility</th><th class="dataList-cell">Archived</th><th class="dataList-cell">Status</th></tr></thead>
 <tbody><xf:foreach loop="$repositories" value="$repository"><tr class="dataList-row">
 <td class="dataList-cell"><a href="{$repository.html_url}" target="_blank">{$repository.full_name}</a></td>
 <td class="dataList-cell">{$repository.default_branch}</td>
-<td class="dataList-cell">{{ $repository.is_private ? 'Private' : 'Public' }}</td>
-<td class="dataList-cell">{{ $repository.is_archived ? 'Yes' : 'No' }}</td>
-<td class="dataList-cell">{{ $repository.active ? 'Active' : 'Inactive' }}</td>
+<td class="dataList-cell">{{ $repository.is_private ? phrase('wgh_i18n_d01f2cac') : phrase('wgh_i18n_ccdfbfa0') }}</td>
+<td class="dataList-cell">{{ $repository.is_archived ? phrase('wgh_i18n_b3a43630') : phrase('wgh_i18n_61e6be1a') }}</td>
+<td class="dataList-cell">{{ $repository.active ? phrase('wgh_i18n_1f89134f') : phrase('wgh_i18n_901aca78') }}</td>
 </tr></xf:foreach></tbody>
 </table>
 </div></div></div>

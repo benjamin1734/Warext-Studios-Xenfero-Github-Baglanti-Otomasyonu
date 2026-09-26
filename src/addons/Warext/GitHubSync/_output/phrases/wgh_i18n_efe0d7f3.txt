@@ -1,0 +1,1 @@
+Release synchronization targets an existing XFRM resource. v0.8 adds audit history, manual retry, remote reconciliation and a dedicated mapping manager.

@@ -1,0 +1,1 @@
+Comma or line separated GitHub logins.

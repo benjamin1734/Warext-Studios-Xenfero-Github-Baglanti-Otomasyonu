@@ -1,0 +1,1 @@
+Strip leading v from numeric tags
