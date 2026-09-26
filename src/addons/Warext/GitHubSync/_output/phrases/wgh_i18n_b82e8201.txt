@@ -1,0 +1,1 @@
+One per line. Example: 12=APPROVE, 13=REQUEST_CHANGES, 14=COMMENT. Review is sent only when the prefix changes to a configured value.

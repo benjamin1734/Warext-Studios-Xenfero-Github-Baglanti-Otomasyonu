@@ -1,30 +1,30 @@
-<xf:title>{{ $connection.connection_id ? 'Edit GitHub connection' : 'Add GitHub connection' }}</xf:title>
+<xf:title>{{ $connection.connection_id ? phrase('wgh_i18n_f07e22c0') : phrase('wgh_i18n_6bff0625') }}</xf:title>
 <xf:macro template="wgh_macros" name="nav" arg-selected="connections" />
 
 <xf:form action="{{ link('github-sync/connection-save', null, {'connection_id': $connection.connection_id}) }}" ajax="true" class="block">
 	<div class="block-container">
-		<h2 class="block-header">GitHub App connection</h2>
+		<h2 class="block-header">{{ phrase('wgh_i18n_a200e31f') }}</h2>
 		<div class="block-body">
-			<xf:textboxrow name="title" value="{$connection.title}" label="Title" required="required" />
-			<xf:numberboxrow name="app_id" value="{$connection.app_id}" min="0" label="GitHub App ID" />
-			<xf:numberboxrow name="installation_id" value="{$connection.installation_id}" min="0" label="Installation ID" />
-			<xf:textboxrow name="client_id" value="{$connection.client_id}" label="Client ID" />
-			<xf:textboxrow name="account_login" value="{$connection.account_login}" label="Account / organization login" />
-			<xf:textboxrow name="private_key_ref" value="{$connection.private_key_ref}" label="Private key reference" explain="Key name under $config['warextGitHubSync']['privateKeys']. The PEM itself is not stored in the database." />
-			<xf:textboxrow name="secret_ref" value="{$connection.secret_ref}" label="Webhook secret reference" explain="Key name under $config['warextGitHubSync']['webhookSecrets']." />
-			<xf:checkboxrow label="Status"><xf:option name="active" value="1" selected="{$connection.active}">Connection is active</xf:option></xf:checkboxrow>
+			<xf:textboxrow name="title" value="{$connection.title}" label="{{ phrase('wgh_i18n_24d471a9') }}" required="required" />
+			<xf:numberboxrow name="app_id" value="{$connection.app_id}" min="0" label="{{ phrase('wgh_i18n_6376d16a') }}" />
+			<xf:numberboxrow name="installation_id" value="{$connection.installation_id}" min="0" label="{{ phrase('wgh_i18n_148fd59a') }}" />
+			<xf:textboxrow name="client_id" value="{$connection.client_id}" label="{{ phrase('wgh_i18n_96a12137') }}" />
+			<xf:textboxrow name="account_login" value="{$connection.account_login}" label="{{ phrase('wgh_i18n_4d603c51') }}" />
+			<xf:textboxrow name="private_key_ref" value="{$connection.private_key_ref}" label="{{ phrase('wgh_i18n_a0b54756') }}" explain="Key name under $config['warextGitHubSync']['privateKeys']. The PEM itself is not stored in the database." />
+			<xf:textboxrow name="secret_ref" value="{$connection.secret_ref}" label="{{ phrase('wgh_i18n_4c35c233') }}" explain="Key name under $config['warextGitHubSync']['webhookSecrets']." />
+			<xf:checkboxrow label="{{ phrase('wgh_i18n_005ef20f') }}"><xf:option name="active" value="1" selected="{$connection.active}">{{ phrase('wgh_i18n_99b7da07') }}</xf:option></xf:checkboxrow>
 		</div>
-		<xf:submitrow submit="Save" />
+		<xf:submitrow submit="{{ phrase('wgh_i18n_4d2d5d68') }}" />
 	</div>
 </xf:form>
 
 <xf:if is="$connection.connection_id">
 	<xf:form action="{{ link('github-sync/connection-sync', null, {'connection_id': $connection.connection_id}) }}" ajax="true" class="block">
-		<div class="block-container"><div class="block-body"><xf:submitrow submit="Synchronize repositories now" /></div></div>
+		<div class="block-container"><div class="block-body"><xf:submitrow submit="{{ phrase('wgh_i18n_a29015e3') }}" /></div></div>
 	</xf:form>
 </xf:if>
 
-<div class="block"><div class="block-container"><h2 class="block-header">config.php example</h2><div class="block-body block-row"><pre>$config['warextGitHubSync']['privateKeys']['warext'] = &lt;&lt;&lt;'PEM'
+<div class="block"><div class="block-container"><h2 class="block-header">{{ phrase('wgh_i18n_521c7f93') }}</h2><div class="block-body block-row"><pre>$config['warextGitHubSync']['privateKeys']['warext'] = &lt;&lt;&lt;'PEM'
 -----BEGIN PRIVATE KEY-----
 ...
 -----END PRIVATE KEY-----

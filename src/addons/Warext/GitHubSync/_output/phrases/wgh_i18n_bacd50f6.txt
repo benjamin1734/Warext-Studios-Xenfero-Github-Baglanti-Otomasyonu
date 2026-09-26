@@ -1,0 +1,1 @@
+Used as XF-Api-User when the configured key is a super-user key.

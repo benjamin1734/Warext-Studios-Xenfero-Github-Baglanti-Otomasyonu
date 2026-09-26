@@ -1,0 +1,1 @@
+? Existing sync registry entries are retained for audit/recovery.

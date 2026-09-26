@@ -1,0 +1,1 @@
+Synchronize thread open/closed state to the GitHub Issue

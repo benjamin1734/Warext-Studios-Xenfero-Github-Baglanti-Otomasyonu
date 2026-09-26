@@ -1,0 +1,1 @@
+Only threads/posts from this forum are sent to GitHub. 0 allows any forum for this mapping.

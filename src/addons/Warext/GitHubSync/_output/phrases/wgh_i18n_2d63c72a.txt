@@ -1,0 +1,1 @@
+Examples: published, edited, deleted, opened, closed. Use * for all.

@@ -1,0 +1,1 @@
+When set, synchronization targets this thread instead of creating a new one.

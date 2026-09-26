@@ -1,0 +1,1 @@
+Synchronize thread title and first post to the GitHub Issue

@@ -1,81 +1,81 @@
-<xf:title>{{ $mapping.mapping_id ? 'Edit synchronization mapping' : 'Add synchronization mapping' }}</xf:title>
+<xf:title>{{ $mapping.mapping_id ? phrase('wgh_i18n_853ffe77') : phrase('wgh_i18n_5d313e06') }}</xf:title>
 <xf:macro template="wgh_macros" name="nav" arg-selected="mappings" />
 <xf:form action="{{ link('github-sync/mapping-save', null, {'mapping_id': $mapping.mapping_id}) }}" ajax="true" class="block">
 <div class="block-container">
-<h2 class="block-header">Event mapping</h2><div class="block-body">
-<xf:textboxrow name="title" value="{$mapping.title}" label="Title" required="required" />
-<xf:selectrow name="repository_id" value="{$mapping.repository_id}" label="Repository"><xf:option value="0">All repositories</xf:option><xf:foreach loop="$repositories" value="$repository"><xf:option value="{$repository.repository_id}">{$repository.full_name}</xf:option></xf:foreach></xf:selectrow>
-<xf:selectrow name="direction" value="{$mapping.direction}" label="Direction"><xf:option value="github_to_xf">GitHub → XenForo</xf:option><xf:option value="xf_to_github">XenForo → GitHub</xf:option><xf:option value="bidirectional">Bidirectional</xf:option></xf:selectrow>
-<xf:textboxrow name="event" value="{$mapping.event}" label="GitHub event" explain="Examples: release, push, issues, pull_request. Use * for all." />
-<xf:textboxrow name="event_action" value="{$mapping.event_action}" label="Event action" explain="Examples: published, edited, deleted, opened, closed. Use * for all." />
-<xf:numberboxrow name="priority" value="{$mapping.priority}" label="Priority" />
-<xf:checkboxrow label="Status"><xf:option name="enabled" value="1" selected="{$mapping.enabled}">Mapping is enabled</xf:option></xf:checkboxrow>
+<h2 class="block-header">{{ phrase('wgh_i18n_735b7e4d') }}</h2><div class="block-body">
+<xf:textboxrow name="title" value="{$mapping.title}" label="{{ phrase('wgh_i18n_24d471a9') }}" required="required" />
+<xf:selectrow name="repository_id" value="{$mapping.repository_id}" label="{{ phrase('wgh_i18n_e763c8b5') }}"><xf:option value="0">{{ phrase('wgh_i18n_023d7f04') }}</xf:option><xf:foreach loop="$repositories" value="$repository"><xf:option value="{$repository.repository_id}">{$repository.full_name}</xf:option></xf:foreach></xf:selectrow>
+<xf:selectrow name="direction" value="{$mapping.direction}" label="{{ phrase('wgh_i18n_61fefc0a') }}"><xf:option value="github_to_xf">{{ phrase('wgh_i18n_45e9b837') }}</xf:option><xf:option value="xf_to_github">{{ phrase('wgh_i18n_318b2491') }}</xf:option><xf:option value="bidirectional">Bidirectional</xf:option></xf:selectrow>
+<xf:textboxrow name="event" value="{$mapping.event}" label="{{ phrase('wgh_i18n_f5aade02') }}" explain="{{ phrase('wgh_i18n_86236693') }}" />
+<xf:textboxrow name="event_action" value="{$mapping.event_action}" label="{{ phrase('wgh_i18n_935d7ff7') }}" explain="{{ phrase('wgh_i18n_2d63c72a') }}" />
+<xf:numberboxrow name="priority" value="{$mapping.priority}" label="{{ phrase('wgh_i18n_e68d9f29') }}" />
+<xf:checkboxrow label="{{ phrase('wgh_i18n_005ef20f') }}"><xf:option name="enabled" value="1" selected="{$mapping.enabled}">{{ phrase('wgh_i18n_457b27f2') }}</xf:option></xf:checkboxrow>
 </div>
-<h2 class="block-header">XenForo source (XenForo → GitHub)</h2><div class="block-body">
-<xf:numberboxrow name="xf_node_id" value="{$source.xf_node_id}" min="0" label="Source forum node ID" explain="Only threads/posts from this forum are sent to GitHub. 0 allows any forum for this mapping." />
-<xf:selectrow name="outbound_object" value="{$source.outbound_object}" label="GitHub object"><xf:option value="issue">GitHub Issue</xf:option><xf:option value="pull_request">GitHub Pull Request</xf:option></xf:selectrow>
-<xf:checkboxrow label="Outbound synchronization">
-<xf:option name="sync_first_post" value="1" selected="{$source.sync_first_post}">Synchronize thread title and first post to the GitHub Issue</xf:option>
-<xf:option name="sync_replies" value="1" selected="{$source.sync_replies}">Synchronize thread replies as GitHub Issue comments</xf:option>
-<xf:option name="sync_thread_state" value="1" selected="{$source.sync_thread_state}">Synchronize thread open/closed state to the GitHub Issue</xf:option>
-<xf:option name="sync_labels" value="1" selected="{$source.sync_labels}">Synchronize XenForo thread prefix to GitHub Issue labels using the label map below</xf:option>
+<h2 class="block-header">{{ phrase('wgh_i18n_25ecbb60') }}</h2><div class="block-body">
+<xf:numberboxrow name="xf_node_id" value="{$source.xf_node_id}" min="0" label="{{ phrase('wgh_i18n_b05886cc') }}" explain="{{ phrase('wgh_i18n_7bfcc515') }}" />
+<xf:selectrow name="outbound_object" value="{$source.outbound_object}" label="{{ phrase('wgh_i18n_dc4d3d55') }}"><xf:option value="issue">{{ phrase('wgh_i18n_b5cc65ad') }}</xf:option><xf:option value="pull_request">{{ phrase('wgh_i18n_6545e080') }}</xf:option></xf:selectrow>
+<xf:checkboxrow label="{{ phrase('wgh_i18n_106bebdd') }}">
+<xf:option name="sync_first_post" value="1" selected="{$source.sync_first_post}">{{ phrase('wgh_i18n_88d2040a') }}</xf:option>
+<xf:option name="sync_replies" value="1" selected="{$source.sync_replies}">{{ phrase('wgh_i18n_dbdd35d7') }}</xf:option>
+<xf:option name="sync_thread_state" value="1" selected="{$source.sync_thread_state}">{{ phrase('wgh_i18n_0c80051d') }}</xf:option>
+<xf:option name="sync_labels" value="1" selected="{$source.sync_labels}">{{ phrase('wgh_i18n_f6f36dc2') }}</xf:option>
 </xf:checkboxrow>
-<xf:textarearow name="outbound_field_map" value="{$outboundFieldMapText}" label="Outbound field map" explain="Optional GitHub field=XenForo field mappings. Examples: title=thread.title, body=post.message, head=thread.custom_fields.github_branch, base=thread.custom_fields.github_base." autosize="true" />
-<h3 class="block-minorHeader">Pull Request options</h3>
-<xf:textboxrow name="pr_head" value="{$source.pr_head}" label="Default PR head branch" explain="Required when creating a PR unless head is provided by the outbound field map." />
-<xf:textboxrow name="pr_base" value="{$source.pr_base}" label="Default PR base branch" explain="Empty uses the repository default branch unless base is provided by the outbound field map." />
-<xf:checkboxrow label="Pull Request creation">
-<xf:option name="pr_draft" value="1" selected="{$source.pr_draft}">Create new pull requests as drafts</xf:option>
-<xf:option name="pr_maintainer_can_modify" value="1" selected="{$source.pr_maintainer_can_modify}">Allow maintainers to modify the pull request branch</xf:option>
-<xf:option name="sync_review_prefix" value="1" selected="{$source.sync_review_prefix}">Create a GitHub PR review when the thread prefix matches the review map</xf:option>
+<xf:textarearow name="outbound_field_map" value="{$outboundFieldMapText}" label="{{ phrase('wgh_i18n_4591f47b') }}" explain="{{ phrase('wgh_i18n_e33c3815') }}" autosize="true" />
+<h3 class="block-minorHeader">{{ phrase('wgh_i18n_f16be935') }}</h3>
+<xf:textboxrow name="pr_head" value="{$source.pr_head}" label="{{ phrase('wgh_i18n_f864d092') }}" explain="{{ phrase('wgh_i18n_c5a8d4c5') }}" />
+<xf:textboxrow name="pr_base" value="{$source.pr_base}" label="{{ phrase('wgh_i18n_312bf833') }}" explain="{{ phrase('wgh_i18n_e8657108') }}" />
+<xf:checkboxrow label="{{ phrase('wgh_i18n_f186d5b4') }}">
+<xf:option name="pr_draft" value="1" selected="{$source.pr_draft}">{{ phrase('wgh_i18n_b62ca584') }}</xf:option>
+<xf:option name="pr_maintainer_can_modify" value="1" selected="{$source.pr_maintainer_can_modify}">{{ phrase('wgh_i18n_72bb816d') }}</xf:option>
+<xf:option name="sync_review_prefix" value="1" selected="{$source.sync_review_prefix}">{{ phrase('wgh_i18n_f516a21a') }}</xf:option>
 </xf:checkboxrow>
-<xf:textarearow name="review_prefix_map" value="{$reviewPrefixMapText}" label="Prefix → PR review action" explain="One per line. Example: 12=APPROVE, 13=REQUEST_CHANGES, 14=COMMENT. Review is sent only when the prefix changes to a configured value." autosize="true" />
-<xf:textarearow name="review_body" value="{$source.review_body}" label="PR review body" explain="Optional message used for synchronized reviews." autosize="true" />
+<xf:textarearow name="review_prefix_map" value="{$reviewPrefixMapText}" label="{{ phrase('wgh_i18n_ca30cc85') }}" explain="{{ phrase('wgh_i18n_b82e8201') }}" autosize="true" />
+<xf:textarearow name="review_body" value="{$source.review_body}" label="{{ phrase('wgh_i18n_ebebbbbb') }}" explain="{{ phrase('wgh_i18n_d5699aaf') }}" autosize="true" />
 </div>
-<h2 class="block-header">XenForo target</h2><div class="block-body">
-<xf:numberboxrow name="node_id" value="{$target.node_id}" min="0" label="Forum node ID" explain="Used when the integration should create a new thread." />
-<xf:numberboxrow name="thread_id" value="{$target.thread_id}" min="0" label="Existing thread ID" explain="When set, synchronization targets this thread instead of creating a new one." />
-<xf:numberboxrow name="user_id" value="{$target.user_id}" min="0" label="Automation user ID" required="required" />
-<xf:numberboxrow name="prefix_id" value="{$target.prefix_id}" min="0" label="Fallback thread prefix ID" />
-<xf:checkboxrow label="Inbound identity and metadata">
-<xf:option name="use_user_mapping" value="1" selected="{$target.use_user_mapping}">Use GitHub → XenForo user mappings for the event author</xf:option>
-<xf:option name="sync_remote_labels" value="1" selected="{$target.sync_remote_labels}">Synchronize GitHub labels to XenForo thread prefix</xf:option>
-<xf:option name="sync_remote_state" value="1" selected="{$target.sync_remote_state}">Synchronize GitHub open/closed state to the XenForo thread</xf:option>
+<h2 class="block-header">{{ phrase('wgh_i18n_9766c371') }}</h2><div class="block-body">
+<xf:numberboxrow name="node_id" value="{$target.node_id}" min="0" label="{{ phrase('wgh_i18n_4ded8eb7') }}" explain="{{ phrase('wgh_i18n_bc066fff') }}" />
+<xf:numberboxrow name="thread_id" value="{$target.thread_id}" min="0" label="{{ phrase('wgh_i18n_e6dd7929') }}" explain="{{ phrase('wgh_i18n_770fdd94') }}" />
+<xf:numberboxrow name="user_id" value="{$target.user_id}" min="0" label="{{ phrase('wgh_i18n_b04a756e') }}" required="required" />
+<xf:numberboxrow name="prefix_id" value="{$target.prefix_id}" min="0" label="{{ phrase('wgh_i18n_03700dac') }}" />
+<xf:checkboxrow label="{{ phrase('wgh_i18n_7573412e') }}">
+<xf:option name="use_user_mapping" value="1" selected="{$target.use_user_mapping}">{{ phrase('wgh_i18n_37362d37') }}</xf:option>
+<xf:option name="sync_remote_labels" value="1" selected="{$target.sync_remote_labels}">{{ phrase('wgh_i18n_d544c82b') }}</xf:option>
+<xf:option name="sync_remote_state" value="1" selected="{$target.sync_remote_state}">{{ phrase('wgh_i18n_1cc51483') }}</xf:option>
 </xf:checkboxrow>
-<xf:textarearow name="label_prefix_map" value="{$labelMapText}" label="GitHub label ↔ XenForo prefix map" explain="One mapping per line, for example: bug=12. The same map is used in both directions." autosize="true" />
-<xf:textarearow name="inbound_field_map" value="{$inboundFieldMapText}" label="Inbound field map" explain="Optional XenForo action field=GitHub payload path. Safe targets: title, message, remote_state, prefix_id. Example: title=workflow_run.name." autosize="true" />
-<xf:selectrow name="template_id" value="{$target.template_id}" label="Reusable template"><xf:option value="0">Use inline/default template</xf:option><xf:foreach loop="$templates" value="$template"><xf:option value="{$template.template_id}">{$template.title}</xf:option></xf:foreach></xf:selectrow>
-<xf:textarearow name="title_template" value="{$target.title_template}" label="Title template override" autosize="true" />
-<xf:textarearow name="message_template" value="{$target.message_template}" label="Message template override" rows="8" />
-<xf:checkboxrow label="Update behavior"><xf:option name="update_first_post" value="1" selected="{$target.update_first_post}">Update the first post of an existing thread</xf:option><xf:option name="update_title" value="1" selected="{$target.update_title}">Update thread title</xf:option></xf:checkboxrow>
-<xf:selectrow name="delete_policy" value="{$target.delete_policy}" label="Remote delete policy"><xf:option value="ignore">Ignore</xf:option><xf:option value="mark_deleted">Mark as deleted</xf:option><xf:option value="soft_delete">Soft delete integration-created content</xf:option><xf:option value="hard_delete">Hard delete integration-created content</xf:option></xf:selectrow>
+<xf:textarearow name="label_prefix_map" value="{$labelMapText}" label="{{ phrase('wgh_i18n_c55199b7') }}" explain="{{ phrase('wgh_i18n_fd5aa3d5') }}" autosize="true" />
+<xf:textarearow name="inbound_field_map" value="{$inboundFieldMapText}" label="{{ phrase('wgh_i18n_73e70c1c') }}" explain="{{ phrase('wgh_i18n_b1fbc936') }}" autosize="true" />
+<xf:selectrow name="template_id" value="{$target.template_id}" label="{{ phrase('wgh_i18n_da379f5e') }}"><xf:option value="0">{{ phrase('wgh_i18n_58ed5a83') }}</xf:option><xf:foreach loop="$templates" value="$template"><xf:option value="{$template.template_id}">{$template.title}</xf:option></xf:foreach></xf:selectrow>
+<xf:textarearow name="title_template" value="{$target.title_template}" label="{{ phrase('wgh_i18n_cece6a63') }}" autosize="true" />
+<xf:textarearow name="message_template" value="{$target.message_template}" label="{{ phrase('wgh_i18n_d0d15f5a') }}" rows="8" />
+<xf:checkboxrow label="{{ phrase('wgh_i18n_d67124ee') }}"><xf:option name="update_first_post" value="1" selected="{$target.update_first_post}">{{ phrase('wgh_i18n_acd1de66') }}</xf:option><xf:option name="update_title" value="1" selected="{$target.update_title}">{{ phrase('wgh_i18n_7ea489aa') }}</xf:option></xf:checkboxrow>
+<xf:selectrow name="delete_policy" value="{$target.delete_policy}" label="{{ phrase('wgh_i18n_c628a50c') }}"><xf:option value="ignore">Ignore</xf:option><xf:option value="mark_deleted">{{ phrase('wgh_i18n_e6d20eed') }}</xf:option><xf:option value="soft_delete">{{ phrase('wgh_i18n_e8a8d46a') }}</xf:option><xf:option value="hard_delete">{{ phrase('wgh_i18n_0b378a0d') }}</xf:option></xf:selectrow>
 </div>
-<h2 class="block-header">XFRM Resource Manager target</h2><div class="block-body">
-<xf:checkboxrow label="XFRM synchronization">
-<xf:option name="xfrm_enabled" value="1" selected="{$target.xfrm_enabled}">Synchronize GitHub release events to an existing XenForo Resource Manager resource</xf:option>
-<xf:option name="xfrm_create_version" value="1" selected="{$target.xfrm_create_version}">Create an XFRM ResourceVersion for a new GitHub release</xf:option>
-<xf:option name="xfrm_create_update" value="1" selected="{$target.xfrm_create_update}">Create/update an XFRM Resource Update from GitHub release notes (also feeds the resource discussion workflow)</xf:option>
-<xf:option name="xfrm_strip_v" value="1" selected="{$target.xfrm_strip_v}">Strip a leading v from numeric release tags (v1.2.0 → 1.2.0)</xf:option>
-<xf:option name="xfrm_api_bypass" value="1" selected="{$target.xfrm_api_bypass}">Use api_bypass_permissions (requires a suitable super-user API key)</xf:option>
+<h2 class="block-header">{{ phrase('wgh_i18n_ad54cb3e') }}</h2><div class="block-body">
+<xf:checkboxrow label="{{ phrase('wgh_i18n_c6adbeea') }}">
+<xf:option name="xfrm_enabled" value="1" selected="{$target.xfrm_enabled}">{{ phrase('wgh_i18n_51ebf0a5') }}</xf:option>
+<xf:option name="xfrm_create_version" value="1" selected="{$target.xfrm_create_version}">{{ phrase('wgh_i18n_8afbfe15') }}</xf:option>
+<xf:option name="xfrm_create_update" value="1" selected="{$target.xfrm_create_update}">{{ phrase('wgh_i18n_b00a0cb2') }}</xf:option>
+<xf:option name="xfrm_strip_v" value="1" selected="{$target.xfrm_strip_v}">{{ phrase('wgh_i18n_e66dd01c') }}</xf:option>
+<xf:option name="xfrm_api_bypass" value="1" selected="{$target.xfrm_api_bypass}">{{ phrase('wgh_i18n_bd2598ab') }}</xf:option>
 </xf:checkboxrow>
-<xf:selectrow name="xfrm_mode" value="{$target.xfrm_mode}" label="XFRM mode"><xf:option value="alongside">XFRM + normal XenForo target</xf:option><xf:option value="only">XFRM only for this release mapping</xf:option></xf:selectrow>
-<xf:numberboxrow name="xfrm_resource_id" value="{$target.xfrm_resource_id}" min="0" label="Existing XFRM resource ID" explain="v0.7 intentionally targets an existing resource; it does not auto-create ResourceItem records." />
-<xf:textboxrow name="xfrm_api_key_ref" value="{$target.xfrm_api_key_ref}" label="Local XFRM API key reference" explain="Reference under config.php: warextGitHubSync.xfrmApiKeys. The real key is never stored in the add-on database." />
-<xf:numberboxrow name="xfrm_api_user_id" value="{$target.xfrm_api_user_id}" min="0" label="XFRM API context user ID" explain="Used as XF-Api-User when the configured key is a super-user key." />
-<xf:selectrow name="xfrm_download_source" value="{$target.xfrm_download_source}" label="Release download source"><xf:option value="asset">Matching release asset</xf:option><xf:option value="zipball">GitHub source ZIP</xf:option><xf:option value="release_page">GitHub release page</xf:option></xf:selectrow>
-<xf:textboxrow name="xfrm_asset_pattern" value="{$target.xfrm_asset_pattern}" label="Release asset pattern" explain="Used in asset mode. Wildcards are supported, e.g. *.zip or Warext-*.zip." />
-<xf:selectrow name="xfrm_delete_policy" value="{$target.xfrm_delete_policy}" label="Deleted GitHub release policy"><xf:option value="ignore">Keep XFRM version/update</xf:option><xf:option value="soft_delete">Soft-delete synchronized XFRM version/update</xf:option><xf:option value="hard_delete">Hard-delete synchronized XFRM version/update</xf:option></xf:selectrow>
+<xf:selectrow name="xfrm_mode" value="{$target.xfrm_mode}" label="{{ phrase('wgh_i18n_2a251a55') }}"><xf:option value="alongside">{{ phrase('wgh_i18n_2f3e2696') }}</xf:option><xf:option value="only">{{ phrase('wgh_i18n_48b9e1be') }}</xf:option></xf:selectrow>
+<xf:numberboxrow name="xfrm_resource_id" value="{$target.xfrm_resource_id}" min="0" label="{{ phrase('wgh_i18n_2485c5c6') }}" explain="{{ phrase('wgh_i18n_4f790c25') }}" />
+<xf:textboxrow name="xfrm_api_key_ref" value="{$target.xfrm_api_key_ref}" label="{{ phrase('wgh_i18n_7b4678c9') }}" explain="{{ phrase('wgh_i18n_a573c357') }}" />
+<xf:numberboxrow name="xfrm_api_user_id" value="{$target.xfrm_api_user_id}" min="0" label="{{ phrase('wgh_i18n_1bd870f5') }}" explain="{{ phrase('wgh_i18n_bacd50f6') }}" />
+<xf:selectrow name="xfrm_download_source" value="{$target.xfrm_download_source}" label="{{ phrase('wgh_i18n_e21880d3') }}"><xf:option value="asset">{{ phrase('wgh_i18n_b4f5fd8b') }}</xf:option><xf:option value="zipball">{{ phrase('wgh_i18n_8a88e798') }}</xf:option><xf:option value="release_page">{{ phrase('wgh_i18n_8b5c27de') }}</xf:option></xf:selectrow>
+<xf:textboxrow name="xfrm_asset_pattern" value="{$target.xfrm_asset_pattern}" label="{{ phrase('wgh_i18n_052942b0') }}" explain="{{ phrase('wgh_i18n_af91c2bc') }}" />
+<xf:selectrow name="xfrm_delete_policy" value="{$target.xfrm_delete_policy}" label="{{ phrase('wgh_i18n_a2b0e2ee') }}"><xf:option value="ignore">{{ phrase('wgh_i18n_f005a9f9') }}</xf:option><xf:option value="soft_delete">{{ phrase('wgh_i18n_41bb2466') }}</xf:option><xf:option value="hard_delete">{{ phrase('wgh_i18n_d5691a0f') }}</xf:option></xf:selectrow>
 </div>
 
 <h2 class="block-header">Filters</h2><div class="block-body">
-<xf:textarearow name="branches" value="{$filterText.branches}" label="Allowed branches" explain="One branch per line. Empty means all branches." autosize="true" />
-<xf:textarearow name="include_commit" value="{$filterText.include_commit}" label="Commit message include terms" explain="At least one term must match when configured." autosize="true" />
-<xf:textarearow name="exclude_commit" value="{$filterText.exclude_commit}" label="Commit message exclude terms" autosize="true" />
-<xf:textarearow name="include_paths" value="{$filterText.include_paths}" label="Included paths" explain="Supports * and ** globs." autosize="true" />
-<xf:textarearow name="exclude_paths" value="{$filterText.exclude_paths}" label="Excluded paths" explain="Supports * and ** globs." autosize="true" />
-<xf:textarearow name="workflow_statuses" value="{$filterText.workflow_statuses}" label="Allowed workflow statuses" explain="One per line. Example: completed or in_progress. Empty means all." autosize="true" />
-<xf:textarearow name="workflow_conclusions" value="{$filterText.workflow_conclusions}" label="Allowed workflow conclusions" explain="One per line. Example: success, failure, cancelled. Empty means all." autosize="true" />
-<xf:checkboxrow label="Release states"><xf:option name="allow_prerelease" value="1" selected="{$filter.allow_prerelease}">Allow prereleases</xf:option><xf:option name="allow_draft" value="1" selected="{$filter.allow_draft}">Allow draft releases</xf:option></xf:checkboxrow>
-<xf:selectrow name="conflict_strategy" value="{$mapping.conflict_strategy}" label="Conflict strategy"><xf:option value="manual">Manual review</xf:option><xf:option value="github_wins">GitHub wins</xf:option><xf:option value="xenforo_wins">XenForo wins</xf:option><xf:option value="newest_wins">Newest wins</xf:option></xf:selectrow>
-</div><xf:submitrow submit="Save mapping" />
+<xf:textarearow name="branches" value="{$filterText.branches}" label="{{ phrase('wgh_i18n_9ba6196d') }}" explain="{{ phrase('wgh_i18n_c28a86c4') }}" autosize="true" />
+<xf:textarearow name="include_commit" value="{$filterText.include_commit}" label="{{ phrase('wgh_i18n_816c0a68') }}" explain="{{ phrase('wgh_i18n_a860fdff') }}" autosize="true" />
+<xf:textarearow name="exclude_commit" value="{$filterText.exclude_commit}" label="{{ phrase('wgh_i18n_673a86ea') }}" autosize="true" />
+<xf:textarearow name="include_paths" value="{$filterText.include_paths}" label="{{ phrase('wgh_i18n_d7c1c52d') }}" explain="{{ phrase('wgh_i18n_df3e88b9') }}" autosize="true" />
+<xf:textarearow name="exclude_paths" value="{$filterText.exclude_paths}" label="{{ phrase('wgh_i18n_c9e1016f') }}" explain="{{ phrase('wgh_i18n_df3e88b9') }}" autosize="true" />
+<xf:textarearow name="workflow_statuses" value="{$filterText.workflow_statuses}" label="{{ phrase('wgh_i18n_39e2ebc6') }}" explain="{{ phrase('wgh_i18n_a2f3d279') }}" autosize="true" />
+<xf:textarearow name="workflow_conclusions" value="{$filterText.workflow_conclusions}" label="{{ phrase('wgh_i18n_b8b37b00') }}" explain="{{ phrase('wgh_i18n_08ee8c16') }}" autosize="true" />
+<xf:checkboxrow label="{{ phrase('wgh_i18n_1e3442b4') }}"><xf:option name="allow_prerelease" value="1" selected="{$filter.allow_prerelease}">{{ phrase('wgh_i18n_c7932a65') }}</xf:option><xf:option name="allow_draft" value="1" selected="{$filter.allow_draft}">{{ phrase('wgh_i18n_ec1021f5') }}</xf:option></xf:checkboxrow>
+<xf:selectrow name="conflict_strategy" value="{$mapping.conflict_strategy}" label="{{ phrase('wgh_i18n_dda8c1ac') }}"><xf:option value="manual">{{ phrase('wgh_i18n_1d0e98c5') }}</xf:option><xf:option value="github_wins">{{ phrase('wgh_i18n_087d6e49') }}</xf:option><xf:option value="xenforo_wins">{{ phrase('wgh_i18n_ad7cf12f') }}</xf:option><xf:option value="newest_wins">{{ phrase('wgh_i18n_bf2eae0a') }}</xf:option></xf:selectrow>
+</div><xf:submitrow submit="{{ phrase('wgh_i18n_7c90e126') }}" />
 </div></xf:form>

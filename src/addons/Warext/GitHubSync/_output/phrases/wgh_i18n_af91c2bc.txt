@@ -1,0 +1,1 @@
+Used in asset mode. Wildcards are supported, e.g. *.zip or Warext-*.zip.

@@ -1,0 +1,1 @@
+Reference under config.php: warextGitHubSync.xfrmApiKeys. The real key is never stored in the add-on database.

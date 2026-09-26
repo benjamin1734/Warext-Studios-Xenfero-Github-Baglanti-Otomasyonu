@@ -1,0 +1,1 @@
+Optional XenForo action field=GitHub payload path. Safe targets: title, message, remote_state, prefix_id. Example: title=workflow_run.name.

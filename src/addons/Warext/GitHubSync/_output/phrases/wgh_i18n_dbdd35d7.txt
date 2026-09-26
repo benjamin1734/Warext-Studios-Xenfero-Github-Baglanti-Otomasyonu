@@ -1,0 +1,1 @@
+Synchronize thread replies as GitHub Issue comments

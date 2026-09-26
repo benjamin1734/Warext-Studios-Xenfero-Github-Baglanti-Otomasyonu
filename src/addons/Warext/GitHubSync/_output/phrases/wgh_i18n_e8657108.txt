@@ -1,0 +1,1 @@
+Empty uses the repository default branch unless base is provided by the outbound field map.

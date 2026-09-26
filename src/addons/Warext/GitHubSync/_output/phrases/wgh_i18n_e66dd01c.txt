@@ -1,0 +1,1 @@
+Strip a leading v from numeric release tags (v1.2.0 → 1.2.0)

@@ -1,0 +1,1 @@
+Use GitHub → XenForo user mappings for the event author

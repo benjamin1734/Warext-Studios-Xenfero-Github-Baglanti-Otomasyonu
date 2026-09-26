@@ -1,0 +1,1 @@
+Examples: release, push, issues, pull_request. Use * for all.

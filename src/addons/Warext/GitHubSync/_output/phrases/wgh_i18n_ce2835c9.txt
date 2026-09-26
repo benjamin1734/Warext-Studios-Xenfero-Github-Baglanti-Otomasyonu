@@ -1,0 +1,1 @@
+Webhook-captured runs are stored locally. Refresh imports the latest 50 runs from GitHub.

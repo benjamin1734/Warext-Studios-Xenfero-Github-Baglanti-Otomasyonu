@@ -1,0 +1,1 @@
+Synchronize GitHub labels to XenForo thread prefix

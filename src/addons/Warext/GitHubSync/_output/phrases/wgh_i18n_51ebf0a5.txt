@@ -1,0 +1,1 @@
+Synchronize GitHub release events to an existing XenForo Resource Manager resource

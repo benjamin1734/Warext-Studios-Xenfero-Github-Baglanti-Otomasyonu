@@ -1,0 +1,1 @@
+Optional GitHub field=XenForo field mappings. Examples: title=thread.title, body=post.message, head=thread.custom_fields.github_branch, base=thread.custom_fields.github_base.

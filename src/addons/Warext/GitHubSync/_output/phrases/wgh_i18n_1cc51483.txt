@@ -1,0 +1,1 @@
+Synchronize GitHub open/closed state to the XenForo thread

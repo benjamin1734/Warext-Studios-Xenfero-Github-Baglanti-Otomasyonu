@@ -1,0 +1,1 @@
+One per line. Example: success, failure, cancelled. Empty means all.

@@ -1,0 +1,1 @@
+Synchronize XenForo thread prefix to GitHub Issue labels using the label map below

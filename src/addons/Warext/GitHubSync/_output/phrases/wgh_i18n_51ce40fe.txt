@@ -1,0 +1,1 @@
+Refresh run history from GitHub

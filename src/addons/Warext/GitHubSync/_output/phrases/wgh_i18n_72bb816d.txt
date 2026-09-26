@@ -1,0 +1,1 @@
+Allow maintainers to modify the pull request branch

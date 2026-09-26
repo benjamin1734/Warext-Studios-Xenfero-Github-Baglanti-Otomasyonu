@@ -1,9 +1,9 @@
-<xf:title>Warext GitHub Sync</xf:title>
+<xf:title>{{ phrase('wgh_i18n_ef8df546') }}</xf:title>
 <xf:macro template="wgh_macros" name="nav" arg-selected="dashboard" />
 
 <div class="block">
 	<div class="block-container">
-		<h2 class="block-header">Synchronization overview</h2>
+		<h2 class="block-header">{{ phrase('wgh_i18n_0ff15b06') }}</h2>
 		<div class="block-body block-row">
 			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Connections</dt><dd>{$stats.connections}</dd></div>
 			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Repositories</dt><dd>{$stats.repositories}</dd></div>
@@ -11,20 +11,20 @@
 			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Deliveries</dt><dd>{$stats.deliveries}</dd></div>
 			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Pending</dt><dd>{$stats.pending}</dd></div>
 			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Failed</dt><dd>{$stats.failed}</dd></div>
-			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Pending conflicts</dt><dd><a href="{{ link('github-sync/conflicts') }}">{$stats.conflicts}</a></dd></div>
-			<div class="pairs pairs--columns pairs--fixedSmall"><dt>User mappings</dt><dd><a href="{{ link('github-sync/user-mappings') }}">{$stats.userMappings}</a></dd></div>
-			<div class="pairs pairs--columns pairs--fixedSmall"><dt>XFRM releases</dt><dd><a href="{{ link('github-sync/xfrm') }}">{$stats.xfrmReleases}</a></dd></div>
-			<div class="pairs pairs--columns pairs--fixedSmall"><dt>XFRM failed</dt><dd>{$stats.xfrmFailed}</dd></div>
-			<div class="pairs pairs--columns pairs--fixedSmall"><dt>XFRM attention</dt><dd>{$stats.xfrmAttention}</dd></div>
-			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Workflow runs</dt><dd><a href="{{ link('github-sync/actions') }}">{$stats.workflowRuns}</a></dd></div>
-			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Open health alerts</dt><dd><a href="{{ link('github-sync/health') }}">{$stats.healthAlerts}</a></dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_i18n_be4a9e57') }}</dt><dd><a href="{{ link('github-sync/conflicts') }}">{$stats.conflicts}</a></dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_i18n_bd4d5461') }}</dt><dd><a href="{{ link('github-sync/user-mappings') }}">{$stats.userMappings}</a></dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_i18n_efbc918c') }}</dt><dd><a href="{{ link('github-sync/xfrm') }}">{$stats.xfrmReleases}</a></dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_i18n_2f69546f') }}</dt><dd>{$stats.xfrmFailed}</dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_i18n_e7a36b9c') }}</dt><dd>{$stats.xfrmAttention}</dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_i18n_98b5cefa') }}</dt><dd><a href="{{ link('github-sync/actions') }}">{$stats.workflowRuns}</a></dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_i18n_de0be088') }}</dt><dd><a href="{{ link('github-sync/health') }}">{$stats.healthAlerts}</a></dd></div>
 		</div>
 	</div>
 </div>
 
 <div class="block">
 	<div class="block-container">
-		<h2 class="block-header">Recent webhook deliveries</h2>
+		<h2 class="block-header">{{ phrase('wgh_i18n_00db6045') }}</h2>
 		<div class="block-body">
 			<table class="dataList">
 				<thead><tr class="dataList-row"><th class="dataList-cell">Event</th><th class="dataList-cell">Action</th><th class="dataList-cell">Status</th><th class="dataList-cell">Attempts</th><th class="dataList-cell">Received</th></tr></thead>

@@ -1,0 +1,1 @@
+One mapping per line, for example: bug=12. The same map is used in both directions.
