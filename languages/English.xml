@@ -1,405 +1,405 @@
 <?xml version="1.0" encoding="utf-8"?>
 <language title="Warext GitHub Sync English (US)" date_format="M j, Y" time_format="g:i A" decimal_point="." thousands_separator="," language_code="en-US" text_direction="LTR">
-  <phrase title="admin_navigation.wghGitHubSync" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Warext GitHub Sync]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncActions" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Actions]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncConflicts" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Conflicts]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncConnections" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Connections]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncDashboard" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Dashboard]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncDeliveries" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Webhook Logs]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncDiagnostics" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Diagnostics]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncHealth" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Health]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncMappings" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mappings]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncPullRequests" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[PR Tools]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncRepositories" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Repositories]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncTemplates" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Templates]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncUsers" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[User Mappings]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncXfrm" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM]]></phrase>
-  <phrase title="admin_navigation_wghGitHubSync" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Warext GitHub Sync]]></phrase>
-  <phrase title="admin_permission.wghManage" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Manage Warext GitHub Sync]]></phrase>
-  <phrase title="admin_permission_wghManage" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Manage Warext GitHub Sync]]></phrase>
-  <phrase title="wgh_i18n_005ef20f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Status]]></phrase>
-  <phrase title="wgh_i18n_00db6045" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Recent webhook deliveries]]></phrase>
-  <phrase title="wgh_i18n_010a1b71" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Run bulk recovery]]></phrase>
-  <phrase title="wgh_i18n_023d7f04" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[All repositories]]></phrase>
-  <phrase title="wgh_i18n_03700dac" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Fallback thread prefix ID]]></phrase>
-  <phrase title="wgh_i18n_0471b8d4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Enable XFRM release synchronization]]></phrase>
-  <phrase title="wgh_i18n_052942b0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Release asset pattern]]></phrase>
-  <phrase title="wgh_i18n_05a02c1f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub release]]></phrase>
-  <phrase title="wgh_i18n_087d6e49" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub wins]]></phrase>
-  <phrase title="wgh_i18n_08ee8c16" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[One per line. Example: success, failure, cancelled. Empty means all.]]></phrase>
-  <phrase title="wgh_i18n_0a77a91f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Action]]></phrase>
-  <phrase title="wgh_i18n_0b378a0d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Hard delete integration-created content]]></phrase>
-  <phrase title="wgh_i18n_0c80051d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Synchronize thread open/closed state to the GitHub Issue]]></phrase>
-  <phrase title="wgh_i18n_0e4a763d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub Actions]]></phrase>
-  <phrase title="wgh_i18n_0ff15b06" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Synchronization overview]]></phrase>
-  <phrase title="wgh_i18n_106bebdd" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Outbound synchronization]]></phrase>
-  <phrase title="wgh_i18n_110681a5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub Sync diagnostics]]></phrase>
-  <phrase title="wgh_i18n_1323c708" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Last attempt]]></phrase>
-  <phrase title="wgh_i18n_148fd59a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Installation ID]]></phrase>
-  <phrase title="wgh_i18n_1651a33b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Select repository]]></phrase>
-  <phrase title="wgh_i18n_1bd870f5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM API context user ID]]></phrase>
-  <phrase title="wgh_i18n_1cc51483" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Synchronize GitHub open/closed state to the XenForo thread]]></phrase>
-  <phrase title="wgh_i18n_1d0e98c5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Manual review]]></phrase>
-  <phrase title="wgh_i18n_1e3442b4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Release states]]></phrase>
-  <phrase title="wgh_i18n_1e581f24" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XenForo user ID]]></phrase>
-  <phrase title="wgh_i18n_1e7612d1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Connection scope]]></phrase>
-  <phrase title="wgh_i18n_1ebd2f2a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Remote state]]></phrase>
-  <phrase title="wgh_i18n_1ee52022" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Resource ID]]></phrase>
-  <phrase title="wgh_i18n_1f89134f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Active]]></phrase>
-  <phrase title="wgh_i18n_2122b880" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Synchronization conflicts]]></phrase>
-  <phrase title="wgh_i18n_219b41ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Soft delete XFRM content]]></phrase>
-  <phrase title="wgh_i18n_221e2703" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[? Existing repository/mapping records should be reviewed before deleting a connection.]]></phrase>
-  <phrase title="wgh_i18n_22426f70" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Edit message template]]></phrase>
-  <phrase title="wgh_i18n_2485c5c6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Existing XFRM resource ID]]></phrase>
-  <phrase title="wgh_i18n_24d471a9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Title]]></phrase>
-  <phrase title="wgh_i18n_250e7c81" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Save user mapping]]></phrase>
-  <phrase title="wgh_i18n_25ecbb60" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XenForo source (XenForo → GitHub)]]></phrase>
-  <phrase title="wgh_i18n_2690030d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Conflict details]]></phrase>
-  <phrase title="wgh_i18n_27b4d372" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Stale XFRM checks]]></phrase>
-  <phrase title="wgh_i18n_29b70fc3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Warext GitHub Sync - XFRM mappings]]></phrase>
-  <phrase title="wgh_i18n_2a251a55" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM mode]]></phrase>
-  <phrase title="wgh_i18n_2d1229b0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Manage review requests]]></phrase>
-  <phrase title="wgh_i18n_2d5a534f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM loaded]]></phrase>
-  <phrase title="wgh_i18n_2d63c72a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Examples: published, edited, deleted, opened, closed. Use * for all.]]></phrase>
-  <phrase title="wgh_i18n_2f3e2696" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM + normal XenForo target]]></phrase>
-  <phrase title="wgh_i18n_2f69546f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM failed]]></phrase>
-  <phrase title="wgh_i18n_312bf833" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Default PR base branch]]></phrase>
-  <phrase title="wgh_i18n_318b2491" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XenForo → GitHub]]></phrase>
-  <phrase title="wgh_i18n_323f1abd" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Template is active]]></phrase>
-  <phrase title="wgh_i18n_32a6d450" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Version ID]]></phrase>
-  <phrase title="wgh_i18n_32b40e8c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Add connection]]></phrase>
-  <phrase title="wgh_i18n_34a28c9d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Health alert history]]></phrase>
-  <phrase title="wgh_i18n_34e8dee2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Save template]]></phrase>
-  <phrase title="wgh_i18n_35c6c8ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Thread/title template]]></phrase>
-  <phrase title="wgh_i18n_3682552b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Available variables (current engine)]]></phrase>
-  <phrase title="wgh_i18n_37362d37" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Use GitHub → XenForo user mappings for the event author]]></phrase>
-  <phrase title="wgh_i18n_37e51807" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[? Mappings referencing it will fall back to inline/default templates.]]></phrase>
-  <phrase title="wgh_i18n_37ec80a5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Load pull request]]></phrase>
-  <phrase title="wgh_i18n_3982656e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Oldest pending age]]></phrase>
-  <phrase title="wgh_i18n_39e2ebc6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Allowed workflow statuses]]></phrase>
-  <phrase title="wgh_i18n_3ab22754" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Manage XFRM mappings]]></phrase>
-  <phrase title="wgh_i18n_3c3e9606" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XenForo hash:]]></phrase>
-  <phrase title="wgh_i18n_3fb1839f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Delete mapping for]]></phrase>
-  <phrase title="wgh_i18n_40c7207a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Add mapping]]></phrase>
-  <phrase title="wgh_i18n_416cf6fa" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Retry selected]]></phrase>
-  <phrase title="wgh_i18n_41bb2466" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Soft-delete synchronized XFRM version/update]]></phrase>
-  <phrase title="wgh_i18n_42f6daaa" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Remove review request]]></phrase>
-  <phrase title="wgh_i18n_433900ed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Add user mapping]]></phrase>
-  <phrase title="wgh_i18n_43cad27f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Deleted release policy]]></phrase>
-  <phrase title="wgh_i18n_43cd5e94" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub user mappings]]></phrase>
-  <phrase title="wgh_i18n_457b27f2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mapping is enabled]]></phrase>
-  <phrase title="wgh_i18n_4591f47b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Outbound field map]]></phrase>
-  <phrase title="wgh_i18n_45e9b837" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub → XenForo]]></phrase>
-  <phrase title="wgh_i18n_46959611" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Update ID]]></phrase>
-  <phrase title="wgh_i18n_48b9e1be" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM only for this release mapping]]></phrase>
-  <phrase title="wgh_i18n_49c956e0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub hash:]]></phrase>
-  <phrase title="wgh_i18n_49d5d089" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Workflow run history]]></phrase>
-  <phrase title="wgh_i18n_49e2aa42" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Repository ID]]></phrase>
-  <phrase title="wgh_i18n_4b824af4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Team reviewers]]></phrase>
-  <phrase title="wgh_i18n_4c35c233" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Webhook secret reference]]></phrase>
-  <phrase title="wgh_i18n_4ce42fa0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Delete synchronization mapping]]></phrase>
-  <phrase title="wgh_i18n_4d2d5d68" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Save]]></phrase>
-  <phrase title="wgh_i18n_4d603c51" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Account / organization login]]></phrase>
-  <phrase title="wgh_i18n_4dc4d0ff" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Run workflow]]></phrase>
-  <phrase title="wgh_i18n_4ded8eb7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Forum node ID]]></phrase>
-  <phrase title="wgh_i18n_4f790c25" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[v0.7 intentionally targets an existing resource; it does not auto-create ResourceItem records.]]></phrase>
-  <phrase title="wgh_i18n_5160fe75" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Save XFRM mapping]]></phrase>
-  <phrase title="wgh_i18n_51ce40fe" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Refresh run history from GitHub]]></phrase>
-  <phrase title="wgh_i18n_51ebf0a5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Synchronize GitHub release events to an existing XenForo Resource Manager resource]]></phrase>
-  <phrase title="wgh_i18n_521c7f93" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[config.php example]]></phrase>
-  <phrase title="wgh_i18n_534e7732" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mode]]></phrase>
-  <phrase title="wgh_i18n_5392f380" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[ResourceVersion ID]]></phrase>
-  <phrase title="wgh_i18n_54877718" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Last seen]]></phrase>
-  <phrase title="wgh_i18n_5635f148" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Apply reviewer action]]></phrase>
-  <phrase title="wgh_i18n_568452cb" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Retry delivery now]]></phrase>
-  <phrase title="wgh_i18n_57774f9f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Requested reviewers]]></phrase>
-  <phrase title="wgh_i18n_5797ea6a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Delete]]></phrase>
-  <phrase title="wgh_i18n_58ed5a83" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Use inline/default template]]></phrase>
-  <phrase title="wgh_i18n_59829c2a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Inputs JSON]]></phrase>
-  <phrase title="wgh_i18n_5d313e06" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Add synchronization mapping]]></phrase>
-  <phrase title="wgh_i18n_5d4b4a33" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub connections]]></phrase>
-  <phrase title="wgh_i18n_5dcdd537" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Version]]></phrase>
-  <phrase title="wgh_i18n_5e1845dc" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[PR tools]]></phrase>
-  <phrase title="wgh_i18n_6041b55f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Re-run failed jobs]]></phrase>
-  <phrase title="wgh_i18n_61836dfd" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Last reconcile]]></phrase>
-  <phrase title="wgh_i18n_61e6be1a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[No]]></phrase>
-  <phrase title="wgh_i18n_61fefc0a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Direction]]></phrase>
-  <phrase title="wgh_i18n_6376d16a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub App ID]]></phrase>
-  <phrase title="wgh_i18n_6545e080" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub Pull Request]]></phrase>
-  <phrase title="wgh_i18n_6553db78" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM only]]></phrase>
-  <phrase title="wgh_i18n_6655283f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Delete GitHub connection]]></phrase>
-  <phrase title="wgh_i18n_6720cb35" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Source ref]]></phrase>
-  <phrase title="wgh_i18n_673a86ea" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Commit message exclude terms]]></phrase>
-  <phrase title="wgh_i18n_68a7e6c0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Comma or line separated organization team slugs.]]></phrase>
-  <phrase title="wgh_i18n_68fb46eb" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub Pull Request tools]]></phrase>
-  <phrase title="wgh_i18n_695f5810" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Pull request number]]></phrase>
-  <phrase title="wgh_i18n_699f32e2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Default branch]]></phrase>
-  <phrase title="wgh_i18n_6bff0625" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Add GitHub connection]]></phrase>
-  <phrase title="wgh_i18n_6cab2f85" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Grouped into]]></phrase>
-  <phrase title="wgh_i18n_706306ff" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Repository workflows]]></phrase>
-  <phrase title="wgh_i18n_72bb816d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Allow maintainers to modify the pull request branch]]></phrase>
-  <phrase title="wgh_i18n_735b7e4d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Event mapping]]></phrase>
-  <phrase title="wgh_i18n_73e70c1c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Inbound field map]]></phrase>
-  <phrase title="wgh_i18n_7573412e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Inbound identity and metadata]]></phrase>
-  <phrase title="wgh_i18n_770fdd94" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[When set, synchronization targets this thread instead of creating a new one.]]></phrase>
-  <phrase title="wgh_i18n_78a0f955" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Webhook delivery logs]]></phrase>
-  <phrase title="wgh_i18n_7a47da73" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub login]]></phrase>
-  <phrase title="wgh_i18n_7aa6f0e7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[API]]></phrase>
-  <phrase title="wgh_i18n_7ab3a3db" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Keep XenForo version]]></phrase>
-  <phrase title="wgh_i18n_7b4678c9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Local XFRM API key reference]]></phrase>
-  <phrase title="wgh_i18n_7bfcc515" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Only threads/posts from this forum are sent to GitHub. 0 allows any forum for this mapping.]]></phrase>
-  <phrase title="wgh_i18n_7c015427" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Add message template]]></phrase>
-  <phrase title="wgh_i18n_7c90e126" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Save mapping]]></phrase>
-  <phrase title="wgh_i18n_7d21db29" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub account]]></phrase>
-  <phrase title="wgh_i18n_7dddbb44" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Add GitHub user mapping]]></phrase>
-  <phrase title="wgh_i18n_7e0a5533" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[API key config reference]]></phrase>
-  <phrase title="wgh_i18n_7ea489aa" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Update thread title]]></phrase>
-  <phrase title="wgh_i18n_816c0a68" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Commit message include terms]]></phrase>
-  <phrase title="wgh_i18n_818601a1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Warext GitHub Sync - Health]]></phrase>
-  <phrase title="wgh_i18n_827dda41" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Comma or line separated GitHub logins.]]></phrase>
-  <phrase title="wgh_i18n_832358da" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Incoming GitHub action]]></phrase>
-  <phrase title="wgh_i18n_853ffe77" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Edit synchronization mapping]]></phrase>
-  <phrase title="wgh_i18n_85e4b82f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[OK]]></phrase>
-  <phrase title="wgh_i18n_86236693" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Examples: release, push, issues, pull_request. Use * for all.]]></phrase>
-  <phrase title="wgh_i18n_88d2040a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Synchronize thread title and first post to the GitHub Issue]]></phrase>
-  <phrase title="wgh_i18n_8a2d1d22" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Retry from GitHub]]></phrase>
-  <phrase title="wgh_i18n_8a88e798" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub source ZIP]]></phrase>
-  <phrase title="wgh_i18n_8afbfe15" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Create an XFRM ResourceVersion for a new GitHub release]]></phrase>
-  <phrase title="wgh_i18n_8b5c27de" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub release page]]></phrase>
-  <phrase title="wgh_i18n_8d50ecb6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Any repository in the selected scope]]></phrase>
-  <phrase title="wgh_i18n_8d51911e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Bypass permissions (super-user API key only)]]></phrase>
-  <phrase title="wgh_i18n_8dfee4f8" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub release ID]]></phrase>
-  <phrase title="wgh_i18n_8f8d470d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Repository scope]]></phrase>
-  <phrase title="wgh_i18n_901aca78" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Inactive]]></phrase>
-  <phrase title="wgh_i18n_90b03010" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[API context user ID]]></phrase>
-  <phrase title="wgh_i18n_935d7ff7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Event action]]></phrase>
-  <phrase title="wgh_i18n_94483ccf" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub delivery ID]]></phrase>
-  <phrase title="wgh_i18n_96a12137" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Client ID]]></phrase>
-  <phrase title="wgh_i18n_9766c371" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XenForo target]]></phrase>
-  <phrase title="wgh_i18n_98839df1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Webhook logs]]></phrase>
-  <phrase title="wgh_i18n_98b5cefa" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Workflow runs]]></phrase>
-  <phrase title="wgh_i18n_990de47d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Create]]></phrase>
-  <phrase title="wgh_i18n_99b7da07" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Connection is active]]></phrase>
-  <phrase title="wgh_i18n_9a96c706" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Last success]]></phrase>
-  <phrase title="wgh_i18n_9ba6196d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Allowed branches]]></phrase>
-  <phrase title="wgh_i18n_9c86e43e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Enabled]]></phrase>
-  <phrase title="wgh_i18n_a0b54756" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Private key reference]]></phrase>
-  <phrase title="wgh_i18n_a200e31f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub App connection]]></phrase>
-  <phrase title="wgh_i18n_a29015e3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Synchronize repositories now]]></phrase>
-  <phrase title="wgh_i18n_a2b0e2ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Deleted GitHub release policy]]></phrase>
-  <phrase title="wgh_i18n_a2f3d279" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[One per line. Example: completed or in_progress. Empty means all.]]></phrase>
-  <phrase title="wgh_i18n_a40701ec" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Evaluate health now]]></phrase>
-  <phrase title="wgh_i18n_a573c357" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Reference under config.php: warextGitHubSync.xfrmApiKeys. The real key is never stored in the add-on database.]]></phrase>
-  <phrase title="wgh_i18n_a57f1ba2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Ref]]></phrase>
-  <phrase title="wgh_i18n_a860fdff" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[At least one term must match when configured.]]></phrase>
-  <phrase title="wgh_i18n_ac4049c3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Release → Resource mappings]]></phrase>
-  <phrase title="wgh_i18n_ac6427ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub repositories]]></phrase>
-  <phrase title="wgh_i18n_acd1de66" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Update the first post of an existing thread]]></phrase>
-  <phrase title="wgh_i18n_ad54cb3e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM Resource Manager target]]></phrase>
-  <phrase title="wgh_i18n_ad56869f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM target]]></phrase>
-  <phrase title="wgh_i18n_ad7cf12f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XenForo wins]]></phrase>
-  <phrase title="wgh_i18n_ad9d2170" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Delete mapping]]></phrase>
-  <phrase title="wgh_i18n_af91c2bc" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Used in asset mode. Wildcards are supported, e.g. *.zip or Warext-*.zip.]]></phrase>
-  <phrase title="wgh_i18n_b00a0cb2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Create/update an XFRM Resource Update from GitHub release notes (also feeds the resource discussion workflow)]]></phrase>
-  <phrase title="wgh_i18n_b04a756e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Automation user ID]]></phrase>
-  <phrase title="wgh_i18n_b05886cc" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Source forum node ID]]></phrase>
-  <phrase title="wgh_i18n_b136fe9d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[? Existing sync registry entries are retained for audit/recovery.]]></phrase>
-  <phrase title="wgh_i18n_b1fbc936" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Optional XenForo action field=GitHub payload path. Safe targets: title, message, remote_state, prefix_id. Example: title=workflow_run.name.]]></phrase>
-  <phrase title="wgh_i18n_b3a43630" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yes]]></phrase>
-  <phrase title="wgh_i18n_b43f9625" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Failed / hour]]></phrase>
-  <phrase title="wgh_i18n_b46c572e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[User reviewers]]></phrase>
-  <phrase title="wgh_i18n_b4f5fd8b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Matching release asset]]></phrase>
-  <phrase title="wgh_i18n_b51e570a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Retry count]]></phrase>
-  <phrase title="wgh_i18n_b5bcb81f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Message templates]]></phrase>
-  <phrase title="wgh_i18n_b5cc65ad" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub Issue]]></phrase>
-  <phrase title="wgh_i18n_b62ca584" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Create new pull requests as drafts]]></phrase>
-  <phrase title="wgh_i18n_b82e8201" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[One per line. Example: 12=APPROVE, 13=REQUEST_CHANGES, 14=COMMENT. Review is sent only when the prefix changes to a configured value.]]></phrase>
-  <phrase title="wgh_i18n_b87a566e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Apply GitHub version]]></phrase>
-  <phrase title="wgh_i18n_b8b37b00" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Allowed workflow conclusions]]></phrase>
-  <phrase title="wgh_i18n_ba8885b3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Load workflows]]></phrase>
-  <phrase title="wgh_i18n_bacd50f6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Used as XF-Api-User when the configured key is a super-user key.]]></phrase>
-  <phrase title="wgh_i18n_bc066fff" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Used when the integration should create a new thread.]]></phrase>
-  <phrase title="wgh_i18n_bc3d5188" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Existing resource]]></phrase>
-  <phrase title="wgh_i18n_bd2598ab" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Use api_bypass_permissions (requires a suitable super-user API key)]]></phrase>
-  <phrase title="wgh_i18n_bd4d5461" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[User mappings]]></phrase>
-  <phrase title="wgh_i18n_be4a9e57" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Pending conflicts]]></phrase>
-  <phrase title="wgh_i18n_bf2eae0a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Newest wins]]></phrase>
-  <phrase title="wgh_i18n_bfce9925" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Disabled]]></phrase>
-  <phrase title="wgh_i18n_c0137fcc" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Warext GitHub Sync - XFRM]]></phrase>
-  <phrase title="wgh_i18n_c0f4aea1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[ResourceUpdate ID]]></phrase>
-  <phrase title="wgh_i18n_c1053436" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Synchronization mappings]]></phrase>
-  <phrase title="wgh_i18n_c28a86c4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[One branch per line. Empty means all branches.]]></phrase>
-  <phrase title="wgh_i18n_c55199b7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub label ↔ XenForo prefix map]]></phrase>
-  <phrase title="wgh_i18n_c5a8d4c5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Required when creating a PR unless head is provided by the outbound field map.]]></phrase>
-  <phrase title="wgh_i18n_c628a50c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Remote delete policy]]></phrase>
-  <phrase title="wgh_i18n_c68eae09" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XenForo Resource Manager integration]]></phrase>
-  <phrase title="wgh_i18n_c6adbeea" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM synchronization]]></phrase>
-  <phrase title="wgh_i18n_c7932a65" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Allow prereleases]]></phrase>
-  <phrase title="wgh_i18n_c80fb6b6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Message template]]></phrase>
-  <phrase title="wgh_i18n_c83001dd" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Strip leading v from numeric tags]]></phrase>
-  <phrase title="wgh_i18n_c9e1016f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Excluded paths]]></phrase>
-  <phrase title="wgh_i18n_ca30cc85" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Prefix → PR review action]]></phrase>
-  <phrase title="wgh_i18n_cae33da6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[release, push, issues, pull_request or *]]></phrase>
-  <phrase title="wgh_i18n_ccdfbfa0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Public]]></phrase>
-  <phrase title="wgh_i18n_cda8c1e5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Delete message template]]></phrase>
-  <phrase title="wgh_i18n_ce2835c9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Webhook-captured runs are stored locally. Refresh imports the latest 50 runs from GitHub.]]></phrase>
-  <phrase title="wgh_i18n_ce332b84" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Reconcile selected]]></phrase>
-  <phrase title="wgh_i18n_cece6a63" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Title template override]]></phrase>
-  <phrase title="wgh_i18n_d01f2cac" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Private]]></phrase>
-  <phrase title="wgh_i18n_d02b533f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Event]]></phrase>
-  <phrase title="wgh_i18n_d0d15f5a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Message template override]]></phrase>
-  <phrase title="wgh_i18n_d0e38806" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Add template]]></phrase>
-  <phrase title="wgh_i18n_d26a6f5e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Request review]]></phrase>
-  <phrase title="wgh_i18n_d309b8e7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Delete user mapping]]></phrase>
-  <phrase title="wgh_i18n_d544c82b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Synchronize GitHub labels to XenForo thread prefix]]></phrase>
-  <phrase title="wgh_i18n_d5691a0f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Hard-delete synchronized XFRM version/update]]></phrase>
-  <phrase title="wgh_i18n_d5699aaf" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Optional message used for synchronized reviews.]]></phrase>
-  <phrase title="wgh_i18n_d56cc75b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Asset wildcard]]></phrase>
-  <phrase title="wgh_i18n_d67124ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Update behavior]]></phrase>
-  <phrase title="wgh_i18n_d69d3dbe" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Restore tracking]]></phrase>
-  <phrase title="wgh_i18n_d71e7a5e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Tracked XFRM releases]]></phrase>
-  <phrase title="wgh_i18n_d7c1c52d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Included paths]]></phrase>
-  <phrase title="wgh_i18n_d7e8fab4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[FAILED]]></phrase>
-  <phrase title="wgh_i18n_d8aea56d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Tracked releases]]></phrase>
-  <phrase title="wgh_i18n_da379f5e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Reusable template]]></phrase>
-  <phrase title="wgh_i18n_dbdd35d7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Synchronize thread replies as GitHub Issue comments]]></phrase>
-  <phrase title="wgh_i18n_dc4d3d55" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub object]]></phrase>
-  <phrase title="wgh_i18n_dda8c1ac" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Conflict strategy]]></phrase>
-  <phrase title="wgh_i18n_de0be088" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Open health alerts]]></phrase>
-  <phrase title="wgh_i18n_dee2fcb1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Edit GitHub user mapping]]></phrase>
-  <phrase title="wgh_i18n_df3e88b9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Supports * and ** globs.]]></phrase>
-  <phrase title="wgh_i18n_df5f2d89" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[App ID]]></phrase>
-  <phrase title="wgh_i18n_e21880d3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Release download source]]></phrase>
-  <phrase title="wgh_i18n_e33c3815" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Optional GitHub field=XenForo field mappings. Examples: title=thread.title, body=post.message, head=thread.custom_fields.github_branch, base=thread.custom_fields.github_base.]]></phrase>
-  <phrase title="wgh_i18n_e3d869f0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Delete template]]></phrase>
-  <phrase title="wgh_i18n_e3faec47" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Delivery details]]></phrase>
-  <phrase title="wgh_i18n_e66dd01c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Strip a leading v from numeric release tags (v1.2.0 → 1.2.0)]]></phrase>
-  <phrase title="wgh_i18n_e68d9f29" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Priority]]></phrase>
-  <phrase title="wgh_i18n_e6d20eed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mark as deleted]]></phrase>
-  <phrase title="wgh_i18n_e6dd7929" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Existing thread ID]]></phrase>
-  <phrase title="wgh_i18n_e763c8b5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Repository]]></phrase>
-  <phrase title="wgh_i18n_e7a36b9c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM attention]]></phrase>
-  <phrase title="wgh_i18n_e8657108" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Empty uses the repository default branch unless base is provided by the outbound field map.]]></phrase>
-  <phrase title="wgh_i18n_e8a8d46a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Soft delete integration-created content]]></phrase>
-  <phrase title="wgh_i18n_e9e5a00c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Processed / hour]]></phrase>
-  <phrase title="wgh_i18n_eadb9387" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Hard delete XFRM content]]></phrase>
-  <phrase title="wgh_i18n_ebebbbbb" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[PR review body]]></phrase>
-  <phrase title="wgh_i18n_ec1021f5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Allow draft releases]]></phrase>
-  <phrase title="wgh_i18n_ee0f543f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Reconcile remote objects]]></phrase>
-  <phrase title="wgh_i18n_ef8df546" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Warext GitHub Sync]]></phrase>
-  <phrase title="wgh_i18n_efbc918c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM releases]]></phrase>
-  <phrase title="wgh_i18n_efe0d7f3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Release synchronization targets an existing XFRM resource. v0.8 adds audit history, manual retry, remote reconciliation and a dedicated mapping manager.]]></phrase>
-  <phrase title="wgh_i18n_f005a9f9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Keep XFRM version/update]]></phrase>
-  <phrase title="wgh_i18n_f07e22c0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Edit GitHub connection]]></phrase>
-  <phrase title="wgh_i18n_f14a11e2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Last error / note]]></phrase>
-  <phrase title="wgh_i18n_f16be935" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Pull Request options]]></phrase>
-  <phrase title="wgh_i18n_f186d5b4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Pull Request creation]]></phrase>
-  <phrase title="wgh_i18n_f1d0878d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Create ResourceVersion]]></phrase>
-  <phrase title="wgh_i18n_f3f18e26" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Create/update Resource Update]]></phrase>
-  <phrase title="wgh_i18n_f516a21a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Create a GitHub PR review when the thread prefix matches the review map]]></phrase>
-  <phrase title="wgh_i18n_f51b1c8c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Tracked release]]></phrase>
-  <phrase title="wgh_i18n_f5aade02" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub event]]></phrase>
-  <phrase title="wgh_i18n_f6f36dc2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Synchronize XenForo thread prefix to GitHub Issue labels using the label map below]]></phrase>
-  <phrase title="wgh_i18n_f7b77a7e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Download source]]></phrase>
-  <phrase title="wgh_i18n_f864d092" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Default PR head branch]]></phrase>
-  <phrase title="wgh_i18n_fd5aa3d5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[One mapping per line, for example: bug=12. The same map is used in both directions.]]></phrase>
-  <phrase title="wgh_i18n_fd921a23" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Select resource]]></phrase>
-  <phrase title="wgh_i18n_fdd996cf" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Any connection]]></phrase>
-  <phrase title="wgh_msg_conflict_resolution_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Conflict resolution failed: {error}]]></phrase>
-  <phrase title="wgh_msg_connection_has_repositories" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[This connection still owns synchronized repositories. Disable it or migrate/remove repository records first.]]></phrase>
-  <phrase title="wgh_msg_github_connection_unavailable" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub connection is unavailable.]]></phrase>
-  <phrase title="wgh_msg_health_alert_resolved" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Health alert resolved.]]></phrase>
-  <phrase title="wgh_msg_health_state_evaluated" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Health state evaluated.]]></phrase>
-  <phrase title="wgh_msg_inputs_json_object" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Inputs JSON must be an object.]]></phrase>
-  <phrase title="wgh_msg_invalid_workflow_inputs" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Invalid workflow inputs JSON: {error}]]></phrase>
-  <phrase title="wgh_msg_pr_reviewer_action_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Pull request reviewer action failed: {error}]]></phrase>
-  <phrase title="wgh_msg_pull_request_number_required" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Pull request number is required.]]></phrase>
-  <phrase title="wgh_msg_repository_not_found_inactive" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Repository was not found or is inactive.]]></phrase>
-  <phrase title="wgh_msg_repository_sync_complete" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Repository sync complete: {created} created, {updated} updated, {deactivated} deactivated.]]></phrase>
-  <phrase title="wgh_msg_repository_sync_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Repository sync failed: {error}]]></phrase>
-  <phrase title="wgh_msg_reviewer_requests_updated" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Reviewer requests updated.]]></phrase>
-  <phrase title="wgh_msg_select_retry_reconcile" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Select retry or reconcile.]]></phrase>
-  <phrase title="wgh_msg_select_xfrm_record" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Select at least one XFRM synchronization record.]]></phrase>
-  <phrase title="wgh_msg_tracking_snapshot_restored" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Tracking snapshot restored. Run reconcile before retrying.]]></phrase>
-  <phrase title="wgh_msg_user_mapping_required" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub login and XenForo user ID are required.]]></phrase>
-  <phrase title="wgh_msg_workflow_dispatch_accepted" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Workflow dispatch accepted.]]></phrase>
-  <phrase title="wgh_msg_workflow_dispatch_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Workflow dispatch failed: {error}]]></phrase>
-  <phrase title="wgh_msg_workflow_history_refresh_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Workflow history refresh failed: {error}]]></phrase>
-  <phrase title="wgh_msg_workflow_history_refreshed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Workflow run history refreshed.]]></phrase>
-  <phrase title="wgh_msg_workflow_ref_required" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Workflow and ref are required.]]></phrase>
-  <phrase title="wgh_msg_workflow_run_action_accepted" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Workflow run action accepted by GitHub.]]></phrase>
-  <phrase title="wgh_msg_workflow_run_action_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Workflow run action failed: {error}]]></phrase>
-  <phrase title="wgh_msg_workflow_run_id_required" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Workflow run ID is required.]]></phrase>
-  <phrase title="wgh_msg_xfrm_bulk_first_error" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[{message} First error: {error}]]></phrase>
-  <phrase title="wgh_msg_xfrm_bulk_result" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[{processed} XFRM record(s) processed, {failed} failed.]]></phrase>
-  <phrase title="wgh_msg_xfrm_mapping_updated" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM mapping updated.]]></phrase>
-  <phrase title="wgh_msg_xfrm_reconcile_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM reconcile failed: {error}]]></phrase>
-  <phrase title="wgh_msg_xfrm_reconcile_missing" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Reconcile completed with missing remote objects.]]></phrase>
-  <phrase title="wgh_msg_xfrm_remote_verified" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Remote XFRM objects verified.]]></phrase>
-  <phrase title="wgh_msg_xfrm_retry_completed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM retry completed.]]></phrase>
-  <phrase title="wgh_msg_xfrm_retry_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM retry failed: {error}]]></phrase>
-  <phrase title="wgh_ui_action" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Action]]></phrase>
-  <phrase title="wgh_ui_actions" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Actions]]></phrase>
-  <phrase title="wgh_ui_actor" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Actor]]></phrase>
-  <phrase title="wgh_ui_all" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[All]]></phrase>
-  <phrase title="wgh_ui_apply" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Apply]]></phrase>
-  <phrase title="wgh_ui_attempts" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Attempts]]></phrase>
-  <phrase title="wgh_ui_attention" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Attention]]></phrase>
-  <phrase title="wgh_ui_base" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Base]]></phrase>
-  <phrase title="wgh_ui_branch" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Branch]]></phrase>
-  <phrase title="wgh_ui_cancel" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Cancel]]></phrase>
-  <phrase title="wgh_ui_check" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Check]]></phrase>
-  <phrase title="wgh_ui_conflicts" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Conflicts]]></phrase>
-  <phrase title="wgh_ui_connection_number" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Connection #{id}]]></phrase>
-  <phrase title="wgh_ui_connections" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Connections]]></phrase>
-  <phrase title="wgh_ui_count" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Count]]></phrase>
-  <phrase title="wgh_ui_created" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Created]]></phrase>
-  <phrase title="wgh_ui_dashboard" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Dashboard]]></phrase>
-  <phrase title="wgh_ui_date" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Date]]></phrase>
-  <phrase title="wgh_ui_deliveries" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Deliveries]]></phrase>
-  <phrase title="wgh_ui_delivery" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Delivery]]></phrase>
-  <phrase title="wgh_ui_details" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Details]]></phrase>
-  <phrase title="wgh_ui_diagnostics" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Diagnostics]]></phrase>
-  <phrase title="wgh_ui_direction" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Direction]]></phrase>
-  <phrase title="wgh_ui_dismissed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Dismissed]]></phrase>
-  <phrase title="wgh_ui_draft" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Draft]]></phrase>
-  <phrase title="wgh_ui_event" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Event]]></phrase>
-  <phrase title="wgh_ui_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Failed]]></phrase>
-  <phrase title="wgh_ui_global" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Global]]></phrase>
-  <phrase title="wgh_ui_head" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Head]]></phrase>
-  <phrase title="wgh_ui_health" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Health]]></phrase>
-  <phrase title="wgh_ui_history" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[History]]></phrase>
-  <phrase title="wgh_ui_ignore" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Ignore]]></phrase>
-  <phrase title="wgh_ui_mappings" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mappings]]></phrase>
-  <phrase title="wgh_ui_message" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Message]]></phrase>
-  <phrase title="wgh_ui_never" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Never]]></phrase>
-  <phrase title="wgh_ui_object" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Object]]></phrase>
-  <phrase title="wgh_ui_payload" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Payload]]></phrase>
-  <phrase title="wgh_ui_pending" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Pending]]></phrase>
-  <phrase title="wgh_ui_priority" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Priority]]></phrase>
-  <phrase title="wgh_ui_received" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Received]]></phrase>
-  <phrase title="wgh_ui_remote" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Remote]]></phrase>
-  <phrase title="wgh_ui_repositories" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Repositories]]></phrase>
-  <phrase title="wgh_ui_rerun" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Re-run]]></phrase>
-  <phrase title="wgh_ui_resolution" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Resolution]]></phrase>
-  <phrase title="wgh_ui_resolve" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Resolve]]></phrase>
-  <phrase title="wgh_ui_resolved" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Resolved]]></phrase>
-  <phrase title="wgh_ui_resource" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Resource]]></phrase>
-  <phrase title="wgh_ui_result" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Result]]></phrase>
-  <phrase title="wgh_ui_retries" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Retries]]></phrase>
-  <phrase title="wgh_ui_run" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Run]]></phrase>
-  <phrase title="wgh_ui_scope" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Scope]]></phrase>
-  <phrase title="wgh_ui_severity" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Severity]]></phrase>
-  <phrase title="wgh_ui_state" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[State]]></phrase>
-  <phrase title="wgh_ui_sync_health" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Synchronization health: {severity}]]></phrase>
-  <phrase title="wgh_ui_teams" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Teams]]></phrase>
-  <phrase title="wgh_ui_templates" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Templates]]></phrase>
-  <phrase title="wgh_ui_title" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Title]]></phrase>
-  <phrase title="wgh_ui_updated" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Updated]]></phrase>
-  <phrase title="wgh_ui_users" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Users]]></phrase>
-  <phrase title="wgh_ui_version" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Version]]></phrase>
-  <phrase title="wgh_ui_webhook_delivery" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Webhook delivery #{id}]]></phrase>
-  <phrase title="wgh_ui_xfrm" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM]]></phrase>
-  <phrase title="wgh_ui_xfrm_mapping_title" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM mapping - {title}]]></phrase>
-  <phrase title="wgh_ui_xfrm_release_title" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM release #{id}]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSync" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Warext GitHub Sync]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncActions" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Actions]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncConflicts" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Conflicts]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncConnections" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Connections]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncDashboard" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Dashboard]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncDeliveries" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Webhook Logs]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncDiagnostics" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Diagnostics]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncHealth" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Health]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncMappings" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mappings]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncPullRequests" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[PR Tools]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncRepositories" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Repositories]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncTemplates" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Templates]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncUsers" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[User Mappings]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncXfrm" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM]]></phrase>
+  <phrase title="admin_navigation_wghGitHubSync" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Warext GitHub Sync]]></phrase>
+  <phrase title="admin_permission.wghManage" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Manage Warext GitHub Sync]]></phrase>
+  <phrase title="admin_permission_wghManage" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Manage Warext GitHub Sync]]></phrase>
+  <phrase title="wgh_i18n_005ef20f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Status]]></phrase>
+  <phrase title="wgh_i18n_00db6045" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Recent webhook deliveries]]></phrase>
+  <phrase title="wgh_i18n_010a1b71" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Run bulk recovery]]></phrase>
+  <phrase title="wgh_i18n_023d7f04" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[All repositories]]></phrase>
+  <phrase title="wgh_i18n_03700dac" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Fallback thread prefix ID]]></phrase>
+  <phrase title="wgh_i18n_0471b8d4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Enable XFRM release synchronization]]></phrase>
+  <phrase title="wgh_i18n_052942b0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Release asset pattern]]></phrase>
+  <phrase title="wgh_i18n_05a02c1f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub release]]></phrase>
+  <phrase title="wgh_i18n_087d6e49" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub wins]]></phrase>
+  <phrase title="wgh_i18n_08ee8c16" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[One per line. Example: success, failure, cancelled. Empty means all.]]></phrase>
+  <phrase title="wgh_i18n_0a77a91f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Action]]></phrase>
+  <phrase title="wgh_i18n_0b378a0d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Hard delete integration-created content]]></phrase>
+  <phrase title="wgh_i18n_0c80051d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Synchronize thread open/closed state to the GitHub Issue]]></phrase>
+  <phrase title="wgh_i18n_0e4a763d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub Actions]]></phrase>
+  <phrase title="wgh_i18n_0ff15b06" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Synchronization overview]]></phrase>
+  <phrase title="wgh_i18n_106bebdd" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Outbound synchronization]]></phrase>
+  <phrase title="wgh_i18n_110681a5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub Sync diagnostics]]></phrase>
+  <phrase title="wgh_i18n_1323c708" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Last attempt]]></phrase>
+  <phrase title="wgh_i18n_148fd59a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Installation ID]]></phrase>
+  <phrase title="wgh_i18n_1651a33b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Select repository]]></phrase>
+  <phrase title="wgh_i18n_1bd870f5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM API context user ID]]></phrase>
+  <phrase title="wgh_i18n_1cc51483" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Synchronize GitHub open/closed state to the XenForo thread]]></phrase>
+  <phrase title="wgh_i18n_1d0e98c5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Manual review]]></phrase>
+  <phrase title="wgh_i18n_1e3442b4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Release states]]></phrase>
+  <phrase title="wgh_i18n_1e581f24" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XenForo user ID]]></phrase>
+  <phrase title="wgh_i18n_1e7612d1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Connection scope]]></phrase>
+  <phrase title="wgh_i18n_1ebd2f2a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Remote state]]></phrase>
+  <phrase title="wgh_i18n_1ee52022" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Resource ID]]></phrase>
+  <phrase title="wgh_i18n_1f89134f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Active]]></phrase>
+  <phrase title="wgh_i18n_2122b880" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Synchronization conflicts]]></phrase>
+  <phrase title="wgh_i18n_219b41ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Soft delete XFRM content]]></phrase>
+  <phrase title="wgh_i18n_221e2703" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[? Existing repository/mapping records should be reviewed before deleting a connection.]]></phrase>
+  <phrase title="wgh_i18n_22426f70" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Edit message template]]></phrase>
+  <phrase title="wgh_i18n_2485c5c6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Existing XFRM resource ID]]></phrase>
+  <phrase title="wgh_i18n_24d471a9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Title]]></phrase>
+  <phrase title="wgh_i18n_250e7c81" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Save user mapping]]></phrase>
+  <phrase title="wgh_i18n_25ecbb60" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XenForo source (XenForo → GitHub)]]></phrase>
+  <phrase title="wgh_i18n_2690030d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Conflict details]]></phrase>
+  <phrase title="wgh_i18n_27b4d372" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Stale XFRM checks]]></phrase>
+  <phrase title="wgh_i18n_29b70fc3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Warext GitHub Sync - XFRM mappings]]></phrase>
+  <phrase title="wgh_i18n_2a251a55" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM mode]]></phrase>
+  <phrase title="wgh_i18n_2d1229b0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Manage review requests]]></phrase>
+  <phrase title="wgh_i18n_2d5a534f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM loaded]]></phrase>
+  <phrase title="wgh_i18n_2d63c72a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Examples: published, edited, deleted, opened, closed. Use * for all.]]></phrase>
+  <phrase title="wgh_i18n_2f3e2696" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM + normal XenForo target]]></phrase>
+  <phrase title="wgh_i18n_2f69546f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM failed]]></phrase>
+  <phrase title="wgh_i18n_312bf833" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Default PR base branch]]></phrase>
+  <phrase title="wgh_i18n_318b2491" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XenForo → GitHub]]></phrase>
+  <phrase title="wgh_i18n_323f1abd" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Template is active]]></phrase>
+  <phrase title="wgh_i18n_32a6d450" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Version ID]]></phrase>
+  <phrase title="wgh_i18n_32b40e8c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Add connection]]></phrase>
+  <phrase title="wgh_i18n_34a28c9d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Health alert history]]></phrase>
+  <phrase title="wgh_i18n_34e8dee2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Save template]]></phrase>
+  <phrase title="wgh_i18n_35c6c8ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Thread/title template]]></phrase>
+  <phrase title="wgh_i18n_3682552b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Available variables (current engine)]]></phrase>
+  <phrase title="wgh_i18n_37362d37" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Use GitHub → XenForo user mappings for the event author]]></phrase>
+  <phrase title="wgh_i18n_37e51807" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[? Mappings referencing it will fall back to inline/default templates.]]></phrase>
+  <phrase title="wgh_i18n_37ec80a5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Load pull request]]></phrase>
+  <phrase title="wgh_i18n_3982656e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Oldest pending age]]></phrase>
+  <phrase title="wgh_i18n_39e2ebc6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Allowed workflow statuses]]></phrase>
+  <phrase title="wgh_i18n_3ab22754" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Manage XFRM mappings]]></phrase>
+  <phrase title="wgh_i18n_3c3e9606" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XenForo hash:]]></phrase>
+  <phrase title="wgh_i18n_3fb1839f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Delete mapping for]]></phrase>
+  <phrase title="wgh_i18n_40c7207a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Add mapping]]></phrase>
+  <phrase title="wgh_i18n_416cf6fa" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Retry selected]]></phrase>
+  <phrase title="wgh_i18n_41bb2466" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Soft-delete synchronized XFRM version/update]]></phrase>
+  <phrase title="wgh_i18n_42f6daaa" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Remove review request]]></phrase>
+  <phrase title="wgh_i18n_433900ed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Add user mapping]]></phrase>
+  <phrase title="wgh_i18n_43cad27f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Deleted release policy]]></phrase>
+  <phrase title="wgh_i18n_43cd5e94" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub user mappings]]></phrase>
+  <phrase title="wgh_i18n_457b27f2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mapping is enabled]]></phrase>
+  <phrase title="wgh_i18n_4591f47b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Outbound field map]]></phrase>
+  <phrase title="wgh_i18n_45e9b837" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub → XenForo]]></phrase>
+  <phrase title="wgh_i18n_46959611" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Update ID]]></phrase>
+  <phrase title="wgh_i18n_48b9e1be" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM only for this release mapping]]></phrase>
+  <phrase title="wgh_i18n_49c956e0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub hash:]]></phrase>
+  <phrase title="wgh_i18n_49d5d089" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Workflow run history]]></phrase>
+  <phrase title="wgh_i18n_49e2aa42" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Repository ID]]></phrase>
+  <phrase title="wgh_i18n_4b824af4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Team reviewers]]></phrase>
+  <phrase title="wgh_i18n_4c35c233" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Webhook secret reference]]></phrase>
+  <phrase title="wgh_i18n_4ce42fa0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Delete synchronization mapping]]></phrase>
+  <phrase title="wgh_i18n_4d2d5d68" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Save]]></phrase>
+  <phrase title="wgh_i18n_4d603c51" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Account / organization login]]></phrase>
+  <phrase title="wgh_i18n_4dc4d0ff" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Run workflow]]></phrase>
+  <phrase title="wgh_i18n_4ded8eb7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Forum node ID]]></phrase>
+  <phrase title="wgh_i18n_4f790c25" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[v0.7 intentionally targets an existing resource; it does not auto-create ResourceItem records.]]></phrase>
+  <phrase title="wgh_i18n_5160fe75" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Save XFRM mapping]]></phrase>
+  <phrase title="wgh_i18n_51ce40fe" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Refresh run history from GitHub]]></phrase>
+  <phrase title="wgh_i18n_51ebf0a5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Synchronize GitHub release events to an existing XenForo Resource Manager resource]]></phrase>
+  <phrase title="wgh_i18n_521c7f93" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[config.php example]]></phrase>
+  <phrase title="wgh_i18n_534e7732" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mode]]></phrase>
+  <phrase title="wgh_i18n_5392f380" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[ResourceVersion ID]]></phrase>
+  <phrase title="wgh_i18n_54877718" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Last seen]]></phrase>
+  <phrase title="wgh_i18n_5635f148" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Apply reviewer action]]></phrase>
+  <phrase title="wgh_i18n_568452cb" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Retry delivery now]]></phrase>
+  <phrase title="wgh_i18n_57774f9f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Requested reviewers]]></phrase>
+  <phrase title="wgh_i18n_5797ea6a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Delete]]></phrase>
+  <phrase title="wgh_i18n_58ed5a83" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Use inline/default template]]></phrase>
+  <phrase title="wgh_i18n_59829c2a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Inputs JSON]]></phrase>
+  <phrase title="wgh_i18n_5d313e06" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Add synchronization mapping]]></phrase>
+  <phrase title="wgh_i18n_5d4b4a33" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub connections]]></phrase>
+  <phrase title="wgh_i18n_5dcdd537" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Version]]></phrase>
+  <phrase title="wgh_i18n_5e1845dc" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[PR tools]]></phrase>
+  <phrase title="wgh_i18n_6041b55f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Re-run failed jobs]]></phrase>
+  <phrase title="wgh_i18n_61836dfd" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Last reconcile]]></phrase>
+  <phrase title="wgh_i18n_61e6be1a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[No]]></phrase>
+  <phrase title="wgh_i18n_61fefc0a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Direction]]></phrase>
+  <phrase title="wgh_i18n_6376d16a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub App ID]]></phrase>
+  <phrase title="wgh_i18n_6545e080" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub Pull Request]]></phrase>
+  <phrase title="wgh_i18n_6553db78" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM only]]></phrase>
+  <phrase title="wgh_i18n_6655283f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Delete GitHub connection]]></phrase>
+  <phrase title="wgh_i18n_6720cb35" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Source ref]]></phrase>
+  <phrase title="wgh_i18n_673a86ea" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Commit message exclude terms]]></phrase>
+  <phrase title="wgh_i18n_68a7e6c0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Comma or line separated organization team slugs.]]></phrase>
+  <phrase title="wgh_i18n_68fb46eb" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub Pull Request tools]]></phrase>
+  <phrase title="wgh_i18n_695f5810" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Pull request number]]></phrase>
+  <phrase title="wgh_i18n_699f32e2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Default branch]]></phrase>
+  <phrase title="wgh_i18n_6bff0625" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Add GitHub connection]]></phrase>
+  <phrase title="wgh_i18n_6cab2f85" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Grouped into]]></phrase>
+  <phrase title="wgh_i18n_706306ff" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Repository workflows]]></phrase>
+  <phrase title="wgh_i18n_72bb816d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Allow maintainers to modify the pull request branch]]></phrase>
+  <phrase title="wgh_i18n_735b7e4d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Event mapping]]></phrase>
+  <phrase title="wgh_i18n_73e70c1c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Inbound field map]]></phrase>
+  <phrase title="wgh_i18n_7573412e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Inbound identity and metadata]]></phrase>
+  <phrase title="wgh_i18n_770fdd94" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[When set, synchronization targets this thread instead of creating a new one.]]></phrase>
+  <phrase title="wgh_i18n_78a0f955" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Webhook delivery logs]]></phrase>
+  <phrase title="wgh_i18n_7a47da73" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub login]]></phrase>
+  <phrase title="wgh_i18n_7aa6f0e7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[API]]></phrase>
+  <phrase title="wgh_i18n_7ab3a3db" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Keep XenForo version]]></phrase>
+  <phrase title="wgh_i18n_7b4678c9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Local XFRM API key reference]]></phrase>
+  <phrase title="wgh_i18n_7bfcc515" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Only threads/posts from this forum are sent to GitHub. 0 allows any forum for this mapping.]]></phrase>
+  <phrase title="wgh_i18n_7c015427" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Add message template]]></phrase>
+  <phrase title="wgh_i18n_7c90e126" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Save mapping]]></phrase>
+  <phrase title="wgh_i18n_7d21db29" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub account]]></phrase>
+  <phrase title="wgh_i18n_7dddbb44" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Add GitHub user mapping]]></phrase>
+  <phrase title="wgh_i18n_7e0a5533" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[API key config reference]]></phrase>
+  <phrase title="wgh_i18n_7ea489aa" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Update thread title]]></phrase>
+  <phrase title="wgh_i18n_816c0a68" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Commit message include terms]]></phrase>
+  <phrase title="wgh_i18n_818601a1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Warext GitHub Sync - Health]]></phrase>
+  <phrase title="wgh_i18n_827dda41" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Comma or line separated GitHub logins.]]></phrase>
+  <phrase title="wgh_i18n_832358da" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Incoming GitHub action]]></phrase>
+  <phrase title="wgh_i18n_853ffe77" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Edit synchronization mapping]]></phrase>
+  <phrase title="wgh_i18n_85e4b82f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[OK]]></phrase>
+  <phrase title="wgh_i18n_86236693" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Examples: release, push, issues, pull_request. Use * for all.]]></phrase>
+  <phrase title="wgh_i18n_88d2040a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Synchronize thread title and first post to the GitHub Issue]]></phrase>
+  <phrase title="wgh_i18n_8a2d1d22" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Retry from GitHub]]></phrase>
+  <phrase title="wgh_i18n_8a88e798" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub source ZIP]]></phrase>
+  <phrase title="wgh_i18n_8afbfe15" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Create an XFRM ResourceVersion for a new GitHub release]]></phrase>
+  <phrase title="wgh_i18n_8b5c27de" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub release page]]></phrase>
+  <phrase title="wgh_i18n_8d50ecb6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Any repository in the selected scope]]></phrase>
+  <phrase title="wgh_i18n_8d51911e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Bypass permissions (super-user API key only)]]></phrase>
+  <phrase title="wgh_i18n_8dfee4f8" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub release ID]]></phrase>
+  <phrase title="wgh_i18n_8f8d470d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Repository scope]]></phrase>
+  <phrase title="wgh_i18n_901aca78" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Inactive]]></phrase>
+  <phrase title="wgh_i18n_90b03010" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[API context user ID]]></phrase>
+  <phrase title="wgh_i18n_935d7ff7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Event action]]></phrase>
+  <phrase title="wgh_i18n_94483ccf" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub delivery ID]]></phrase>
+  <phrase title="wgh_i18n_96a12137" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Client ID]]></phrase>
+  <phrase title="wgh_i18n_9766c371" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XenForo target]]></phrase>
+  <phrase title="wgh_i18n_98839df1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Webhook logs]]></phrase>
+  <phrase title="wgh_i18n_98b5cefa" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Workflow runs]]></phrase>
+  <phrase title="wgh_i18n_990de47d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Create]]></phrase>
+  <phrase title="wgh_i18n_99b7da07" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Connection is active]]></phrase>
+  <phrase title="wgh_i18n_9a96c706" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Last success]]></phrase>
+  <phrase title="wgh_i18n_9ba6196d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Allowed branches]]></phrase>
+  <phrase title="wgh_i18n_9c86e43e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Enabled]]></phrase>
+  <phrase title="wgh_i18n_a0b54756" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Private key reference]]></phrase>
+  <phrase title="wgh_i18n_a200e31f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub App connection]]></phrase>
+  <phrase title="wgh_i18n_a29015e3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Synchronize repositories now]]></phrase>
+  <phrase title="wgh_i18n_a2b0e2ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Deleted GitHub release policy]]></phrase>
+  <phrase title="wgh_i18n_a2f3d279" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[One per line. Example: completed or in_progress. Empty means all.]]></phrase>
+  <phrase title="wgh_i18n_a40701ec" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Evaluate health now]]></phrase>
+  <phrase title="wgh_i18n_a573c357" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Reference under config.php: warextGitHubSync.xfrmApiKeys. The real key is never stored in the add-on database.]]></phrase>
+  <phrase title="wgh_i18n_a57f1ba2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Ref]]></phrase>
+  <phrase title="wgh_i18n_a860fdff" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[At least one term must match when configured.]]></phrase>
+  <phrase title="wgh_i18n_ac4049c3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Release → Resource mappings]]></phrase>
+  <phrase title="wgh_i18n_ac6427ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub repositories]]></phrase>
+  <phrase title="wgh_i18n_acd1de66" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Update the first post of an existing thread]]></phrase>
+  <phrase title="wgh_i18n_ad54cb3e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM Resource Manager target]]></phrase>
+  <phrase title="wgh_i18n_ad56869f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM target]]></phrase>
+  <phrase title="wgh_i18n_ad7cf12f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XenForo wins]]></phrase>
+  <phrase title="wgh_i18n_ad9d2170" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Delete mapping]]></phrase>
+  <phrase title="wgh_i18n_af91c2bc" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Used in asset mode. Wildcards are supported, e.g. *.zip or Warext-*.zip.]]></phrase>
+  <phrase title="wgh_i18n_b00a0cb2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Create/update an XFRM Resource Update from GitHub release notes (also feeds the resource discussion workflow)]]></phrase>
+  <phrase title="wgh_i18n_b04a756e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Automation user ID]]></phrase>
+  <phrase title="wgh_i18n_b05886cc" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Source forum node ID]]></phrase>
+  <phrase title="wgh_i18n_b136fe9d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[? Existing sync registry entries are retained for audit/recovery.]]></phrase>
+  <phrase title="wgh_i18n_b1fbc936" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Optional XenForo action field=GitHub payload path. Safe targets: title, message, remote_state, prefix_id. Example: title=workflow_run.name.]]></phrase>
+  <phrase title="wgh_i18n_b3a43630" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yes]]></phrase>
+  <phrase title="wgh_i18n_b43f9625" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Failed / hour]]></phrase>
+  <phrase title="wgh_i18n_b46c572e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[User reviewers]]></phrase>
+  <phrase title="wgh_i18n_b4f5fd8b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Matching release asset]]></phrase>
+  <phrase title="wgh_i18n_b51e570a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Retry count]]></phrase>
+  <phrase title="wgh_i18n_b5bcb81f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Message templates]]></phrase>
+  <phrase title="wgh_i18n_b5cc65ad" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub Issue]]></phrase>
+  <phrase title="wgh_i18n_b62ca584" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Create new pull requests as drafts]]></phrase>
+  <phrase title="wgh_i18n_b82e8201" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[One per line. Example: 12=APPROVE, 13=REQUEST_CHANGES, 14=COMMENT. Review is sent only when the prefix changes to a configured value.]]></phrase>
+  <phrase title="wgh_i18n_b87a566e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Apply GitHub version]]></phrase>
+  <phrase title="wgh_i18n_b8b37b00" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Allowed workflow conclusions]]></phrase>
+  <phrase title="wgh_i18n_ba8885b3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Load workflows]]></phrase>
+  <phrase title="wgh_i18n_bacd50f6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Used as XF-Api-User when the configured key is a super-user key.]]></phrase>
+  <phrase title="wgh_i18n_bc066fff" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Used when the integration should create a new thread.]]></phrase>
+  <phrase title="wgh_i18n_bc3d5188" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Existing resource]]></phrase>
+  <phrase title="wgh_i18n_bd2598ab" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Use api_bypass_permissions (requires a suitable super-user API key)]]></phrase>
+  <phrase title="wgh_i18n_bd4d5461" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[User mappings]]></phrase>
+  <phrase title="wgh_i18n_be4a9e57" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Pending conflicts]]></phrase>
+  <phrase title="wgh_i18n_bf2eae0a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Newest wins]]></phrase>
+  <phrase title="wgh_i18n_bfce9925" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Disabled]]></phrase>
+  <phrase title="wgh_i18n_c0137fcc" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Warext GitHub Sync - XFRM]]></phrase>
+  <phrase title="wgh_i18n_c0f4aea1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[ResourceUpdate ID]]></phrase>
+  <phrase title="wgh_i18n_c1053436" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Synchronization mappings]]></phrase>
+  <phrase title="wgh_i18n_c28a86c4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[One branch per line. Empty means all branches.]]></phrase>
+  <phrase title="wgh_i18n_c55199b7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub label ↔ XenForo prefix map]]></phrase>
+  <phrase title="wgh_i18n_c5a8d4c5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Required when creating a PR unless head is provided by the outbound field map.]]></phrase>
+  <phrase title="wgh_i18n_c628a50c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Remote delete policy]]></phrase>
+  <phrase title="wgh_i18n_c68eae09" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XenForo Resource Manager integration]]></phrase>
+  <phrase title="wgh_i18n_c6adbeea" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM synchronization]]></phrase>
+  <phrase title="wgh_i18n_c7932a65" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Allow prereleases]]></phrase>
+  <phrase title="wgh_i18n_c80fb6b6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Message template]]></phrase>
+  <phrase title="wgh_i18n_c83001dd" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Strip leading v from numeric tags]]></phrase>
+  <phrase title="wgh_i18n_c9e1016f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Excluded paths]]></phrase>
+  <phrase title="wgh_i18n_ca30cc85" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Prefix → PR review action]]></phrase>
+  <phrase title="wgh_i18n_cae33da6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[release, push, issues, pull_request or *]]></phrase>
+  <phrase title="wgh_i18n_ccdfbfa0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Public]]></phrase>
+  <phrase title="wgh_i18n_cda8c1e5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Delete message template]]></phrase>
+  <phrase title="wgh_i18n_ce2835c9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Webhook-captured runs are stored locally. Refresh imports the latest 50 runs from GitHub.]]></phrase>
+  <phrase title="wgh_i18n_ce332b84" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Reconcile selected]]></phrase>
+  <phrase title="wgh_i18n_cece6a63" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Title template override]]></phrase>
+  <phrase title="wgh_i18n_d01f2cac" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Private]]></phrase>
+  <phrase title="wgh_i18n_d02b533f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Event]]></phrase>
+  <phrase title="wgh_i18n_d0d15f5a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Message template override]]></phrase>
+  <phrase title="wgh_i18n_d0e38806" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Add template]]></phrase>
+  <phrase title="wgh_i18n_d26a6f5e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Request review]]></phrase>
+  <phrase title="wgh_i18n_d309b8e7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Delete user mapping]]></phrase>
+  <phrase title="wgh_i18n_d544c82b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Synchronize GitHub labels to XenForo thread prefix]]></phrase>
+  <phrase title="wgh_i18n_d5691a0f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Hard-delete synchronized XFRM version/update]]></phrase>
+  <phrase title="wgh_i18n_d5699aaf" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Optional message used for synchronized reviews.]]></phrase>
+  <phrase title="wgh_i18n_d56cc75b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Asset wildcard]]></phrase>
+  <phrase title="wgh_i18n_d67124ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Update behavior]]></phrase>
+  <phrase title="wgh_i18n_d69d3dbe" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Restore tracking]]></phrase>
+  <phrase title="wgh_i18n_d71e7a5e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Tracked XFRM releases]]></phrase>
+  <phrase title="wgh_i18n_d7c1c52d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Included paths]]></phrase>
+  <phrase title="wgh_i18n_d7e8fab4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[FAILED]]></phrase>
+  <phrase title="wgh_i18n_d8aea56d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Tracked releases]]></phrase>
+  <phrase title="wgh_i18n_da379f5e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Reusable template]]></phrase>
+  <phrase title="wgh_i18n_dbdd35d7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Synchronize thread replies as GitHub Issue comments]]></phrase>
+  <phrase title="wgh_i18n_dc4d3d55" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub object]]></phrase>
+  <phrase title="wgh_i18n_dda8c1ac" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Conflict strategy]]></phrase>
+  <phrase title="wgh_i18n_de0be088" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Open health alerts]]></phrase>
+  <phrase title="wgh_i18n_dee2fcb1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Edit GitHub user mapping]]></phrase>
+  <phrase title="wgh_i18n_df3e88b9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Supports * and ** globs.]]></phrase>
+  <phrase title="wgh_i18n_df5f2d89" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[App ID]]></phrase>
+  <phrase title="wgh_i18n_e21880d3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Release download source]]></phrase>
+  <phrase title="wgh_i18n_e33c3815" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Optional GitHub field=XenForo field mappings. Examples: title=thread.title, body=post.message, head=thread.custom_fields.github_branch, base=thread.custom_fields.github_base.]]></phrase>
+  <phrase title="wgh_i18n_e3d869f0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Delete template]]></phrase>
+  <phrase title="wgh_i18n_e3faec47" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Delivery details]]></phrase>
+  <phrase title="wgh_i18n_e66dd01c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Strip a leading v from numeric release tags (v1.2.0 → 1.2.0)]]></phrase>
+  <phrase title="wgh_i18n_e68d9f29" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Priority]]></phrase>
+  <phrase title="wgh_i18n_e6d20eed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mark as deleted]]></phrase>
+  <phrase title="wgh_i18n_e6dd7929" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Existing thread ID]]></phrase>
+  <phrase title="wgh_i18n_e763c8b5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Repository]]></phrase>
+  <phrase title="wgh_i18n_e7a36b9c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM attention]]></phrase>
+  <phrase title="wgh_i18n_e8657108" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Empty uses the repository default branch unless base is provided by the outbound field map.]]></phrase>
+  <phrase title="wgh_i18n_e8a8d46a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Soft delete integration-created content]]></phrase>
+  <phrase title="wgh_i18n_e9e5a00c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Processed / hour]]></phrase>
+  <phrase title="wgh_i18n_eadb9387" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Hard delete XFRM content]]></phrase>
+  <phrase title="wgh_i18n_ebebbbbb" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[PR review body]]></phrase>
+  <phrase title="wgh_i18n_ec1021f5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Allow draft releases]]></phrase>
+  <phrase title="wgh_i18n_ee0f543f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Reconcile remote objects]]></phrase>
+  <phrase title="wgh_i18n_ef8df546" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Warext GitHub Sync]]></phrase>
+  <phrase title="wgh_i18n_efbc918c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM releases]]></phrase>
+  <phrase title="wgh_i18n_efe0d7f3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Release synchronization targets an existing XFRM resource. v0.8 adds audit history, manual retry, remote reconciliation and a dedicated mapping manager.]]></phrase>
+  <phrase title="wgh_i18n_f005a9f9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Keep XFRM version/update]]></phrase>
+  <phrase title="wgh_i18n_f07e22c0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Edit GitHub connection]]></phrase>
+  <phrase title="wgh_i18n_f14a11e2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Last error / note]]></phrase>
+  <phrase title="wgh_i18n_f16be935" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Pull Request options]]></phrase>
+  <phrase title="wgh_i18n_f186d5b4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Pull Request creation]]></phrase>
+  <phrase title="wgh_i18n_f1d0878d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Create ResourceVersion]]></phrase>
+  <phrase title="wgh_i18n_f3f18e26" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Create/update Resource Update]]></phrase>
+  <phrase title="wgh_i18n_f516a21a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Create a GitHub PR review when the thread prefix matches the review map]]></phrase>
+  <phrase title="wgh_i18n_f51b1c8c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Tracked release]]></phrase>
+  <phrase title="wgh_i18n_f5aade02" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub event]]></phrase>
+  <phrase title="wgh_i18n_f6f36dc2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Synchronize XenForo thread prefix to GitHub Issue labels using the label map below]]></phrase>
+  <phrase title="wgh_i18n_f7b77a7e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Download source]]></phrase>
+  <phrase title="wgh_i18n_f864d092" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Default PR head branch]]></phrase>
+  <phrase title="wgh_i18n_fd5aa3d5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[One mapping per line, for example: bug=12. The same map is used in both directions.]]></phrase>
+  <phrase title="wgh_i18n_fd921a23" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Select resource]]></phrase>
+  <phrase title="wgh_i18n_fdd996cf" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Any connection]]></phrase>
+  <phrase title="wgh_msg_conflict_resolution_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Conflict resolution failed: {error}]]></phrase>
+  <phrase title="wgh_msg_connection_has_repositories" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[This connection still owns synchronized repositories. Disable it or migrate/remove repository records first.]]></phrase>
+  <phrase title="wgh_msg_github_connection_unavailable" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub connection is unavailable.]]></phrase>
+  <phrase title="wgh_msg_health_alert_resolved" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Health alert resolved.]]></phrase>
+  <phrase title="wgh_msg_health_state_evaluated" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Health state evaluated.]]></phrase>
+  <phrase title="wgh_msg_inputs_json_object" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Inputs JSON must be an object.]]></phrase>
+  <phrase title="wgh_msg_invalid_workflow_inputs" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Invalid workflow inputs JSON: {error}]]></phrase>
+  <phrase title="wgh_msg_pr_reviewer_action_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Pull request reviewer action failed: {error}]]></phrase>
+  <phrase title="wgh_msg_pull_request_number_required" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Pull request number is required.]]></phrase>
+  <phrase title="wgh_msg_repository_not_found_inactive" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Repository was not found or is inactive.]]></phrase>
+  <phrase title="wgh_msg_repository_sync_complete" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Repository sync complete: {created} created, {updated} updated, {deactivated} deactivated.]]></phrase>
+  <phrase title="wgh_msg_repository_sync_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Repository sync failed: {error}]]></phrase>
+  <phrase title="wgh_msg_reviewer_requests_updated" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Reviewer requests updated.]]></phrase>
+  <phrase title="wgh_msg_select_retry_reconcile" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Select retry or reconcile.]]></phrase>
+  <phrase title="wgh_msg_select_xfrm_record" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Select at least one XFRM synchronization record.]]></phrase>
+  <phrase title="wgh_msg_tracking_snapshot_restored" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Tracking snapshot restored. Run reconcile before retrying.]]></phrase>
+  <phrase title="wgh_msg_user_mapping_required" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub login and XenForo user ID are required.]]></phrase>
+  <phrase title="wgh_msg_workflow_dispatch_accepted" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Workflow dispatch accepted.]]></phrase>
+  <phrase title="wgh_msg_workflow_dispatch_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Workflow dispatch failed: {error}]]></phrase>
+  <phrase title="wgh_msg_workflow_history_refresh_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Workflow history refresh failed: {error}]]></phrase>
+  <phrase title="wgh_msg_workflow_history_refreshed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Workflow run history refreshed.]]></phrase>
+  <phrase title="wgh_msg_workflow_ref_required" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Workflow and ref are required.]]></phrase>
+  <phrase title="wgh_msg_workflow_run_action_accepted" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Workflow run action accepted by GitHub.]]></phrase>
+  <phrase title="wgh_msg_workflow_run_action_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Workflow run action failed: {error}]]></phrase>
+  <phrase title="wgh_msg_workflow_run_id_required" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Workflow run ID is required.]]></phrase>
+  <phrase title="wgh_msg_xfrm_bulk_first_error" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[{message} First error: {error}]]></phrase>
+  <phrase title="wgh_msg_xfrm_bulk_result" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[{processed} XFRM record(s) processed, {failed} failed.]]></phrase>
+  <phrase title="wgh_msg_xfrm_mapping_updated" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM mapping updated.]]></phrase>
+  <phrase title="wgh_msg_xfrm_reconcile_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM reconcile failed: {error}]]></phrase>
+  <phrase title="wgh_msg_xfrm_reconcile_missing" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Reconcile completed with missing remote objects.]]></phrase>
+  <phrase title="wgh_msg_xfrm_remote_verified" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Remote XFRM objects verified.]]></phrase>
+  <phrase title="wgh_msg_xfrm_retry_completed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM retry completed.]]></phrase>
+  <phrase title="wgh_msg_xfrm_retry_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM retry failed: {error}]]></phrase>
+  <phrase title="wgh_ui_action" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Action]]></phrase>
+  <phrase title="wgh_ui_actions" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Actions]]></phrase>
+  <phrase title="wgh_ui_actor" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Actor]]></phrase>
+  <phrase title="wgh_ui_all" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[All]]></phrase>
+  <phrase title="wgh_ui_apply" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Apply]]></phrase>
+  <phrase title="wgh_ui_attempts" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Attempts]]></phrase>
+  <phrase title="wgh_ui_attention" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Attention]]></phrase>
+  <phrase title="wgh_ui_base" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Base]]></phrase>
+  <phrase title="wgh_ui_branch" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Branch]]></phrase>
+  <phrase title="wgh_ui_cancel" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Cancel]]></phrase>
+  <phrase title="wgh_ui_check" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Check]]></phrase>
+  <phrase title="wgh_ui_conflicts" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Conflicts]]></phrase>
+  <phrase title="wgh_ui_connection_number" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Connection #{id}]]></phrase>
+  <phrase title="wgh_ui_connections" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Connections]]></phrase>
+  <phrase title="wgh_ui_count" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Count]]></phrase>
+  <phrase title="wgh_ui_created" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Created]]></phrase>
+  <phrase title="wgh_ui_dashboard" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Dashboard]]></phrase>
+  <phrase title="wgh_ui_date" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Date]]></phrase>
+  <phrase title="wgh_ui_deliveries" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Deliveries]]></phrase>
+  <phrase title="wgh_ui_delivery" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Delivery]]></phrase>
+  <phrase title="wgh_ui_details" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Details]]></phrase>
+  <phrase title="wgh_ui_diagnostics" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Diagnostics]]></phrase>
+  <phrase title="wgh_ui_direction" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Direction]]></phrase>
+  <phrase title="wgh_ui_dismissed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Dismissed]]></phrase>
+  <phrase title="wgh_ui_draft" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Draft]]></phrase>
+  <phrase title="wgh_ui_event" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Event]]></phrase>
+  <phrase title="wgh_ui_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Failed]]></phrase>
+  <phrase title="wgh_ui_global" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Global]]></phrase>
+  <phrase title="wgh_ui_head" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Head]]></phrase>
+  <phrase title="wgh_ui_health" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Health]]></phrase>
+  <phrase title="wgh_ui_history" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[History]]></phrase>
+  <phrase title="wgh_ui_ignore" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Ignore]]></phrase>
+  <phrase title="wgh_ui_mappings" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mappings]]></phrase>
+  <phrase title="wgh_ui_message" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Message]]></phrase>
+  <phrase title="wgh_ui_never" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Never]]></phrase>
+  <phrase title="wgh_ui_object" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Object]]></phrase>
+  <phrase title="wgh_ui_payload" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Payload]]></phrase>
+  <phrase title="wgh_ui_pending" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Pending]]></phrase>
+  <phrase title="wgh_ui_priority" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Priority]]></phrase>
+  <phrase title="wgh_ui_received" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Received]]></phrase>
+  <phrase title="wgh_ui_remote" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Remote]]></phrase>
+  <phrase title="wgh_ui_repositories" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Repositories]]></phrase>
+  <phrase title="wgh_ui_rerun" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Re-run]]></phrase>
+  <phrase title="wgh_ui_resolution" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Resolution]]></phrase>
+  <phrase title="wgh_ui_resolve" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Resolve]]></phrase>
+  <phrase title="wgh_ui_resolved" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Resolved]]></phrase>
+  <phrase title="wgh_ui_resource" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Resource]]></phrase>
+  <phrase title="wgh_ui_result" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Result]]></phrase>
+  <phrase title="wgh_ui_retries" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Retries]]></phrase>
+  <phrase title="wgh_ui_run" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Run]]></phrase>
+  <phrase title="wgh_ui_scope" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Scope]]></phrase>
+  <phrase title="wgh_ui_severity" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Severity]]></phrase>
+  <phrase title="wgh_ui_state" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[State]]></phrase>
+  <phrase title="wgh_ui_sync_health" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Synchronization health: {severity}]]></phrase>
+  <phrase title="wgh_ui_teams" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Teams]]></phrase>
+  <phrase title="wgh_ui_templates" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Templates]]></phrase>
+  <phrase title="wgh_ui_title" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Title]]></phrase>
+  <phrase title="wgh_ui_updated" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Updated]]></phrase>
+  <phrase title="wgh_ui_users" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Users]]></phrase>
+  <phrase title="wgh_ui_version" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Version]]></phrase>
+  <phrase title="wgh_ui_webhook_delivery" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Webhook delivery #{id}]]></phrase>
+  <phrase title="wgh_ui_xfrm" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM]]></phrase>
+  <phrase title="wgh_ui_xfrm_mapping_title" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM mapping - {title}]]></phrase>
+  <phrase title="wgh_ui_xfrm_release_title" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM release #{id}]]></phrase>
 </language>
