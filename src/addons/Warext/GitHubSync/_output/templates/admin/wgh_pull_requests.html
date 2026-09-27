@@ -9,14 +9,14 @@
 <xf:if is="$error"><div class="blockMessage blockMessage--error">{$error}</div></xf:if>
 <xf:if is="$pullRequest">
 <div class="block"><div class="block-container"><h2 class="block-header">#{$pullRequest.number} {$pullRequest.title}</h2><div class="block-body block-row">
-<div class="pairs pairs--columns pairs--fixedSmall"><dt>State</dt><dd>{$pullRequest.state}</dd></div>
-<div class="pairs pairs--columns pairs--fixedSmall"><dt>Draft</dt><dd>{{ $pullRequest.draft ? phrase('wgh_i18n_b3a43630') : phrase('wgh_i18n_61e6be1a') }}</dd></div>
-<div class="pairs pairs--columns pairs--fixedSmall"><dt>Head</dt><dd>{$pullRequest.head.ref}</dd></div>
-<div class="pairs pairs--columns pairs--fixedSmall"><dt>Base</dt><dd>{$pullRequest.base.ref}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_ui_state') }}</dt><dd>{$pullRequest.state}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_ui_draft') }}</dt><dd>{{ $pullRequest.draft ? phrase('wgh_i18n_b3a43630') : phrase('wgh_i18n_61e6be1a') }}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_ui_head') }}</dt><dd>{$pullRequest.head.ref}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_ui_base') }}</dt><dd>{$pullRequest.base.ref}</dd></div>
 </div></div></div>
 <div class="block"><div class="block-container"><h2 class="block-header">{{ phrase('wgh_i18n_57774f9f') }}</h2><div class="block-body block-row">
-<p><strong>Users:</strong> <xf:foreach loop="$requested.users" value="$user">{$user.login} </xf:foreach></p>
-<p><strong>Teams:</strong> <xf:foreach loop="$requested.teams" value="$team">{$team.slug} </xf:foreach></p>
+<p><strong>{{ phrase('wgh_ui_users') }}:</strong> <xf:foreach loop="$requested.users" value="$user">{$user.login} </xf:foreach></p>
+<p><strong>{{ phrase('wgh_ui_teams') }}:</strong> <xf:foreach loop="$requested.teams" value="$team">{$team.slug} </xf:foreach></p>
 </div></div></div>
 <xf:form action="{{ link('github-sync/pull-request-reviewers') }}" ajax="true" class="block">
 <input type="hidden" name="repository_id" value="{$repositoryId}" /><input type="hidden" name="pull_request_number" value="{$number}" />

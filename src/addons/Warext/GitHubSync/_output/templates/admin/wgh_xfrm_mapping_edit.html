@@ -1,4 +1,4 @@
-<xf:title>XFRM mapping - {$mapping.title}</xf:title>
+<xf:title>{{ phrase('wgh_ui_xfrm_mapping_title', {'title': $mapping.title}) }}</xf:title>
 <xf:macro template="wgh_macros" name="nav" arg-selected="xfrm" />
 <xf:form action="{{ link('github-sync/xfrm-mapping-save', null, {'mapping_id': $mapping.mapping_id}) }}" ajax="true" class="block"><div class="block-container"><h2 class="block-header">{{ phrase('wgh_i18n_ad56869f') }}</h2><div class="block-body">
 <xf:checkboxrow label="{{ phrase('wgh_i18n_005ef20f') }}"><xf:option name="xfrm_enabled" value="1" selected="{$target.xfrm_enabled}">{{ phrase('wgh_i18n_0471b8d4') }}</xf:option></xf:checkboxrow>
@@ -11,5 +11,5 @@
 <xf:selectrow name="xfrm_download_source" value="{$target.xfrm_download_source}" label="{{ phrase('wgh_i18n_f7b77a7e') }}"><xf:option value="asset">{{ phrase('wgh_i18n_b4f5fd8b') }}</xf:option><xf:option value="zipball">{{ phrase('wgh_i18n_8a88e798') }}</xf:option><xf:option value="release_page">{{ phrase('wgh_i18n_8b5c27de') }}</xf:option></xf:selectrow>
 <xf:textboxrow name="xfrm_asset_pattern" value="{$target.xfrm_asset_pattern}" label="{{ phrase('wgh_i18n_d56cc75b') }}" />
 <xf:checkboxrow label="{{ phrase('wgh_i18n_5dcdd537') }}"><xf:option name="xfrm_strip_v" value="1" selected="{$target.xfrm_strip_v}">{{ phrase('wgh_i18n_c83001dd') }}</xf:option></xf:checkboxrow>
-<xf:selectrow name="xfrm_delete_policy" value="{$target.xfrm_delete_policy}" label="{{ phrase('wgh_i18n_43cad27f') }}"><xf:option value="ignore">Ignore</xf:option><xf:option value="soft_delete">{{ phrase('wgh_i18n_219b41ee') }}</xf:option><xf:option value="hard_delete">{{ phrase('wgh_i18n_eadb9387') }}</xf:option></xf:selectrow>
+<xf:selectrow name="xfrm_delete_policy" value="{$target.xfrm_delete_policy}" label="{{ phrase('wgh_i18n_43cad27f') }}"><xf:option value="ignore">{{ phrase('wgh_ui_ignore') }}</xf:option><xf:option value="soft_delete">{{ phrase('wgh_i18n_219b41ee') }}</xf:option><xf:option value="hard_delete">{{ phrase('wgh_i18n_eadb9387') }}</xf:option></xf:selectrow>
 </div><xf:submitrow submit="{{ phrase('wgh_i18n_5160fe75') }}" /></div></xf:form>

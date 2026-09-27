@@ -5,14 +5,14 @@
 <div class="block-body block-row">
 <div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_i18n_2d5a534f') }}</dt><dd>{{ $available ? phrase('wgh_i18n_b3a43630') : phrase('wgh_i18n_61e6be1a') }}</dd></div>
 <div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_i18n_d8aea56d') }}</dt><dd>{$recordCount}</dd></div>
-<div class="pairs pairs--columns pairs--fixedSmall"><dt>Failed</dt><dd>{$failedCount}</dd></div>
-<div class="pairs pairs--columns pairs--fixedSmall"><dt>Attention</dt><dd>{$attentionCount}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_ui_failed') }}</dt><dd>{$failedCount}</dd></div>
+<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_ui_attention') }}</dt><dd>{$attentionCount}</dd></div>
 <p><a class="button" href="{{ link('github-sync/xfrm-mappings') }}">{{ phrase('wgh_i18n_3ab22754') }}</a></p>
 <p class="formRow-explain">{{ phrase('wgh_i18n_efe0d7f3') }}</p>
 </div></div></div>
 <xf:form action="{{ link('github-sync/xfrm-bulk') }}" ajax="true" class="block"><div class="block-container"><h2 class="block-header">{{ phrase('wgh_i18n_d71e7a5e') }}</h2><div class="block-body">
 <div class="block-row"><xf:select name="bulk_operation"><xf:option value="reconcile">{{ phrase('wgh_i18n_ce332b84') }}</xf:option><xf:option value="retry">{{ phrase('wgh_i18n_416cf6fa') }}</xf:option></xf:select> <xf:button type="submit">{{ phrase('wgh_i18n_010a1b71') }}</xf:button></div>
-<table class="dataList"><thead><tr class="dataList-row"><th class="dataList-cell"></th><th class="dataList-cell">{{ phrase('wgh_i18n_05a02c1f') }}</th><th class="dataList-cell">Resource</th><th class="dataList-cell">Version</th><th class="dataList-cell">Status</th><th class="dataList-cell">Remote</th><th class="dataList-cell">Retries</th><th class="dataList-cell">Updated</th></tr></thead><tbody>
+<table class="dataList"><thead><tr class="dataList-row"><th class="dataList-cell"></th><th class="dataList-cell">{{ phrase('wgh_i18n_05a02c1f') }}</th><th class="dataList-cell">{{ phrase('wgh_ui_resource') }}</th><th class="dataList-cell">{{ phrase('wgh_ui_version') }}</th><th class="dataList-cell">{{ phrase('wgh_i18n_005ef20f') }}</th><th class="dataList-cell">{{ phrase('wgh_ui_remote') }}</th><th class="dataList-cell">{{ phrase('wgh_ui_retries') }}</th><th class="dataList-cell">{{ phrase('wgh_ui_updated') }}</th></tr></thead><tbody>
 <xf:foreach loop="$records" value="$record"><tr class="dataList-row"><td class="dataList-cell"><input type="checkbox" name="xfrm_release_ids[]" value="{$record.xfrm_release_id}" /></td><td class="dataList-cell"><a href="{{ link('github-sync/xfrm-view', null, {'xfrm_release_id': $record.xfrm_release_id}) }}">{$record.github_release_id}</a></td><td class="dataList-cell">#{$record.resource_id}</td><td class="dataList-cell">{$record.version_string}</td><td class="dataList-cell">{$record.status}<xf:if is="$record.last_error"><br /><span class="u-muted">{$record.last_error}</span></xf:if></td><td class="dataList-cell">{$record.remote_state}</td><td class="dataList-cell">{$record.retry_count}</td><td class="dataList-cell"><xf:date time="$record.updated_date" /></td></tr></xf:foreach>
 </tbody></table>
 </div></div></xf:form>

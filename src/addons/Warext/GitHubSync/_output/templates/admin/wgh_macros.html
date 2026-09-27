@@ -3,19 +3,19 @@
 		<div class="block-container">
 			<div class="block-body">
 				<div class="buttonGroup buttonGroup--scroll">
-					<a class="button {{ $selected == 'dashboard' ? 'button--primary' : '' }}" href="{{ link('github-sync') }}">Dashboard</a>
-					<a class="button {{ $selected == 'connections' ? 'button--primary' : '' }}" href="{{ link('github-sync/connections') }}">Connections</a>
-					<a class="button {{ $selected == 'repositories' ? 'button--primary' : '' }}" href="{{ link('github-sync/repositories') }}">Repositories</a>
-					<a class="button {{ $selected == 'mappings' ? 'button--primary' : '' }}" href="{{ link('github-sync/mappings') }}">Mappings</a>
-					<a class="button {{ $selected == 'templates' ? 'button--primary' : '' }}" href="{{ link('github-sync/templates') }}">Templates</a>
-					<a class="button {{ $selected == 'actions' ? 'button--primary' : '' }}" href="{{ link('github-sync/actions') }}">Actions</a>
+					<a class="button {{ $selected == 'dashboard' ? 'button--primary' : '' }}" href="{{ link('github-sync') }}">{{ phrase('wgh_ui_dashboard') }}</a>
+					<a class="button {{ $selected == 'connections' ? 'button--primary' : '' }}" href="{{ link('github-sync/connections') }}">{{ phrase('wgh_ui_connections') }}</a>
+					<a class="button {{ $selected == 'repositories' ? 'button--primary' : '' }}" href="{{ link('github-sync/repositories') }}">{{ phrase('wgh_ui_repositories') }}</a>
+					<a class="button {{ $selected == 'mappings' ? 'button--primary' : '' }}" href="{{ link('github-sync/mappings') }}">{{ phrase('wgh_ui_mappings') }}</a>
+					<a class="button {{ $selected == 'templates' ? 'button--primary' : '' }}" href="{{ link('github-sync/templates') }}">{{ phrase('wgh_ui_templates') }}</a>
+					<a class="button {{ $selected == 'actions' ? 'button--primary' : '' }}" href="{{ link('github-sync/actions') }}">{{ phrase('wgh_ui_actions') }}</a>
 					<a class="button {{ $selected == 'pulls' ? 'button--primary' : '' }}" href="{{ link('github-sync/pull-requests') }}">{{ phrase('wgh_i18n_5e1845dc') }}</a>
-					<a class="button {{ $selected == 'xfrm' ? 'button--primary' : '' }}" href="{{ link('github-sync/xfrm') }}">XFRM</a>
-					<a class="button {{ $selected == 'health' ? 'button--primary' : '' }}" href="{{ link('github-sync/health') }}">Health</a>
+					<a class="button {{ $selected == 'xfrm' ? 'button--primary' : '' }}" href="{{ link('github-sync/xfrm') }}">{{ phrase('wgh_ui_xfrm') }}</a>
+					<a class="button {{ $selected == 'health' ? 'button--primary' : '' }}" href="{{ link('github-sync/health') }}">{{ phrase('wgh_ui_health') }}</a>
 					<a class="button {{ $selected == 'users' ? 'button--primary' : '' }}" href="{{ link('github-sync/user-mappings') }}">{{ phrase('wgh_i18n_bd4d5461') }}</a>
-					<a class="button {{ $selected == 'conflicts' ? 'button--primary' : '' }}" href="{{ link('github-sync/conflicts') }}">Conflicts</a>
+					<a class="button {{ $selected == 'conflicts' ? 'button--primary' : '' }}" href="{{ link('github-sync/conflicts') }}">{{ phrase('wgh_ui_conflicts') }}</a>
 					<a class="button {{ $selected == 'deliveries' ? 'button--primary' : '' }}" href="{{ link('github-sync/deliveries') }}">{{ phrase('wgh_i18n_98839df1') }}</a>
-					<a class="button {{ $selected == 'diagnostics' ? 'button--primary' : '' }}" href="{{ link('github-sync/diagnostics') }}">Diagnostics</a>
+					<a class="button {{ $selected == 'diagnostics' ? 'button--primary' : '' }}" href="{{ link('github-sync/diagnostics') }}">{{ phrase('wgh_ui_diagnostics') }}</a>
 				</div>
 			</div>
 		</div>
