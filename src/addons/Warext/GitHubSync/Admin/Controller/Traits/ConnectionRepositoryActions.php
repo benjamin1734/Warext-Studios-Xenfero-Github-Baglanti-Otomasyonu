@@ -50,7 +50,7 @@ trait ConnectionRepositoryActions
         if ($this->isPost())
         {
             if (\XF::finder('Warext\\GitHubSync:Repository')->where('connection_id', $id)->total() > 0)
-                return $this->error('This connection still owns synchronized repositories. Disable it or migrate/remove repository records first.');
+                return $this->error(\XF::phrase('wgh_msg_connection_has_repositories'));
             $connection->delete();
             return $this->redirect($this->buildLink('github-sync/connections'));
         }
@@ -65,12 +65,11 @@ trait ConnectionRepositoryActions
         try
         {
             $result = (new RepositorySynchronizer(new ApiClient(new JwtFactory(), new CredentialProvider())))->synchronize($connection);
-            return $this->redirect($this->buildLink('github-sync/repositories'), sprintf(
-                'Repository sync complete: %d created, %d updated, %d deactivated.',
-                $result['created'], $result['updated'], $result['deactivated']
-            ));
+            return $this->redirect($this->buildLink('github-sync/repositories'), \XF::phrase('wgh_msg_repository_sync_complete', [
+                'created' => $result['created'], 'updated' => $result['updated'], 'deactivated' => $result['deactivated']
+            ]));
         }
-        catch (\Throwable $e) { return $this->error('Repository sync failed: ' . $e->getMessage()); }
+        catch (\Throwable $e) { return $this->error(\XF::phrase('wgh_msg_repository_sync_failed', ['error' => $e->getMessage()])); }
     }
 
     public function actionRepositories()

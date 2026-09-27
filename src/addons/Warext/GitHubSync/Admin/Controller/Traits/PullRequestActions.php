@@ -40,22 +40,22 @@ trait PullRequestActions
         $reviewers = $this->csvValues($this->filter('reviewers','str'));
         $teams = $this->csvValues($this->filter('team_reviewers','str'));
         $repository = \XF::em()->find('Warext\\GitHubSync:Repository',$repositoryId);
-        if (!$repository || !$repository->active) return $this->error('Repository was not found or is inactive.');
-        if ($number <= 0) return $this->error('Pull request number is required.');
+        if (!$repository || !$repository->active) return $this->error(\XF::phrase('wgh_msg_repository_not_found_inactive'));
+        if ($number <= 0) return $this->error(\XF::phrase('wgh_msg_pull_request_number_required'));
         try
         {
             [$api,$connection] = $this->githubApiForRepository($repository);
             if ($mode === 'remove') $api->removeRequestedReviewers($connection,(string)$repository->owner_name,(string)$repository->repo_name,$number,$reviewers,$teams);
             else $api->requestReviewers($connection,(string)$repository->owner_name,(string)$repository->repo_name,$number,$reviewers,$teams);
         }
-        catch (\Throwable $e) { return $this->error('Pull request reviewer action failed: '.$e->getMessage()); }
-        return $this->redirect($this->buildLink('github-sync/pull-requests',null,['repository_id'=>$repositoryId,'pull_request_number'=>$number]), 'Reviewer requests updated.');
+        catch (\Throwable $e) { return $this->error(\XF::phrase('wgh_msg_pr_reviewer_action_failed', ['error' => $e->getMessage()])); }
+        return $this->redirect($this->buildLink('github-sync/pull-requests',null,['repository_id'=>$repositoryId,'pull_request_number'=>$number]), \XF::phrase('wgh_msg_reviewer_requests_updated'));
     }
 
     private function githubApiForRepository($repository): array
     {
         $connection = \XF::em()->find('Warext\\GitHubSync:Connection',(int)$repository->connection_id);
-        if (!$connection || !$connection->active) throw new \RuntimeException('GitHub connection is unavailable.');
+        if (!$connection || !$connection->active) throw new \RuntimeException((string)\XF::phrase('wgh_msg_github_connection_unavailable'));
         return [new ApiClient(new JwtFactory(),new CredentialProvider()),$connection];
     }
 

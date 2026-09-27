@@ -36,26 +36,26 @@ trait WorkflowActions
         $this->assertPostOnly();
         $repositoryId=$this->filter('repository_id','uint'); $workflowId=trim($this->filter('workflow_id','str')); $ref=trim($this->filter('ref','str')); $inputsJson=trim($this->filter('inputs_json','str'));
         $repository=\XF::em()->find('Warext\\GitHubSync:Repository',$repositoryId);
-        if(!$repository||!$repository->active)return $this->error('Repository was not found or is inactive.');
-        if($workflowId===''||$ref==='')return $this->error('Workflow and ref are required.');
+        if(!$repository||!$repository->active)return $this->error(\XF::phrase('wgh_msg_repository_not_found_inactive'));
+        if($workflowId===''||$ref==='')return $this->error(\XF::phrase('wgh_msg_workflow_ref_required'));
         $inputs=[];
-        if($inputsJson!=='')try{$decoded=json_decode($inputsJson,true,512,JSON_THROW_ON_ERROR);if(!is_array($decoded))throw new \RuntimeException('Inputs JSON must be an object.');$inputs=$decoded;}catch(\Throwable $e){return $this->error('Invalid workflow inputs JSON: '.$e->getMessage());}
-        try{[$api,$connection]=$this->workflowApi($repository);$api->dispatchWorkflow($connection,(string)$repository->owner_name,(string)$repository->repo_name,$workflowId,$ref,$inputs);}catch(\Throwable $e){return $this->error('Workflow dispatch failed: '.$e->getMessage());}
-        return $this->redirect($this->buildLink('github-sync/actions',null,['repository_id'=>$repositoryId]),'Workflow dispatch accepted.');
+        if($inputsJson!=='')try{$decoded=json_decode($inputsJson,true,512,JSON_THROW_ON_ERROR);if(!is_array($decoded))throw new \RuntimeException((string)\XF::phrase('wgh_msg_inputs_json_object'));$inputs=$decoded;}catch(\Throwable $e){return $this->error(\XF::phrase('wgh_msg_invalid_workflow_inputs', ['error' => $e->getMessage()]));}
+        try{[$api,$connection]=$this->workflowApi($repository);$api->dispatchWorkflow($connection,(string)$repository->owner_name,(string)$repository->repo_name,$workflowId,$ref,$inputs);}catch(\Throwable $e){return $this->error(\XF::phrase('wgh_msg_workflow_dispatch_failed', ['error' => $e->getMessage()]));}
+        return $this->redirect($this->buildLink('github-sync/actions',null,['repository_id'=>$repositoryId]),\XF::phrase('wgh_msg_workflow_dispatch_accepted'));
     }
 
     public function actionWorkflowRunsRefresh()
     {
         $this->assertPostOnly();
         $repositoryId=$this->filter('repository_id','uint'); $repository=\XF::em()->find('Warext\\GitHubSync:Repository',$repositoryId);
-        if(!$repository||!$repository->active)return $this->error('Repository was not found or is inactive.');
+        if(!$repository||!$repository->active)return $this->error(\XF::phrase('wgh_msg_repository_not_found_inactive'));
         try
         {
             [$api,$connection]=$this->workflowApi($repository); $data=$api->listWorkflowRuns($connection,(string)$repository->owner_name,(string)$repository->repo_name,50);
             $tracker=new WorkflowRunTracker(); foreach((array)($data['workflow_runs']??[]) as $run) if(is_array($run))$tracker->import($repository,$run);
         }
-        catch(\Throwable $e){return $this->error('Workflow history refresh failed: '.$e->getMessage());}
-        return $this->redirect($this->buildLink('github-sync/actions',null,['repository_id'=>$repositoryId]),'Workflow run history refreshed.');
+        catch(\Throwable $e){return $this->error(\XF::phrase('wgh_msg_workflow_history_refresh_failed', ['error' => $e->getMessage()]));}
+        return $this->redirect($this->buildLink('github-sync/actions',null,['repository_id'=>$repositoryId]),\XF::phrase('wgh_msg_workflow_history_refreshed'));
     }
 
     public function actionWorkflowRunControl()
@@ -63,7 +63,7 @@ trait WorkflowActions
         $this->assertPostOnly();
         $repositoryId=$this->filter('repository_id','uint'); $runId=$this->filter('run_id','uint'); $operation=$this->filter('run_operation','str'); $debug=$this->filter('debug_logging','bool');
         $repository=\XF::em()->find('Warext\\GitHubSync:Repository',$repositoryId);
-        if(!$repository||!$repository->active)return $this->error('Repository was not found or is inactive.'); if($runId<=0)return $this->error('Workflow run ID is required.');
+        if(!$repository||!$repository->active)return $this->error(\XF::phrase('wgh_msg_repository_not_found_inactive')); if($runId<=0)return $this->error(\XF::phrase('wgh_msg_workflow_run_id_required'));
         try
         {
             [$api,$connection]=$this->workflowApi($repository);
@@ -71,13 +71,13 @@ trait WorkflowActions
             elseif($operation==='cancel')$api->cancelWorkflowRun($connection,(string)$repository->owner_name,(string)$repository->repo_name,$runId);
             else $api->rerunWorkflowRun($connection,(string)$repository->owner_name,(string)$repository->repo_name,$runId,$debug);
         }
-        catch(\Throwable $e){return $this->error('Workflow run action failed: '.$e->getMessage());}
-        return $this->redirect($this->buildLink('github-sync/actions',null,['repository_id'=>$repositoryId]),'Workflow run action accepted by GitHub.');
+        catch(\Throwable $e){return $this->error(\XF::phrase('wgh_msg_workflow_run_action_failed', ['error' => $e->getMessage()]));}
+        return $this->redirect($this->buildLink('github-sync/actions',null,['repository_id'=>$repositoryId]),\XF::phrase('wgh_msg_workflow_run_action_accepted'));
     }
 
     private function workflowApi($repository): array
     {
-        $connection=\XF::em()->find('Warext\\GitHubSync:Connection',(int)$repository->connection_id); if(!$connection||!$connection->active)throw new \RuntimeException('GitHub connection is unavailable.');
+        $connection=\XF::em()->find('Warext\\GitHubSync:Connection',(int)$repository->connection_id); if(!$connection||!$connection->active)throw new \RuntimeException((string)\XF::phrase('wgh_msg_github_connection_unavailable'));
         return [new ApiClient(new JwtFactory(),new CredentialProvider()),$connection];
     }
 }

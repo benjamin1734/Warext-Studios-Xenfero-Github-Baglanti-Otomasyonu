@@ -21,7 +21,7 @@ trait HealthActions
     {
         $this->assertPostOnly();
         (new HealthAlertManager())->evaluate();
-        return $this->redirect($this->buildLink('github-sync/health'),'Health state evaluated.');
+        return $this->redirect($this->buildLink('github-sync/health'), \XF::phrase('wgh_msg_health_state_evaluated'));
     }
 
     public function actionHealthAlertResolve(ParameterBag $params)
@@ -30,6 +30,6 @@ trait HealthActions
         $id=(int)($params->health_alert_id ?: $this->filter('health_alert_id','uint'));
         $alert=$this->assertRecordExists('Warext\\GitHubSync:HealthAlert',$id);
         $alert->status='resolved'; $alert->resolved_date=\XF::$time; $alert->save();
-        return $this->redirect($this->buildLink('github-sync/health'),'Health alert resolved.');
+        return $this->redirect($this->buildLink('github-sync/health'), \XF::phrase('wgh_msg_health_alert_resolved'));
     }
 }

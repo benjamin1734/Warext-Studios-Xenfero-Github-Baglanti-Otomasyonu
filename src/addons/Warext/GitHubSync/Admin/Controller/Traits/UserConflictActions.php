@@ -33,7 +33,7 @@ trait UserConflictActions
         $this->assertPostOnly();
         $input = $this->filter(['connection_id'=>'uint','repository_id'=>'uint','github_login'=>'str','xf_user_id'=>'uint','active'=>'bool']);
         $input['github_login'] = mb_strtolower(trim($input['github_login']));
-        if ($input['github_login'] === '' || $input['xf_user_id'] <= 0) return $this->error('GitHub login and XenForo user ID are required.');
+        if ($input['github_login'] === '' || $input['xf_user_id'] <= 0) return $this->error(\XF::phrase('wgh_msg_user_mapping_required'));
         $id = (int)($params->user_mapping_id ?: $this->filter('user_mapping_id', 'uint'));
         $item = $id ? $this->assertUserMappingExists($id) : \XF::em()->create('Warext\\GitHubSync:UserMapping');
         $isNew = !$item->exists();
@@ -75,7 +75,7 @@ trait UserConflictActions
         $this->assertPostOnly();
         $id = (int)($params->conflict_id ?: $this->filter('conflict_id', 'uint'));
         try { (new ConflictResolver())->resolve($this->assertConflictExists($id), $this->filter('resolution', 'str')); }
-        catch (\Throwable $e) { return $this->error('Conflict resolution failed: ' . $e->getMessage()); }
+        catch (\Throwable $e) { return $this->error(\XF::phrase('wgh_msg_conflict_resolution_failed', ['error' => $e->getMessage()])); }
         return $this->redirect($this->buildLink('github-sync/conflicts'));
     }
 }

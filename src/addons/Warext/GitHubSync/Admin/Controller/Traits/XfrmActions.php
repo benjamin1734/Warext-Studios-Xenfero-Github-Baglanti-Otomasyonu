@@ -31,12 +31,12 @@ trait XfrmActions
         $this->assertPostOnly();
         $ids = $this->filter('xfrm_release_ids', 'array-uint');
         $operation = $this->filter('bulk_operation','str');
-        if (!in_array($operation,['retry','reconcile'],true)) return $this->error('Select retry or reconcile.');
-        if (!$ids) return $this->error('Select at least one XFRM synchronization record.');
+        if (!in_array($operation,['retry','reconcile'],true)) return $this->error(\XF::phrase('wgh_msg_select_retry_reconcile'));
+        if (!$ids) return $this->error(\XF::phrase('wgh_msg_select_xfrm_record'));
         $result = (new BulkRecoveryService())->run($ids,$operation);
         (new HealthAlertManager())->evaluate();
-        $message = sprintf('%d XFRM record(s) processed, %d failed.',(int)$result['processed'],(int)$result['failed']);
-        if (!empty($result['errors'])) $message .= ' First error: ' . (string)$result['errors'][0];
+        $message = (string)\XF::phrase('wgh_msg_xfrm_bulk_result', ['processed' => (int)$result['processed'], 'failed' => (int)$result['failed']]);
+        if (!empty($result['errors'])) $message = (string)\XF::phrase('wgh_msg_xfrm_bulk_first_error', ['message' => $message, 'error' => (string)$result['errors'][0]]);
         return $this->redirect($this->buildLink('github-sync/xfrm'),$message);
     }
 
@@ -61,9 +61,9 @@ trait XfrmActions
         {
             $result = (new RetryService())->retry($record);
             (new HealthAlertManager())->evaluate();
-            return $this->redirect($this->buildLink('github-sync/xfrm-view', null, ['xfrm_release_id'=>$id]), (string)($result['message'] ?? 'XFRM retry completed.'));
+            return $this->redirect($this->buildLink('github-sync/xfrm-view', null, ['xfrm_release_id'=>$id]), (string)($result['message'] ?? \XF::phrase('wgh_msg_xfrm_retry_completed')));
         }
-        catch (\Throwable $e) { return $this->error('XFRM retry failed: ' . $e->getMessage()); }
+        catch (\Throwable $e) { return $this->error(\XF::phrase('wgh_msg_xfrm_retry_failed', ['error' => $e->getMessage()])); }
     }
 
     public function actionXfrmReconcile(ParameterBag $params)
@@ -75,10 +75,10 @@ trait XfrmActions
         {
             $result = (new Reconciler())->reconcile($record);
             (new HealthAlertManager())->evaluate();
-            $message = !empty($result['ok']) ? 'Remote XFRM objects verified.' : 'Reconcile completed with missing remote objects.';
+            $message = !empty($result['ok']) ? \XF::phrase('wgh_msg_xfrm_remote_verified') : \XF::phrase('wgh_msg_xfrm_reconcile_missing');
             return $this->redirect($this->buildLink('github-sync/xfrm-view', null, ['xfrm_release_id'=>$id]), $message);
         }
-        catch (\Throwable $e) { return $this->error('XFRM reconcile failed: ' . $e->getMessage()); }
+        catch (\Throwable $e) { return $this->error(\XF::phrase('wgh_msg_xfrm_reconcile_failed', ['error' => $e->getMessage()])); }
     }
 
     public function actionXfrmHistoryRestore(ParameterBag $params)
@@ -97,7 +97,7 @@ trait XfrmActions
         $record->save();
         (new \Warext\GitHubSync\Service\XFRM\HistoryLogger())->log($record, 'restore_tracking', 'attention', $record->last_error);
         (new HealthAlertManager())->evaluate();
-        return $this->redirect($this->buildLink('github-sync/xfrm-view', null, ['xfrm_release_id'=>(int)$record->xfrm_release_id]), 'Tracking snapshot restored. Run reconcile before retrying.');
+        return $this->redirect($this->buildLink('github-sync/xfrm-view', null, ['xfrm_release_id'=>(int)$record->xfrm_release_id]), \XF::phrase('wgh_msg_tracking_snapshot_restored'));
     }
 
     public function actionXfrmMappings()
@@ -154,6 +154,6 @@ trait XfrmActions
         $mapping->target_config = $target;
         $mapping->updated_date = \XF::$time;
         $mapping->save();
-        return $this->redirect($this->buildLink('github-sync/xfrm-mappings'), 'XFRM mapping updated.');
+        return $this->redirect($this->buildLink('github-sync/xfrm-mappings'), \XF::phrase('wgh_msg_xfrm_mapping_updated'));
     }
 }

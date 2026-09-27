@@ -1,0 +1,1 @@
+This connection still owns synchronized repositories. Disable it or migrate/remove repository records first.
