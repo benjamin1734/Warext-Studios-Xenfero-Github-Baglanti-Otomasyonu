@@ -1,4 +1,4 @@
-name: Publish v1.0.0 stable release
+name: Publish v1.0.1 stable release
 
 on:
   push:
@@ -7,8 +7,11 @@ on:
     paths:
       - '.github/workflows/publish-pre-release.yml'
       - 'tools/build-xenforo-release.py'
-      - 'release/v1.0.0/**'
+      - 'tools/build-language-packs.py'
+      - 'release/v1.0.1/**'
       - 'src/addons/Warext/GitHubSync/**'
+      - 'languages/**'
+      - 'LANGUAGE.md'
       - 'README.md'
   workflow_dispatch:
 
@@ -19,11 +22,14 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     env:
-      TAG: v1.0.0
-      ZIP_NAME: Warext-GitHub-Sync-v1.0.0-install.zip
+      TAG: v1.0.1
+      ZIP_NAME: Warext-GitHub-Sync-v1.0.1-install.zip
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Validate language packs
+        run: python tools/build-language-packs.py --check
 
       - name: Validate XenForo source data
         shell: bash
@@ -35,22 +41,31 @@ jobs:
 
           addon = Path('src/addons/Warext/GitHubSync')
           templates = addon / '_output/templates'
+          phrases = addon / '_output/phrases'
           errors = []
 
           addon_meta = json.loads((addon / 'addon.json').read_text(encoding='utf-8'))
-          if addon_meta.get('version_string') != '1.0.0':
-              errors.append('addon.json version_string must be 1.0.0')
-          if addon_meta.get('version_id') != 10000000:
-              errors.append('addon.json version_id must be 10000000')
+          if addon_meta.get('version_string') != '1.0.1':
+              errors.append('addon.json version_string must be 1.0.1')
+          if addon_meta.get('version_id') != 10000010:
+              errors.append('addon.json version_id must be 10000010')
 
-          for path in templates.rglob('*.html'):
+          phrase_keys = {p.stem for p in phrases.glob('*.txt')}
+          refs = set()
+          phrase_re = re.compile(r"(?:phrase|XF::phrase|\\XF::phrase)\(\s*['\"]([^'\"]+)['\"]")
+          for path in list(addon.rglob('*.php')) + list(templates.rglob('*.html')):
               text = path.read_text(encoding='utf-8')
-              if re.search(r'<xf:submit(?:\s|>)', text):
-                  errors.append(f'{path}: invalid <xf:submit> tag')
-              if re.search(r'\{\{[^}\n]*\$[A-Za-z_][A-Za-z0-9_.]*\s*\[[^\]]+\]', text):
-                  errors.append(f'{path}: PHP-style dynamic array access inside expression')
-              if re.search(r'\{\$[A-Za-z_][A-Za-z0-9_.]*\s*\[[^\]]+\]', text):
-                  errors.append(f'{path}: PHP-style dynamic array access')
+              refs.update(phrase_re.findall(text))
+              if path.suffix == '.html':
+                  if re.search(r'<xf:submit(?:\s|>)', text):
+                      errors.append(f'{path}: invalid <xf:submit> tag')
+                  if re.search(r'\{\{[^}\n]*\$[A-Za-z_][A-Za-z0-9_.]*\s*\[[^\]]+\]', text):
+                      errors.append(f'{path}: PHP-style dynamic array access inside expression')
+                  if re.search(r'\{\$[A-Za-z_][A-Za-z0-9_.]*\s*\[[^\]]+\]', text):
+                      errors.append(f'{path}: PHP-style dynamic array access')
+          missing_refs = sorted(refs - phrase_keys)
+          if missing_refs:
+              errors.append('Missing phrase files for references: ' + ', '.join(missing_refs[:20]))
 
           nav_dir = addon / '_output/admin_navigation'
           nav_files = list(nav_dir.glob('*.json'))
@@ -98,7 +113,7 @@ jobs:
           if errors:
               print('\n'.join(errors), file=sys.stderr)
               raise SystemExit(1)
-          print(f'XenForo stable source validation: OK ({len(expected_children)} child navigation entries)')
+          print(f'XenForo source validation: OK ({len(phrase_keys)} phrases, {len(refs)} referenced keys)')
           PY
 
       - name: Build XenForo installation ZIP
@@ -106,7 +121,7 @@ jobs:
         run: |
           set -euo pipefail
           rm -rf dist "${ZIP_NAME}" "${ZIP_NAME}.sha256"
-          mkdir -p dist/upload/src/addons/Warext
+          mkdir -p dist/upload/src/addons/Warext dist/languages
           cp -a src/addons/Warext/GitHubSync dist/upload/src/addons/Warext/
 
           rm -rf dist/upload/src/addons/Warext/GitHubSync/_data
@@ -117,8 +132,11 @@ jobs:
                  dist/upload/src/addons/Warext/GitHubSync/_releases
           rm -f dist/upload/src/addons/Warext/GitHubSync/hashes.json
 
-          cp release/v1.0.0/INSTALL.md dist/KURULUM-INSTALL.md
-          cp release/v1.0.0/RELEASE_NOTES.md dist/RELEASE_NOTES.md
+          cp release/v1.0.1/INSTALL.md dist/KURULUM-INSTALL.md
+          cp release/v1.0.1/RELEASE_NOTES.md dist/RELEASE_NOTES.md
+          cp languages/English.xml dist/languages/English.xml
+          cp languages/Turkish.xml dist/languages/Turkish.xml
+          cp LANGUAGE.md dist/LANGUAGE.md
 
           python - <<'PY'
           from pathlib import Path
@@ -131,33 +149,35 @@ jobs:
           nav_items = list(nav_root)
           if len(nav_items) < 14:
               raise SystemExit(f'Expected at least 14 admin navigation records, found {len(nav_items)}')
-          route_text = (addon / '_data/routes.xml').read_text(encoding='utf-8')
-          if 'wghGitHubSync' not in route_text:
-              raise SystemExit('Built routes.xml does not contain wghGitHubSync section context')
+
+          phrase_root = ET.parse(addon / '_data/phrases.xml').getroot()
+          phrase_items = list(phrase_root)
+          if len(phrase_items) != 402:
+              raise SystemExit(f'Expected 402 packaged phrases, found {len(phrase_items)}')
 
           for xml_path in (addon / '_data').glob('*.xml'):
               ET.parse(xml_path)
+          ET.parse('dist/languages/English.xml')
+          ET.parse('dist/languages/Turkish.xml')
 
           hashes = {}
           for path in sorted(upload.rglob('*')):
               if path.is_file() and path.name != 'hashes.json':
                   hashes[path.relative_to(upload).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
           (addon / 'hashes.json').write_text(json.dumps(hashes, indent=2) + '\n', encoding='utf-8')
-          print(f'Stable package validation: {len(nav_items)} admin navigation records, {len(hashes)} hashed files')
+          print(f'Package validation: {len(nav_items)} navigation records, {len(phrase_items)} phrases, {len(hashes)} hashed files')
           PY
 
           (
             cd dist
-            zip -qr "../${ZIP_NAME}" upload KURULUM-INSTALL.md RELEASE_NOTES.md
+            zip -qr "../${ZIP_NAME}" upload KURULUM-INSTALL.md RELEASE_NOTES.md LANGUAGE.md languages
           )
           sha256sum "${ZIP_NAME}" | tee "${ZIP_NAME}.sha256"
           unzip -t "${ZIP_NAME}"
           ! unzip -l "${ZIP_NAME}" | grep -q '/_output/'
-          unzip -l "${ZIP_NAME}" | grep -q '_data/admin_navigation.xml'
-          unzip -l "${ZIP_NAME}" | grep -q '_data/admin_permission.xml'
-          unzip -l "${ZIP_NAME}" | grep -q '_data/routes.xml'
-          unzip -l "${ZIP_NAME}" | grep -q '_data/templates.xml'
-          unzip -l "${ZIP_NAME}" | grep -q 'hashes.json'
+          unzip -l "${ZIP_NAME}" | grep -q '_data/phrases.xml'
+          unzip -l "${ZIP_NAME}" | grep -q 'languages/English.xml'
+          unzip -l "${ZIP_NAME}" | grep -q 'languages/Turkish.xml'
 
       - name: Create or update stable release
         env:
@@ -167,15 +187,15 @@ jobs:
           set -euo pipefail
           if gh release view "${TAG}" >/dev/null 2>&1; then
             gh release edit "${TAG}" \
-              --title "Warext GitHub Sync v1.0.0" \
-              --notes-file release/v1.0.0/RELEASE_NOTES.md \
+              --title "Warext GitHub Sync v1.0.1" \
+              --notes-file release/v1.0.1/RELEASE_NOTES.md \
               --prerelease=false \
               --latest
           else
             gh release create "${TAG}" \
               --target "${GITHUB_SHA}" \
-              --title "Warext GitHub Sync v1.0.0" \
-              --notes-file release/v1.0.0/RELEASE_NOTES.md \
+              --title "Warext GitHub Sync v1.0.1" \
+              --notes-file release/v1.0.1/RELEASE_NOTES.md \
               --latest
           fi
 

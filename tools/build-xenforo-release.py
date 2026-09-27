@@ -57,10 +57,9 @@ def build(addon):
     rows=[]
     pdir=out/'phrases'
     if pdir.exists():
-        # Only canonical XenForo dotted phrase identifiers are exported.
         for p in sorted(pdir.glob('*.txt')):
-            if '.' not in p.stem: continue
-            rows.append('<phrase'+attr('title',p.stem)+attr('version_id',vid)+attr('version_string',vs)+f'><![CDATA[{cdata(p.read_text(encoding="utf-8"))}]]></phrase>')
+            value=p.read_text(encoding='utf-8').rstrip('\n')
+            rows.append('<phrase'+attr('title',p.stem)+attr('version_id',vid)+attr('version_string',vs)+f'><![CDATA[{cdata(value)}]]></phrase>')
     (data/'phrases.xml').write_text(doc('phrases',rows),encoding='utf-8')
 
     rows=[]; tdir=out/'templates'
@@ -73,7 +72,7 @@ def build(addon):
     (data/'templates.xml').write_text(doc('templates',rows),encoding='utf-8')
 
     for root in EMPTY: (data/f'{root}.xml').write_text(doc(root,[]),encoding='utf-8')
-    print(f'Generated {len(list(data.glob("*.xml")))} XenForo _data XML files')
+    print(f'Generated {len(list(data.glob("*.xml")))} XenForo _data XML files; exported {len(rows)} templates and {len(list(pdir.glob("*.txt")))} phrases')
 
 if __name__=='__main__':
     ap=argparse.ArgumentParser(); ap.add_argument('addon_dir'); build(ap.parse_args().addon_dir)
