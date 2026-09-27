@@ -1,405 +1,405 @@
 <?xml version="1.0" encoding="utf-8"?>
 <language title="Warext GitHub Sync Türkçe (TR)" date_format="j F Y" time_format="H:i" decimal_point="," thousands_separator="." language_code="tr-TR" text_direction="LTR">
-  <phrase title="admin_navigation.wghGitHubSync" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Warext GitHub Sync]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncActions" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İşlemler]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncConflicts" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Çakışmalar]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncConnections" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Bağlantılar]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncDashboard" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kontrol paneli]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncDeliveries" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Webhook Kayıtları]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncDiagnostics" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Tanılama]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncHealth" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sağlık]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncMappings" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Eşlemeler]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncPullRequests" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[PR Araçları]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncRepositories" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Depolar]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncTemplates" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Şablonlar]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncUsers" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kullanıcı Eşlemeleri]]></phrase>
-  <phrase title="admin_navigation.wghGitHubSyncXfrm" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM]]></phrase>
-  <phrase title="admin_navigation_wghGitHubSync" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Warext GitHub Sync]]></phrase>
-  <phrase title="admin_permission.wghManage" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Warext GitHub Sync'i yönet]]></phrase>
-  <phrase title="admin_permission_wghManage" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Warext GitHub Sync'i yönet]]></phrase>
-  <phrase title="wgh_i18n_005ef20f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Durum]]></phrase>
-  <phrase title="wgh_i18n_00db6045" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Son webhook teslimatları]]></phrase>
-  <phrase title="wgh_i18n_010a1b71" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Toplu kurtarmayı çalıştır]]></phrase>
-  <phrase title="wgh_i18n_023d7f04" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Tüm depolar]]></phrase>
-  <phrase title="wgh_i18n_03700dac" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yedek konu öneki kimliği]]></phrase>
-  <phrase title="wgh_i18n_0471b8d4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM sürüm senkronizasyonunu etkinleştir]]></phrase>
-  <phrase title="wgh_i18n_052942b0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sürüm dosyası deseni]]></phrase>
-  <phrase title="wgh_i18n_05a02c1f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub sürümü]]></phrase>
-  <phrase title="wgh_i18n_087d6e49" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub öncelikli]]></phrase>
-  <phrase title="wgh_i18n_08ee8c16" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Her satıra bir tane yazın. Örnek: success, failure, cancelled. Boş bırakılırsa tümü kullanılır.]]></phrase>
-  <phrase title="wgh_i18n_0a77a91f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İşlem]]></phrase>
-  <phrase title="wgh_i18n_0b378a0d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Entegrasyon tarafından oluşturulan içeriği kalıcı olarak sil]]></phrase>
-  <phrase title="wgh_i18n_0c80051d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Konu açık/kapalı durumunu GitHub Issue ile senkronize et]]></phrase>
-  <phrase title="wgh_i18n_0e4a763d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub Actions]]></phrase>
-  <phrase title="wgh_i18n_0ff15b06" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Senkronizasyon özeti]]></phrase>
-  <phrase title="wgh_i18n_106bebdd" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Giden senkronizasyon]]></phrase>
-  <phrase title="wgh_i18n_110681a5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub Sync tanılama]]></phrase>
-  <phrase title="wgh_i18n_1323c708" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Son deneme]]></phrase>
-  <phrase title="wgh_i18n_148fd59a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kurulum kimliği]]></phrase>
-  <phrase title="wgh_i18n_1651a33b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Depo seç]]></phrase>
-  <phrase title="wgh_i18n_1bd870f5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM API bağlam kullanıcı kimliği]]></phrase>
-  <phrase title="wgh_i18n_1cc51483" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub açık/kapalı durumunu XenForo konusu ile senkronize et]]></phrase>
-  <phrase title="wgh_i18n_1d0e98c5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Manuel inceleme]]></phrase>
-  <phrase title="wgh_i18n_1e3442b4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sürüm durumları]]></phrase>
-  <phrase title="wgh_i18n_1e581f24" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XenForo kullanıcı kimliği]]></phrase>
-  <phrase title="wgh_i18n_1e7612d1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Bağlantı kapsamı]]></phrase>
-  <phrase title="wgh_i18n_1ebd2f2a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Uzak durum]]></phrase>
-  <phrase title="wgh_i18n_1ee52022" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kaynak kimliği]]></phrase>
-  <phrase title="wgh_i18n_1f89134f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Etkin]]></phrase>
-  <phrase title="wgh_i18n_2122b880" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Senkronizasyon çakışmaları]]></phrase>
-  <phrase title="wgh_i18n_219b41ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM içeriğini yumuşak sil]]></phrase>
-  <phrase title="wgh_i18n_221e2703" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[? Bağlantı silinmeden önce mevcut depo/eşleme kayıtları incelenmelidir.]]></phrase>
-  <phrase title="wgh_i18n_22426f70" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mesaj şablonunu düzenle]]></phrase>
-  <phrase title="wgh_i18n_2485c5c6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mevcut XFRM kaynak kimliği]]></phrase>
-  <phrase title="wgh_i18n_24d471a9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Başlık]]></phrase>
-  <phrase title="wgh_i18n_250e7c81" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kullanıcı eşlemesini kaydet]]></phrase>
-  <phrase title="wgh_i18n_25ecbb60" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XenForo kaynağı (XenForo → GitHub)]]></phrase>
-  <phrase title="wgh_i18n_2690030d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Çakışma ayrıntıları]]></phrase>
-  <phrase title="wgh_i18n_27b4d372" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Eski XFRM kontrolleri]]></phrase>
-  <phrase title="wgh_i18n_29b70fc3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Warext GitHub Sync - XFRM eşlemeleri]]></phrase>
-  <phrase title="wgh_i18n_2a251a55" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM modu]]></phrase>
-  <phrase title="wgh_i18n_2d1229b0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İnceleme isteklerini yönet]]></phrase>
-  <phrase title="wgh_i18n_2d5a534f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM yüklü]]></phrase>
-  <phrase title="wgh_i18n_2d63c72a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Örnekler: published, edited, deleted, opened, closed. Tümü için * kullanın.]]></phrase>
-  <phrase title="wgh_i18n_2f3e2696" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM + normal XenForo hedefi]]></phrase>
-  <phrase title="wgh_i18n_2f69546f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM başarısız]]></phrase>
-  <phrase title="wgh_i18n_312bf833" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Varsayılan PR temel dalı]]></phrase>
-  <phrase title="wgh_i18n_318b2491" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XenForo → GitHub]]></phrase>
-  <phrase title="wgh_i18n_323f1abd" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Şablon etkin]]></phrase>
-  <phrase title="wgh_i18n_32a6d450" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sürüm kimliği]]></phrase>
-  <phrase title="wgh_i18n_32b40e8c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Bağlantı ekle]]></phrase>
-  <phrase title="wgh_i18n_34a28c9d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sağlık uyarısı geçmişi]]></phrase>
-  <phrase title="wgh_i18n_34e8dee2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Şablonu kaydet]]></phrase>
-  <phrase title="wgh_i18n_35c6c8ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Konu/başlık şablonu]]></phrase>
-  <phrase title="wgh_i18n_3682552b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kullanılabilir değişkenler (mevcut motor)]]></phrase>
-  <phrase title="wgh_i18n_37362d37" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Olay yazarı için GitHub → XenForo kullanıcı eşlemelerini kullan]]></phrase>
-  <phrase title="wgh_i18n_37e51807" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[? Buna başvuran eşlemeler satır içi/varsayılan şablonlara geri döner.]]></phrase>
-  <phrase title="wgh_i18n_37ec80a5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Pull request'i yükle]]></phrase>
-  <phrase title="wgh_i18n_3982656e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[En eski bekleyen kaydın yaşı]]></phrase>
-  <phrase title="wgh_i18n_39e2ebc6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İzin verilen iş akışı durumları]]></phrase>
-  <phrase title="wgh_i18n_3ab22754" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM eşlemelerini yönet]]></phrase>
-  <phrase title="wgh_i18n_3c3e9606" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XenForo hash:]]></phrase>
-  <phrase title="wgh_i18n_3fb1839f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Şunun eşlemesini sil]]></phrase>
-  <phrase title="wgh_i18n_40c7207a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Eşleme ekle]]></phrase>
-  <phrase title="wgh_i18n_416cf6fa" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Seçilenleri yeniden dene]]></phrase>
-  <phrase title="wgh_i18n_41bb2466" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Senkronize XFRM sürümünü/güncellemesini yumuşak sil]]></phrase>
-  <phrase title="wgh_i18n_42f6daaa" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İnceleme isteğini kaldır]]></phrase>
-  <phrase title="wgh_i18n_433900ed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kullanıcı eşlemesi ekle]]></phrase>
-  <phrase title="wgh_i18n_43cad27f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Silinen sürüm politikası]]></phrase>
-  <phrase title="wgh_i18n_43cd5e94" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub kullanıcı eşlemeleri]]></phrase>
-  <phrase title="wgh_i18n_457b27f2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Eşleme etkin]]></phrase>
-  <phrase title="wgh_i18n_4591f47b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Giden alan eşlemesi]]></phrase>
-  <phrase title="wgh_i18n_45e9b837" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub → XenForo]]></phrase>
-  <phrase title="wgh_i18n_46959611" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Güncelleme kimliği]]></phrase>
-  <phrase title="wgh_i18n_48b9e1be" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yalnızca bu sürüm eşlemesi için XFRM]]></phrase>
-  <phrase title="wgh_i18n_49c956e0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub hash:]]></phrase>
-  <phrase title="wgh_i18n_49d5d089" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İş akışı çalıştırma geçmişi]]></phrase>
-  <phrase title="wgh_i18n_49e2aa42" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Depo kimliği]]></phrase>
-  <phrase title="wgh_i18n_4b824af4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Takım inceleyicileri]]></phrase>
-  <phrase title="wgh_i18n_4c35c233" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Webhook gizli anahtar referansı]]></phrase>
-  <phrase title="wgh_i18n_4ce42fa0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Senkronizasyon eşlemesini sil]]></phrase>
-  <phrase title="wgh_i18n_4d2d5d68" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kaydet]]></phrase>
-  <phrase title="wgh_i18n_4d603c51" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Hesap / kuruluş kullanıcı adı]]></phrase>
-  <phrase title="wgh_i18n_4dc4d0ff" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İş akışını çalıştır]]></phrase>
-  <phrase title="wgh_i18n_4ded8eb7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Forum düğüm kimliği]]></phrase>
-  <phrase title="wgh_i18n_4f790c25" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[v0.7 bilerek mevcut bir kaynağı hedefler; ResourceItem kayıtlarını otomatik oluşturmaz.]]></phrase>
-  <phrase title="wgh_i18n_5160fe75" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM eşlemesini kaydet]]></phrase>
-  <phrase title="wgh_i18n_51ce40fe" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Çalıştırma geçmişini GitHub'dan yenile]]></phrase>
-  <phrase title="wgh_i18n_51ebf0a5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub sürüm olaylarını mevcut bir XenForo Resource Manager kaynağıyla senkronize et]]></phrase>
-  <phrase title="wgh_i18n_521c7f93" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[config.php örneği]]></phrase>
-  <phrase title="wgh_i18n_534e7732" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mod]]></phrase>
-  <phrase title="wgh_i18n_5392f380" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[ResourceVersion kimliği]]></phrase>
-  <phrase title="wgh_i18n_54877718" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Son görülme]]></phrase>
-  <phrase title="wgh_i18n_5635f148" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İnceleyici işlemini uygula]]></phrase>
-  <phrase title="wgh_i18n_568452cb" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Teslimatı şimdi yeniden dene]]></phrase>
-  <phrase title="wgh_i18n_57774f9f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İstenen inceleyiciler]]></phrase>
-  <phrase title="wgh_i18n_5797ea6a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sil]]></phrase>
-  <phrase title="wgh_i18n_58ed5a83" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Satır içi/varsayılan şablonu kullan]]></phrase>
-  <phrase title="wgh_i18n_59829c2a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Girdi JSON'u]]></phrase>
-  <phrase title="wgh_i18n_5d313e06" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Senkronizasyon eşlemesi ekle]]></phrase>
-  <phrase title="wgh_i18n_5d4b4a33" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub bağlantıları]]></phrase>
-  <phrase title="wgh_i18n_5dcdd537" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sürüm]]></phrase>
-  <phrase title="wgh_i18n_5e1845dc" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[PR araçları]]></phrase>
-  <phrase title="wgh_i18n_6041b55f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Başarısız işleri yeniden çalıştır]]></phrase>
-  <phrase title="wgh_i18n_61836dfd" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Son uzlaştırma]]></phrase>
-  <phrase title="wgh_i18n_61e6be1a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Hayır]]></phrase>
-  <phrase title="wgh_i18n_61fefc0a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yön]]></phrase>
-  <phrase title="wgh_i18n_6376d16a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub App kimliği]]></phrase>
-  <phrase title="wgh_i18n_6545e080" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub Pull Request]]></phrase>
-  <phrase title="wgh_i18n_6553db78" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yalnızca XFRM]]></phrase>
-  <phrase title="wgh_i18n_6655283f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub bağlantısını sil]]></phrase>
-  <phrase title="wgh_i18n_6720cb35" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kaynak ref]]></phrase>
-  <phrase title="wgh_i18n_673a86ea" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Commit mesajı hariç tutma terimleri]]></phrase>
-  <phrase title="wgh_i18n_68a7e6c0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Virgül veya satır ile ayrılmış kuruluş takım slug'ları.]]></phrase>
-  <phrase title="wgh_i18n_68fb46eb" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub Pull Request araçları]]></phrase>
-  <phrase title="wgh_i18n_695f5810" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Pull request numarası]]></phrase>
-  <phrase title="wgh_i18n_699f32e2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Varsayılan dal]]></phrase>
-  <phrase title="wgh_i18n_6bff0625" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub bağlantısı ekle]]></phrase>
-  <phrase title="wgh_i18n_6cab2f85" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Şunun altında gruplandı]]></phrase>
-  <phrase title="wgh_i18n_706306ff" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Depo iş akışları]]></phrase>
-  <phrase title="wgh_i18n_72bb816d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Bakımcıların pull request dalını değiştirmesine izin ver]]></phrase>
-  <phrase title="wgh_i18n_735b7e4d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Olay eşlemesi]]></phrase>
-  <phrase title="wgh_i18n_73e70c1c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Gelen alan eşlemesi]]></phrase>
-  <phrase title="wgh_i18n_7573412e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Gelen kimlik ve meta veriler]]></phrase>
-  <phrase title="wgh_i18n_770fdd94" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Ayarlandığında senkronizasyon yeni konu oluşturmak yerine bu konuyu hedefler.]]></phrase>
-  <phrase title="wgh_i18n_78a0f955" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Webhook teslimat kayıtları]]></phrase>
-  <phrase title="wgh_i18n_7a47da73" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub kullanıcı adı]]></phrase>
-  <phrase title="wgh_i18n_7aa6f0e7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[API]]></phrase>
-  <phrase title="wgh_i18n_7ab3a3db" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XenForo sürümünü koru]]></phrase>
-  <phrase title="wgh_i18n_7b4678c9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yerel XFRM API anahtarı referansı]]></phrase>
-  <phrase title="wgh_i18n_7bfcc515" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yalnızca bu forumdaki konu/mesajlar GitHub'a gönderilir. 0 değeri bu eşleme için tüm forumlara izin verir.]]></phrase>
-  <phrase title="wgh_i18n_7c015427" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mesaj şablonu ekle]]></phrase>
-  <phrase title="wgh_i18n_7c90e126" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Eşlemeyi kaydet]]></phrase>
-  <phrase title="wgh_i18n_7d21db29" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub hesabı]]></phrase>
-  <phrase title="wgh_i18n_7dddbb44" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub kullanıcı eşlemesi ekle]]></phrase>
-  <phrase title="wgh_i18n_7e0a5533" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[API anahtarı yapılandırma referansı]]></phrase>
-  <phrase title="wgh_i18n_7ea489aa" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Konu başlığını güncelle]]></phrase>
-  <phrase title="wgh_i18n_816c0a68" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Commit mesajı dahil etme terimleri]]></phrase>
-  <phrase title="wgh_i18n_818601a1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Warext GitHub Sync - Sağlık]]></phrase>
-  <phrase title="wgh_i18n_827dda41" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Virgül veya satır ile ayrılmış GitHub kullanıcı adları.]]></phrase>
-  <phrase title="wgh_i18n_832358da" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Gelen GitHub işlemi]]></phrase>
-  <phrase title="wgh_i18n_853ffe77" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Senkronizasyon eşlemesini düzenle]]></phrase>
-  <phrase title="wgh_i18n_85e4b82f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Tamam]]></phrase>
-  <phrase title="wgh_i18n_86236693" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Örnekler: release, push, issues, pull_request. Tümü için * kullanın.]]></phrase>
-  <phrase title="wgh_i18n_88d2040a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Konu başlığını ve ilk mesajı GitHub Issue ile senkronize et]]></phrase>
-  <phrase title="wgh_i18n_8a2d1d22" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub'dan yeniden dene]]></phrase>
-  <phrase title="wgh_i18n_8a88e798" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub kaynak ZIP'i]]></phrase>
-  <phrase title="wgh_i18n_8afbfe15" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yeni bir GitHub sürümü için XFRM ResourceVersion oluştur]]></phrase>
-  <phrase title="wgh_i18n_8b5c27de" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub sürüm sayfası]]></phrase>
-  <phrase title="wgh_i18n_8d50ecb6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Seçilen kapsamdaki herhangi bir depo]]></phrase>
-  <phrase title="wgh_i18n_8d51911e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İzinleri atla (yalnızca süper kullanıcı API anahtarı)]]></phrase>
-  <phrase title="wgh_i18n_8dfee4f8" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub sürüm kimliği]]></phrase>
-  <phrase title="wgh_i18n_8f8d470d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Depo kapsamı]]></phrase>
-  <phrase title="wgh_i18n_901aca78" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Etkin değil]]></phrase>
-  <phrase title="wgh_i18n_90b03010" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[API bağlam kullanıcı kimliği]]></phrase>
-  <phrase title="wgh_i18n_935d7ff7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Olay işlemi]]></phrase>
-  <phrase title="wgh_i18n_94483ccf" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub teslimat kimliği]]></phrase>
-  <phrase title="wgh_i18n_96a12137" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İstemci kimliği]]></phrase>
-  <phrase title="wgh_i18n_9766c371" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XenForo hedefi]]></phrase>
-  <phrase title="wgh_i18n_98839df1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Webhook kayıtları]]></phrase>
-  <phrase title="wgh_i18n_98b5cefa" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İş akışı çalıştırmaları]]></phrase>
-  <phrase title="wgh_i18n_990de47d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Oluştur]]></phrase>
-  <phrase title="wgh_i18n_99b7da07" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Bağlantı etkin]]></phrase>
-  <phrase title="wgh_i18n_9a96c706" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Son başarı]]></phrase>
-  <phrase title="wgh_i18n_9ba6196d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İzin verilen dallar]]></phrase>
-  <phrase title="wgh_i18n_9c86e43e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Etkin]]></phrase>
-  <phrase title="wgh_i18n_a0b54756" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Özel anahtar referansı]]></phrase>
-  <phrase title="wgh_i18n_a200e31f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub App bağlantısı]]></phrase>
-  <phrase title="wgh_i18n_a29015e3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Depoları şimdi senkronize et]]></phrase>
-  <phrase title="wgh_i18n_a2b0e2ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Silinen GitHub sürümü politikası]]></phrase>
-  <phrase title="wgh_i18n_a2f3d279" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Her satıra bir tane yazın. Örnek: completed veya in_progress. Boş bırakılırsa tümü kullanılır.]]></phrase>
-  <phrase title="wgh_i18n_a40701ec" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sağlık durumunu şimdi değerlendir]]></phrase>
-  <phrase title="wgh_i18n_a573c357" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[config.php altında şu referansı kullanır: warextGitHubSync.xfrmApiKeys. Gerçek anahtar hiçbir zaman eklenti veritabanında saklanmaz.]]></phrase>
-  <phrase title="wgh_i18n_a57f1ba2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Ref]]></phrase>
-  <phrase title="wgh_i18n_a860fdff" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yapılandırıldığında en az bir terim eşleşmelidir.]]></phrase>
-  <phrase title="wgh_i18n_ac4049c3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sürüm → Kaynak eşlemeleri]]></phrase>
-  <phrase title="wgh_i18n_ac6427ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub depoları]]></phrase>
-  <phrase title="wgh_i18n_acd1de66" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mevcut konunun ilk mesajını güncelle]]></phrase>
-  <phrase title="wgh_i18n_ad54cb3e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM Resource Manager hedefi]]></phrase>
-  <phrase title="wgh_i18n_ad56869f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM hedefi]]></phrase>
-  <phrase title="wgh_i18n_ad7cf12f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XenForo öncelikli]]></phrase>
-  <phrase title="wgh_i18n_ad9d2170" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Eşlemeyi sil]]></phrase>
-  <phrase title="wgh_i18n_af91c2bc" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Dosya modunda kullanılır. Joker karakterler desteklenir; örneğin *.zip veya Warext-*.zip.]]></phrase>
-  <phrase title="wgh_i18n_b00a0cb2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub sürüm notlarından bir XFRM Resource Update oluştur/güncelle (kaynak tartışma iş akışını da besler)]]></phrase>
-  <phrase title="wgh_i18n_b04a756e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Otomasyon kullanıcı kimliği]]></phrase>
-  <phrase title="wgh_i18n_b05886cc" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kaynak forum düğüm kimliği]]></phrase>
-  <phrase title="wgh_i18n_b136fe9d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[? Mevcut senkronizasyon kayıt defteri girdileri denetim/kurtarma için korunur.]]></phrase>
-  <phrase title="wgh_i18n_b1fbc936" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İsteğe bağlı XenForo işlem alanı=GitHub payload yolu. Güvenli hedefler: title, message, remote_state, prefix_id. Örnek: title=workflow_run.name.]]></phrase>
-  <phrase title="wgh_i18n_b3a43630" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Evet]]></phrase>
-  <phrase title="wgh_i18n_b43f9625" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Başarısız / saat]]></phrase>
-  <phrase title="wgh_i18n_b46c572e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kullanıcı inceleyicileri]]></phrase>
-  <phrase title="wgh_i18n_b4f5fd8b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Eşleşen sürüm dosyası]]></phrase>
-  <phrase title="wgh_i18n_b51e570a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yeniden deneme sayısı]]></phrase>
-  <phrase title="wgh_i18n_b5bcb81f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mesaj şablonları]]></phrase>
-  <phrase title="wgh_i18n_b5cc65ad" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub Issue]]></phrase>
-  <phrase title="wgh_i18n_b62ca584" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yeni pull request'leri taslak olarak oluştur]]></phrase>
-  <phrase title="wgh_i18n_b82e8201" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Her satıra bir tane yazın. Örnek: 12=APPROVE, 13=REQUEST_CHANGES, 14=COMMENT. İnceleme yalnızca önek yapılandırılmış bir değere değiştiğinde gönderilir.]]></phrase>
-  <phrase title="wgh_i18n_b87a566e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub sürümünü uygula]]></phrase>
-  <phrase title="wgh_i18n_b8b37b00" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İzin verilen iş akışı sonuçları]]></phrase>
-  <phrase title="wgh_i18n_ba8885b3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İş akışlarını yükle]]></phrase>
-  <phrase title="wgh_i18n_bacd50f6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yapılandırılmış anahtar süper kullanıcı anahtarı olduğunda XF-Api-User olarak kullanılır.]]></phrase>
-  <phrase title="wgh_i18n_bc066fff" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Entegrasyonun yeni bir konu oluşturması gerektiğinde kullanılır.]]></phrase>
-  <phrase title="wgh_i18n_bc3d5188" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mevcut kaynak]]></phrase>
-  <phrase title="wgh_i18n_bd2598ab" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[api_bypass_permissions kullan (uygun bir süper kullanıcı API anahtarı gerektirir)]]></phrase>
-  <phrase title="wgh_i18n_bd4d5461" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kullanıcı eşlemeleri]]></phrase>
-  <phrase title="wgh_i18n_be4a9e57" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Bekleyen çakışmalar]]></phrase>
-  <phrase title="wgh_i18n_bf2eae0a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[En yeni kazanır]]></phrase>
-  <phrase title="wgh_i18n_bfce9925" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Devre dışı]]></phrase>
-  <phrase title="wgh_i18n_c0137fcc" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Warext GitHub Sync - XFRM]]></phrase>
-  <phrase title="wgh_i18n_c0f4aea1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[ResourceUpdate kimliği]]></phrase>
-  <phrase title="wgh_i18n_c1053436" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Senkronizasyon eşlemeleri]]></phrase>
-  <phrase title="wgh_i18n_c28a86c4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Her satıra bir dal yazın. Boş bırakılırsa tüm dallar kullanılır.]]></phrase>
-  <phrase title="wgh_i18n_c55199b7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub etiketi ↔ XenForo önek eşlemesi]]></phrase>
-  <phrase title="wgh_i18n_c5a8d4c5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Giden alan eşlemesi tarafından head sağlanmadığı sürece PR oluştururken gereklidir.]]></phrase>
-  <phrase title="wgh_i18n_c628a50c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Uzak silme politikası]]></phrase>
-  <phrase title="wgh_i18n_c68eae09" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XenForo Resource Manager entegrasyonu]]></phrase>
-  <phrase title="wgh_i18n_c6adbeea" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM senkronizasyonu]]></phrase>
-  <phrase title="wgh_i18n_c7932a65" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Ön sürümlere izin ver]]></phrase>
-  <phrase title="wgh_i18n_c80fb6b6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mesaj şablonu]]></phrase>
-  <phrase title="wgh_i18n_c83001dd" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sayısal etiketlerin başındaki v harfini kaldır]]></phrase>
-  <phrase title="wgh_i18n_c9e1016f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Hariç tutulan yollar]]></phrase>
-  <phrase title="wgh_i18n_ca30cc85" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Önek → PR inceleme işlemi]]></phrase>
-  <phrase title="wgh_i18n_cae33da6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[release, push, issues, pull_request veya *]]></phrase>
-  <phrase title="wgh_i18n_ccdfbfa0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Herkese açık]]></phrase>
-  <phrase title="wgh_i18n_cda8c1e5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mesaj şablonunu sil]]></phrase>
-  <phrase title="wgh_i18n_ce2835c9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Webhook ile yakalanan çalıştırmalar yerel olarak saklanır. Yenileme, GitHub'daki en son 50 çalıştırmayı içe aktarır.]]></phrase>
-  <phrase title="wgh_i18n_ce332b84" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Seçilenleri uzlaştır]]></phrase>
-  <phrase title="wgh_i18n_cece6a63" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Başlık şablonu geçersiz kılma]]></phrase>
-  <phrase title="wgh_i18n_d01f2cac" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Özel]]></phrase>
-  <phrase title="wgh_i18n_d02b533f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Olay]]></phrase>
-  <phrase title="wgh_i18n_d0d15f5a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mesaj şablonu geçersiz kılma]]></phrase>
-  <phrase title="wgh_i18n_d0e38806" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Şablon ekle]]></phrase>
-  <phrase title="wgh_i18n_d26a6f5e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İnceleme iste]]></phrase>
-  <phrase title="wgh_i18n_d309b8e7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kullanıcı eşlemesini sil]]></phrase>
-  <phrase title="wgh_i18n_d544c82b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub etiketlerini XenForo konu öneki ile senkronize et]]></phrase>
-  <phrase title="wgh_i18n_d5691a0f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Senkronize XFRM sürümünü/güncellemesini kalıcı olarak sil]]></phrase>
-  <phrase title="wgh_i18n_d5699aaf" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Senkronize incelemelerde kullanılacak isteğe bağlı mesaj.]]></phrase>
-  <phrase title="wgh_i18n_d56cc75b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Dosya joker deseni]]></phrase>
-  <phrase title="wgh_i18n_d67124ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Güncelleme davranışı]]></phrase>
-  <phrase title="wgh_i18n_d69d3dbe" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Takibi geri yükle]]></phrase>
-  <phrase title="wgh_i18n_d71e7a5e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Takip edilen XFRM sürümleri]]></phrase>
-  <phrase title="wgh_i18n_d7c1c52d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Dahil edilen yollar]]></phrase>
-  <phrase title="wgh_i18n_d7e8fab4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[BAŞARISIZ]]></phrase>
-  <phrase title="wgh_i18n_d8aea56d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Takip edilen sürümler]]></phrase>
-  <phrase title="wgh_i18n_da379f5e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yeniden kullanılabilir şablon]]></phrase>
-  <phrase title="wgh_i18n_dbdd35d7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Konu yanıtlarını GitHub Issue yorumları olarak senkronize et]]></phrase>
-  <phrase title="wgh_i18n_dc4d3d55" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub nesnesi]]></phrase>
-  <phrase title="wgh_i18n_dda8c1ac" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Çakışma stratejisi]]></phrase>
-  <phrase title="wgh_i18n_de0be088" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Açık sağlık uyarıları]]></phrase>
-  <phrase title="wgh_i18n_dee2fcb1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub kullanıcı eşlemesini düzenle]]></phrase>
-  <phrase title="wgh_i18n_df3e88b9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[* ve ** glob desenlerini destekler.]]></phrase>
-  <phrase title="wgh_i18n_df5f2d89" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[App kimliği]]></phrase>
-  <phrase title="wgh_i18n_e21880d3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sürüm indirme kaynağı]]></phrase>
-  <phrase title="wgh_i18n_e33c3815" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İsteğe bağlı GitHub alanı=XenForo alanı eşlemeleri. Örnekler: title=thread.title, body=post.message, head=thread.custom_fields.github_branch, base=thread.custom_fields.github_base.]]></phrase>
-  <phrase title="wgh_i18n_e3d869f0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Şablonu sil]]></phrase>
-  <phrase title="wgh_i18n_e3faec47" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Teslimat ayrıntıları]]></phrase>
-  <phrase title="wgh_i18n_e66dd01c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sayısal sürüm etiketlerinin başındaki v harfini kaldır (v1.2.0 → 1.2.0)]]></phrase>
-  <phrase title="wgh_i18n_e68d9f29" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Öncelik]]></phrase>
-  <phrase title="wgh_i18n_e6d20eed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Silinmiş olarak işaretle]]></phrase>
-  <phrase title="wgh_i18n_e6dd7929" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mevcut konu kimliği]]></phrase>
-  <phrase title="wgh_i18n_e763c8b5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Depo]]></phrase>
-  <phrase title="wgh_i18n_e7a36b9c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM dikkat gerekiyor]]></phrase>
-  <phrase title="wgh_i18n_e8657108" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Giden alan eşlemesi tarafından base sağlanmadığı sürece boş değer depo varsayılan dalını kullanır.]]></phrase>
-  <phrase title="wgh_i18n_e8a8d46a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Entegrasyon tarafından oluşturulan içeriği yumuşak sil]]></phrase>
-  <phrase title="wgh_i18n_e9e5a00c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İşlenen / saat]]></phrase>
-  <phrase title="wgh_i18n_eadb9387" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM içeriğini kalıcı olarak sil]]></phrase>
-  <phrase title="wgh_i18n_ebebbbbb" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[PR inceleme metni]]></phrase>
-  <phrase title="wgh_i18n_ec1021f5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Taslak sürümlere izin ver]]></phrase>
-  <phrase title="wgh_i18n_ee0f543f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Uzak nesneleri uzlaştır]]></phrase>
-  <phrase title="wgh_i18n_ef8df546" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Warext GitHub Sync]]></phrase>
-  <phrase title="wgh_i18n_efbc918c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM sürümleri]]></phrase>
-  <phrase title="wgh_i18n_efe0d7f3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sürüm senkronizasyonu mevcut bir XFRM kaynağını hedefler. v0.8 denetim geçmişi, manuel yeniden deneme, uzak uzlaştırma ve özel bir eşleme yöneticisi ekler.]]></phrase>
-  <phrase title="wgh_i18n_f005a9f9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM sürümünü/güncellemesini koru]]></phrase>
-  <phrase title="wgh_i18n_f07e22c0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub bağlantısını düzenle]]></phrase>
-  <phrase title="wgh_i18n_f14a11e2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Son hata / not]]></phrase>
-  <phrase title="wgh_i18n_f16be935" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Pull Request seçenekleri]]></phrase>
-  <phrase title="wgh_i18n_f186d5b4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Pull Request oluşturma]]></phrase>
-  <phrase title="wgh_i18n_f1d0878d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[ResourceVersion oluştur]]></phrase>
-  <phrase title="wgh_i18n_f3f18e26" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Resource Update oluştur/güncelle]]></phrase>
-  <phrase title="wgh_i18n_f516a21a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Konu öneki inceleme eşlemesiyle eşleştiğinde GitHub PR incelemesi oluştur]]></phrase>
-  <phrase title="wgh_i18n_f51b1c8c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Takip edilen sürüm]]></phrase>
-  <phrase title="wgh_i18n_f5aade02" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub olayı]]></phrase>
-  <phrase title="wgh_i18n_f6f36dc2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Aşağıdaki etiket eşlemesini kullanarak XenForo konu önekini GitHub Issue etiketleriyle senkronize et]]></phrase>
-  <phrase title="wgh_i18n_f7b77a7e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İndirme kaynağı]]></phrase>
-  <phrase title="wgh_i18n_f864d092" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Varsayılan PR head dalı]]></phrase>
-  <phrase title="wgh_i18n_fd5aa3d5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Her satıra bir eşleme yazın; örneğin: bug=12. Aynı eşleme her iki yönde de kullanılır.]]></phrase>
-  <phrase title="wgh_i18n_fd921a23" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kaynak seç]]></phrase>
-  <phrase title="wgh_i18n_fdd996cf" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Herhangi bir bağlantı]]></phrase>
-  <phrase title="wgh_msg_conflict_resolution_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Çakışma çözümü başarısız oldu: {error}]]></phrase>
-  <phrase title="wgh_msg_connection_has_repositories" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Bu bağlantının hâlâ senkronize depoları var. Önce bağlantıyı devre dışı bırakın veya depo kayıtlarını taşıyın/kaldırın.]]></phrase>
-  <phrase title="wgh_msg_github_connection_unavailable" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub bağlantısına erişilemiyor.]]></phrase>
-  <phrase title="wgh_msg_health_alert_resolved" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sağlık uyarısı çözüldü.]]></phrase>
-  <phrase title="wgh_msg_health_state_evaluated" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sağlık durumu değerlendirildi.]]></phrase>
-  <phrase title="wgh_msg_inputs_json_object" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Girdi JSON'u bir nesne olmalıdır.]]></phrase>
-  <phrase title="wgh_msg_invalid_workflow_inputs" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Geçersiz iş akışı girdi JSON'u: {error}]]></phrase>
-  <phrase title="wgh_msg_pr_reviewer_action_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Pull request inceleyici işlemi başarısız oldu: {error}]]></phrase>
-  <phrase title="wgh_msg_pull_request_number_required" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Pull request numarası gereklidir.]]></phrase>
-  <phrase title="wgh_msg_repository_not_found_inactive" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Depo bulunamadı veya etkin değil.]]></phrase>
-  <phrase title="wgh_msg_repository_sync_complete" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Depo senkronizasyonu tamamlandı: {created} oluşturuldu, {updated} güncellendi, {deactivated} devre dışı bırakıldı.]]></phrase>
-  <phrase title="wgh_msg_repository_sync_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Depo senkronizasyonu başarısız oldu: {error}]]></phrase>
-  <phrase title="wgh_msg_reviewer_requests_updated" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İnceleyici istekleri güncellendi.]]></phrase>
-  <phrase title="wgh_msg_select_retry_reconcile" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yeniden dene veya uzlaştır seçeneğini seçin.]]></phrase>
-  <phrase title="wgh_msg_select_xfrm_record" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[En az bir XFRM senkronizasyon kaydı seçin.]]></phrase>
-  <phrase title="wgh_msg_tracking_snapshot_restored" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Takip anlık görüntüsü geri yüklendi. Yeniden denemeden önce uzlaştırma çalıştırın.]]></phrase>
-  <phrase title="wgh_msg_user_mapping_required" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[GitHub kullanıcı adı ve XenForo kullanıcı kimliği gereklidir.]]></phrase>
-  <phrase title="wgh_msg_workflow_dispatch_accepted" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İş akışı çalıştırma isteği kabul edildi.]]></phrase>
-  <phrase title="wgh_msg_workflow_dispatch_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İş akışı çalıştırılamadı: {error}]]></phrase>
-  <phrase title="wgh_msg_workflow_history_refresh_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İş akışı geçmişi yenilenemedi: {error}]]></phrase>
-  <phrase title="wgh_msg_workflow_history_refreshed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İş akışı çalıştırma geçmişi yenilendi.]]></phrase>
-  <phrase title="wgh_msg_workflow_ref_required" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İş akışı ve ref gereklidir.]]></phrase>
-  <phrase title="wgh_msg_workflow_run_action_accepted" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İş akışı çalıştırma işlemi GitHub tarafından kabul edildi.]]></phrase>
-  <phrase title="wgh_msg_workflow_run_action_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İş akışı çalıştırma işlemi başarısız oldu: {error}]]></phrase>
-  <phrase title="wgh_msg_workflow_run_id_required" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İş akışı çalıştırma kimliği gereklidir.]]></phrase>
-  <phrase title="wgh_msg_xfrm_bulk_first_error" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[{message} İlk hata: {error}]]></phrase>
-  <phrase title="wgh_msg_xfrm_bulk_result" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[{processed} XFRM kaydı işlendi, {failed} başarısız oldu.]]></phrase>
-  <phrase title="wgh_msg_xfrm_mapping_updated" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM eşlemesi güncellendi.]]></phrase>
-  <phrase title="wgh_msg_xfrm_reconcile_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM uzlaştırması başarısız oldu: {error}]]></phrase>
-  <phrase title="wgh_msg_xfrm_reconcile_missing" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Uzlaştırma, eksik uzak nesnelerle tamamlandı.]]></phrase>
-  <phrase title="wgh_msg_xfrm_remote_verified" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Uzak XFRM nesneleri doğrulandı.]]></phrase>
-  <phrase title="wgh_msg_xfrm_retry_completed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM yeniden denemesi tamamlandı.]]></phrase>
-  <phrase title="wgh_msg_xfrm_retry_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM yeniden denemesi başarısız oldu: {error}]]></phrase>
-  <phrase title="wgh_ui_action" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İşlem]]></phrase>
-  <phrase title="wgh_ui_actions" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İşlemler]]></phrase>
-  <phrase title="wgh_ui_actor" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İşlemi yapan]]></phrase>
-  <phrase title="wgh_ui_all" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Tümü]]></phrase>
-  <phrase title="wgh_ui_apply" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Uygula]]></phrase>
-  <phrase title="wgh_ui_attempts" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Denemeler]]></phrase>
-  <phrase title="wgh_ui_attention" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Dikkat]]></phrase>
-  <phrase title="wgh_ui_base" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Base]]></phrase>
-  <phrase title="wgh_ui_branch" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Dal]]></phrase>
-  <phrase title="wgh_ui_cancel" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[İptal]]></phrase>
-  <phrase title="wgh_ui_check" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kontrol]]></phrase>
-  <phrase title="wgh_ui_conflicts" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Çakışmalar]]></phrase>
-  <phrase title="wgh_ui_connection_number" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Bağlantı #{id}]]></phrase>
-  <phrase title="wgh_ui_connections" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Bağlantılar]]></phrase>
-  <phrase title="wgh_ui_count" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sayı]]></phrase>
-  <phrase title="wgh_ui_created" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Oluşturulma]]></phrase>
-  <phrase title="wgh_ui_dashboard" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kontrol paneli]]></phrase>
-  <phrase title="wgh_ui_date" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Tarih]]></phrase>
-  <phrase title="wgh_ui_deliveries" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Teslimatlar]]></phrase>
-  <phrase title="wgh_ui_delivery" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Teslimat]]></phrase>
-  <phrase title="wgh_ui_details" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Ayrıntılar]]></phrase>
-  <phrase title="wgh_ui_diagnostics" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Tanılama]]></phrase>
-  <phrase title="wgh_ui_direction" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yön]]></phrase>
-  <phrase title="wgh_ui_dismissed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yoksayıldı]]></phrase>
-  <phrase title="wgh_ui_draft" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Taslak]]></phrase>
-  <phrase title="wgh_ui_event" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Olay]]></phrase>
-  <phrase title="wgh_ui_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Başarısız]]></phrase>
-  <phrase title="wgh_ui_global" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Genel]]></phrase>
-  <phrase title="wgh_ui_head" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Head]]></phrase>
-  <phrase title="wgh_ui_health" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sağlık]]></phrase>
-  <phrase title="wgh_ui_history" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Geçmiş]]></phrase>
-  <phrase title="wgh_ui_ignore" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yoksay]]></phrase>
-  <phrase title="wgh_ui_mappings" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Eşlemeler]]></phrase>
-  <phrase title="wgh_ui_message" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Mesaj]]></phrase>
-  <phrase title="wgh_ui_never" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Hiçbir zaman]]></phrase>
-  <phrase title="wgh_ui_object" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Nesne]]></phrase>
-  <phrase title="wgh_ui_payload" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Payload]]></phrase>
-  <phrase title="wgh_ui_pending" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Bekliyor]]></phrase>
-  <phrase title="wgh_ui_priority" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Öncelik]]></phrase>
-  <phrase title="wgh_ui_received" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Alınma]]></phrase>
-  <phrase title="wgh_ui_remote" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Uzak]]></phrase>
-  <phrase title="wgh_ui_repositories" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Depolar]]></phrase>
-  <phrase title="wgh_ui_rerun" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yeniden çalıştır]]></phrase>
-  <phrase title="wgh_ui_resolution" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Çözüm]]></phrase>
-  <phrase title="wgh_ui_resolve" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Çöz]]></phrase>
-  <phrase title="wgh_ui_resolved" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Çözüldü]]></phrase>
-  <phrase title="wgh_ui_resource" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kaynak]]></phrase>
-  <phrase title="wgh_ui_result" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sonuç]]></phrase>
-  <phrase title="wgh_ui_retries" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Yeniden denemeler]]></phrase>
-  <phrase title="wgh_ui_run" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Çalıştır]]></phrase>
-  <phrase title="wgh_ui_scope" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kapsam]]></phrase>
-  <phrase title="wgh_ui_severity" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Önem derecesi]]></phrase>
-  <phrase title="wgh_ui_state" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Durum]]></phrase>
-  <phrase title="wgh_ui_sync_health" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Senkronizasyon sağlığı: {severity}]]></phrase>
-  <phrase title="wgh_ui_teams" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Takımlar]]></phrase>
-  <phrase title="wgh_ui_templates" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Şablonlar]]></phrase>
-  <phrase title="wgh_ui_title" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Başlık]]></phrase>
-  <phrase title="wgh_ui_updated" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Güncellenme]]></phrase>
-  <phrase title="wgh_ui_users" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Kullanıcılar]]></phrase>
-  <phrase title="wgh_ui_version" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Sürüm]]></phrase>
-  <phrase title="wgh_ui_webhook_delivery" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[Webhook teslimatı #{id}]]></phrase>
-  <phrase title="wgh_ui_xfrm" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM]]></phrase>
-  <phrase title="wgh_ui_xfrm_mapping_title" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM eşlemesi - {title}]]></phrase>
-  <phrase title="wgh_ui_xfrm_release_title" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000000" version_string="1.0.0"><![CDATA[XFRM sürümü #{id}]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSync" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Warext GitHub Sync]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncActions" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İşlemler]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncConflicts" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Çakışmalar]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncConnections" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Bağlantılar]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncDashboard" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kontrol paneli]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncDeliveries" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Webhook Kayıtları]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncDiagnostics" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Tanılama]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncHealth" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sağlık]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncMappings" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Eşlemeler]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncPullRequests" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[PR Araçları]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncRepositories" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Depolar]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncTemplates" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Şablonlar]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncUsers" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kullanıcı Eşlemeleri]]></phrase>
+  <phrase title="admin_navigation.wghGitHubSyncXfrm" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM]]></phrase>
+  <phrase title="admin_navigation_wghGitHubSync" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Warext GitHub Sync]]></phrase>
+  <phrase title="admin_permission.wghManage" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Warext GitHub Sync'i yönet]]></phrase>
+  <phrase title="admin_permission_wghManage" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Warext GitHub Sync'i yönet]]></phrase>
+  <phrase title="wgh_i18n_005ef20f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Durum]]></phrase>
+  <phrase title="wgh_i18n_00db6045" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Son webhook teslimatları]]></phrase>
+  <phrase title="wgh_i18n_010a1b71" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Toplu kurtarmayı çalıştır]]></phrase>
+  <phrase title="wgh_i18n_023d7f04" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Tüm depolar]]></phrase>
+  <phrase title="wgh_i18n_03700dac" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yedek konu öneki kimliği]]></phrase>
+  <phrase title="wgh_i18n_0471b8d4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM sürüm senkronizasyonunu etkinleştir]]></phrase>
+  <phrase title="wgh_i18n_052942b0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sürüm dosyası deseni]]></phrase>
+  <phrase title="wgh_i18n_05a02c1f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub sürümü]]></phrase>
+  <phrase title="wgh_i18n_087d6e49" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub öncelikli]]></phrase>
+  <phrase title="wgh_i18n_08ee8c16" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Her satıra bir tane yazın. Örnek: success, failure, cancelled. Boş bırakılırsa tümü kullanılır.]]></phrase>
+  <phrase title="wgh_i18n_0a77a91f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İşlem]]></phrase>
+  <phrase title="wgh_i18n_0b378a0d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Entegrasyon tarafından oluşturulan içeriği kalıcı olarak sil]]></phrase>
+  <phrase title="wgh_i18n_0c80051d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Konu açık/kapalı durumunu GitHub Issue ile senkronize et]]></phrase>
+  <phrase title="wgh_i18n_0e4a763d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub Actions]]></phrase>
+  <phrase title="wgh_i18n_0ff15b06" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Senkronizasyon özeti]]></phrase>
+  <phrase title="wgh_i18n_106bebdd" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Giden senkronizasyon]]></phrase>
+  <phrase title="wgh_i18n_110681a5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub Sync tanılama]]></phrase>
+  <phrase title="wgh_i18n_1323c708" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Son deneme]]></phrase>
+  <phrase title="wgh_i18n_148fd59a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kurulum kimliği]]></phrase>
+  <phrase title="wgh_i18n_1651a33b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Depo seç]]></phrase>
+  <phrase title="wgh_i18n_1bd870f5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM API bağlam kullanıcı kimliği]]></phrase>
+  <phrase title="wgh_i18n_1cc51483" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub açık/kapalı durumunu XenForo konusu ile senkronize et]]></phrase>
+  <phrase title="wgh_i18n_1d0e98c5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Manuel inceleme]]></phrase>
+  <phrase title="wgh_i18n_1e3442b4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sürüm durumları]]></phrase>
+  <phrase title="wgh_i18n_1e581f24" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XenForo kullanıcı kimliği]]></phrase>
+  <phrase title="wgh_i18n_1e7612d1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Bağlantı kapsamı]]></phrase>
+  <phrase title="wgh_i18n_1ebd2f2a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Uzak durum]]></phrase>
+  <phrase title="wgh_i18n_1ee52022" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kaynak kimliği]]></phrase>
+  <phrase title="wgh_i18n_1f89134f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Etkin]]></phrase>
+  <phrase title="wgh_i18n_2122b880" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Senkronizasyon çakışmaları]]></phrase>
+  <phrase title="wgh_i18n_219b41ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM içeriğini yumuşak sil]]></phrase>
+  <phrase title="wgh_i18n_221e2703" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[? Bağlantı silinmeden önce mevcut depo/eşleme kayıtları incelenmelidir.]]></phrase>
+  <phrase title="wgh_i18n_22426f70" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mesaj şablonunu düzenle]]></phrase>
+  <phrase title="wgh_i18n_2485c5c6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mevcut XFRM kaynak kimliği]]></phrase>
+  <phrase title="wgh_i18n_24d471a9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Başlık]]></phrase>
+  <phrase title="wgh_i18n_250e7c81" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kullanıcı eşlemesini kaydet]]></phrase>
+  <phrase title="wgh_i18n_25ecbb60" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XenForo kaynağı (XenForo → GitHub)]]></phrase>
+  <phrase title="wgh_i18n_2690030d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Çakışma ayrıntıları]]></phrase>
+  <phrase title="wgh_i18n_27b4d372" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Eski XFRM kontrolleri]]></phrase>
+  <phrase title="wgh_i18n_29b70fc3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Warext GitHub Sync - XFRM eşlemeleri]]></phrase>
+  <phrase title="wgh_i18n_2a251a55" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM modu]]></phrase>
+  <phrase title="wgh_i18n_2d1229b0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İnceleme isteklerini yönet]]></phrase>
+  <phrase title="wgh_i18n_2d5a534f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM yüklü]]></phrase>
+  <phrase title="wgh_i18n_2d63c72a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Örnekler: published, edited, deleted, opened, closed. Tümü için * kullanın.]]></phrase>
+  <phrase title="wgh_i18n_2f3e2696" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM + normal XenForo hedefi]]></phrase>
+  <phrase title="wgh_i18n_2f69546f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM başarısız]]></phrase>
+  <phrase title="wgh_i18n_312bf833" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Varsayılan PR temel dalı]]></phrase>
+  <phrase title="wgh_i18n_318b2491" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XenForo → GitHub]]></phrase>
+  <phrase title="wgh_i18n_323f1abd" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Şablon etkin]]></phrase>
+  <phrase title="wgh_i18n_32a6d450" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sürüm kimliği]]></phrase>
+  <phrase title="wgh_i18n_32b40e8c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Bağlantı ekle]]></phrase>
+  <phrase title="wgh_i18n_34a28c9d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sağlık uyarısı geçmişi]]></phrase>
+  <phrase title="wgh_i18n_34e8dee2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Şablonu kaydet]]></phrase>
+  <phrase title="wgh_i18n_35c6c8ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Konu/başlık şablonu]]></phrase>
+  <phrase title="wgh_i18n_3682552b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kullanılabilir değişkenler (mevcut motor)]]></phrase>
+  <phrase title="wgh_i18n_37362d37" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Olay yazarı için GitHub → XenForo kullanıcı eşlemelerini kullan]]></phrase>
+  <phrase title="wgh_i18n_37e51807" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[? Buna başvuran eşlemeler satır içi/varsayılan şablonlara geri döner.]]></phrase>
+  <phrase title="wgh_i18n_37ec80a5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Pull request'i yükle]]></phrase>
+  <phrase title="wgh_i18n_3982656e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[En eski bekleyen kaydın yaşı]]></phrase>
+  <phrase title="wgh_i18n_39e2ebc6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İzin verilen iş akışı durumları]]></phrase>
+  <phrase title="wgh_i18n_3ab22754" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM eşlemelerini yönet]]></phrase>
+  <phrase title="wgh_i18n_3c3e9606" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XenForo hash:]]></phrase>
+  <phrase title="wgh_i18n_3fb1839f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Şunun eşlemesini sil]]></phrase>
+  <phrase title="wgh_i18n_40c7207a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Eşleme ekle]]></phrase>
+  <phrase title="wgh_i18n_416cf6fa" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Seçilenleri yeniden dene]]></phrase>
+  <phrase title="wgh_i18n_41bb2466" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Senkronize XFRM sürümünü/güncellemesini yumuşak sil]]></phrase>
+  <phrase title="wgh_i18n_42f6daaa" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İnceleme isteğini kaldır]]></phrase>
+  <phrase title="wgh_i18n_433900ed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kullanıcı eşlemesi ekle]]></phrase>
+  <phrase title="wgh_i18n_43cad27f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Silinen sürüm politikası]]></phrase>
+  <phrase title="wgh_i18n_43cd5e94" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub kullanıcı eşlemeleri]]></phrase>
+  <phrase title="wgh_i18n_457b27f2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Eşleme etkin]]></phrase>
+  <phrase title="wgh_i18n_4591f47b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Giden alan eşlemesi]]></phrase>
+  <phrase title="wgh_i18n_45e9b837" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub → XenForo]]></phrase>
+  <phrase title="wgh_i18n_46959611" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Güncelleme kimliği]]></phrase>
+  <phrase title="wgh_i18n_48b9e1be" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yalnızca bu sürüm eşlemesi için XFRM]]></phrase>
+  <phrase title="wgh_i18n_49c956e0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub hash:]]></phrase>
+  <phrase title="wgh_i18n_49d5d089" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İş akışı çalıştırma geçmişi]]></phrase>
+  <phrase title="wgh_i18n_49e2aa42" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Depo kimliği]]></phrase>
+  <phrase title="wgh_i18n_4b824af4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Takım inceleyicileri]]></phrase>
+  <phrase title="wgh_i18n_4c35c233" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Webhook gizli anahtar referansı]]></phrase>
+  <phrase title="wgh_i18n_4ce42fa0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Senkronizasyon eşlemesini sil]]></phrase>
+  <phrase title="wgh_i18n_4d2d5d68" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kaydet]]></phrase>
+  <phrase title="wgh_i18n_4d603c51" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Hesap / kuruluş kullanıcı adı]]></phrase>
+  <phrase title="wgh_i18n_4dc4d0ff" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İş akışını çalıştır]]></phrase>
+  <phrase title="wgh_i18n_4ded8eb7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Forum düğüm kimliği]]></phrase>
+  <phrase title="wgh_i18n_4f790c25" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[v0.7 bilerek mevcut bir kaynağı hedefler; ResourceItem kayıtlarını otomatik oluşturmaz.]]></phrase>
+  <phrase title="wgh_i18n_5160fe75" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM eşlemesini kaydet]]></phrase>
+  <phrase title="wgh_i18n_51ce40fe" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Çalıştırma geçmişini GitHub'dan yenile]]></phrase>
+  <phrase title="wgh_i18n_51ebf0a5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub sürüm olaylarını mevcut bir XenForo Resource Manager kaynağıyla senkronize et]]></phrase>
+  <phrase title="wgh_i18n_521c7f93" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[config.php örneği]]></phrase>
+  <phrase title="wgh_i18n_534e7732" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mod]]></phrase>
+  <phrase title="wgh_i18n_5392f380" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[ResourceVersion kimliği]]></phrase>
+  <phrase title="wgh_i18n_54877718" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Son görülme]]></phrase>
+  <phrase title="wgh_i18n_5635f148" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İnceleyici işlemini uygula]]></phrase>
+  <phrase title="wgh_i18n_568452cb" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Teslimatı şimdi yeniden dene]]></phrase>
+  <phrase title="wgh_i18n_57774f9f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İstenen inceleyiciler]]></phrase>
+  <phrase title="wgh_i18n_5797ea6a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sil]]></phrase>
+  <phrase title="wgh_i18n_58ed5a83" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Satır içi/varsayılan şablonu kullan]]></phrase>
+  <phrase title="wgh_i18n_59829c2a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Girdi JSON'u]]></phrase>
+  <phrase title="wgh_i18n_5d313e06" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Senkronizasyon eşlemesi ekle]]></phrase>
+  <phrase title="wgh_i18n_5d4b4a33" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub bağlantıları]]></phrase>
+  <phrase title="wgh_i18n_5dcdd537" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sürüm]]></phrase>
+  <phrase title="wgh_i18n_5e1845dc" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[PR araçları]]></phrase>
+  <phrase title="wgh_i18n_6041b55f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Başarısız işleri yeniden çalıştır]]></phrase>
+  <phrase title="wgh_i18n_61836dfd" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Son uzlaştırma]]></phrase>
+  <phrase title="wgh_i18n_61e6be1a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Hayır]]></phrase>
+  <phrase title="wgh_i18n_61fefc0a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yön]]></phrase>
+  <phrase title="wgh_i18n_6376d16a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub App kimliği]]></phrase>
+  <phrase title="wgh_i18n_6545e080" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub Pull Request]]></phrase>
+  <phrase title="wgh_i18n_6553db78" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yalnızca XFRM]]></phrase>
+  <phrase title="wgh_i18n_6655283f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub bağlantısını sil]]></phrase>
+  <phrase title="wgh_i18n_6720cb35" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kaynak ref]]></phrase>
+  <phrase title="wgh_i18n_673a86ea" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Commit mesajı hariç tutma terimleri]]></phrase>
+  <phrase title="wgh_i18n_68a7e6c0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Virgül veya satır ile ayrılmış kuruluş takım slug'ları.]]></phrase>
+  <phrase title="wgh_i18n_68fb46eb" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub Pull Request araçları]]></phrase>
+  <phrase title="wgh_i18n_695f5810" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Pull request numarası]]></phrase>
+  <phrase title="wgh_i18n_699f32e2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Varsayılan dal]]></phrase>
+  <phrase title="wgh_i18n_6bff0625" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub bağlantısı ekle]]></phrase>
+  <phrase title="wgh_i18n_6cab2f85" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Şunun altında gruplandı]]></phrase>
+  <phrase title="wgh_i18n_706306ff" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Depo iş akışları]]></phrase>
+  <phrase title="wgh_i18n_72bb816d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Bakımcıların pull request dalını değiştirmesine izin ver]]></phrase>
+  <phrase title="wgh_i18n_735b7e4d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Olay eşlemesi]]></phrase>
+  <phrase title="wgh_i18n_73e70c1c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Gelen alan eşlemesi]]></phrase>
+  <phrase title="wgh_i18n_7573412e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Gelen kimlik ve meta veriler]]></phrase>
+  <phrase title="wgh_i18n_770fdd94" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Ayarlandığında senkronizasyon yeni konu oluşturmak yerine bu konuyu hedefler.]]></phrase>
+  <phrase title="wgh_i18n_78a0f955" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Webhook teslimat kayıtları]]></phrase>
+  <phrase title="wgh_i18n_7a47da73" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub kullanıcı adı]]></phrase>
+  <phrase title="wgh_i18n_7aa6f0e7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[API]]></phrase>
+  <phrase title="wgh_i18n_7ab3a3db" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XenForo sürümünü koru]]></phrase>
+  <phrase title="wgh_i18n_7b4678c9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yerel XFRM API anahtarı referansı]]></phrase>
+  <phrase title="wgh_i18n_7bfcc515" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yalnızca bu forumdaki konu/mesajlar GitHub'a gönderilir. 0 değeri bu eşleme için tüm forumlara izin verir.]]></phrase>
+  <phrase title="wgh_i18n_7c015427" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mesaj şablonu ekle]]></phrase>
+  <phrase title="wgh_i18n_7c90e126" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Eşlemeyi kaydet]]></phrase>
+  <phrase title="wgh_i18n_7d21db29" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub hesabı]]></phrase>
+  <phrase title="wgh_i18n_7dddbb44" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub kullanıcı eşlemesi ekle]]></phrase>
+  <phrase title="wgh_i18n_7e0a5533" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[API anahtarı yapılandırma referansı]]></phrase>
+  <phrase title="wgh_i18n_7ea489aa" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Konu başlığını güncelle]]></phrase>
+  <phrase title="wgh_i18n_816c0a68" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Commit mesajı dahil etme terimleri]]></phrase>
+  <phrase title="wgh_i18n_818601a1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Warext GitHub Sync - Sağlık]]></phrase>
+  <phrase title="wgh_i18n_827dda41" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Virgül veya satır ile ayrılmış GitHub kullanıcı adları.]]></phrase>
+  <phrase title="wgh_i18n_832358da" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Gelen GitHub işlemi]]></phrase>
+  <phrase title="wgh_i18n_853ffe77" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Senkronizasyon eşlemesini düzenle]]></phrase>
+  <phrase title="wgh_i18n_85e4b82f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Tamam]]></phrase>
+  <phrase title="wgh_i18n_86236693" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Örnekler: release, push, issues, pull_request. Tümü için * kullanın.]]></phrase>
+  <phrase title="wgh_i18n_88d2040a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Konu başlığını ve ilk mesajı GitHub Issue ile senkronize et]]></phrase>
+  <phrase title="wgh_i18n_8a2d1d22" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub'dan yeniden dene]]></phrase>
+  <phrase title="wgh_i18n_8a88e798" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub kaynak ZIP'i]]></phrase>
+  <phrase title="wgh_i18n_8afbfe15" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yeni bir GitHub sürümü için XFRM ResourceVersion oluştur]]></phrase>
+  <phrase title="wgh_i18n_8b5c27de" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub sürüm sayfası]]></phrase>
+  <phrase title="wgh_i18n_8d50ecb6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Seçilen kapsamdaki herhangi bir depo]]></phrase>
+  <phrase title="wgh_i18n_8d51911e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İzinleri atla (yalnızca süper kullanıcı API anahtarı)]]></phrase>
+  <phrase title="wgh_i18n_8dfee4f8" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub sürüm kimliği]]></phrase>
+  <phrase title="wgh_i18n_8f8d470d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Depo kapsamı]]></phrase>
+  <phrase title="wgh_i18n_901aca78" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Etkin değil]]></phrase>
+  <phrase title="wgh_i18n_90b03010" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[API bağlam kullanıcı kimliği]]></phrase>
+  <phrase title="wgh_i18n_935d7ff7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Olay işlemi]]></phrase>
+  <phrase title="wgh_i18n_94483ccf" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub teslimat kimliği]]></phrase>
+  <phrase title="wgh_i18n_96a12137" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İstemci kimliği]]></phrase>
+  <phrase title="wgh_i18n_9766c371" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XenForo hedefi]]></phrase>
+  <phrase title="wgh_i18n_98839df1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Webhook kayıtları]]></phrase>
+  <phrase title="wgh_i18n_98b5cefa" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İş akışı çalıştırmaları]]></phrase>
+  <phrase title="wgh_i18n_990de47d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Oluştur]]></phrase>
+  <phrase title="wgh_i18n_99b7da07" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Bağlantı etkin]]></phrase>
+  <phrase title="wgh_i18n_9a96c706" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Son başarı]]></phrase>
+  <phrase title="wgh_i18n_9ba6196d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İzin verilen dallar]]></phrase>
+  <phrase title="wgh_i18n_9c86e43e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Etkin]]></phrase>
+  <phrase title="wgh_i18n_a0b54756" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Özel anahtar referansı]]></phrase>
+  <phrase title="wgh_i18n_a200e31f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub App bağlantısı]]></phrase>
+  <phrase title="wgh_i18n_a29015e3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Depoları şimdi senkronize et]]></phrase>
+  <phrase title="wgh_i18n_a2b0e2ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Silinen GitHub sürümü politikası]]></phrase>
+  <phrase title="wgh_i18n_a2f3d279" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Her satıra bir tane yazın. Örnek: completed veya in_progress. Boş bırakılırsa tümü kullanılır.]]></phrase>
+  <phrase title="wgh_i18n_a40701ec" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sağlık durumunu şimdi değerlendir]]></phrase>
+  <phrase title="wgh_i18n_a573c357" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[config.php altında şu referansı kullanır: warextGitHubSync.xfrmApiKeys. Gerçek anahtar hiçbir zaman eklenti veritabanında saklanmaz.]]></phrase>
+  <phrase title="wgh_i18n_a57f1ba2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Ref]]></phrase>
+  <phrase title="wgh_i18n_a860fdff" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yapılandırıldığında en az bir terim eşleşmelidir.]]></phrase>
+  <phrase title="wgh_i18n_ac4049c3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sürüm → Kaynak eşlemeleri]]></phrase>
+  <phrase title="wgh_i18n_ac6427ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub depoları]]></phrase>
+  <phrase title="wgh_i18n_acd1de66" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mevcut konunun ilk mesajını güncelle]]></phrase>
+  <phrase title="wgh_i18n_ad54cb3e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM Resource Manager hedefi]]></phrase>
+  <phrase title="wgh_i18n_ad56869f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM hedefi]]></phrase>
+  <phrase title="wgh_i18n_ad7cf12f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XenForo öncelikli]]></phrase>
+  <phrase title="wgh_i18n_ad9d2170" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Eşlemeyi sil]]></phrase>
+  <phrase title="wgh_i18n_af91c2bc" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Dosya modunda kullanılır. Joker karakterler desteklenir; örneğin *.zip veya Warext-*.zip.]]></phrase>
+  <phrase title="wgh_i18n_b00a0cb2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub sürüm notlarından bir XFRM Resource Update oluştur/güncelle (kaynak tartışma iş akışını da besler)]]></phrase>
+  <phrase title="wgh_i18n_b04a756e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Otomasyon kullanıcı kimliği]]></phrase>
+  <phrase title="wgh_i18n_b05886cc" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kaynak forum düğüm kimliği]]></phrase>
+  <phrase title="wgh_i18n_b136fe9d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[? Mevcut senkronizasyon kayıt defteri girdileri denetim/kurtarma için korunur.]]></phrase>
+  <phrase title="wgh_i18n_b1fbc936" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İsteğe bağlı XenForo işlem alanı=GitHub payload yolu. Güvenli hedefler: title, message, remote_state, prefix_id. Örnek: title=workflow_run.name.]]></phrase>
+  <phrase title="wgh_i18n_b3a43630" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Evet]]></phrase>
+  <phrase title="wgh_i18n_b43f9625" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Başarısız / saat]]></phrase>
+  <phrase title="wgh_i18n_b46c572e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kullanıcı inceleyicileri]]></phrase>
+  <phrase title="wgh_i18n_b4f5fd8b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Eşleşen sürüm dosyası]]></phrase>
+  <phrase title="wgh_i18n_b51e570a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yeniden deneme sayısı]]></phrase>
+  <phrase title="wgh_i18n_b5bcb81f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mesaj şablonları]]></phrase>
+  <phrase title="wgh_i18n_b5cc65ad" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub Issue]]></phrase>
+  <phrase title="wgh_i18n_b62ca584" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yeni pull request'leri taslak olarak oluştur]]></phrase>
+  <phrase title="wgh_i18n_b82e8201" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Her satıra bir tane yazın. Örnek: 12=APPROVE, 13=REQUEST_CHANGES, 14=COMMENT. İnceleme yalnızca önek yapılandırılmış bir değere değiştiğinde gönderilir.]]></phrase>
+  <phrase title="wgh_i18n_b87a566e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub sürümünü uygula]]></phrase>
+  <phrase title="wgh_i18n_b8b37b00" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İzin verilen iş akışı sonuçları]]></phrase>
+  <phrase title="wgh_i18n_ba8885b3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İş akışlarını yükle]]></phrase>
+  <phrase title="wgh_i18n_bacd50f6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yapılandırılmış anahtar süper kullanıcı anahtarı olduğunda XF-Api-User olarak kullanılır.]]></phrase>
+  <phrase title="wgh_i18n_bc066fff" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Entegrasyonun yeni bir konu oluşturması gerektiğinde kullanılır.]]></phrase>
+  <phrase title="wgh_i18n_bc3d5188" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mevcut kaynak]]></phrase>
+  <phrase title="wgh_i18n_bd2598ab" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[api_bypass_permissions kullan (uygun bir süper kullanıcı API anahtarı gerektirir)]]></phrase>
+  <phrase title="wgh_i18n_bd4d5461" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kullanıcı eşlemeleri]]></phrase>
+  <phrase title="wgh_i18n_be4a9e57" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Bekleyen çakışmalar]]></phrase>
+  <phrase title="wgh_i18n_bf2eae0a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[En yeni kazanır]]></phrase>
+  <phrase title="wgh_i18n_bfce9925" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Devre dışı]]></phrase>
+  <phrase title="wgh_i18n_c0137fcc" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Warext GitHub Sync - XFRM]]></phrase>
+  <phrase title="wgh_i18n_c0f4aea1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[ResourceUpdate kimliği]]></phrase>
+  <phrase title="wgh_i18n_c1053436" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Senkronizasyon eşlemeleri]]></phrase>
+  <phrase title="wgh_i18n_c28a86c4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Her satıra bir dal yazın. Boş bırakılırsa tüm dallar kullanılır.]]></phrase>
+  <phrase title="wgh_i18n_c55199b7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub etiketi ↔ XenForo önek eşlemesi]]></phrase>
+  <phrase title="wgh_i18n_c5a8d4c5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Giden alan eşlemesi tarafından head sağlanmadığı sürece PR oluştururken gereklidir.]]></phrase>
+  <phrase title="wgh_i18n_c628a50c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Uzak silme politikası]]></phrase>
+  <phrase title="wgh_i18n_c68eae09" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XenForo Resource Manager entegrasyonu]]></phrase>
+  <phrase title="wgh_i18n_c6adbeea" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM senkronizasyonu]]></phrase>
+  <phrase title="wgh_i18n_c7932a65" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Ön sürümlere izin ver]]></phrase>
+  <phrase title="wgh_i18n_c80fb6b6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mesaj şablonu]]></phrase>
+  <phrase title="wgh_i18n_c83001dd" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sayısal etiketlerin başındaki v harfini kaldır]]></phrase>
+  <phrase title="wgh_i18n_c9e1016f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Hariç tutulan yollar]]></phrase>
+  <phrase title="wgh_i18n_ca30cc85" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Önek → PR inceleme işlemi]]></phrase>
+  <phrase title="wgh_i18n_cae33da6" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[release, push, issues, pull_request veya *]]></phrase>
+  <phrase title="wgh_i18n_ccdfbfa0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Herkese açık]]></phrase>
+  <phrase title="wgh_i18n_cda8c1e5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mesaj şablonunu sil]]></phrase>
+  <phrase title="wgh_i18n_ce2835c9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Webhook ile yakalanan çalıştırmalar yerel olarak saklanır. Yenileme, GitHub'daki en son 50 çalıştırmayı içe aktarır.]]></phrase>
+  <phrase title="wgh_i18n_ce332b84" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Seçilenleri uzlaştır]]></phrase>
+  <phrase title="wgh_i18n_cece6a63" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Başlık şablonu geçersiz kılma]]></phrase>
+  <phrase title="wgh_i18n_d01f2cac" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Özel]]></phrase>
+  <phrase title="wgh_i18n_d02b533f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Olay]]></phrase>
+  <phrase title="wgh_i18n_d0d15f5a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mesaj şablonu geçersiz kılma]]></phrase>
+  <phrase title="wgh_i18n_d0e38806" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Şablon ekle]]></phrase>
+  <phrase title="wgh_i18n_d26a6f5e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İnceleme iste]]></phrase>
+  <phrase title="wgh_i18n_d309b8e7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kullanıcı eşlemesini sil]]></phrase>
+  <phrase title="wgh_i18n_d544c82b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub etiketlerini XenForo konu öneki ile senkronize et]]></phrase>
+  <phrase title="wgh_i18n_d5691a0f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Senkronize XFRM sürümünü/güncellemesini kalıcı olarak sil]]></phrase>
+  <phrase title="wgh_i18n_d5699aaf" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Senkronize incelemelerde kullanılacak isteğe bağlı mesaj.]]></phrase>
+  <phrase title="wgh_i18n_d56cc75b" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Dosya joker deseni]]></phrase>
+  <phrase title="wgh_i18n_d67124ee" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Güncelleme davranışı]]></phrase>
+  <phrase title="wgh_i18n_d69d3dbe" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Takibi geri yükle]]></phrase>
+  <phrase title="wgh_i18n_d71e7a5e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Takip edilen XFRM sürümleri]]></phrase>
+  <phrase title="wgh_i18n_d7c1c52d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Dahil edilen yollar]]></phrase>
+  <phrase title="wgh_i18n_d7e8fab4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[BAŞARISIZ]]></phrase>
+  <phrase title="wgh_i18n_d8aea56d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Takip edilen sürümler]]></phrase>
+  <phrase title="wgh_i18n_da379f5e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yeniden kullanılabilir şablon]]></phrase>
+  <phrase title="wgh_i18n_dbdd35d7" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Konu yanıtlarını GitHub Issue yorumları olarak senkronize et]]></phrase>
+  <phrase title="wgh_i18n_dc4d3d55" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub nesnesi]]></phrase>
+  <phrase title="wgh_i18n_dda8c1ac" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Çakışma stratejisi]]></phrase>
+  <phrase title="wgh_i18n_de0be088" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Açık sağlık uyarıları]]></phrase>
+  <phrase title="wgh_i18n_dee2fcb1" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub kullanıcı eşlemesini düzenle]]></phrase>
+  <phrase title="wgh_i18n_df3e88b9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[* ve ** glob desenlerini destekler.]]></phrase>
+  <phrase title="wgh_i18n_df5f2d89" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[App kimliği]]></phrase>
+  <phrase title="wgh_i18n_e21880d3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sürüm indirme kaynağı]]></phrase>
+  <phrase title="wgh_i18n_e33c3815" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İsteğe bağlı GitHub alanı=XenForo alanı eşlemeleri. Örnekler: title=thread.title, body=post.message, head=thread.custom_fields.github_branch, base=thread.custom_fields.github_base.]]></phrase>
+  <phrase title="wgh_i18n_e3d869f0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Şablonu sil]]></phrase>
+  <phrase title="wgh_i18n_e3faec47" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Teslimat ayrıntıları]]></phrase>
+  <phrase title="wgh_i18n_e66dd01c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sayısal sürüm etiketlerinin başındaki v harfini kaldır (v1.2.0 → 1.2.0)]]></phrase>
+  <phrase title="wgh_i18n_e68d9f29" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Öncelik]]></phrase>
+  <phrase title="wgh_i18n_e6d20eed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Silinmiş olarak işaretle]]></phrase>
+  <phrase title="wgh_i18n_e6dd7929" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mevcut konu kimliği]]></phrase>
+  <phrase title="wgh_i18n_e763c8b5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Depo]]></phrase>
+  <phrase title="wgh_i18n_e7a36b9c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM dikkat gerekiyor]]></phrase>
+  <phrase title="wgh_i18n_e8657108" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Giden alan eşlemesi tarafından base sağlanmadığı sürece boş değer depo varsayılan dalını kullanır.]]></phrase>
+  <phrase title="wgh_i18n_e8a8d46a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Entegrasyon tarafından oluşturulan içeriği yumuşak sil]]></phrase>
+  <phrase title="wgh_i18n_e9e5a00c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İşlenen / saat]]></phrase>
+  <phrase title="wgh_i18n_eadb9387" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM içeriğini kalıcı olarak sil]]></phrase>
+  <phrase title="wgh_i18n_ebebbbbb" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[PR inceleme metni]]></phrase>
+  <phrase title="wgh_i18n_ec1021f5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Taslak sürümlere izin ver]]></phrase>
+  <phrase title="wgh_i18n_ee0f543f" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Uzak nesneleri uzlaştır]]></phrase>
+  <phrase title="wgh_i18n_ef8df546" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Warext GitHub Sync]]></phrase>
+  <phrase title="wgh_i18n_efbc918c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM sürümleri]]></phrase>
+  <phrase title="wgh_i18n_efe0d7f3" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sürüm senkronizasyonu mevcut bir XFRM kaynağını hedefler. v0.8 denetim geçmişi, manuel yeniden deneme, uzak uzlaştırma ve özel bir eşleme yöneticisi ekler.]]></phrase>
+  <phrase title="wgh_i18n_f005a9f9" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM sürümünü/güncellemesini koru]]></phrase>
+  <phrase title="wgh_i18n_f07e22c0" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub bağlantısını düzenle]]></phrase>
+  <phrase title="wgh_i18n_f14a11e2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Son hata / not]]></phrase>
+  <phrase title="wgh_i18n_f16be935" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Pull Request seçenekleri]]></phrase>
+  <phrase title="wgh_i18n_f186d5b4" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Pull Request oluşturma]]></phrase>
+  <phrase title="wgh_i18n_f1d0878d" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[ResourceVersion oluştur]]></phrase>
+  <phrase title="wgh_i18n_f3f18e26" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Resource Update oluştur/güncelle]]></phrase>
+  <phrase title="wgh_i18n_f516a21a" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Konu öneki inceleme eşlemesiyle eşleştiğinde GitHub PR incelemesi oluştur]]></phrase>
+  <phrase title="wgh_i18n_f51b1c8c" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Takip edilen sürüm]]></phrase>
+  <phrase title="wgh_i18n_f5aade02" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub olayı]]></phrase>
+  <phrase title="wgh_i18n_f6f36dc2" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Aşağıdaki etiket eşlemesini kullanarak XenForo konu önekini GitHub Issue etiketleriyle senkronize et]]></phrase>
+  <phrase title="wgh_i18n_f7b77a7e" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İndirme kaynağı]]></phrase>
+  <phrase title="wgh_i18n_f864d092" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Varsayılan PR head dalı]]></phrase>
+  <phrase title="wgh_i18n_fd5aa3d5" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Her satıra bir eşleme yazın; örneğin: bug=12. Aynı eşleme her iki yönde de kullanılır.]]></phrase>
+  <phrase title="wgh_i18n_fd921a23" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kaynak seç]]></phrase>
+  <phrase title="wgh_i18n_fdd996cf" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Herhangi bir bağlantı]]></phrase>
+  <phrase title="wgh_msg_conflict_resolution_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Çakışma çözümü başarısız oldu: {error}]]></phrase>
+  <phrase title="wgh_msg_connection_has_repositories" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Bu bağlantının hâlâ senkronize depoları var. Önce bağlantıyı devre dışı bırakın veya depo kayıtlarını taşıyın/kaldırın.]]></phrase>
+  <phrase title="wgh_msg_github_connection_unavailable" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub bağlantısına erişilemiyor.]]></phrase>
+  <phrase title="wgh_msg_health_alert_resolved" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sağlık uyarısı çözüldü.]]></phrase>
+  <phrase title="wgh_msg_health_state_evaluated" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sağlık durumu değerlendirildi.]]></phrase>
+  <phrase title="wgh_msg_inputs_json_object" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Girdi JSON'u bir nesne olmalıdır.]]></phrase>
+  <phrase title="wgh_msg_invalid_workflow_inputs" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Geçersiz iş akışı girdi JSON'u: {error}]]></phrase>
+  <phrase title="wgh_msg_pr_reviewer_action_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Pull request inceleyici işlemi başarısız oldu: {error}]]></phrase>
+  <phrase title="wgh_msg_pull_request_number_required" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Pull request numarası gereklidir.]]></phrase>
+  <phrase title="wgh_msg_repository_not_found_inactive" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Depo bulunamadı veya etkin değil.]]></phrase>
+  <phrase title="wgh_msg_repository_sync_complete" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Depo senkronizasyonu tamamlandı: {created} oluşturuldu, {updated} güncellendi, {deactivated} devre dışı bırakıldı.]]></phrase>
+  <phrase title="wgh_msg_repository_sync_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Depo senkronizasyonu başarısız oldu: {error}]]></phrase>
+  <phrase title="wgh_msg_reviewer_requests_updated" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İnceleyici istekleri güncellendi.]]></phrase>
+  <phrase title="wgh_msg_select_retry_reconcile" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yeniden dene veya uzlaştır seçeneğini seçin.]]></phrase>
+  <phrase title="wgh_msg_select_xfrm_record" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[En az bir XFRM senkronizasyon kaydı seçin.]]></phrase>
+  <phrase title="wgh_msg_tracking_snapshot_restored" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Takip anlık görüntüsü geri yüklendi. Yeniden denemeden önce uzlaştırma çalıştırın.]]></phrase>
+  <phrase title="wgh_msg_user_mapping_required" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[GitHub kullanıcı adı ve XenForo kullanıcı kimliği gereklidir.]]></phrase>
+  <phrase title="wgh_msg_workflow_dispatch_accepted" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İş akışı çalıştırma isteği kabul edildi.]]></phrase>
+  <phrase title="wgh_msg_workflow_dispatch_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İş akışı çalıştırılamadı: {error}]]></phrase>
+  <phrase title="wgh_msg_workflow_history_refresh_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İş akışı geçmişi yenilenemedi: {error}]]></phrase>
+  <phrase title="wgh_msg_workflow_history_refreshed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İş akışı çalıştırma geçmişi yenilendi.]]></phrase>
+  <phrase title="wgh_msg_workflow_ref_required" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İş akışı ve ref gereklidir.]]></phrase>
+  <phrase title="wgh_msg_workflow_run_action_accepted" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İş akışı çalıştırma işlemi GitHub tarafından kabul edildi.]]></phrase>
+  <phrase title="wgh_msg_workflow_run_action_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İş akışı çalıştırma işlemi başarısız oldu: {error}]]></phrase>
+  <phrase title="wgh_msg_workflow_run_id_required" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İş akışı çalıştırma kimliği gereklidir.]]></phrase>
+  <phrase title="wgh_msg_xfrm_bulk_first_error" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[{message} İlk hata: {error}]]></phrase>
+  <phrase title="wgh_msg_xfrm_bulk_result" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[{processed} XFRM kaydı işlendi, {failed} başarısız oldu.]]></phrase>
+  <phrase title="wgh_msg_xfrm_mapping_updated" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM eşlemesi güncellendi.]]></phrase>
+  <phrase title="wgh_msg_xfrm_reconcile_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM uzlaştırması başarısız oldu: {error}]]></phrase>
+  <phrase title="wgh_msg_xfrm_reconcile_missing" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Uzlaştırma, eksik uzak nesnelerle tamamlandı.]]></phrase>
+  <phrase title="wgh_msg_xfrm_remote_verified" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Uzak XFRM nesneleri doğrulandı.]]></phrase>
+  <phrase title="wgh_msg_xfrm_retry_completed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM yeniden denemesi tamamlandı.]]></phrase>
+  <phrase title="wgh_msg_xfrm_retry_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM yeniden denemesi başarısız oldu: {error}]]></phrase>
+  <phrase title="wgh_ui_action" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İşlem]]></phrase>
+  <phrase title="wgh_ui_actions" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İşlemler]]></phrase>
+  <phrase title="wgh_ui_actor" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İşlemi yapan]]></phrase>
+  <phrase title="wgh_ui_all" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Tümü]]></phrase>
+  <phrase title="wgh_ui_apply" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Uygula]]></phrase>
+  <phrase title="wgh_ui_attempts" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Denemeler]]></phrase>
+  <phrase title="wgh_ui_attention" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Dikkat]]></phrase>
+  <phrase title="wgh_ui_base" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Base]]></phrase>
+  <phrase title="wgh_ui_branch" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Dal]]></phrase>
+  <phrase title="wgh_ui_cancel" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[İptal]]></phrase>
+  <phrase title="wgh_ui_check" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kontrol]]></phrase>
+  <phrase title="wgh_ui_conflicts" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Çakışmalar]]></phrase>
+  <phrase title="wgh_ui_connection_number" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Bağlantı #{id}]]></phrase>
+  <phrase title="wgh_ui_connections" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Bağlantılar]]></phrase>
+  <phrase title="wgh_ui_count" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sayı]]></phrase>
+  <phrase title="wgh_ui_created" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Oluşturulma]]></phrase>
+  <phrase title="wgh_ui_dashboard" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kontrol paneli]]></phrase>
+  <phrase title="wgh_ui_date" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Tarih]]></phrase>
+  <phrase title="wgh_ui_deliveries" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Teslimatlar]]></phrase>
+  <phrase title="wgh_ui_delivery" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Teslimat]]></phrase>
+  <phrase title="wgh_ui_details" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Ayrıntılar]]></phrase>
+  <phrase title="wgh_ui_diagnostics" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Tanılama]]></phrase>
+  <phrase title="wgh_ui_direction" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yön]]></phrase>
+  <phrase title="wgh_ui_dismissed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yoksayıldı]]></phrase>
+  <phrase title="wgh_ui_draft" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Taslak]]></phrase>
+  <phrase title="wgh_ui_event" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Olay]]></phrase>
+  <phrase title="wgh_ui_failed" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Başarısız]]></phrase>
+  <phrase title="wgh_ui_global" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Genel]]></phrase>
+  <phrase title="wgh_ui_head" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Head]]></phrase>
+  <phrase title="wgh_ui_health" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sağlık]]></phrase>
+  <phrase title="wgh_ui_history" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Geçmiş]]></phrase>
+  <phrase title="wgh_ui_ignore" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yoksay]]></phrase>
+  <phrase title="wgh_ui_mappings" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Eşlemeler]]></phrase>
+  <phrase title="wgh_ui_message" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Mesaj]]></phrase>
+  <phrase title="wgh_ui_never" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Hiçbir zaman]]></phrase>
+  <phrase title="wgh_ui_object" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Nesne]]></phrase>
+  <phrase title="wgh_ui_payload" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Payload]]></phrase>
+  <phrase title="wgh_ui_pending" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Bekliyor]]></phrase>
+  <phrase title="wgh_ui_priority" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Öncelik]]></phrase>
+  <phrase title="wgh_ui_received" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Alınma]]></phrase>
+  <phrase title="wgh_ui_remote" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Uzak]]></phrase>
+  <phrase title="wgh_ui_repositories" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Depolar]]></phrase>
+  <phrase title="wgh_ui_rerun" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yeniden çalıştır]]></phrase>
+  <phrase title="wgh_ui_resolution" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Çözüm]]></phrase>
+  <phrase title="wgh_ui_resolve" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Çöz]]></phrase>
+  <phrase title="wgh_ui_resolved" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Çözüldü]]></phrase>
+  <phrase title="wgh_ui_resource" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kaynak]]></phrase>
+  <phrase title="wgh_ui_result" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sonuç]]></phrase>
+  <phrase title="wgh_ui_retries" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Yeniden denemeler]]></phrase>
+  <phrase title="wgh_ui_run" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Çalıştır]]></phrase>
+  <phrase title="wgh_ui_scope" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kapsam]]></phrase>
+  <phrase title="wgh_ui_severity" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Önem derecesi]]></phrase>
+  <phrase title="wgh_ui_state" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Durum]]></phrase>
+  <phrase title="wgh_ui_sync_health" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Senkronizasyon sağlığı: {severity}]]></phrase>
+  <phrase title="wgh_ui_teams" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Takımlar]]></phrase>
+  <phrase title="wgh_ui_templates" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Şablonlar]]></phrase>
+  <phrase title="wgh_ui_title" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Başlık]]></phrase>
+  <phrase title="wgh_ui_updated" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Güncellenme]]></phrase>
+  <phrase title="wgh_ui_users" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Kullanıcılar]]></phrase>
+  <phrase title="wgh_ui_version" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Sürüm]]></phrase>
+  <phrase title="wgh_ui_webhook_delivery" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[Webhook teslimatı #{id}]]></phrase>
+  <phrase title="wgh_ui_xfrm" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM]]></phrase>
+  <phrase title="wgh_ui_xfrm_mapping_title" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM eşlemesi - {title}]]></phrase>
+  <phrase title="wgh_ui_xfrm_release_title" addon_id="Warext/GitHubSync" global_cache="0" version_id="10000010" version_string="1.0.1"><![CDATA[XFRM sürümü #{id}]]></phrase>
 </language>
