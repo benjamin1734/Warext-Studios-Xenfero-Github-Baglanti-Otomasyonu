@@ -5,12 +5,12 @@
 	<div class="block-container">
 		<h2 class="block-header">{{ phrase('wgh_i18n_0ff15b06') }}</h2>
 		<div class="block-body block-row">
-			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Connections</dt><dd>{$stats.connections}</dd></div>
-			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Repositories</dt><dd>{$stats.repositories}</dd></div>
-			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Mappings</dt><dd>{$stats.mappings}</dd></div>
-			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Deliveries</dt><dd>{$stats.deliveries}</dd></div>
-			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Pending</dt><dd>{$stats.pending}</dd></div>
-			<div class="pairs pairs--columns pairs--fixedSmall"><dt>Failed</dt><dd>{$stats.failed}</dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_ui_connections') }}</dt><dd>{$stats.connections}</dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_ui_repositories') }}</dt><dd>{$stats.repositories}</dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_ui_mappings') }}</dt><dd>{$stats.mappings}</dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_ui_deliveries') }}</dt><dd>{$stats.deliveries}</dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_ui_pending') }}</dt><dd>{$stats.pending}</dd></div>
+			<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_ui_failed') }}</dt><dd>{$stats.failed}</dd></div>
 			<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_i18n_be4a9e57') }}</dt><dd><a href="{{ link('github-sync/conflicts') }}">{$stats.conflicts}</a></dd></div>
 			<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_i18n_bd4d5461') }}</dt><dd><a href="{{ link('github-sync/user-mappings') }}">{$stats.userMappings}</a></dd></div>
 			<div class="pairs pairs--columns pairs--fixedSmall"><dt>{{ phrase('wgh_i18n_efbc918c') }}</dt><dd><a href="{{ link('github-sync/xfrm') }}">{$stats.xfrmReleases}</a></dd></div>
@@ -27,7 +27,7 @@
 		<h2 class="block-header">{{ phrase('wgh_i18n_00db6045') }}</h2>
 		<div class="block-body">
 			<table class="dataList">
-				<thead><tr class="dataList-row"><th class="dataList-cell">Event</th><th class="dataList-cell">Action</th><th class="dataList-cell">Status</th><th class="dataList-cell">Attempts</th><th class="dataList-cell">Received</th></tr></thead>
+				<thead><tr class="dataList-row"><th class="dataList-cell">{{ phrase('wgh_ui_event') }}</th><th class="dataList-cell">{{ phrase('wgh_ui_action') }}</th><th class="dataList-cell">{{ phrase('wgh_i18n_005ef20f') }}</th><th class="dataList-cell">{{ phrase('wgh_ui_attempts') }}</th><th class="dataList-cell">{{ phrase('wgh_ui_received') }}</th></tr></thead>
 				<tbody>
 				<xf:foreach loop="$recentDeliveries" value="$delivery">
 					<tr class="dataList-row">

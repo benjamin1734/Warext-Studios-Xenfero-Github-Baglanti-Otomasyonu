@@ -6,7 +6,7 @@
 	<div class="block-container">
 		<div class="block-body">
 			<table class="dataList">
-				<thead><tr class="dataList-row"><th class="dataList-cell">Title</th><th class="dataList-cell">{{ phrase('wgh_i18n_7d21db29') }}</th><th class="dataList-cell">{{ phrase('wgh_i18n_df5f2d89') }}</th><th class="dataList-cell">{{ phrase('wgh_i18n_148fd59a') }}</th><th class="dataList-cell">Status</th><th class="dataList-cell"></th></tr></thead>
+				<thead><tr class="dataList-row"><th class="dataList-cell">{{ phrase('wgh_ui_title') }}</th><th class="dataList-cell">{{ phrase('wgh_i18n_7d21db29') }}</th><th class="dataList-cell">{{ phrase('wgh_i18n_df5f2d89') }}</th><th class="dataList-cell">{{ phrase('wgh_i18n_148fd59a') }}</th><th class="dataList-cell">{{ phrase('wgh_i18n_005ef20f') }}</th><th class="dataList-cell"></th></tr></thead>
 				<tbody>
 				<xf:foreach loop="$connections" value="$connection">
 					<tr class="dataList-row">
@@ -15,7 +15,7 @@
 						<td class="dataList-cell">{$connection.app_id}</td>
 						<td class="dataList-cell">{$connection.installation_id}</td>
 						<td class="dataList-cell">{{ $connection.active ? phrase('wgh_i18n_1f89134f') : phrase('wgh_i18n_bfce9925') }}</td>
-						<td class="dataList-cell dataList-cell--action"><a href="{{ link('github-sync/connection-delete', null, {'connection_id': $connection.connection_id}) }}">Delete</a></td>
+						<td class="dataList-cell dataList-cell--action"><a href="{{ link('github-sync/connection-delete', null, {'connection_id': $connection.connection_id}) }}">{{ phrase('wgh_i18n_5797ea6a') }}</a></td>
 					</tr>
 				</xf:foreach>
 				</tbody>
